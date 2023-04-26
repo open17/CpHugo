@@ -1,10 +1,13 @@
 ---
-title: Links
+title: "推荐"
 links:
-  - title: GitHub
-    description: GitHub is the world's largest software development platform.
-    website: https://github.com
-    image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
+  - title: OI-wiki
+    description: OI Wiki 是一个编程竞赛知识整合站点,帮助广大编程竞赛爱好者更快更深入地学习编程竞赛
+    website: https://oi-wiki.org/
+  - title: codeforces
+    description: 无需多言
+    website: https://codeforces.com/
+    image: https://codeforces.org/s/47341/images/codeforces-sponsored-by-ton.png
 menu:
     main: 
         weight: 4
@@ -14,20 +17,4 @@ menu:
 comments: false
 ---
 
-To use this feature, add `links` section to frontmatter.
-
-This page's frontmatter:
-
-```yaml
-links:
-  - title: GitHub
-    description: GitHub is the world's largest software development platform.
-    website: https://github.com
-    image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
-  - title: TypeScript
-    description: TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
-    website: https://www.typescriptlang.org
-    image: ts-logo-128.jpg
-```
-
-`image` field accepts both local and external images.
+下面是一些常用的算法网站推荐
