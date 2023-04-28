@@ -1,0 +1,588 @@
+<!doctype html><html lang=en-us dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="作者：open17"><title>小蓝书0X00总结</title><link rel=canonical href=https://open17.github.io/CpHugo/p/blue00/><link rel=stylesheet href=/CpHugo/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css><meta property="og:title" content="小蓝书0X00总结"><meta property="og:description" content="作者：open17"><meta property="og:url" content="https://open17.github.io/CpHugo/p/blue00/"><meta property="og:site_name" content="CpHugo"><meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="summary"><meta property="article:tag" content="c++"><meta property="article:published_time" content="2023-04-26T00:00:00+00:00"><meta property="article:modified_time" content="2023-04-26T00:00:00+00:00"><meta property="og:image" content="https://open17.github.io/CpHugo/p/blue00/cover.jpg"><meta name=twitter:title content="小蓝书0X00总结"><meta name=twitter:description content="作者：open17"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://open17.github.io/CpHugo/p/blue00/cover.jpg"></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label=切换菜单>
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=/CpHugo/><img src=/CpHugo/img/avatar_huda2458f72ce188392d75c5d51cd8e24e_373_300x0_resize_box_3.png width=300 height=300 class=site-logo loading=lazy alt=Avatar></a>
+<span class=emoji>🍥</span></figure><div class=site-meta><h1 class=site-name><a href=/CpHugo>CpHugo</a></h1><h2 class=site-description>算法蒟蒻</h2></div></header><ol class=social-menu><li><a href=https://github.com/open17 target=_blank title=GitHub rel=me><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6.0 00-1.3-3.2 4.2 4.2.0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3.0 00-6.2.0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2.0 00-.1 3.2A4.6 4.6.0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a></li></ol><ol class=menu id=main-menu><li><a href=/CpHugo/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg><span>主页</span></a></li><li><a href=/CpHugo/archives/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg><span>专题</span></a></li><li><a href=/CpHugo/search/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg><span>搜索</span></a></li><li><a href=/CpHugo/%E6%8E%A8%E8%8D%90/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M10 14a3.5 3.5.0 005 0l4-4a3.5 3.5.0 00-5-5l-.5.5"/><path d="M14 10a3.5 3.5.0 00-5 0l-4 4a3.5 3.5.0 005 5l.5-.5"/></svg><span>推荐</span></a></li><div class=menu-bottom-section><li id=dark-mode-toggle><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><span>暗色模式</span></li></div></ol></aside><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目录</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#位运算>位运算</a><ol><li><a href=#a的b次方对p取模>a的b次方对p取模</a></li><li><a href=#ab对p取模>a*b对p取模</a></li><li><a href=#最短hamilton路径>最短Hamilton路径</a></li><li><a href=#起床困难综合症>起床困难综合症</a></li><li><a href=#xor成对变换>XOR成对变换</a></li><li><a href=#lowbit>lowbit</a></li><li><a href=#飞行员兄弟>飞行员兄弟</a></li><li><a href=#费解的开关>费解的开关</a></li></ol></li><li><a href=#分而治之>分而治之</a></li><li><a href=#前缀和与差分>前缀和与差分</a></li><li><a href=#二分>二分</a></li><li><a href=#排序>排序</a></li><li><a href=#倍增>倍增</a></li><li><a href=#贪心>贪心</a></li></ol></nav></div></section></aside><main class="main full-width"><article class="has-image main-article"><header class=article-header><div class=article-image><a href=/CpHugo/p/blue00/><img src=/CpHugo/p/blue00/cover_hud7e36f7e20e71be184458283bdae4646_55974_800x0_resize_q75_box.jpg srcset="/CpHugo/p/blue00/cover_hud7e36f7e20e71be184458283bdae4646_55974_800x0_resize_q75_box.jpg 800w, /CpHugo/p/blue00/cover_hud7e36f7e20e71be184458283bdae4646_55974_1600x0_resize_q75_box.jpg 1600w" width=800 height=534 loading=lazy alt="Featured image of post 小蓝书0X00总结"></a></div><div class=article-details><header class=article-category><a href=/CpHugo/categories/blue/ style=background-color:#2a9d8f;color:#fff>小蓝书</a></header><div class=article-title-wrapper><h2 class=article-title><a href=/CpHugo/p/blue00/>小蓝书0X00总结</a></h2><h3 class=article-subtitle>作者：open17</h3></div><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg><time class=article-time--published>Apr 26, 2023</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><time class=article-time--reading>阅读时长: 6 分钟</time></div></footer></div></header><section class=article-content><h2 id=位运算>位运算</h2><h3 id=a的b次方对p取模>a的b次方对p取模</h3><p>前置知识</p><ul><li>[qpow]</li><li>[math]:<code>(a+b)%p=(a%p+b%p)%p</code></li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-cpp data-lang=cpp><span class=line><span class=cl><span class=c1>// 求 a的 b次方对 p取模的值。
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=c1>// 输入格式
+</span></span></span><span class=line><span class=cl><span class=c1>// 三个整数 a,b,p，在同一行用空格隔开。
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=c1>// 输出格式
+</span></span></span><span class=line><span class=cl><span class=c1>// 输出一个整数，表示a^b mod p的值。
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=c1>// 数据范围
+</span></span></span><span class=line><span class=cl><span class=c1>// 0≤a,b≤109
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=c1>// 1≤p≤109
+</span></span></span><span class=line><span class=cl><span class=c1>// 输入样例：
+</span></span></span><span class=line><span class=cl><span class=c1>// 3 2 7
+</span></span></span><span class=line><span class=cl><span class=c1>// 输出样例：
+</span></span></span><span class=line><span class=cl><span class=c1>// 2
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=cp>#include</span> <span class=cpf>&lt;iostream&gt;</span><span class=cp>
+</span></span></span><span class=line><span class=cl><span class=cp></span><span class=k>using</span> <span class=k>namespace</span> <span class=n>std</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=k>typedef</span> <span class=kt>long</span> <span class=kt>long</span> <span class=n>ll</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=kt>int</span> <span class=nf>main</span><span class=p>(){</span>
+</span></span><span class=line><span class=cl>    <span class=n>ll</span> <span class=n>a</span><span class=p>,</span><span class=n>b</span><span class=p>,</span><span class=n>p</span><span class=p>,</span><span class=n>res</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>cin</span><span class=o>&gt;&gt;</span><span class=n>a</span><span class=o>&gt;&gt;</span><span class=n>b</span><span class=o>&gt;&gt;</span><span class=n>p</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// 防止当b=0，p=1时被卡
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=n>res</span><span class=o>=</span><span class=mi>1</span><span class=o>%</span><span class=n>p</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>while</span><span class=p>(</span><span class=n>b</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span><span class=p>(</span><span class=n>b</span><span class=o>&amp;</span><span class=mi>1</span><span class=p>)</span><span class=n>res</span><span class=o>=</span><span class=p>(</span><span class=n>res</span><span class=o>*</span><span class=n>a</span><span class=p>)</span><span class=o>%</span><span class=n>p</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>a</span><span class=o>*=</span><span class=n>a</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>a</span><span class=o>%=</span><span class=n>p</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>b</span><span class=o>&gt;&gt;=</span><span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=n>cout</span><span class=o>&lt;&lt;</span><span class=n>res</span><span class=o>&lt;&lt;</span><span class=n>endl</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=ab对p取模>a*b对p取模</h3><p>前置知识</p><ul><li>[qpow]</li><li>[math]:<code>(a+b)%p=(a%p+b%p)%p</code></li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-cpp data-lang=cpp><span class=line><span class=cl><span class=c1>// 求 a
+</span></span></span><span class=line><span class=cl><span class=c1>//  乘 b
+</span></span></span><span class=line><span class=cl><span class=c1>//  对 p
+</span></span></span><span class=line><span class=cl><span class=c1>//  取模的值。
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=c1>// 输入格式
+</span></span></span><span class=line><span class=cl><span class=c1>// 第一行输入整数a
+</span></span></span><span class=line><span class=cl><span class=c1>// ，第二行输入整数b
+</span></span></span><span class=line><span class=cl><span class=c1>// ，第三行输入整数p
+</span></span></span><span class=line><span class=cl><span class=c1>// 。
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=c1>// 输出格式
+</span></span></span><span class=line><span class=cl><span class=c1>// 输出一个整数，表示a*b mod p的值。
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=c1>// 数据范围
+</span></span></span><span class=line><span class=cl><span class=c1>// 1≤a,b,p≤1018
+</span></span></span><span class=line><span class=cl><span class=c1>// 输入样例：
+</span></span></span><span class=line><span class=cl><span class=c1>// 3
+</span></span></span><span class=line><span class=cl><span class=c1>// 4
+</span></span></span><span class=line><span class=cl><span class=c1>// 5
+</span></span></span><span class=line><span class=cl><span class=c1>// 输出样例：
+</span></span></span><span class=line><span class=cl><span class=c1>// 2
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=cp>#include</span> <span class=cpf>&lt;iostream&gt;</span><span class=cp>
+</span></span></span><span class=line><span class=cl><span class=cp></span><span class=k>using</span> <span class=k>namespace</span> <span class=n>std</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=k>typedef</span> <span class=kt>long</span> <span class=kt>long</span> <span class=n>ll</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=kt>int</span> <span class=nf>main</span><span class=p>(){</span>
+</span></span><span class=line><span class=cl>    <span class=n>ll</span> <span class=n>a</span><span class=p>,</span><span class=n>b</span><span class=p>,</span><span class=n>p</span><span class=p>,</span><span class=n>res</span><span class=o>=</span><span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>cin</span><span class=o>&gt;&gt;</span><span class=n>a</span><span class=o>&gt;&gt;</span><span class=n>b</span><span class=o>&gt;&gt;</span><span class=n>p</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>while</span><span class=p>(</span><span class=n>b</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span><span class=p>(</span><span class=n>b</span><span class=o>&amp;</span><span class=mi>1</span><span class=p>)</span><span class=n>res</span><span class=o>=</span><span class=p>(</span><span class=n>res</span><span class=o>+</span><span class=n>a</span><span class=p>)</span><span class=o>%</span><span class=n>p</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>b</span><span class=o>&gt;&gt;=</span><span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>a</span><span class=o>*=</span><span class=mi>2</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>a</span><span class=o>%=</span><span class=n>p</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=n>cout</span><span class=o>&lt;&lt;</span><span class=n>res</span><span class=o>&lt;&lt;</span><span class=n>endl</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=最短hamilton路径>最短Hamilton路径</h3><p>前置知识</p><ul><li></li><li>[位运算]</li><li>[状压DP]</li><li></li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span><span class=lnt>46
+</span><span class=lnt>47
+</span><span class=lnt>48
+</span><span class=lnt>49
+</span><span class=lnt>50
+</span><span class=lnt>51
+</span><span class=lnt>52
+</span><span class=lnt>53
+</span><span class=lnt>54
+</span><span class=lnt>55
+</span><span class=lnt>56
+</span><span class=lnt>57
+</span><span class=lnt>58
+</span><span class=lnt>59
+</span><span class=lnt>60
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-cpp data-lang=cpp><span class=line><span class=cl><span class=c1>// 给定一张 n个点的带权无向图，点从 0∼n−1标号，求起点 0到终点 n−1的最短 Hamilton 路径。
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=c1>// Hamilton 路径的定义是从 0到 n−1不重不漏地经过每个点恰好一次。输入格式
+</span></span></span><span class=line><span class=cl><span class=c1>// 第一行输入整数 n。
+</span></span></span><span class=line><span class=cl><span class=c1>// 接下来 n行每行 n个整数，其中第 i行第 j个整数表示点 i到 j的距离（记为 a[i,j]）。
+</span></span></span><span class=line><span class=cl><span class=c1>// 对于任意的 x,y,z，数据保证 a[x,x]=0，a[x,y]=a[y,x]并且 a[x,y]+a[y,z]≥a[x,z]。
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=c1>// 输出格式
+</span></span></span><span class=line><span class=cl><span class=c1>// 输出一个整数，表示最短 Hamilton 路径的长度。
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=c1>// 数据范围
+</span></span></span><span class=line><span class=cl><span class=c1>// 1≤n≤20
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=c1>// 0≤a[i,j]≤107
+</span></span></span><span class=line><span class=cl><span class=c1>// 输入样例：
+</span></span></span><span class=line><span class=cl><span class=c1>// 5
+</span></span></span><span class=line><span class=cl><span class=c1>// 0 2 4 5 1
+</span></span></span><span class=line><span class=cl><span class=c1>// 2 0 6 5 3
+</span></span></span><span class=line><span class=cl><span class=c1>// 4 6 0 8 3
+</span></span></span><span class=line><span class=cl><span class=c1>// 5 5 8 0 5
+</span></span></span><span class=line><span class=cl><span class=c1>// 1 3 3 5 0
+</span></span></span><span class=line><span class=cl><span class=c1>// 输出样例：
+</span></span></span><span class=line><span class=cl><span class=c1>// 18
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=cp>#include</span><span class=cpf>&lt;iostream&gt;</span><span class=cp>
+</span></span></span><span class=line><span class=cl><span class=cp>#include</span><span class=cpf>&lt;algorithm&gt;</span><span class=cp>
+</span></span></span><span class=line><span class=cl><span class=cp>#include</span><span class=cpf>&lt;cstring&gt;</span><span class=cp>
+</span></span></span><span class=line><span class=cl><span class=cp></span><span class=k>using</span> <span class=k>namespace</span> <span class=n>std</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=cp>#define For(a,b,c) for(int a=b;a&lt;c;a++)
+</span></span></span><span class=line><span class=cl><span class=cp>#define inf 0x3f
+</span></span></span><span class=line><span class=cl><span class=cp></span><span class=k>const</span> <span class=kt>int</span> <span class=n>N</span><span class=o>=</span><span class=mi>20</span><span class=p>,</span><span class=n>M</span><span class=o>=</span><span class=mi>1</span><span class=o>&lt;&lt;</span><span class=mi>20</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=kt>int</span> <span class=n>n</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=c1>//大数组开到全局里，防止爆栈
+</span></span></span><span class=line><span class=cl><span class=c1>//f[i][j]: i:经过状态，j:j点最短路
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kt>int</span> <span class=n>f</span><span class=p>[</span><span class=n>M</span><span class=p>][</span><span class=n>N</span><span class=p>],</span><span class=n>w</span><span class=p>[</span><span class=n>N</span><span class=p>][</span><span class=n>N</span><span class=p>];</span>
+</span></span><span class=line><span class=cl><span class=kt>int</span> <span class=nf>main</span><span class=p>(){</span>
+</span></span><span class=line><span class=cl>    <span class=n>cin</span><span class=o>&gt;&gt;</span><span class=n>n</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>For</span><span class=p>(</span><span class=n>i</span><span class=p>,</span><span class=mi>0</span><span class=p>,</span><span class=n>n</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>        <span class=n>For</span><span class=p>(</span><span class=n>j</span><span class=p>,</span><span class=mi>0</span><span class=p>,</span><span class=n>n</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>            <span class=n>cin</span><span class=o>&gt;&gt;</span><span class=n>w</span><span class=p>[</span><span class=n>i</span><span class=p>][</span><span class=n>j</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=n>memset</span><span class=p>(</span><span class=n>f</span><span class=p>,</span><span class=n>inf</span><span class=p>,</span><span class=k>sizeof</span><span class=p>(</span><span class=n>f</span><span class=p>));</span>
+</span></span><span class=line><span class=cl>    <span class=n>f</span><span class=p>[</span><span class=mi>1</span><span class=p>][</span><span class=mi>0</span><span class=p>]</span><span class=o>=</span><span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>For</span><span class=p>(</span><span class=n>i</span><span class=p>,</span><span class=mi>0</span><span class=p>,</span><span class=mi>1</span><span class=o>&lt;&lt;</span><span class=n>n</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>        <span class=n>For</span><span class=p>(</span><span class=n>j</span><span class=p>,</span><span class=mi>0</span><span class=p>,</span><span class=n>n</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>            <span class=k>if</span><span class=p>(</span><span class=n>i</span><span class=o>&gt;&gt;</span><span class=n>j</span><span class=o>&amp;</span><span class=mi>1</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>                <span class=c1>//int p=i^(1&lt;&lt;j)
+</span></span></span><span class=line><span class=cl><span class=c1></span>                <span class=kt>int</span> <span class=n>p</span><span class=o>=</span><span class=n>i</span><span class=o>-</span><span class=p>(</span><span class=mi>1</span><span class=o>&lt;&lt;</span><span class=n>j</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>                <span class=n>For</span><span class=p>(</span><span class=n>k</span><span class=p>,</span><span class=mi>0</span><span class=p>,</span><span class=n>n</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>                    <span class=k>if</span><span class=p>(</span><span class=n>p</span><span class=o>&amp;</span><span class=p>(</span><span class=mi>1</span><span class=o>&lt;&lt;</span><span class=n>k</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>                    <span class=c1>// if(p&gt;&gt;k&amp;1)
+</span></span></span><span class=line><span class=cl><span class=c1></span>                        <span class=n>f</span><span class=p>[</span><span class=n>i</span><span class=p>][</span><span class=n>j</span><span class=p>]</span><span class=o>=</span><span class=n>min</span><span class=p>(</span><span class=n>f</span><span class=p>[</span><span class=n>i</span><span class=p>][</span><span class=n>j</span><span class=p>],</span><span class=n>f</span><span class=p>[</span><span class=n>p</span><span class=p>][</span><span class=n>k</span><span class=p>]</span><span class=o>+</span><span class=n>w</span><span class=p>[</span><span class=n>k</span><span class=p>][</span><span class=n>j</span><span class=p>]);</span>
+</span></span><span class=line><span class=cl>                    
+</span></span><span class=line><span class=cl>                <span class=p>}</span>
+</span></span><span class=line><span class=cl>            <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=n>cout</span><span class=o>&lt;&lt;</span><span class=n>f</span><span class=p>[(</span><span class=mi>1</span><span class=o>&lt;&lt;</span><span class=n>n</span><span class=p>)</span><span class=o>-</span><span class=mi>1</span><span class=p>][</span><span class=n>n</span><span class=o>-</span><span class=mi>1</span><span class=p>]</span><span class=o>&lt;&lt;</span><span class=n>endl</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=起床困难综合症>起床困难综合症</h3><p>前置知识</p><ul><li>[位运算性质] :与或非运算在二进制表示下不进位，也就是说每个bit之间<strong>独立</strong>位运算</li><li>[贪心]</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>  1
+</span><span class=lnt>  2
+</span><span class=lnt>  3
+</span><span class=lnt>  4
+</span><span class=lnt>  5
+</span><span class=lnt>  6
+</span><span class=lnt>  7
+</span><span class=lnt>  8
+</span><span class=lnt>  9
+</span><span class=lnt> 10
+</span><span class=lnt> 11
+</span><span class=lnt> 12
+</span><span class=lnt> 13
+</span><span class=lnt> 14
+</span><span class=lnt> 15
+</span><span class=lnt> 16
+</span><span class=lnt> 17
+</span><span class=lnt> 18
+</span><span class=lnt> 19
+</span><span class=lnt> 20
+</span><span class=lnt> 21
+</span><span class=lnt> 22
+</span><span class=lnt> 23
+</span><span class=lnt> 24
+</span><span class=lnt> 25
+</span><span class=lnt> 26
+</span><span class=lnt> 27
+</span><span class=lnt> 28
+</span><span class=lnt> 29
+</span><span class=lnt> 30
+</span><span class=lnt> 31
+</span><span class=lnt> 32
+</span><span class=lnt> 33
+</span><span class=lnt> 34
+</span><span class=lnt> 35
+</span><span class=lnt> 36
+</span><span class=lnt> 37
+</span><span class=lnt> 38
+</span><span class=lnt> 39
+</span><span class=lnt> 40
+</span><span class=lnt> 41
+</span><span class=lnt> 42
+</span><span class=lnt> 43
+</span><span class=lnt> 44
+</span><span class=lnt> 45
+</span><span class=lnt> 46
+</span><span class=lnt> 47
+</span><span class=lnt> 48
+</span><span class=lnt> 49
+</span><span class=lnt> 50
+</span><span class=lnt> 51
+</span><span class=lnt> 52
+</span><span class=lnt> 53
+</span><span class=lnt> 54
+</span><span class=lnt> 55
+</span><span class=lnt> 56
+</span><span class=lnt> 57
+</span><span class=lnt> 58
+</span><span class=lnt> 59
+</span><span class=lnt> 60
+</span><span class=lnt> 61
+</span><span class=lnt> 62
+</span><span class=lnt> 63
+</span><span class=lnt> 64
+</span><span class=lnt> 65
+</span><span class=lnt> 66
+</span><span class=lnt> 67
+</span><span class=lnt> 68
+</span><span class=lnt> 69
+</span><span class=lnt> 70
+</span><span class=lnt> 71
+</span><span class=lnt> 72
+</span><span class=lnt> 73
+</span><span class=lnt> 74
+</span><span class=lnt> 75
+</span><span class=lnt> 76
+</span><span class=lnt> 77
+</span><span class=lnt> 78
+</span><span class=lnt> 79
+</span><span class=lnt> 80
+</span><span class=lnt> 81
+</span><span class=lnt> 82
+</span><span class=lnt> 83
+</span><span class=lnt> 84
+</span><span class=lnt> 85
+</span><span class=lnt> 86
+</span><span class=lnt> 87
+</span><span class=lnt> 88
+</span><span class=lnt> 89
+</span><span class=lnt> 90
+</span><span class=lnt> 91
+</span><span class=lnt> 92
+</span><span class=lnt> 93
+</span><span class=lnt> 94
+</span><span class=lnt> 95
+</span><span class=lnt> 96
+</span><span class=lnt> 97
+</span><span class=lnt> 98
+</span><span class=lnt> 99
+</span><span class=lnt>100
+</span><span class=lnt>101
+</span><span class=lnt>102
+</span><span class=lnt>103
+</span><span class=lnt>104
+</span><span class=lnt>105
+</span><span class=lnt>106
+</span><span class=lnt>107
+</span><span class=lnt>108
+</span><span class=lnt>109
+</span><span class=lnt>110
+</span><span class=lnt>111
+</span><span class=lnt>112
+</span><span class=lnt>113
+</span><span class=lnt>114
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-cpp data-lang=cpp><span class=line><span class=cl><span class=c1>// 21世纪，许多人得了一种奇怪的病：起床困难综合症，其临床表现为：起床难，起床后精神不佳。
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=c1>// 作为一名青春阳光好少年，atm 一直坚持与起床困难综合症作斗争。
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=c1>// 通过研究相关文献，他找到了该病的发病原因： 在深邃的太平洋海底中，出现了一条名为 drd 的巨龙，它掌握着睡眠之精髓，能随意延长大家的睡眠时间。
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=c1>// 正是由于 drd 的活动，起床困难综合症愈演愈烈， 以惊人的速度在世界上传播。
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=c1>// 为了彻底消灭这种病，atm 决定前往海底，消灭这条恶龙。
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=c1>// 历经千辛万苦，atm 终于来到了 drd 所在的地方，准备与其展开艰苦卓绝的战斗。
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=c1>// drd 有着十分特殊的技能，他的防御战线能够使用一定的运算来改变他受到的伤害。
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=c1>// 具体说来，drd 的防御战线由 n扇防御门组成。
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=c1>// 每扇防御门包括一个运算 op
+</span></span></span><span class=line><span class=cl><span class=c1>//  和一个参数 t ，其中运算一定是 OR,XOR,AND中的一种，参数则一定为非负整数。
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=c1>// 如果还未通过防御门时攻击力为 x
+</span></span></span><span class=line><span class=cl><span class=c1>// 则其通过这扇防御门后攻击力将变为 x op t
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=c1>// 最终 drd 受到的伤害为对方初始攻击力 x
+</span></span></span><span class=line><span class=cl><span class=c1>//  依次经过所有 n扇防御门后转变得到的攻击力。
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=c1>// 由于 atm 水平有限，他的初始攻击力只能为 0
+</span></span></span><span class=line><span class=cl><span class=c1>//  到 m之间的一个整数（即他的初始攻击力只能在 0,1,…,m中任选，
+</span></span></span><span class=line><span class=cl><span class=c1>// 但在通过防御门之后的攻击力不受 m的限制）。
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=c1>// 为了节省体力，他希望通过选择合适的初始攻击力使得他的攻击能让 drd 受到最大的伤害，请你帮他计算一下，他的一次攻击最多能使 drd 受到多少伤害。
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=c1>// 输入格式
+</span></span></span><span class=line><span class=cl><span class=c1>// 第 1行包含 2个整数，依次为 n,m，表示 drd 有 n扇防御门，atm 的初始攻击力为 0到 m之间的整数。
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=c1>// 接下来 n  行，依次表示每一扇防御门。每行包括一个字符串 op  和一个非负整数 t ，两者由一个空格隔开，且 op  在前，t  在后，op  表示该防御门所对应的操作，t  表示对应的参数。
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=c1>// 输出格式
+</span></span></span><span class=line><span class=cl><span class=c1>// 输出一个整数，表示 atm 的一次攻击最多使 drd 受到多少伤害。
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=c1>// 数据范围
+</span></span></span><span class=line><span class=cl><span class=c1>// QQ截图20190907125839.png
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=c1>// 输入样例：
+</span></span></span><span class=line><span class=cl><span class=c1>// 3 10
+</span></span></span><span class=line><span class=cl><span class=c1>// AND 5
+</span></span></span><span class=line><span class=cl><span class=c1>// OR 6
+</span></span></span><span class=line><span class=cl><span class=c1>// XOR 7
+</span></span></span><span class=line><span class=cl><span class=c1>// 输出样例：
+</span></span></span><span class=line><span class=cl><span class=c1>// 1
+</span></span></span><span class=line><span class=cl><span class=c1>// 样例解释
+</span></span></span><span class=line><span class=cl><span class=c1>// atm可以选择的初始攻击力为 0,1,…,10
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=c1>// 假设初始攻击力为 4，最终攻击力经过了如下计算
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=c1>// 4 AND 5 = 4
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=c1>// 4 OR 6 = 6
+</span></span></span><span class=line><span class=cl><span class=c1>// 6 XOR 7 = 1 
+</span></span></span><span class=line><span class=cl><span class=c1>//类似的，我们可以计算出初始攻击力为 1,3,5,7,9  时最终攻击力为 0 ，初始攻击力为 0,2,4,6,8,10  时最终攻击力为 1 ，因此 atm 的一次攻击最多使 drd 受到的伤害值为 1 。
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=c1>// 运算解释
+</span></span></span><span class=line><span class=cl><span class=c1>// 在本题中，选手需要先将数字变换为二进制后再进行计算。如果操作的两个数二进制长度不同，则在前补 0
+</span></span></span><span class=line><span class=cl><span class=c1>//  至相同长度。
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=c1>// OR 为按位或运算，处理两个长度相同的二进制数，两个相应的二进制位中只要有一个为 1，则该位的结果值为 1，否则为 0。
+</span></span></span><span class=line><span class=cl><span class=c1>// XOR 为按位异或运算，对等长二进制模式或二进制数的每一位执行逻辑异或操作。如果两个相应的二进制位不同（相异），则该位的结果值为 1，否则该位为 0
+</span></span></span><span class=line><span class=cl><span class=c1>// AND 为按位与运算，处理两个长度相同的二进制数，两个相应的二进制位都为 1，该位的结果值才为 1，否则为 0
+</span></span></span><span class=line><span class=cl><span class=c1>// 例如，我们将十进制数 5与十进制数 3
+</span></span></span><span class=line><span class=cl><span class=c1>//  分别进行 OR、XOR与 AND运算，可以得到如下结果：
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=c1>//     0101 (十进制 5)             0101 (十进制 5)             0101 (十进制 5)             
+</span></span></span><span class=line><span class=cl><span class=c1>//  OR 0011 (十进制 3)         XOR 0011 (十进制 3)         AND 0011 (十进制 3)             
+</span></span></span><span class=line><span class=cl><span class=c1>//   = 0111 (十进制 7)           = 0110 (十进制 6)           = 0001 (十进制 1) 
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=cp>#include</span><span class=cpf>&lt;iostream&gt;</span><span class=cp>
+</span></span></span><span class=line><span class=cl><span class=cp>#include</span><span class=cpf>&lt;vector&gt;</span><span class=cp>
+</span></span></span><span class=line><span class=cl><span class=cp>#include</span><span class=cpf>&lt;string&gt;</span><span class=cp>
+</span></span></span><span class=line><span class=cl><span class=cp>#include</span><span class=cpf>&lt;algorithm&gt;</span><span class=cp>
+</span></span></span><span class=line><span class=cl><span class=cp></span><span class=k>using</span> <span class=k>namespace</span> <span class=n>std</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=cp>#define For(a,b,c) for(int a=b;a&lt;c;a++)
+</span></span></span><span class=line><span class=cl><span class=cp></span><span class=k>const</span> <span class=kt>int</span> <span class=n>N</span><span class=o>=</span><span class=mf>1e6</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=n>vector</span><span class=o>&lt;</span><span class=n>pair</span><span class=o>&lt;</span><span class=n>string</span><span class=p>,</span><span class=kt>int</span><span class=o>&gt;&gt;</span> <span class=n>a</span><span class=p>(</span><span class=n>N</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=n>string</span> <span class=n>op</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=kt>int</span> <span class=n>t</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=kt>int</span> <span class=n>n</span><span class=p>,</span><span class=n>m</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=cp>#define ios ios::sync_with_stdio(false);cin.tie(0);cout.tie(0);
+</span></span></span><span class=line><span class=cl><span class=cp></span><span class=kt>int</span> <span class=nf>change</span><span class=p>(</span><span class=kt>int</span> <span class=n>p</span><span class=p>,</span><span class=kt>int</span> <span class=n>q</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>    <span class=n>For</span><span class=p>(</span><span class=n>i</span><span class=p>,</span><span class=mi>0</span><span class=p>,</span><span class=n>n</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>        <span class=kt>int</span> <span class=n>x</span><span class=o>=</span><span class=n>a</span><span class=p>[</span><span class=n>i</span><span class=p>].</span><span class=n>second</span><span class=o>&gt;&gt;</span><span class=n>p</span><span class=o>&amp;</span><span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span><span class=p>(</span><span class=n>a</span><span class=p>[</span><span class=n>i</span><span class=p>].</span><span class=n>first</span><span class=o>==</span><span class=s>&#34;AND&#34;</span><span class=p>)</span><span class=n>q</span><span class=o>&amp;=</span><span class=n>x</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=k>else</span> <span class=k>if</span><span class=p>(</span><span class=n>a</span><span class=p>[</span><span class=n>i</span><span class=p>].</span><span class=n>first</span><span class=o>==</span><span class=s>&#34;OR&#34;</span><span class=p>)</span><span class=n>q</span><span class=o>|=</span><span class=n>x</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=k>else</span> <span class=p>{</span><span class=n>q</span><span class=o>^=</span><span class=n>x</span><span class=p>;}</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span>  <span class=n>q</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=kt>int</span> <span class=nf>main</span><span class=p>(){</span>
+</span></span><span class=line><span class=cl>    <span class=n>ios</span>
+</span></span><span class=line><span class=cl>    <span class=n>cin</span><span class=o>&gt;&gt;</span><span class=n>n</span><span class=o>&gt;&gt;</span><span class=n>m</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>For</span><span class=p>(</span><span class=n>i</span><span class=p>,</span><span class=mi>0</span><span class=p>,</span><span class=n>n</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>        <span class=n>cin</span><span class=o>&gt;&gt;</span><span class=n>a</span><span class=p>[</span><span class=n>i</span><span class=p>].</span><span class=n>first</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>cin</span><span class=o>&gt;&gt;</span><span class=n>a</span><span class=p>[</span><span class=n>i</span><span class=p>].</span><span class=n>second</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>pre</span><span class=o>=</span><span class=mi>0</span><span class=p>,</span><span class=n>aft</span><span class=o>=</span><span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>For</span><span class=p>(</span><span class=n>i</span><span class=p>,</span><span class=mi>0</span><span class=p>,</span><span class=mi>30</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>        <span class=kt>int</span> <span class=n>p</span><span class=o>=</span><span class=mi>29</span><span class=o>-</span><span class=n>i</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=kt>int</span> <span class=n>pos1</span><span class=o>=</span><span class=n>change</span><span class=p>(</span><span class=n>p</span><span class=p>,</span><span class=mi>0</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=kt>int</span> <span class=n>pos2</span><span class=o>=</span><span class=n>change</span><span class=p>(</span><span class=n>p</span><span class=p>,</span><span class=mi>1</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span><span class=p>(</span><span class=n>pre</span><span class=o>+</span><span class=p>(</span><span class=mi>1</span><span class=o>&lt;&lt;</span><span class=n>p</span><span class=p>)</span><span class=o>&lt;=</span><span class=n>m</span> <span class=o>&amp;&amp;</span> <span class=n>pos2</span><span class=o>&gt;</span><span class=n>pos1</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>            <span class=n>pre</span><span class=o>+=</span><span class=mi>1</span><span class=o>&lt;&lt;</span><span class=n>p</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=n>aft</span><span class=o>+=</span><span class=n>pos2</span><span class=o>&lt;&lt;</span><span class=n>p</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=k>else</span> <span class=n>aft</span><span class=o>+=</span><span class=n>pos1</span><span class=o>&lt;&lt;</span><span class=n>p</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=n>cout</span><span class=o>&lt;&lt;</span><span class=n>aft</span><span class=o>&lt;&lt;</span><span class=n>endl</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=xor成对变换>XOR成对变换</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-py data-lang=py><span class=line><span class=cl><span class=k>if</span> <span class=n>n</span><span class=o>&amp;</span><span class=mi>1</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=n>n</span><span class=o>^</span><span class=mi>1</span><span class=o>==</span><span class=n>n</span><span class=o>-</span><span class=mi>1</span>
+</span></span><span class=line><span class=cl><span class=k>else</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=n>n</span><span class=o>^</span><span class=mi>1</span><span class=o>==</span><span class=n>n</span><span class=o>+</span><span class=mi>1</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=lowbit>lowbit</h3><p><code>n&(-n)</code></p><h3 id=飞行员兄弟>飞行员兄弟</h3><p>前置知识</p><ul><li>[贪心]</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-cpp data-lang=cpp><span class=line><span class=cl><span class=err>“飞行员兄弟”这个游戏，需要玩家顺利的打开一个拥有</span> <span class=mi>16</span><span class=err>个把手的冰箱。</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=err>已知每个把手可以处于以下两种状态之一：打开或关闭。</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=err>只有当所有把手都打开时，冰箱才会打开。</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=err>把手可以表示为一个</span> <span class=mi>4</span><span class=err>×</span><span class=mi>4</span><span class=err>的矩阵，您可以改变任何一个位置</span> <span class=p>[</span><span class=n>i</span><span class=p>,</span><span class=n>j</span><span class=p>]</span><span class=err>上把手的状态。</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=err>但是，这也会使得第</span> <span class=n>i</span><span class=err>行和第</span> <span class=n>j</span><span class=err>列上的所有把手的状态也随着改变。</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=err>请你求出打开冰箱所需的切换把手的次数最小值是多少。</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=err>输入格式</span>
+</span></span><span class=line><span class=cl><span class=err>输入一共包含四行，每行包含四个把手的初始状态。</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=err>符号</span> <span class=o>+</span> <span class=err>表示把手处于闭合状态，而符号</span> <span class=o>-</span> <span class=err>表示把手处于打开状态。</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=err>至少一个手柄的初始状态是关闭的。</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=err>输出格式</span>
+</span></span><span class=line><span class=cl><span class=err>第一行输出一个整数</span> <span class=n>N</span><span class=err>，表示所需的最小切换把手次数。</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=err>接下来</span> <span class=n>N</span><span class=err>行描述切换顺序，每行输出两个整数，代表被切换状态的把手的行号和列号，数字之间用空格隔开。</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=err>注意：如果存在多种打开冰箱的方式，则按照优先级整体从上到下，同行从左到右打开。</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=err>数据范围</span>
+</span></span><span class=line><span class=cl><span class=mi>1</span><span class=err>≤</span><span class=n>i</span><span class=p>,</span><span class=n>j</span><span class=err>≤</span><span class=mi>4</span>
+</span></span><span class=line><span class=cl><span class=err>输入样例：</span>
+</span></span><span class=line><span class=cl><span class=o>-+--</span>
+</span></span><span class=line><span class=cl><span class=o>----</span>
+</span></span><span class=line><span class=cl><span class=o>----</span>
+</span></span><span class=line><span class=cl><span class=o>-+--</span>
+</span></span><span class=line><span class=cl><span class=err>输出样例：</span>
+</span></span><span class=line><span class=cl><span class=mi>6</span>
+</span></span><span class=line><span class=cl><span class=mi>1</span> <span class=mi>1</span>
+</span></span><span class=line><span class=cl><span class=mi>1</span> <span class=mi>3</span>
+</span></span><span class=line><span class=cl><span class=mi>1</span> <span class=mi>4</span>
+</span></span><span class=line><span class=cl><span class=mi>4</span> <span class=mi>1</span>
+</span></span><span class=line><span class=cl><span class=mi>4</span> <span class=mi>3</span>
+</span></span><span class=line><span class=cl><span class=mi>4</span> <span class=mi>4</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=费解的开关>费解的开关</h3><p>前置知识</p><ul><li>[贪心]</li></ul><h2 id=分而治之>分而治之</h2><h2 id=前缀和与差分>前缀和与差分</h2><h2 id=二分>二分</h2><h2 id=排序>排序</h2><h2 id=倍增>倍增</h2><h2 id=贪心>贪心</h2></section><footer class=article-footer><section class=article-tags><a href=/CpHugo/tags/summary/>summary</a>
+<a href=/CpHugo/tags/c++/>c++</a></section><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg><span>遵循CC BY-NC-SA 4.0协议</span></section></footer></article><div class=disqus-container><div id=disqus_thread></div><script type=application/javascript>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//hu.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div><style>.disqus-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}</style><script>window.addEventListener("onColorSchemeChange",e=>{typeof DISQUS=="object"&&DISQUS.reset({reload:!0})})</script><footer class=site-footer><section class=copyright>&copy;
+2023 CpHugo</section><section class=powerby>Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a><br>主题 <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.16.0>Stack</a></b> 由 <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a> 设计</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css crossorigin=anonymous></main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=/CpHugo/ts/main.js defer></script>
+<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>
