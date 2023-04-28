@@ -1,5 +1,5 @@
 ---
-title: Example Category
+title: 图论
 description: A description of this category
 image:
 
