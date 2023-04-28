@@ -1309,8 +1309,8 @@ $lcm(a,b)&lt;em>gcd(a,b)=a&lt;/em>b$&lt;br>
 &lt;h3 id="a的b次方对p取模">a的b次方对p取模&lt;/h3>
 &lt;p>前置知识&lt;/p>
 &lt;ul>
-&lt;li>[qpow]&lt;/li>
-&lt;li>[math]:&lt;code>(a+b)%p=(a%p+b%p)%p &lt;/code>&lt;/li>
+&lt;li>qpow&lt;/li>
+&lt;li>math:$(a+b)%p=(a%p+b%p)%p$&lt;/li>
 &lt;/ul>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -1358,7 +1358,7 @@ $lcm(a,b)&lt;em>gcd(a,b)=a&lt;/em>b$&lt;br>
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 输出一个整数，表示a^b mod p的值。
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 数据范围
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 0≤a,b≤109
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 0≤a,b≤10^9
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 1≤p≤109
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 输入样例：
@@ -1387,8 +1387,8 @@ $lcm(a,b)&lt;em>gcd(a,b)=a&lt;/em>b$&lt;br>
 &lt;/div>&lt;h3 id="ab对p取模">a*b对p取模&lt;/h3>
 &lt;p>前置知识&lt;/p>
 &lt;ul>
-&lt;li>[qpow]&lt;/li>
-&lt;li>[math]:&lt;code>(a+b)%p=(a%p+b%p)%p &lt;/code>&lt;/li>
+&lt;li>qpow&lt;/li>
+&lt;li>math:&lt;code>(a+b)%p=(a%p+b%p)%p &lt;/code>&lt;/li>
 &lt;/ul>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -1473,10 +1473,10 @@ $lcm(a,b)&lt;em>gcd(a,b)=a&lt;/em>b$&lt;br>
 &lt;/div>&lt;h3 id="最短hamilton路径">最短Hamilton路径&lt;/h3>
 &lt;p>前置知识&lt;/p>
 &lt;ul>
-&lt;li>&lt;/li>
-&lt;li>[位运算]&lt;/li>
-&lt;li>[状压DP]&lt;/li>
-&lt;li>&lt;/li>
+&lt;li>旅行商问题:NP完全,没有多项式时间解法&lt;/li>
+&lt;li>位运算&lt;/li>
+&lt;li>状压DP&lt;/li>
+&lt;li>bitset:STL&lt;/li>
 &lt;/ul>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -1607,8 +1607,8 @@ $lcm(a,b)&lt;em>gcd(a,b)=a&lt;/em>b$&lt;br>
 &lt;/div>&lt;h3 id="起床困难综合症">起床困难综合症&lt;/h3>
 &lt;p>前置知识&lt;/p>
 &lt;ul>
-&lt;li>[位运算性质] :与或非运算在二进制表示下不进位，也就是说每个bit之间&lt;strong>独立&lt;/strong>位运算&lt;/li>
-&lt;li>[贪心]&lt;/li>
+&lt;li>位运算性质 :与或非运算在二进制表示下不进位，也就是说每个bit之间&lt;strong>独立&lt;/strong>位运算&lt;/li>
+&lt;li>贪心&lt;/li>
 &lt;/ul>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -1864,7 +1864,7 @@ $lcm(a,b)&lt;em>gcd(a,b)=a&lt;/em>b$&lt;br>
 &lt;h3 id="飞行员兄弟">飞行员兄弟&lt;/h3>
 &lt;p>前置知识&lt;/p>
 &lt;ul>
-&lt;li>[贪心]&lt;/li>
+&lt;li>贪心&lt;/li>
 &lt;/ul>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -1957,7 +1957,7 @@ $lcm(a,b)&lt;em>gcd(a,b)=a&lt;/em>b$&lt;br>
 &lt;/div>&lt;h3 id="费解的开关">费解的开关&lt;/h3>
 &lt;p>前置知识&lt;/p>
 &lt;ul>
-&lt;li>[贪心]&lt;/li>
+&lt;li>贪心&lt;/li>
 &lt;/ul>
 &lt;h2 id="分而治之">分而治之&lt;/h2>
 &lt;h2 id="前缀和与差分">前缀和与差分&lt;/h2>
