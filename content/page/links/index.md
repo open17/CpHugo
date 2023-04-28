@@ -8,6 +8,9 @@ links:
     description: 无需多言
     website: https://codeforces.com/
     image: https://codeforces.org/s/47341/images/codeforces-sponsored-by-ton.png
+  - title: open17-contest
+    description: open17是一个算法模板速查项目
+    website: https://open17.github.io/contest/new.html
 menu:
     main: 
         weight: 4
