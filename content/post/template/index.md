@@ -7,6 +7,7 @@ image: cover.jpg
 categories:
     - Alg
 tags:
+    - begin
     - templates
     - c++
     - c
