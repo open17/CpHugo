@@ -33,12 +33,6 @@ default = "遵循CC BY-NC-SA 4.0协议"
 type = "search"
 
 [[widgets.homepage]]
-type = "archives"
-
-[widgets.homepage.params]
-limit = 5
-
-[[widgets.homepage]]
 type = "categories"
 
 [widgets.homepage.params]
@@ -48,7 +42,7 @@ limit = 10
 type = "tag-cloud"
 
 [widgets.homepage.params]
-limit = 10
+limit = 100
 
 [[widgets.page]]
 type = "toc"
