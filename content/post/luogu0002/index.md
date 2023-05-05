@@ -9,6 +9,7 @@ categories:
 tags:
     - presum
     - c++
+    - luogu
 ---
 # 最大加权矩形
 

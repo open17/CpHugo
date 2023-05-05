@@ -9,6 +9,7 @@ categories:
 tags:
     - presum
     - c++
+    - luogu
 ---
 # 【深进1.例1】求区间和
 
