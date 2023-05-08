@@ -792,7 +792,7 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>乘法逆元递推（费马小定理版）模板</title><link>https://open17.github.io/CpHugo/p/inv2/</link><pubDate>Mon, 08 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/inv2/</guid><description>&lt;h2 id="模板">模板&lt;/h2>
+&lt;/div></description></item><item><title>乘法逆元递推模板</title><link>https://open17.github.io/CpHugo/p/inv2/</link><pubDate>Mon, 08 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/inv2/</guid><description>&lt;h2 id="模板">模板&lt;/h2>
 &lt;ul>
 &lt;li>只适用于模数为质数的情况(费马小定理)&lt;/li>
 &lt;/ul>
