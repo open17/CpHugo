@@ -1,105 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Distcrete Structures on CpHugo</title><link>https://open17.github.io/CpHugo/tags/distcrete-structures/</link><description>Recent content in Distcrete Structures on CpHugo</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 05 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://open17.github.io/CpHugo/tags/distcrete-structures/index.xml" rel="self" type="application/rss+xml"/><item><title>SFSS</title><link>https://open17.github.io/CpHugo/p/sfss/</link><pubDate>Fri, 05 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/sfss/</guid><description>&lt;h2 id="sets">Sets&lt;/h2>
-&lt;ul>
-&lt;li>A set is a collection of objects&lt;/li>
-&lt;li>Sets are used to group objects together&lt;/li>
-&lt;/ul>
-&lt;h3 id="three-ways-to-express-the-members-in-a-set">Three ways to express the members in a set&lt;/h3>
-&lt;pre>&lt;code>- List all the members
-- Use predicates
-- Use suspension(省略号)points(must be inferred)
-&lt;/code>&lt;/pre>
-&lt;h3 id="universal-set">universal set&lt;/h3>
-&lt;ul>
-&lt;li>$ℕ$ : the set of all natural numbers&lt;/li>
-&lt;li>$ℤ$ : the set of integers&lt;/li>
-&lt;li>$ℤ^+$ : the set of all the positive integers&lt;/li>
-&lt;li>$ℚ$: the set of all rational numbers&lt;/li>
-&lt;li>$ℝ$: the set of all the real numbers&lt;/li>
-&lt;li>$ℂ$: the set of all complex numbers&lt;/li>
-&lt;/ul>
-&lt;h3 id="venn-diagrams">Venn Diagrams&lt;/h3>
-&lt;ul>
-&lt;li>two basic shapes
-&lt;ul>
-&lt;li>A rectangle: indicates the universal set&lt;/li>
-&lt;li>Circles or other shapes: indicate normal sets&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="elements-and-sets">Elements and Sets&lt;/h3>
-&lt;ul>
-&lt;li>$A∈B$ : A is in or is an element of B&lt;/li>
-&lt;li>$A∉B$ : A is not in or is not an element of B&lt;/li>
-&lt;/ul>
-&lt;h3 id="subsets">Subsets&lt;/h3>
-&lt;ul>
-&lt;li>Subsets&lt;/li>
-&lt;li>Proper subsets(真子集)&lt;/li>
-&lt;li>Empty sets&lt;/li>
-&lt;/ul>
-&lt;h3 id="cardinality">Cardinality&lt;/h3>
-&lt;p>number of distinct elements in a set&lt;br>
-The cardinality of a set s is denoted as |s|&lt;/p>
-&lt;h3 id="power-sets">Power Sets&lt;/h3>
-&lt;p>$P(S) = {A|A ⊆ S}$&lt;/p>
-&lt;h4 id="theorem-of-power-sets">Theorem of Power Sets:&lt;/h4>
-&lt;p>$ if |S| = n, then |P(S)| = 2^n$&lt;/p>
-&lt;h3 id="ordered-n-tuple">Ordered n-tuple&lt;/h3>
-&lt;ul>
-&lt;li>The form (1, 2, … , ) or &amp;lt; 1, 2, … , &amp;gt;&lt;/li>
-&lt;li>(1,2) not equal to (2,1)&lt;/li>
-&lt;/ul>
-&lt;h3 id="cartesian-product笛卡尔乘积">Cartesian Product(笛卡尔乘积)&lt;/h3>
-&lt;p>Cartesian product of $S_1, S_2, ⋯ ,S_n (denoted S_1 × S_2 × ⋯ ×S_n )$ &lt;br>
-$S_1 × S_2 × ⋯ ×S_n = {(a1, a2, … ,an )|a_1 ∈ S_1 ∧ a_2 ∈ S_2 ∧⋯ ∧ a_n ∈ S_n}$&lt;/p>
-&lt;h3 id="disjoint-sets">Disjoint Sets&lt;/h3>
-&lt;ul>
-&lt;li>If A ∩ B = ∅ then A and B are disjoint.&lt;/li>
-&lt;li>If A ∩ B ≠ ∅ then A and B are overlapped.&lt;/li>
-&lt;/ul>
-&lt;h2 id="function">function&lt;/h2>
-&lt;h3 id="conditions">conditions&lt;/h3>
-&lt;blockquote>
-&lt;p>A function from to is a subset of × which satisfies
-the following two conditions&lt;/p>
-&lt;/blockquote>
-&lt;p>1.$ ∀ x(x ∈ A → ∃ y(y ∈ B ∧ (x,y) ∈f)) $&lt;br>
-2. $ (((x_1,y_1 ) ∈ f ∧ (x_1,y_2 ) ∈ f) → y_1 = y_2)$&lt;/p>
-&lt;h3 id="image-pre-image-and-range值域">Image, Pre-image and Range(值域)&lt;/h3>
-&lt;p>If $y = f(x)$ from set A to set B, then&lt;/p>
-&lt;ul>
-&lt;li>y is called the image of x under f&lt;/li>
-&lt;li>x is called a pre-image of y&lt;/li>
-&lt;li>the set of all the images of the elements in the domain under is called the range of f, f(A) = {f(x)|x ∈ A}&lt;/li>
-&lt;/ul>
-&lt;h3 id="injective-function单射">injective function（单射）&lt;/h3>
-&lt;p>f is one-to-one&lt;/p>
-&lt;h3 id="urjective-function-满射">urjective function (满射)&lt;/h3>
-&lt;p>Onto function :$∀y ∈ B (∃x(x ∈A ∧f (x) =y ))$&lt;/p>
-&lt;h3 id="bijective-function-双射">bijective function (双射)&lt;/h3>
-&lt;p>[One-to-One and onto function] is also called bijective function&lt;/p>
-&lt;h3 id="floor-functions">Floor functions&lt;/h3>
-&lt;ul>
-&lt;li>Denoted $\lfloor x \rfloor$&lt;/li>
-&lt;li>The largest integer less than or equivalent to x&lt;/li>
-&lt;/ul>
-&lt;h3 id="ceiling-functions">Ceiling functions&lt;/h3>
-&lt;ul>
-&lt;li>Denoted $\lceil x \rceil$&lt;/li>
-&lt;li>The smallest integer greater than or equivalent to x&lt;/li>
-&lt;/ul>
-&lt;h2 id="sequences-数列">Sequences 数列&lt;/h2>
-&lt;p>Sequences are ordered lists of elements
-• A sequence is a function from a subset of the set of integers
-({0, 1, 2, 3, … } or {1, 2, 3, … }) to a set , denoted {$a_n$}. The
-integers determine the positions of the elements in the list&lt;/p>
-&lt;h2 id="summations-求和">Summations 求和&lt;/h2>
-&lt;p>A summation is the value of the sum of the terms of a sequence.&lt;/p>
-&lt;h3 id="special-summations">Special Summations&lt;/h3>
-&lt;h4 id="geometric-series-等比数列和">Geometric series 等比数列和&lt;/h4>
-&lt;p>$\sum^n_{j=0}ar^j$&lt;/p>
-&lt;h4 id="harmonic-series">harmonic series&lt;/h4>
-&lt;p>$\sum^n_{j=1} \frac{1}{j}$&lt;/p></description></item><item><title>离散数学——Relations</title><link>https://open17.github.io/CpHugo/p/distcreterelations/</link><pubDate>Fri, 05 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/distcreterelations/</guid><description>&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Distcrete Structures on CpHugo</title><link>https://open17.github.io/CpHugo/tags/distcrete-structures/</link><description>Recent content in Distcrete Structures on CpHugo</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 05 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://open17.github.io/CpHugo/tags/distcrete-structures/index.xml" rel="self" type="application/rss+xml"/><item><title>离散数学——Relations</title><link>https://open17.github.io/CpHugo/p/distcreterelations/</link><pubDate>Fri, 05 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/distcreterelations/</guid><description>&lt;blockquote>
 &lt;p>A relation is a structure that is used to represent the relationships between elements&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="category-of-relations">Category of relations&lt;/h2>
@@ -202,4 +101,105 @@ In general, (𝐴1, 𝐴2, ⋯ , 𝐴𝑛) is a partition of 𝐴 if:&lt;/li>
 &lt;li>a R b&lt;/li>
 &lt;li>[𝑎] = [𝑏]&lt;/li>
 &lt;li>𝑎 ∩ [𝑏] ≠ ∅&lt;/li>
-&lt;/ul></description></item></channel></rss>
+&lt;/ul></description></item><item><title>离散数学——SFSS</title><link>https://open17.github.io/CpHugo/p/sfss/</link><pubDate>Fri, 05 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/sfss/</guid><description>&lt;h2 id="sets">Sets&lt;/h2>
+&lt;ul>
+&lt;li>A set is a collection of objects&lt;/li>
+&lt;li>Sets are used to group objects together&lt;/li>
+&lt;/ul>
+&lt;h3 id="three-ways-to-express-the-members-in-a-set">Three ways to express the members in a set&lt;/h3>
+&lt;pre>&lt;code>- List all the members
+- Use predicates
+- Use suspension(省略号)points(must be inferred)
+&lt;/code>&lt;/pre>
+&lt;h3 id="universal-set">universal set&lt;/h3>
+&lt;ul>
+&lt;li>$ℕ$ : the set of all natural numbers&lt;/li>
+&lt;li>$ℤ$ : the set of integers&lt;/li>
+&lt;li>$ℤ^+$ : the set of all the positive integers&lt;/li>
+&lt;li>$ℚ$: the set of all rational numbers&lt;/li>
+&lt;li>$ℝ$: the set of all the real numbers&lt;/li>
+&lt;li>$ℂ$: the set of all complex numbers&lt;/li>
+&lt;/ul>
+&lt;h3 id="venn-diagrams">Venn Diagrams&lt;/h3>
+&lt;ul>
+&lt;li>two basic shapes
+&lt;ul>
+&lt;li>A rectangle: indicates the universal set&lt;/li>
+&lt;li>Circles or other shapes: indicate normal sets&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="elements-and-sets">Elements and Sets&lt;/h3>
+&lt;ul>
+&lt;li>$A∈B$ : A is in or is an element of B&lt;/li>
+&lt;li>$A∉B$ : A is not in or is not an element of B&lt;/li>
+&lt;/ul>
+&lt;h3 id="subsets">Subsets&lt;/h3>
+&lt;ul>
+&lt;li>Subsets&lt;/li>
+&lt;li>Proper subsets(真子集)&lt;/li>
+&lt;li>Empty sets&lt;/li>
+&lt;/ul>
+&lt;h3 id="cardinality">Cardinality&lt;/h3>
+&lt;p>number of distinct elements in a set&lt;br>
+The cardinality of a set s is denoted as |s|&lt;/p>
+&lt;h3 id="power-sets">Power Sets&lt;/h3>
+&lt;p>$P(S) = {A|A ⊆ S}$&lt;/p>
+&lt;h4 id="theorem-of-power-sets">Theorem of Power Sets:&lt;/h4>
+&lt;p>$ if |S| = n, then |P(S)| = 2^n$&lt;/p>
+&lt;h3 id="ordered-n-tuple">Ordered n-tuple&lt;/h3>
+&lt;ul>
+&lt;li>The form (1, 2, … , ) or &amp;lt; 1, 2, … , &amp;gt;&lt;/li>
+&lt;li>(1,2) not equal to (2,1)&lt;/li>
+&lt;/ul>
+&lt;h3 id="cartesian-product笛卡尔乘积">Cartesian Product(笛卡尔乘积)&lt;/h3>
+&lt;p>Cartesian product of $S_1, S_2, ⋯ ,S_n (denoted S_1 × S_2 × ⋯ ×S_n )$ &lt;br>
+$S_1 × S_2 × ⋯ ×S_n = {(a1, a2, … ,an )|a_1 ∈ S_1 ∧ a_2 ∈ S_2 ∧⋯ ∧ a_n ∈ S_n}$&lt;/p>
+&lt;h3 id="disjoint-sets">Disjoint Sets&lt;/h3>
+&lt;ul>
+&lt;li>If A ∩ B = ∅ then A and B are disjoint.&lt;/li>
+&lt;li>If A ∩ B ≠ ∅ then A and B are overlapped.&lt;/li>
+&lt;/ul>
+&lt;h2 id="function">function&lt;/h2>
+&lt;h3 id="conditions">conditions&lt;/h3>
+&lt;blockquote>
+&lt;p>A function from to is a subset of × which satisfies
+the following two conditions&lt;/p>
+&lt;/blockquote>
+&lt;p>1.$ ∀ x(x ∈ A → ∃ y(y ∈ B ∧ (x,y) ∈f)) $&lt;br>
+2. $ (((x_1,y_1 ) ∈ f ∧ (x_1,y_2 ) ∈ f) → y_1 = y_2)$&lt;/p>
+&lt;h3 id="image-pre-image-and-range值域">Image, Pre-image and Range(值域)&lt;/h3>
+&lt;p>If $y = f(x)$ from set A to set B, then&lt;/p>
+&lt;ul>
+&lt;li>y is called the image of x under f&lt;/li>
+&lt;li>x is called a pre-image of y&lt;/li>
+&lt;li>the set of all the images of the elements in the domain under is called the range of f, f(A) = {f(x)|x ∈ A}&lt;/li>
+&lt;/ul>
+&lt;h3 id="injective-function单射">injective function（单射）&lt;/h3>
+&lt;p>f is one-to-one&lt;/p>
+&lt;h3 id="urjective-function-满射">urjective function (满射)&lt;/h3>
+&lt;p>Onto function :$∀y ∈ B (∃x(x ∈A ∧f (x) =y ))$&lt;/p>
+&lt;h3 id="bijective-function-双射">bijective function (双射)&lt;/h3>
+&lt;p>[One-to-One and onto function] is also called bijective function&lt;/p>
+&lt;h3 id="floor-functions">Floor functions&lt;/h3>
+&lt;ul>
+&lt;li>Denoted $\lfloor x \rfloor$&lt;/li>
+&lt;li>The largest integer less than or equivalent to x&lt;/li>
+&lt;/ul>
+&lt;h3 id="ceiling-functions">Ceiling functions&lt;/h3>
+&lt;ul>
+&lt;li>Denoted $\lceil x \rceil$&lt;/li>
+&lt;li>The smallest integer greater than or equivalent to x&lt;/li>
+&lt;/ul>
+&lt;h2 id="sequences-数列">Sequences 数列&lt;/h2>
+&lt;p>Sequences are ordered lists of elements
+• A sequence is a function from a subset of the set of integers
+({0, 1, 2, 3, … } or {1, 2, 3, … }) to a set , denoted {$a_n$}. The
+integers determine the positions of the elements in the list&lt;/p>
+&lt;h2 id="summations-求和">Summations 求和&lt;/h2>
+&lt;p>A summation is the value of the sum of the terms of a sequence.&lt;/p>
+&lt;h3 id="special-summations">Special Summations&lt;/h3>
+&lt;h4 id="geometric-series-等比数列和">Geometric series 等比数列和&lt;/h4>
+&lt;p>$\sum^n_{j=0}ar^j$&lt;/p>
+&lt;h4 id="harmonic-series">harmonic series&lt;/h4>
+&lt;p>$\sum^n_{j=1} \frac{1}{j}$&lt;/p></description></item></channel></rss>
