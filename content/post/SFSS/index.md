@@ -2,7 +2,7 @@
 title: SFSS
 description: Sets, Functions, Sequences and Summations
 slug: SFSS
-date: 2023-05-20 00:00:00+0000
+date: 2023-05-05 00:00:00+0000
 categories:
     - Math
 tags:
