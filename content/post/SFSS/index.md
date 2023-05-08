@@ -1,5 +1,5 @@
 ---
-title: SFSS
+title: 离散数学——SFSS
 description: Sets, Functions, Sequences and Summations
 slug: SFSS
 date: 2023-05-05 00:00:00+0000
