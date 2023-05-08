@@ -1,6 +1,6 @@
 ---
 title: 单调队列模板
-description: 作者：open17
+description: 一般用于维护滑动窗口区间最值
 slug: MonotonicQueue
 date: 2023-05-08 00:00:00+0000
 categories:

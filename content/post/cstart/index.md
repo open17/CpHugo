@@ -1,6 +1,6 @@
 ---
 title:  C语言快速入门
-description: 作者：open17
+description: 基础c语言知识，篇幅较长
 slug: cstart
 date: 2023-04-26 00:00:00+0000
 categories:

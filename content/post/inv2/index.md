@@ -1,6 +1,6 @@
 ---
-title: 乘法逆元递推（费马小定理版）模板
-description: 作者：open17
+title: 乘法逆元递推模板
+description: 基于费马小定理快速求出多个连续的逆元
 slug: inv2
 date: 2023-05-08 00:00:00+0000
 categories:

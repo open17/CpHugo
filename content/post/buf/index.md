@@ -1,6 +1,6 @@
 ---
 title: 并查集模板
-description: 作者：open17
+description: 一种擅长于维护具有传递性关系的数据结构
 slug: buf
 date: 2023-05-05 00:00:00+0000
 categories:

@@ -1,10 +1,10 @@
 ---
 title: 算法
-description: A description of this category
-image:
+description: 什么是算法？
+image: https://assets.leetcode.cn/aliyun-lc-upload/leetbook/cover/200731021749/Question-Hard.jpeg
 
 # Badge style
 style:
-    background: "#2a9d8f"
+    background: "#aa96da"
     color: "#fff"
 ---

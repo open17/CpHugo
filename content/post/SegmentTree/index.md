@@ -1,6 +1,6 @@
 ---
 title: 线段树模板
-description: 作者：open17
+description: 擅长维护存在交换律的常用数据结构
 slug: SegmentTree
 date: 2023-05-05 00:00:00+0000
 categories:

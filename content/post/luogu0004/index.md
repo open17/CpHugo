@@ -1,6 +1,6 @@
 ---
 title: 洛谷0004——[TJOI2009] 开关
-description: 作者：open17
+description: 略微修改的板子题，不过前提是要彻底理解相关板子
 slug: luogu0004
 date: 2023-05-05 00:00:00+0000
 categories:

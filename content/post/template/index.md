@@ -1,6 +1,6 @@
 ---
 title: 算法输入输出模板
-description: 作者：open17
+description: 一切的开始......
 slug: template
 date: 2023-05-08 00:03:00+0000
 image: cover.jpg

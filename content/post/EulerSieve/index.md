@@ -1,6 +1,6 @@
 ---
 title: 欧拉筛模板
-description: 作者：open17
+description: 线性素数筛
 slug: EulerSieve
 date: 2023-05-08 00:00:00+0000
 categories:

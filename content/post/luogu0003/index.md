@@ -1,6 +1,6 @@
 ---
 title: 洛谷0003——并查集
-description: 作者：open17
+description: 一道板子题
 slug: luogu0003
 date: 2023-05-05 00:00:00+0000
 categories:

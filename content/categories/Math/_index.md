@@ -1,10 +1,8 @@
 ---
 title: 数学
-description: A description of this category
-image:
-
-# Badge style
+description: 笑死了根本不会
+image: https://assets.leetcode.cn/aliyun-lc-upload/leetbook/cover/200731021742/Question-Medium.jpeg
 style:
-    background: "#2a9d8f"
+    background: "#f38181"
     color: "#fff"
 ---

@@ -1,6 +1,6 @@
 ---
 title: ST表模板
-description: 作者：open17
+description: 利用倍增思想的算法，常用于解决RMQ问题
 slug: st
 date: 2023-05-08 00:00:00+0000
 categories:

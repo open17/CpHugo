@@ -1,6 +1,6 @@
 ---
 title: 倍增LCA模板
-description: 作者：open17
+description: 运用倍增思想优化的LCA模板
 slug: LCA
 date: 2023-05-08 00:00:00+0000
 categories:

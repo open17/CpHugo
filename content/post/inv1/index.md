@@ -1,6 +1,6 @@
 ---
 title: 乘法逆元模板
-description: 作者：open17
+description: 基于扩展欧几里得算法的模板
 slug: inv1
 date: 2023-05-08 00:00:00+0000
 categories:

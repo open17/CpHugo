@@ -1,6 +1,6 @@
 ---
 title: 树状数组模板
-description: 作者：open17
+description: 一种简单的用于维护区间信息的数据结构
 slug: FenwickTree
 date: 2023-05-05 00:00:00+0000
 categories:

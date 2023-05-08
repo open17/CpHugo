@@ -1,6 +1,6 @@
 ---
 title: KMP模板
-description: 作者：open17
+description: 一种字符串匹配算法
 slug: kmp
 date: 2023-05-08 00:00:00+0000
 categories:

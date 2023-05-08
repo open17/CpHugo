@@ -1,6 +1,6 @@
 ---
 title: 洛谷0002——最大加权矩形
-description: 作者：open17
+description: 一道板子题
 slug: luogu0002
 date: 2023-05-02 00:00:00+0000
 categories:

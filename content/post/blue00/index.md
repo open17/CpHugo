@@ -1,6 +1,6 @@
 ---
 title: 小蓝书0X00总结
-description: 作者：open17
+description: 算法进阶指南0x00总结
 slug: blue00
 date: 2023-04-26 00:00:00+0000
 categories:

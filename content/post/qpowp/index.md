@@ -1,6 +1,6 @@
 ---
 title: 快速幂取余模板
-description: 作者：open17
+description: 涉及点同余数学知识的快速幂
 slug: qpowp
 date: 2023-05-05 00:00:00+0000
 categories:
