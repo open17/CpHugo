@@ -4,6 +4,9 @@ links:
   - title: 全部标签
     description: 分类标签大全
     website: ../tags
+  - title: 全部专题
+    description: 专题大全
+    website: ../categories
   - title: 速查模板
     description: 算法模板速查
     website: https://open17.github.io/contest/new.html
