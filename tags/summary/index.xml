@@ -1,4 +1,107 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>summary on CpHugo</title><link>https://open17.github.io/CpHugo/tags/summary/</link><description>Recent content in summary on CpHugo</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 26 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://open17.github.io/CpHugo/tags/summary/index.xml" rel="self" type="application/rss+xml"/><item><title>C语言快速入门</title><link>https://open17.github.io/CpHugo/p/cstart/</link><pubDate>Wed, 26 Apr 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/cstart/</guid><description>&lt;div class="highlight">&lt;div class="chroma">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>summary on CpHugo</title><link>https://open17.github.io/CpHugo/tags/summary/</link><description>Recent content in summary on CpHugo</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 05 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://open17.github.io/CpHugo/tags/summary/index.xml" rel="self" type="application/rss+xml"/><item><title>离散数学——Relations</title><link>https://open17.github.io/CpHugo/p/distcreterelations/</link><pubDate>Fri, 05 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/distcreterelations/</guid><description>&lt;blockquote>
+&lt;p>A relation is a structure that is used to represent the relationships between elements&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="category-of-relations">Category of relations&lt;/h2>
+&lt;ul>
+&lt;li>Binary relations&lt;/li>
+&lt;li>N-ary relations&lt;/li>
+&lt;/ul>
+&lt;h2 id="binary-relations">Binary Relations&lt;/h2>
+&lt;p>A binary relation R from the set 𝐴 to the set 𝐵 is a subset of 𝐴 × 𝐵.&lt;/p>
+&lt;p>R is a set of ordered pairs in the form (𝑎, 𝑏) where 𝑎 is from 𝐴 and 𝑏 is from 𝐵.&lt;/p>
+&lt;p>a R b denotes (𝑎, 𝑏) ∈ 𝑅, called 𝑎 is related to 𝑏 by R&lt;/p>
+&lt;h2 id="functions-and-relations">Functions and Relations&lt;/h2>
+&lt;ul>
+&lt;li>Are all the functions relations? Yes&lt;/li>
+&lt;li>Are all relations functions? No&lt;/li>
+&lt;/ul>
+&lt;h2 id="relation-on-the-set">Relation on the Set&lt;/h2>
+&lt;ul>
+&lt;li>A relation on the set is a relation from 𝐴 to 𝐴.&lt;/li>
+&lt;/ul>
+&lt;h2 id="properties-of-relations">Properties of Relations&lt;/h2>
+&lt;h3 id="reflexive">Reflexive&lt;/h3>
+&lt;p>A relation 𝑅 on a set 𝐴 is called reflexive if (𝑎, 𝑎) ∈ 𝑅 for every element 𝑎 ∈ A&lt;/p>
+&lt;h3 id="symmetric">Symmetric&lt;/h3>
+&lt;p>A relation 𝑅 on a set 𝐴 is called symmetric if (𝑏, 𝑎) ∈ 𝑅 whenever (𝑎, 𝑏) ∈ R&lt;/p>
+&lt;h3 id="anti-symmetric">Anti-symmetric&lt;/h3>
+&lt;p>relation 𝑅 on a set 𝐴 is called anti-symmetric if whenever (𝑎, 𝑏) ∈ 𝑅 and (𝑏, 𝑎) ∈ 𝑅, then 𝑎 = 𝑏&lt;/p>
+&lt;h3 id="transitive">Transitive&lt;/h3>
+&lt;p>A relation 𝑅 on a set 𝐴 is called transitive if whenever
+(𝑎, 𝑏) ∈ 𝑅 and (𝑏, 𝑐) ∈ 𝑅, then (𝑎, 𝑐) ∈ 𝑅&lt;/p>
+&lt;h2 id="combining-relations">Combining Relations&lt;/h2>
+&lt;p>The composite of 𝑅 and 𝑆 (𝑆 ◦ 𝑅): consisting of all ordered pairs (𝑎, 𝑐) where 𝑎 ∈ 𝐴, and 𝑐 ∈ 𝐶 if there exists 𝑏 such that (𝑎, 𝑏) ∈ 𝑅 and (𝑏, 𝑐) ∈ 𝑆.&lt;/p>
+&lt;blockquote>
+&lt;p>E.g.,&lt;br>
+▪ 𝐴 = {1}, 𝐵 = {0, 1}, 𝐶 = {2, 3}&lt;br>
+▪ 𝑅 = {(1, 0), (1, 1)} (a relation from 𝐴 to 𝐵)&lt;br>
+▪ 𝑆 = {(0, 2), (1, 3)} (a relation from 𝐵 to 𝐶)&lt;br>
+▪ 𝑆 ◦ 𝑅 = {(1, 2), (1, 3)}&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="powers-of-a-relation">Powers of a Relation&lt;/h2>
+&lt;p>Let 𝑅 be a relation on the set 𝐴. The powers 𝑅𝑛
+for integer 𝑛
+with 𝑛 &amp;gt; 0 are defined recursively by
+$R^1 = R$&lt;br>
+$R^{n}=R^{n-1}◦R$&lt;/p>
+&lt;blockquote>
+&lt;p>Theorem: The relation 𝑅 on a set 𝐴 is transitive if and only if 𝑅^𝑛 ⊆ 𝑅 for 𝑛 = 1, 2, 3, ⋯&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="𝑛-ary-relations">𝑛-ary Relations&lt;/h2>
+&lt;ul>
+&lt;li>Let 𝐴1, 𝐴2, … , 𝐴𝑛 be sets.&lt;/li>
+&lt;li>An 𝑛-ary relation on these sets is a subset of 𝐴1 × 𝐴2 × ⋯ × 𝐴𝑛&lt;/li>
+&lt;li>Domain: 𝐴1 × 𝐴2 × ⋯ × 𝐴𝑛&lt;/li>
+&lt;li>Degree: n&lt;/li>
+&lt;/ul>
+&lt;h2 id="relations-and-database">Relations and Database&lt;/h2>
+&lt;ul>
+&lt;li>Currently, the most commonly used databases are relational databases.&lt;/li>
+&lt;li>Each database consists of multiple relations.&lt;/li>
+&lt;li>Each relation is presented as a table.&lt;/li>
+&lt;/ul>
+&lt;h2 id="operations-on-n-ary-relations">Operations on n-ary Relations&lt;/h2>
+&lt;h3 id="selection-operator-𝜎">Selection operator 𝜎:&lt;/h3>
+&lt;ul>
+&lt;li>𝑛-ary relation 𝑅&lt;/li>
+&lt;li>condition 𝑐&lt;/li>
+&lt;li>Selection operator 𝜎𝑐: maps 𝑅 to an 𝑛-ary relations 𝑇, where all the tuples in 𝑇 satisfy the condition 𝑐.&lt;br>
+i.e. 𝜎_{𝑚𝑎𝑗𝑜𝑟}=&amp;ldquo;𝐶𝑜𝑚𝑝𝑢𝑡𝑒𝑟 𝑆𝑐𝑖𝑒𝑛𝑐𝑒&amp;rdquo; 𝐺𝑟𝑎𝑑𝑒𝑅𝑒𝑝𝑜𝑟𝑡 = {(𝐽𝑜ℎ𝑛,001,𝐶𝑜𝑚𝑝𝑢𝑡𝑒𝑟 𝑆𝑐𝑖𝑒𝑛𝑐𝑒, 3.5)}&lt;/li>
+&lt;/ul>
+&lt;h3 id="projection-operator-𝜋">Projection operator 𝜋:&lt;/h3>
+&lt;ul>
+&lt;li>the input relation is on 𝑛 tuples (𝑎1, 𝑎2, ⋯ , 𝑎𝑛) ,&lt;/li>
+&lt;li>the output relation is on 𝑚 tuples (𝑎𝑖_1,𝑎𝑖_2, ⋯ , 𝑎𝑖_𝑚), 𝑚 &amp;lt; 𝑛.&lt;/li>
+&lt;li>Projection operator 𝜋𝑖1,𝑖2,⋯,𝑖𝑚: removes the tuples not in the 𝑚-tuple (𝑎𝑖1𝑎𝑖2, ⋯ , 𝑎𝑖𝑚) list
+i.e. 𝜋_{𝑛𝑎𝑚𝑒,𝐺𝑃𝐴} (𝐺𝑟𝑎𝑑𝑒𝑅𝑒𝑝𝑜𝑟𝑡) = {(𝐽𝑜ℎ𝑛, 3.5 ),( 𝑇𝑜𝑛𝑦, 3.2 ),( 𝐽𝑜𝑛𝑎𝑠, 3.3)}&lt;/li>
+&lt;/ul>
+&lt;h2 id="equivalence-relations">Equivalence Relations&lt;/h2>
+&lt;ul>
+&lt;li>A relation on a set 𝐴 is called an equivalence relation if it is reflexive, symmetric, and transitive.
+Let 𝑅 be an equivalence relation on 𝐴.&lt;/li>
+&lt;/ul>
+&lt;h3 id="equivalent-class">Equivalent class&lt;/h3>
+&lt;p>Equivalent class -&amp;gt; Equivalent relations&lt;/p>
+&lt;h3 id="partition">Partition&lt;/h3>
+&lt;ul>
+&lt;li>All the equivalent classes obtained from 𝐴 through an equivalent class are either same or disjoint.&lt;/li>
+&lt;li>These disjoint classes are subsets of 𝐴.&lt;/li>
+&lt;li>The union of these subsets is 𝐴.&lt;/li>
+&lt;li>These subsets are called a partition of A
+In general, (𝐴1, 𝐴2, ⋯ , 𝐴𝑛) is a partition of 𝐴 if:&lt;/li>
+&lt;/ul>
+&lt;ol>
+&lt;li>𝐴𝑖 ≠ ∅ for all 1 ≤ 𝑖 ≤ 𝑛&lt;/li>
+&lt;li>𝐴𝑖 ∩ 𝐴𝑗 = ∅ for all 1 ≤ 𝑖,𝑗 ≤ 𝑛&lt;/li>
+&lt;li>𝐴1 ∪ 𝐴2 ∪ ⋯ ∪ 𝐴𝑛 = A&lt;/li>
+&lt;/ol>
+&lt;h3 id="theorem-let-𝑅-be-an-equivalence-relation-on-a-nonempty-set-𝐴">Theorem: Let 𝑅 be an equivalence relation on a nonempty set 𝐴.&lt;/h3>
+&lt;p>The following statements are equivalent:&lt;/p>
+&lt;ul>
+&lt;li>a R b&lt;/li>
+&lt;li>[𝑎] = [𝑏]&lt;/li>
+&lt;li>𝑎 ∩ [𝑏] ≠ ∅&lt;/li>
+&lt;/ul></description></item><item><title>C语言快速入门</title><link>https://open17.github.io/CpHugo/p/cstart/</link><pubDate>Wed, 26 Apr 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/cstart/</guid><description>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
