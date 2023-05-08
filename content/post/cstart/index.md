@@ -3,7 +3,6 @@ title:  C语言快速入门
 description: 作者：open17
 slug: cstart
 date: 2023-04-26 00:00:00+0000
-image: cover.jpg
 categories:
     - Alg
 tags:

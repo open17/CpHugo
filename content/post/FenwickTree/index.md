@@ -3,7 +3,6 @@ title: 树状数组模板
 description: 作者：open17
 slug: FenwickTree
 date: 2023-05-05 00:00:00+0000
-image: cover.jpg
 categories:
     - DS
 tags:

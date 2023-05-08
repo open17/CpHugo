@@ -2,7 +2,7 @@
 title: 算法输入输出模板
 description: 作者：open17
 slug: template
-date: 2023-04-26 00:00:00+0000
+date: 2023-05-08 00:03:00+0000
 image: cover.jpg
 categories:
     - Alg
@@ -14,8 +14,26 @@ tags:
     - java
     - python
     - go
+    - qread
 ---
 ## c++
+###  快读模板
+```cpp
+inline int read() {
+    int x = 0, f = 1;
+    char ch = getchar();
+    while (ch < '0' || ch > '9') {
+        if (ch == '-')
+            f = -1;
+        ch = getchar();
+    }
+    while (ch >= '0' && ch <= '9') {
+        x = x * 10 + ch - '0';
+        ch = getchar();
+    }
+    return x * f;
+}
+```
 ### 精简模板
 ```cpp
 #include<bits/stdc++.h>
@@ -25,6 +43,7 @@ using namespace std;
 #define inf 0x3f
 typedef long long ll;
 typedef pair<int, int> pii;
+const int N=3e6;
 int main() {
     ios
     cout << "Hello, ACM." << endl;

@@ -3,7 +3,6 @@ title: 小蓝书0X00总结
 description: 作者：open17
 slug: blue00
 date: 2023-04-26 00:00:00+0000
-image: cover.jpg
 categories:
     - Blue
 tags:

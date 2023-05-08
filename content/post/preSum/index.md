@@ -3,7 +3,6 @@ title: 前缀和与差分模板
 description: 作者：open17
 slug: preSum
 date: 2023-05-02 00:00:00+0000
-image: cover.jpg
 categories:
     - Alg
 tags:

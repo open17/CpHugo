@@ -3,7 +3,6 @@ title: 洛谷0005——【模板】线段树 1
 description: 作者：open17
 slug: luogu0005
 date: 2023-05-05 00:00:00+0000
-image: cover.jpg
 categories:
     - Alg
 tags:

@@ -3,7 +3,7 @@ title:  离散数学——Relations
 description: 作者：open17
 slug: distcreteRelations
 date: 2023-05-02 00:00:00+0000
-image: cover.jpg
+# image: cover.jpg
 categories:
     - Math
 tags:

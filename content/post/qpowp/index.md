@@ -3,9 +3,8 @@ title: 快速幂取余模板
 description: 作者：open17
 slug: qpowp
 date: 2023-05-05 00:00:00+0000
-image: cover.jpg
 categories:
-    - Alg
+    - Math
 tags:
     - templates
     - c++
