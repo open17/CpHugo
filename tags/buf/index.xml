@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>buf on CpHugo</title><link>https://open17.github.io/CpHugo/tags/buf/</link><description>Recent content in buf on CpHugo</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 05 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://open17.github.io/CpHugo/tags/buf/index.xml" rel="self" type="application/rss+xml"/><item><title>并查集模板</title><link>https://open17.github.io/CpHugo/p/buf/</link><pubDate>Fri, 05 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/buf/</guid><description>&lt;img src="https://open17.github.io/CpHugo/p/buf/cover.jpg" alt="Featured image of post 并查集模板" />&lt;h2 id="按序合并路径压缩优化并查集">按序合并路径压缩优化并查集&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>buf on CpHugo</title><link>https://open17.github.io/CpHugo/tags/buf/</link><description>Recent content in buf on CpHugo</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 05 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://open17.github.io/CpHugo/tags/buf/index.xml" rel="self" type="application/rss+xml"/><item><title>并查集模板</title><link>https://open17.github.io/CpHugo/p/buf/</link><pubDate>Fri, 05 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/buf/</guid><description>&lt;h2 id="按序合并路径压缩优化并查集">按序合并路径压缩优化并查集&lt;/h2>
 &lt;h3 id="封装模板">封装模板&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -145,7 +145,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>洛谷0003——并查集</title><link>https://open17.github.io/CpHugo/p/luogu0003/</link><pubDate>Fri, 05 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/luogu0003/</guid><description>&lt;img src="https://open17.github.io/CpHugo/p/luogu0003/cover.jpg" alt="Featured image of post 洛谷0003——并查集" />&lt;h1 id="模板并查集">【模板】并查集&lt;/h1>
+&lt;/div></description></item><item><title>洛谷0003——并查集</title><link>https://open17.github.io/CpHugo/p/luogu0003/</link><pubDate>Fri, 05 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/luogu0003/</guid><description>&lt;h1 id="模板并查集">【模板】并查集&lt;/h1>
 &lt;h2 id="题目描述">题目描述&lt;/h2>
 &lt;p>如题，现在有一个并查集，你需要完成合并和查询操作。&lt;/p>
 &lt;h2 id="输入格式">输入格式&lt;/h2>

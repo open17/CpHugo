@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>summary on CpHugo</title><link>https://open17.github.io/CpHugo/tags/summary/</link><description>Recent content in summary on CpHugo</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 02 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://open17.github.io/CpHugo/tags/summary/index.xml" rel="self" type="application/rss+xml"/><item><title>离散数学——Relations</title><link>https://open17.github.io/CpHugo/p/distcreterelations/</link><pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/distcreterelations/</guid><description>&lt;img src="https://open17.github.io/CpHugo/p/distcreterelations/cover.jpg" alt="Featured image of post 离散数学——Relations" />&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>summary on CpHugo</title><link>https://open17.github.io/CpHugo/tags/summary/</link><description>Recent content in summary on CpHugo</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 02 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://open17.github.io/CpHugo/tags/summary/index.xml" rel="self" type="application/rss+xml"/><item><title>离散数学——Relations</title><link>https://open17.github.io/CpHugo/p/distcreterelations/</link><pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/distcreterelations/</guid><description>&lt;blockquote>
 &lt;p>A relation is a structure that is used to represent the relationships between elements&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="category-of-relations">Category of relations&lt;/h2>
@@ -101,7 +101,7 @@ In general, (𝐴1, 𝐴2, ⋯ , 𝐴𝑛) is a partition of 𝐴 if:&lt;/li>
 &lt;li>a R b&lt;/li>
 &lt;li>[𝑎] = [𝑏]&lt;/li>
 &lt;li>𝑎 ∩ [𝑏] ≠ ∅&lt;/li>
-&lt;/ul></description></item><item><title>C语言快速入门</title><link>https://open17.github.io/CpHugo/p/cstart/</link><pubDate>Wed, 26 Apr 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/cstart/</guid><description>&lt;img src="https://open17.github.io/CpHugo/p/cstart/cover.jpg" alt="Featured image of post C语言快速入门" />&lt;div class="highlight">&lt;div class="chroma">
+&lt;/ul></description></item><item><title>C语言快速入门</title><link>https://open17.github.io/CpHugo/p/cstart/</link><pubDate>Wed, 26 Apr 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/cstart/</guid><description>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
@@ -1408,7 +1408,7 @@ $lcm(a,b)&lt;em>gcd(a,b)=a&lt;/em>b$&lt;br>
 &lt;li>同向&lt;/li>
 &lt;li>逆向&lt;/li>
 &lt;li>滑窗&lt;/li>
-&lt;/ul></description></item><item><title>小蓝书0X00总结</title><link>https://open17.github.io/CpHugo/p/blue00/</link><pubDate>Wed, 26 Apr 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/blue00/</guid><description>&lt;img src="https://open17.github.io/CpHugo/p/blue00/cover.jpg" alt="Featured image of post 小蓝书0X00总结" />&lt;h2 id="位运算">位运算&lt;/h2>
+&lt;/ul></description></item><item><title>小蓝书0X00总结</title><link>https://open17.github.io/CpHugo/p/blue00/</link><pubDate>Wed, 26 Apr 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/blue00/</guid><description>&lt;h2 id="位运算">位运算&lt;/h2>
 &lt;h3 id="a的b次方对p取模">a的b次方对p取模&lt;/h3>
 &lt;p>前置知识&lt;/p>
 &lt;ul>

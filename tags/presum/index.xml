@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>presum on CpHugo</title><link>https://open17.github.io/CpHugo/tags/presum/</link><description>Recent content in presum on CpHugo</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 02 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://open17.github.io/CpHugo/tags/presum/index.xml" rel="self" type="application/rss+xml"/><item><title>洛谷0001——求区间和</title><link>https://open17.github.io/CpHugo/p/luogu0001/</link><pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/luogu0001/</guid><description>&lt;img src="https://open17.github.io/CpHugo/p/luogu0001/cover.jpg" alt="Featured image of post 洛谷0001——求区间和" />&lt;h1 id="深进1例1求区间和">【深进1.例1】求区间和&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>presum on CpHugo</title><link>https://open17.github.io/CpHugo/tags/presum/</link><description>Recent content in presum on CpHugo</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 02 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://open17.github.io/CpHugo/tags/presum/index.xml" rel="self" type="application/rss+xml"/><item><title>洛谷0001——求区间和</title><link>https://open17.github.io/CpHugo/p/luogu0001/</link><pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/luogu0001/</guid><description>&lt;h1 id="深进1例1求区间和">【深进1.例1】求区间和&lt;/h1>
 &lt;h2 id="题目描述">题目描述&lt;/h2>
 &lt;p>给定 $n$ 个正整数组成的数列 $a_1, a_2, \cdots, a_n$ 和 $m$ 个区间 $[l_i,r_i]$，分别求这 $m$ 个区间的区间和。对于所有测试数据，$n,m\le10^5,a_i\le 10^4$&lt;/p>
 &lt;h2 id="输入格式">输入格式&lt;/h2>
@@ -108,7 +108,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>洛谷0002——最大加权矩形</title><link>https://open17.github.io/CpHugo/p/luogu0002/</link><pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/luogu0002/</guid><description>&lt;img src="https://open17.github.io/CpHugo/p/luogu0002/cover.jpg" alt="Featured image of post 洛谷0002——最大加权矩形" />&lt;h1 id="最大加权矩形">最大加权矩形&lt;/h1>
+&lt;/div></description></item><item><title>洛谷0002——最大加权矩形</title><link>https://open17.github.io/CpHugo/p/luogu0002/</link><pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/luogu0002/</guid><description>&lt;h1 id="最大加权矩形">最大加权矩形&lt;/h1>
 &lt;h2 id="题目描述">题目描述&lt;/h2>
 &lt;p>为了更好的备战 NOIP2013，电脑组的几个女孩子 LYQ,ZSC,ZHQ 认为，我们不光需要机房，我们还需要运动，于是就决定找校长申请一块电脑组的课余运动场地，听说她们都是电脑组的高手，校长没有马上答应他们，而是先给她们出了一道数学题，并且告诉她们：你们能获得的运动场地的面积就是你们能找到的这个最大的数字。&lt;/p>
 &lt;p>校长先给他们一个 $n\times n$ 矩阵。要求矩阵中最大加权矩形，即矩阵的每一个元素都有一权值，权值定义在整数集上。从中找一矩形，矩形大小无限制，是其中包含的所有元素的和最大 。矩阵的每个元素属于 $[-127,127]$ ,例如&lt;/p>
@@ -255,7 +255,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>前缀和与差分模板</title><link>https://open17.github.io/CpHugo/p/presum/</link><pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/presum/</guid><description>&lt;img src="https://open17.github.io/CpHugo/p/presum/cover.jpg" alt="Featured image of post 前缀和与差分模板" />&lt;h2 id="一维前缀和">一维前缀和&lt;/h2>
+&lt;/div></description></item><item><title>前缀和与差分模板</title><link>https://open17.github.io/CpHugo/p/presum/</link><pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/presum/</guid><description>&lt;h2 id="一维前缀和">一维前缀和&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
