@@ -3,7 +3,7 @@ title:  离散数学——Relations
 description: A relation is a structure that is used to represent the relationships between elements.
 slug: distcreteRelations
 date: 2023-05-05 00:00:00+0000
-# image: cover.jpg
+image: https://img0.baidu.com/it/u=1209717743,1836540112&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500
 categories:
     - Math
 tags:

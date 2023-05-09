@@ -3,6 +3,7 @@ title: 线段树模板
 description: 擅长维护存在交换律的常用数据结构
 slug: SegmentTree
 date: 2023-05-05 00:00:00+0000
+image: https://img2.baidu.com/it/u=1110941159,2287283460&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500
 categories:
     - DS
 tags:

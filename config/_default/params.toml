@@ -68,8 +68,8 @@ enabled = true
 
 ## Comments
 [comments]
-enabled = false
-# provider = "disqus"
+enabled = true
+provider = "giscus"
 
 [comments.disqusjs]
 shortname = ""
@@ -120,11 +120,11 @@ serverName = "cactus.chat"
 siteName = ""
 
 [comments.giscus]
-repo = ""
-repoID = ""
-category = ""
-categoryID = ""
-mapping = ""
+repo = "open17/CpHugo"
+repoID = "R_kgDOJbtiOQ"
+category = "Announcements"
+categoryID = "DIC_kwDOJbtiOc4CWXPs"
+mapping = "pathname"
 lightTheme = ""
 darkTheme = ""
 reactionsEnabled = 1
