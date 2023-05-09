@@ -483,7 +483,7 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>树状数组模板</title><link>https://open17.github.io/CpHugo/p/fenwicktree/</link><pubDate>Fri, 05 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/fenwicktree/</guid><description>&lt;h2 id="封装模板">封装模板&lt;/h2>
+&lt;/div></description></item><item><title>树状数组模板</title><link>https://open17.github.io/CpHugo/p/fenwicktree/</link><pubDate>Fri, 05 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/fenwicktree/</guid><description>&lt;img src="https://img2.baidu.com/it/u=1929941019,3324507395&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500" alt="Featured image of post 树状数组模板" />&lt;h2 id="封装模板">封装模板&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -577,7 +577,7 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>线段树模板</title><link>https://open17.github.io/CpHugo/p/segmenttree/</link><pubDate>Fri, 05 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/segmenttree/</guid><description>&lt;h2 id="lazy线段树模板">lazy线段树模板&lt;/h2>
+&lt;/div></description></item><item><title>线段树模板</title><link>https://open17.github.io/CpHugo/p/segmenttree/</link><pubDate>Fri, 05 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/segmenttree/</guid><description>&lt;img src="https://img2.baidu.com/it/u=1110941159,2287283460&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500" alt="Featured image of post 线段树模板" />&lt;h2 id="lazy线段树模板">lazy线段树模板&lt;/h2>
 &lt;ul>
 &lt;li>区间修改logn&lt;/li>
 &lt;li>区间查询logn
