@@ -158,7 +158,40 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>欧拉筛模板</title><link>https://open17.github.io/CpHugo/p/eulersieve/</link><pubDate>Mon, 08 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/eulersieve/</guid><description>&lt;h2 id="欧拉筛">欧拉筛&lt;/h2>
+&lt;/div></description></item><item><title>离散数学————Counting</title><link>https://open17.github.io/CpHugo/p/counting/</link><pubDate>Mon, 08 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/counting/</guid><description>&lt;h2 id="basic-counting-principles">Basic Counting Principles&lt;/h2>
+&lt;h3 id="the-product-rule">The product rule&lt;/h3>
+&lt;p>乘法原理&lt;/p>
+&lt;h4 id="exercise">Exercise&lt;/h4>
+&lt;p>•Prove Theorem: $ if |S| = n, then |P(S)| = 2^n$&lt;/p>
+&lt;h3 id="the-sum-rule">The sum rule&lt;/h3>
+&lt;p>加法原理&lt;/p>
+&lt;h3 id="the-inclusion-exclusion-principle">The Inclusion-Exclusion Principle&lt;/h3>
+&lt;p>容斥原理&lt;/p>
+&lt;h3 id="the-pigeonhole-principle">The Pigeonhole Principle&lt;/h3>
+&lt;p>抽屉原理&lt;/p>
+&lt;h4 id="theorem-1">Theorem 1:&lt;/h4>
+&lt;p>If k is a positive integer and k + 1 or more objects are placed into k boxes, then there is at least one box containing two or more of the objects.&lt;/p>
+&lt;h4 id="theorem-2">Theorem 2:&lt;/h4>
+&lt;p>If n objects are placed into k boxes, then there is at least one box containing at least n/k objects.&lt;/p>
+&lt;h2 id="permutation">Permutation&lt;/h2>
+&lt;p>排列（考虑顺序）
+$P(n, r) = n!/(n − r)!$&lt;/p>
+&lt;h2 id="combination">Combination&lt;/h2>
+&lt;p>组合（不考虑顺序）
+$C(n, r), or (^n_r)$&lt;/p>
+&lt;h3 id="隔板法">隔板法&lt;/h3>
+&lt;p>How many solutions does the equation a + b + c = 11
+have where a, b, and c are non-negative integers?&lt;/p>
+&lt;h2 id="binomial-coefficients">Binomial Coefficients&lt;/h2>
+&lt;p>二项式定理： &lt;br>
+&lt;img src="https://bkimg.cdn.bcebos.com/formula/90e7897708ac2d3e2619efc1fd9071ff.svg"
+loading="lazy"
+alt="公式"
+>&lt;/p>
+&lt;h2 id="recurrence-relations">Recurrence Relations&lt;/h2>
+&lt;h3 id="linear-homogeneous-recurrence-relation">Linear Homogeneous recurrence relation&lt;/h3>
+&lt;p>Theorem 1: &lt;br>
+Let $c_1$ and $c_2$ be real numbers. Suppose that $r^2 – c_1 – c_2 = 0$ has two distinct roots $r_1$ and $r_2$. Then the sequence ${a_n}$ is a solution of the recurrence relation $a_n= c_1a_{n-1} + c_2a_{n-2}$ if and only if $a_n= k_1r_1^n+k_2r_2^n$ for $n = 0, 1, 2, …,$ where $k_1$ and $k_2$ are constants.&lt;/p></description></item><item><title>欧拉筛模板</title><link>https://open17.github.io/CpHugo/p/eulersieve/</link><pubDate>Mon, 08 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/eulersieve/</guid><description>&lt;h2 id="欧拉筛">欧拉筛&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
