@@ -1,1 +1,216 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>图论 on CpHugo</title><link>https://open17.github.io/CpHugo/categories/graph/</link><description>Recent content in 图论 on CpHugo</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://open17.github.io/CpHugo/categories/graph/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>图论 on CpHugo</title><link>https://open17.github.io/CpHugo/categories/graph/</link><description>Recent content in 图论 on CpHugo</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 01 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://open17.github.io/CpHugo/categories/graph/index.xml" rel="self" type="application/rss+xml"/><item><title>离散数学————Graph</title><link>https://open17.github.io/CpHugo/p/dmgraph/</link><pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/dmgraph/</guid><description>&lt;h2 id="graph-theory">Graph Theory&lt;/h2>
+&lt;h3 id="graph-concepts">Graph concepts&lt;/h3>
+&lt;h4 id="definition1">Definition1&lt;/h4>
+&lt;p>A graph G = (V,E) is a pair and consists of two sets V and such that:&lt;/p>
+&lt;ul>
+&lt;li>V is the set of vertices(顶点)&lt;/li>
+&lt;li>E is the set of edges(边)&lt;/li>
+&lt;/ul>
+&lt;h4 id="remember">Remember&lt;/h4>
+&lt;ol>
+&lt;li>V cannot be empty,but E can(endpoint/node)&lt;/li>
+&lt;li>Each edge have 1 or 2 vertices(1 is a ring)&lt;/li>
+&lt;/ol>
+&lt;h4 id="definition2">Definition2&lt;/h4>
+&lt;ul>
+&lt;li>(u,v) is an edge connetcing vettices u and v&lt;/li>
+&lt;li>u and v are neighbors (adjacent).&lt;/li>
+&lt;li>(u,v) connects u and v ((u,v) is incident on u and v).&lt;/li>
+&lt;/ul>
+&lt;h4 id="simple-graphs">Simple graphs&lt;/h4>
+&lt;ul>
+&lt;li>each edge connects two different vertices and&lt;/li>
+&lt;li>where no two edges connect the same pair of vertices.&lt;/li>
+&lt;/ul>
+&lt;h4 id="multigraph">Multigraph&lt;/h4>
+&lt;ul>
+&lt;li>A multigraph is a graph that may have multiple edges connecting the same pair of vertices.&lt;/li>
+&lt;li>If there are m different edges associated to the same unordered pair of vertices u and v, (u, v) is an edge of multiplicity.&lt;/li>
+&lt;/ul>
+&lt;h4 id="loops自环">Loops(自环)&lt;/h4>
+&lt;ul>
+&lt;li>A loop is an edge that connects one vertex to itself.&lt;/li>
+&lt;li>Graphs that may include loops, and possibly multiples edges connecting the same pair of vertices are called &lt;em>&lt;strong>pseudo-graphs&lt;/strong>&lt;/em>.&lt;/li>
+&lt;/ul>
+&lt;h4 id="directed-graph有向图">Directed Graph(有向图)&lt;/h4>
+&lt;p>A directed graph (V,E) consists of a nonempty set V and a
+set of directed edges E&lt;/p>
+&lt;h4 id="tips">tips&lt;/h4>
+&lt;p>The edge (u,v) in a directed graph starts at u and ends at v.&lt;/p>
+&lt;h4 id="degree度">Degree(度)&lt;/h4>
+&lt;p>The degree of a vertex in an undirected graph is the number of edges connected with it except that a loop at a vertex(自环算2)contribute twice to the degree of that vertex.&lt;/p>
+&lt;h5 id="in-degree-and-out-degree入度出度">In-Degree and Out-Degree(入度、出度)&lt;/h5>
+&lt;p>$In:def^-(v)$&lt;br>
+$Out:def^+(v)$&lt;/p>
+&lt;h3 id="handshaking-theorem">Handshaking Theorem&lt;/h3>
+&lt;p>For an undirected graph G= (V,E):&lt;br>
+$$2|E|=\sum_{v \in V}deg(v)$$&lt;/p>
+&lt;h3 id="odd-degree-theorem">Odd Degree Theorem&lt;/h3>
+&lt;p>In a directed graph G = (V,E)
+$$|E|=\sum_{v \in V}deg^-(v)=\sum_{v \in V}deg^+(v)$$&lt;/p>
+&lt;h3 id="special-graphs">Special graphs&lt;/h3>
+&lt;h4 id="complete-graphs完全图">Complete graphs(完全图)&lt;/h4>
+&lt;p>A complete graph is a simple graph in which there is an edge between each pair of distinct vertices, denoted by $K_n$ where n is the number of nodes in the graph&lt;/p>
+&lt;h4 id="cycles">Cycles&lt;/h4>
+&lt;p>A cycle is a graph that contains (n ≥ 3) vertices {V1, V2, … ,Vn } and n edges (V1, V2), (V2, V3), …, (Vn, V1), denoted by $C_n$ where is the number of nodes in the graph.&lt;/p>
+&lt;h4 id="wheels">Wheels&lt;/h4>
+&lt;p>$Cn$加上中间一个点以及连边，记做$W_n$&lt;/p>
+&lt;h4 id="cubes">Cubes&lt;/h4>
+&lt;p>A cube of dimension n($Q_n$)is a simple graph of $2^n$ vertices, where each vertex represents a bit string of length n. Two vertices are adjacent if and only if they differ by one bit.&lt;/p>
+&lt;h4 id="bipartite-graphs二分图">Bipartite Graphs(二分图)&lt;/h4>
+&lt;ul>
+&lt;li>A simple graph G = (V,E ) is called bipartite if its vertex set V can be partitioned into two disjoint set V1 and V2 such that every edge in the graph connects a vertex in V1 and a vertex in V2.&lt;/li>
+&lt;li>V1 and V2 are called a bipartite of the vertex set V of G&lt;/li>
+&lt;/ul>
+&lt;h4 id="theorem染色法">Theorem(染色法)&lt;/h4>
+&lt;p>前置知识：二分图不存在奇数环&lt;br>
+A simple graph G= (V,E) is bipartite if and only if it is
+possible to color each vertex with one of two colors so that no
+adjacent vertices have the same color.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="n">n&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// n表示点数
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">h&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">N&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="n">e&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">M&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="n">ne&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">M&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="n">idx&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// 邻接表存储图
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">color&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">N&lt;/span>&lt;span class="p">];&lt;/span> &lt;span class="c1">// 表示每个点的颜色，-1表示未染色，0表示白色，1表示黑色
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 参数：u表示当前节点，c表示当前点的颜色
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kt">bool&lt;/span> &lt;span class="nf">dfs&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">u&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">c&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">color&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">u&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">c&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">h&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">u&lt;/span>&lt;span class="p">];&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">ne&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">j&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">e&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">color&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">j&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="o">!&lt;/span>&lt;span class="n">dfs&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">j&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">!&lt;/span>&lt;span class="n">c&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="nb">false&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">color&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">j&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">c&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="nb">false&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nb">true&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">bool&lt;/span> &lt;span class="nf">check&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">memset&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">color&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="k">sizeof&lt;/span> &lt;span class="n">color&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">bool&lt;/span> &lt;span class="n">flag&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">true&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="o">&amp;lt;=&lt;/span> &lt;span class="n">n&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="o">++&lt;/span> &lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">color&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="o">!&lt;/span>&lt;span class="n">dfs&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">flag&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">false&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">break&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">flag&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//source：https://www.acwing.com/blog/content/405/
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="complete-bipartite-graphs完全二分图">Complete Bipartite Graphs(完全二分图)&lt;/h4>
+&lt;p>$K_{m,n} $&lt;br>
+In a complete bipartite graph, for any vertex in a subset,there is an edge between it and each vertex in another set.&lt;/p>
+&lt;h4 id="outline">Outline&lt;/h4>
+&lt;p>&lt;img src="http://ask.qcloudimg.com/http-save/yehe-8904777/6fb1fc6209cd5933717fbc5da940c425.png?imageView2/2/w/1200"
+loading="lazy"
+alt="图片"
+>&lt;/p>
+&lt;h3 id="subgraphs-and-proper-subgraphs">Subgraphs and Proper Subgraphs&lt;/h3>
+&lt;ul>
+&lt;li>A subgraph H = (W,F) of graph G = (V,E) is made up of vertices W ⊆ V and edges F ⊆ E.&lt;/li>
+&lt;li>A subgraph H of G is a proper subgraph if H ≠ G.&lt;/li>
+&lt;/ul>
+&lt;h3 id="union-of-simple-graphs">Union of Simple Graphs&lt;/h3>
+&lt;p>The union of two simple graphs G1 = (V1, E1) and G2 = (V2, E2) is the simple graph G = (V, E) such that V = V1 ∪ V2 and E = E1 ∪ E2&lt;/p>
+&lt;h3 id="representing-graphs">Representing Graphs&lt;/h3>
+&lt;ul>
+&lt;li>Adjacency matrix(邻接矩阵):dense graph&lt;/li>
+&lt;li>Adjacency table(邻接表):sparse graph&lt;/li>
+&lt;/ul>
+&lt;h3 id="graph-isomorphism同构图">Graph Isomorphism(同构图)&lt;/h3>
+&lt;p>判断同构：推荐使用邻接矩阵判断&lt;/p>
+&lt;h3 id="graph-connectivity">Graph Connectivity&lt;/h3>
+&lt;h4 id="path">Path&lt;/h4>
+&lt;p>path of length m from vertexu to vertex v is a sequence of edges e1, e2, … , $e_n$ such that e1 starts at u and $e_n$ ends at v.&lt;/p>
+&lt;h4 id="circuit">Circuit&lt;/h4>
+&lt;p>A circuit is a path that begins and ends at the same vertex in graph.&lt;/p>
+&lt;h4 id="simple-path-or-circuit">Simple path or circuit&lt;/h4>
+&lt;p>A simple path or circuit does not pass through the same edge twice or more.&lt;/p>
+&lt;h3 id="graph-connectedness">Graph Connectedness&lt;/h3>
+&lt;ul>
+&lt;li>An undirected graph is connected if there is a path between every pair of distinct vertices&lt;/li>
+&lt;li>A directed graph is &lt;strong>strongly connected&lt;/strong> if there is a path from a to b and from b to a whenever a and b are vertices in the graph&lt;/li>
+&lt;/ul>
+&lt;h3 id="euler-paths">Euler Paths&lt;/h3>
+&lt;ul>
+&lt;li>An Euler path in G is a &lt;em>simple&lt;/em> path containing every edge of G&lt;/li>
+&lt;li>An Euler circuit in a graph G is a &lt;em>simple&lt;/em> circuit containing every edge of G&lt;/li>
+&lt;/ul>
+&lt;h4 id="theorem">THEOREM&lt;/h4>
+&lt;p>A connected multi-graph has an Euler circuit if and only if each vertex has even degree.&lt;/p>
+&lt;h3 id="hamilton-circuits">Hamilton Circuits&lt;/h3>
+&lt;ul>
+&lt;li>A Hamilton path is a path that traverses each vertex in G exactly once&lt;/li>
+&lt;li>A Hamilton circuit is a circuit that traverses each vertex in G exactly once.&lt;/li>
+&lt;/ul>
+&lt;h4 id="ores-theorem">Ore’s theorem&lt;/h4>
+&lt;p>If for every pair of nonadjacent vertices u and v in the simple graph G with n vertices, deg(u) + deg(v) ≥ n ,then has a Hamilton circuit.&lt;/p>
+&lt;h4 id="diracs-theorem">Dirac’s theorem&lt;/h4>
+&lt;p>If the degree of each vertex is great than or equals n/2 in
+the connected simple graph G with n vertices where n ≥ 3,
+then G has a Hamilton circuit.&lt;/p>
+&lt;h3 id="planar-graphs">Planar Graphs&lt;/h3>
+&lt;p>In a planar representation of&lt;/p>
+&lt;ul>
+&lt;li>e: number of edges&lt;/li>
+&lt;li>v: number of vertices&lt;/li>
+&lt;li>r: number of regions&lt;/li>
+&lt;li>$r= e – v + 2$&lt;/li>
+&lt;/ul>
+&lt;h4 id="eulers-formula">Euler’s Formula&lt;/h4>
+&lt;blockquote>
+&lt;p>G is a connected planar simple graph&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>v ≥ 3, then e ≤ 3v – 6&lt;/li>
+&lt;li>G has a vertex of degree not exceeding 5&lt;/li>
+&lt;li>if v&amp;gt;=3 and no circuits of length 3,then e&amp;lt;=2v-4&lt;/li>
+&lt;/ul></description></item></channel></rss>
