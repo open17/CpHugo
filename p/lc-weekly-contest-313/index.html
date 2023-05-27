@@ -1,0 +1,458 @@
+<!doctype html><html lang=en-us dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="本场竞赛由「 Airwallex 空中云汇 & 力扣」联合主办"><title>lc weekly contest 313</title><link rel=canonical href=https://open17.github.io/CpHugo/p/lc-weekly-contest-313/><link rel=stylesheet href=/CpHugo/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css><meta property="og:title" content="lc weekly contest 313"><meta property="og:description" content="本场竞赛由「 Airwallex 空中云汇 & 力扣」联合主办"><meta property="og:url" content="https://open17.github.io/CpHugo/p/lc-weekly-contest-313/"><meta property="og:site_name" content="CpHugo"><meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="leetcode"><meta property="article:tag" content="c++"><meta property="article:published_time" content="2023-05-26T00:00:00+00:00"><meta property="article:modified_time" content="2023-05-26T00:00:00+00:00"><meta property="og:image" content="https://pic.lingkou.xyz/1664008640-fTlCRH-1760-360%20%E7%A9%BA%E4%B8%AD%E4%BA%91%E6%B1%87.png"><meta name=twitter:title content="lc weekly contest 313"><meta name=twitter:description content="本场竞赛由「 Airwallex 空中云汇 & 力扣」联合主办"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://pic.lingkou.xyz/1664008640-fTlCRH-1760-360%20%E7%A9%BA%E4%B8%AD%E4%BA%91%E6%B1%87.png"></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label=切换菜单>
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=/CpHugo/><img src=/CpHugo/img/avatar_hud7e36f7e20e71be184458283bdae4646_55974_300x0_resize_box_3.png width=300 height=200 class=site-logo loading=lazy alt=Avatar></a></figure><div class=site-meta><h1 class=site-name><a href=/CpHugo>CpHugo</a></h1><h2 class=site-description>CpHugo</h2></div></header><ol class=menu id=main-menu><li><a href=/CpHugo/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg><span>主页</span></a></li><li><a href=/CpHugo/archives/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg><span>专题</span></a></li><li><a href=/CpHugo/search/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg><span>搜索</span></a></li><li><a href=/CpHugo/%E7%BD%91%E7%AB%99%E6%8C%87%E5%8D%97/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M10 14a3.5 3.5.0 005 0l4-4a3.5 3.5.0 00-5-5l-.5.5"/><path d="M14 10a3.5 3.5.0 00-5 0l-4 4a3.5 3.5.0 005 5l.5-.5"/></svg><span>网站指南</span></a></li><div class=menu-bottom-section><li id=dark-mode-toggle><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><span>暗色模式</span></li></div></ol></aside><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目录</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#t1-公因子的数目>T1 公因子的数目</a><ol><li><a href=#思路>思路</a></li></ol></li><li><a href=#t2-沙漏的最大总和>T2 沙漏的最大总和</a><ol><li><a href=#思路-1>思路</a></li></ol></li><li><a href=#t3-最小-xor>T3 最小 XOR</a><ol><li><a href=#思路-2>思路</a></li><li><a href=#缩减版>缩减版</a></li></ol></li><li><a href=#t4-对字母串可执行的最大删除数>T4 对字母串可执行的最大删除数</a><ol><li><a href=#朴素记忆化搜索mle>朴素记忆化搜索(MLE)</a></li><li><a href=#朴素动态规划tle>朴素动态规划(TLE)</a></li><li><a href=#lcp优化朴素动态规划tle>LCP优化朴素动态规划(TLE)</a></li><li><a href=#剪枝记忆化搜索ac>剪枝记忆化搜索(AC)</a></li><li><a href=#剪枝lcp优化动态规划ac>剪枝+LCP优化动态规划(AC)</a></li></ol></li></ol></nav></div></section></aside><main class="main full-width"><article class="has-image main-article"><header class=article-header><div class=article-image><a href=/CpHugo/p/lc-weekly-contest-313/><img src=https://pic.lingkou.xyz/1664008640-fTlCRH-1760-360%20%E7%A9%BA%E4%B8%AD%E4%BA%91%E6%B1%87.png loading=lazy alt="Featured image of post lc weekly contest 313"></a></div><div class=article-details><div class=article-title-wrapper><h2 class=article-title><a href=/CpHugo/p/lc-weekly-contest-313/>lc weekly contest 313</a></h2><h3 class=article-subtitle>本场竞赛由「 Airwallex 空中云汇 & 力扣」联合主办</h3></div><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg><time class=article-time--published>May 26, 2023</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><time class=article-time--reading>阅读时长: 5 分钟</time></div></footer></div></header><section class=article-content><blockquote><p>痛苦T4</p></blockquote><h2 id=t1-公因子的数目>T1 公因子的数目</h2><p>给你两个正整数 a 和 b ，返回 a 和 b 的 公 因子的数目。</p><p>如果 x 可以同时整除 a 和 b ，则认为 x 是 a 和 b 的一个 公因子 。</p><p>示例 1：</p><p>输入：a = 12, b = 6
+输出：4
+解释：12 和 6 的公因子是 1、2、3、6 。
+示例 2：</p><p>输入：a = 25, b = 30
+输出：2
+解释：25 和 30 的公因子是 1、5 。</p><p>提示：</p><p>1 &lt;= a, b &lt;= 1000</p><h3 id=思路>思路</h3><p>模拟即可</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-cpp data-lang=cpp><span class=line><span class=cl><span class=k>class</span> <span class=nc>Solution</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl><span class=k>public</span><span class=o>:</span>
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>commonFactors</span><span class=p>(</span><span class=kt>int</span> <span class=n>a</span><span class=p>,</span> <span class=kt>int</span> <span class=n>b</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=kt>int</span> <span class=n>t</span><span class=o>=</span><span class=n>min</span><span class=p>(</span><span class=n>a</span><span class=p>,</span><span class=n>b</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=kt>int</span> <span class=n>cnt</span><span class=o>=</span><span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=k>for</span><span class=p>(</span><span class=kt>int</span> <span class=n>i</span><span class=o>=</span><span class=mi>1</span><span class=p>;</span><span class=n>i</span><span class=o>&lt;=</span><span class=n>t</span><span class=p>;</span><span class=n>i</span><span class=o>++</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>            <span class=k>if</span><span class=p>(</span><span class=n>a</span><span class=o>%</span><span class=n>i</span><span class=o>==</span><span class=mi>0</span><span class=o>&amp;&amp;</span><span class=n>b</span><span class=o>%</span><span class=n>i</span><span class=o>==</span><span class=mi>0</span><span class=p>)</span><span class=n>cnt</span><span class=o>++</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>cnt</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
+</span></span></code></pre></td></tr></table></div></div><h2 id=t2-沙漏的最大总和>T2 沙漏的最大总和</h2><p>给你一个大小为 m x n 的整数矩阵 grid 。</p><p>按以下形式将矩阵的一部分定义为一个 沙漏 ：<br><img src=https://assets.leetcode.com/uploads/2022/08/21/img.jpg loading=lazy alt=沙漏图片>
+返回沙漏中元素的 最大 总和。</p><p>注意：沙漏无法旋转且必须整个包含在矩阵中。</p><p>示例 1：<br><img src=https://assets.leetcode.com/uploads/2022/08/21/1.jpg loading=lazy></p><p>输入：grid = [[6,2,1,3],[4,2,1,5],[9,2,8,7],[4,1,2,9]]<br>输出：30<br>解释：上图中的单元格表示元素总和最大的沙漏：6 + 2 + 1 + 2 + 9 + 2 + 8 = 30 。<br>示例 2：
+<img src=https://assets.leetcode.com/uploads/2022/08/21/2.jpg loading=lazy></p><p>输入：grid = [[1,2,3],[4,5,6],[7,8,9]]
+输出：35
+解释：上图中的单元格表示元素总和最大的沙漏：1 + 2 + 3 + 5 + 7 + 8 + 9 = 35 。</p><p>提示：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>m == grid.length  
+</span></span><span class=line><span class=cl>n == grid[i].length
+</span></span><span class=line><span class=cl>3 &lt;= m, n &lt;= 150
+</span></span><span class=line><span class=cl>0 &lt;= grid[i][j] &lt;= 106
+</span></span></code></pre></td></tr></table></div></div><h3 id=思路-1>思路</h3><p>数据小,暴力模拟也能ac
+这里用前缀和优化</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-cpp data-lang=cpp><span class=line><span class=cl><span class=k>class</span> <span class=nc>Solution</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl><span class=k>public</span><span class=o>:</span>
+</span></span><span class=line><span class=cl>    <span class=kt>long</span> <span class=kt>long</span>  <span class=n>b</span><span class=p>[</span><span class=mi>153</span><span class=p>][</span><span class=mi>153</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=nf>maxSum</span><span class=p>(</span><span class=n>vector</span><span class=o>&lt;</span><span class=n>vector</span><span class=o>&lt;</span><span class=kt>int</span><span class=o>&gt;&gt;&amp;</span> <span class=n>grid</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>memset</span><span class=p>(</span><span class=n>b</span><span class=p>,</span><span class=mi>0</span><span class=p>,</span><span class=k>sizeof</span><span class=p>(</span><span class=n>b</span><span class=p>));</span>
+</span></span><span class=line><span class=cl>        <span class=k>for</span><span class=p>(</span><span class=kt>int</span> <span class=n>i</span><span class=o>=</span><span class=mi>0</span><span class=p>;</span><span class=n>i</span><span class=o>&lt;</span><span class=n>grid</span><span class=p>.</span><span class=n>size</span><span class=p>();</span><span class=n>i</span><span class=o>++</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>            <span class=k>for</span><span class=p>(</span><span class=kt>int</span> <span class=n>j</span><span class=o>=</span><span class=mi>0</span><span class=p>;</span><span class=n>j</span><span class=o>&lt;</span><span class=n>grid</span><span class=p>[</span><span class=mi>0</span><span class=p>].</span><span class=n>size</span><span class=p>();</span><span class=n>j</span><span class=o>++</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>                <span class=n>b</span><span class=p>[</span><span class=n>i</span><span class=o>+</span><span class=mi>1</span><span class=p>][</span><span class=n>j</span><span class=o>+</span><span class=mi>1</span><span class=p>]</span><span class=o>=</span><span class=n>b</span><span class=p>[</span><span class=n>i</span><span class=p>][</span><span class=n>j</span><span class=o>+</span><span class=mi>1</span><span class=p>]</span><span class=o>+</span><span class=n>b</span><span class=p>[</span><span class=n>i</span><span class=o>+</span><span class=mi>1</span><span class=p>][</span><span class=n>j</span><span class=p>]</span><span class=o>+</span><span class=n>grid</span><span class=p>[</span><span class=n>i</span><span class=p>][</span><span class=n>j</span><span class=p>]</span><span class=o>-</span><span class=n>b</span><span class=p>[</span><span class=n>i</span><span class=p>][</span><span class=n>j</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>            <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=kt>long</span> <span class=kt>long</span> <span class=n>ans</span><span class=o>=-</span><span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=k>for</span><span class=p>(</span><span class=kt>int</span> <span class=n>i</span><span class=o>=</span><span class=mi>3</span><span class=p>;</span><span class=n>i</span><span class=o>&lt;=</span><span class=n>grid</span><span class=p>.</span><span class=n>size</span><span class=p>();</span><span class=n>i</span><span class=o>++</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>            <span class=k>for</span><span class=p>(</span><span class=kt>int</span> <span class=n>j</span><span class=o>=</span><span class=mi>3</span><span class=p>;</span><span class=n>j</span><span class=o>&lt;=</span><span class=n>grid</span><span class=p>[</span><span class=mi>0</span><span class=p>].</span><span class=n>size</span><span class=p>();</span><span class=n>j</span><span class=o>++</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>                <span class=n>ans</span><span class=o>=</span><span class=n>max</span><span class=p>(</span><span class=n>ans</span><span class=p>,</span><span class=n>b</span><span class=p>[</span><span class=n>i</span><span class=p>][</span><span class=n>j</span><span class=p>]</span> <span class=o>-</span> <span class=n>b</span><span class=p>[</span><span class=n>i</span><span class=o>-</span><span class=mi>3</span><span class=p>][</span><span class=n>j</span><span class=p>]</span> <span class=o>-</span> <span class=n>b</span><span class=p>[</span><span class=n>i</span><span class=p>][</span><span class=n>j</span><span class=o>-</span><span class=mi>3</span><span class=p>]</span> <span class=o>+</span> <span class=n>b</span><span class=p>[</span><span class=n>i</span><span class=o>-</span><span class=mi>3</span><span class=p>][</span><span class=n>j</span><span class=o>-</span><span class=mi>3</span><span class=p>]</span><span class=o>-</span><span class=n>grid</span><span class=p>[</span><span class=n>i</span><span class=o>-</span><span class=mi>2</span><span class=p>][</span><span class=n>j</span><span class=o>-</span><span class=mi>3</span><span class=p>]</span><span class=o>-</span><span class=n>grid</span><span class=p>[</span><span class=n>i</span><span class=o>-</span><span class=mi>2</span><span class=p>][</span><span class=n>j</span><span class=o>-</span><span class=mi>1</span><span class=p>]);</span>
+</span></span><span class=line><span class=cl>            <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>ans</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
+</span></span></code></pre></td></tr></table></div></div><h2 id=t3-最小-xor>T3 最小 XOR</h2><p>给你两个正整数 num1 和 num2 ，找出满足下述条件的整数 x ：</p><p>x 的置位数和 num2 相同，且
+x XOR num1 的值 最小
+注意 XOR 是按位异或运算。</p><p>返回整数 x 。题目保证，对于生成的测试用例， x 是 唯一确定 的。</p><p>整数的 置位数 是其二进制表示中 1 的数目。</p><p>示例 1：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>输入：num1 = 3, num2 = 5
+</span></span><span class=line><span class=cl>输出：3
+</span></span><span class=line><span class=cl>解释：
+</span></span><span class=line><span class=cl>num1 和 num2 的二进制表示分别是 0011 和 0101 。
+</span></span><span class=line><span class=cl>整数 3 的置位数与 num2 相同，且 3 XOR 3 = 0 是最小的。
+</span></span></code></pre></td></tr></table></div></div><p>示例 2：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>输入：num1 = 1, num2 = 12
+</span></span><span class=line><span class=cl>输出：3
+</span></span><span class=line><span class=cl>解释：
+</span></span><span class=line><span class=cl>num1 和 num2 的二进制表示分别是 0001 和 1100 。
+</span></span><span class=line><span class=cl>整数 3 的置位数与 num2 相同，且 3 XOR 1 = 2 是最小的。
+</span></span></code></pre></td></tr></table></div></div><p>提示：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>1 &lt;= num1, num2 &lt;= 109
+</span></span></code></pre></td></tr></table></div></div><h3 id=思路-2>思路</h3><p>贪心+位运算</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-cpp data-lang=cpp><span class=line><span class=cl><span class=k>class</span> <span class=nc>Solution</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl><span class=k>public</span><span class=o>:</span>
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>lowbit</span><span class=p>(</span><span class=kt>int</span> <span class=n>a</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>        <span class=kt>int</span> <span class=n>cnt</span><span class=o>=</span><span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=k>while</span><span class=p>(</span><span class=n>a</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>            <span class=n>a</span><span class=o>^=</span><span class=p>(</span><span class=n>a</span><span class=o>&amp;</span><span class=p>(</span><span class=o>-</span><span class=n>a</span><span class=p>));</span>
+</span></span><span class=line><span class=cl>            <span class=n>cnt</span><span class=o>++</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>cnt</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=nf>minimizeXor</span><span class=p>(</span><span class=kt>int</span> <span class=n>num1</span><span class=p>,</span> <span class=kt>int</span> <span class=n>num2</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=kt>int</span> <span class=n>cnt</span><span class=o>=</span><span class=n>lowbit</span><span class=p>(</span><span class=n>num2</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=kt>int</span> <span class=n>res</span><span class=o>=</span><span class=n>lowbit</span><span class=p>(</span><span class=n>num1</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span><span class=p>(</span><span class=n>cnt</span><span class=o>==</span><span class=n>res</span><span class=p>)</span><span class=k>return</span> <span class=n>num1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span><span class=p>(</span><span class=n>res</span><span class=o>&gt;</span><span class=n>cnt</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>            <span class=kt>int</span> <span class=n>dif</span><span class=o>=</span><span class=n>res</span><span class=o>-</span><span class=n>cnt</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=kt>int</span> <span class=n>ans</span><span class=o>=</span><span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=kt>int</span> <span class=n>p</span><span class=o>=</span><span class=n>num1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=k>while</span><span class=p>(</span><span class=n>dif</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>                <span class=n>dif</span><span class=o>--</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                <span class=n>ans</span><span class=o>+=</span><span class=n>num1</span><span class=o>&amp;</span><span class=p>(</span><span class=o>-</span><span class=n>num1</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>                <span class=n>num1</span><span class=o>^=</span><span class=p>(</span><span class=n>num1</span><span class=o>&amp;</span><span class=p>(</span><span class=o>-</span><span class=n>num1</span><span class=p>));</span>
+</span></span><span class=line><span class=cl>            <span class=p>}</span>
+</span></span><span class=line><span class=cl>            <span class=k>return</span> <span class=n>p</span><span class=o>-</span><span class=n>ans</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=kt>int</span> <span class=n>d</span><span class=o>=-</span><span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=kt>int</span> <span class=n>t</span><span class=o>=</span><span class=n>cnt</span><span class=o>-</span><span class=n>res</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=kt>int</span> <span class=n>ans</span><span class=o>=</span><span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=k>while</span><span class=p>(</span><span class=n>d</span><span class=o>&lt;</span><span class=mi>31</span><span class=o>&amp;&amp;</span><span class=n>t</span><span class=o>&gt;</span><span class=mi>0</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>            <span class=n>d</span><span class=o>++</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=k>if</span><span class=p>(</span><span class=n>num1</span><span class=o>&amp;</span><span class=p>(</span><span class=mi>1</span><span class=o>&lt;&lt;</span><span class=n>d</span><span class=p>)){</span><span class=k>continue</span><span class=p>;}</span>
+</span></span><span class=line><span class=cl>            <span class=n>ans</span><span class=o>+=</span><span class=n>pow</span><span class=p>(</span><span class=mi>2</span><span class=p>,</span><span class=n>d</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>            <span class=n>t</span><span class=o>--</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>ans</span><span class=o>+</span><span class=n>num1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=缩减版>缩减版</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-cpp data-lang=cpp><span class=line><span class=cl><span class=k>class</span> <span class=nc>Solution</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl><span class=k>public</span><span class=o>:</span>
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>minimizeXor</span><span class=p>(</span><span class=kt>int</span> <span class=n>num1</span><span class=p>,</span> <span class=kt>int</span> <span class=n>num2</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=kt>int</span> <span class=n>c1</span> <span class=o>=</span> <span class=n>__builtin_popcount</span><span class=p>(</span><span class=n>num1</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=kt>int</span> <span class=n>c2</span> <span class=o>=</span> <span class=n>__builtin_popcount</span><span class=p>(</span><span class=n>num2</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=k>for</span> <span class=p>(;</span> <span class=n>c2</span> <span class=o>&lt;</span> <span class=n>c1</span><span class=p>;</span> <span class=o>++</span><span class=n>c2</span><span class=p>)</span> <span class=n>num1</span> <span class=o>&amp;=</span> <span class=n>num1</span> <span class=o>-</span> <span class=mi>1</span><span class=p>;</span> <span class=c1>// 最低的 1 变成 0
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=k>for</span> <span class=p>(;</span> <span class=n>c2</span> <span class=o>&gt;</span> <span class=n>c1</span><span class=p>;</span> <span class=o>--</span><span class=n>c2</span><span class=p>)</span> <span class=n>num1</span> <span class=o>|=</span> <span class=n>num1</span> <span class=o>+</span> <span class=mi>1</span><span class=p>;</span> <span class=c1>// 最低的 0 变成 1
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=k>return</span> <span class=n>num1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
+</span></span><span class=line><span class=cl><span class=c1>// 作者：endlesscheng
+</span></span></span></code></pre></td></tr></table></div></div><h2 id=t4-对字母串可执行的最大删除数>T4 对字母串可执行的最大删除数</h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>给你一个仅由小写英文字母组成的字符串 s 。在一步操作中，你可以：
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>删除 整个字符串 s ，或者
+</span></span><span class=line><span class=cl>对于满足 1 &lt;= i &lt;= s.length / 2 的任意 i ，如果 s 中的 前 i 个字母和接下来的 i 个字母 相等 ，删除 前 i 个字母。
+</span></span><span class=line><span class=cl>例如，如果 s = &#34;ababc&#34; ，那么在一步操作中，你可以删除 s 的前两个字母得到 &#34;abc&#34; ，因为 s 的前两个字母和接下来的两个字母都等于 &#34;ab&#34; 。
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>返回删除 s 所需的最大操作数。
+</span></span><span class=line><span class=cl> 
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>示例 1：
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>输入：s = &#34;abcabcdabc&#34;
+</span></span><span class=line><span class=cl>输出：2
+</span></span><span class=line><span class=cl>解释：
+</span></span><span class=line><span class=cl>- 删除前 3 个字母（&#34;abc&#34;），因为它们和接下来 3 个字母相等。现在，s = &#34;abcdabc&#34;。
+</span></span><span class=line><span class=cl>- 删除全部字母。
+</span></span><span class=line><span class=cl>一共用了 2 步操作，所以返回 2 。可以证明 2 是所需的最大操作数。
+</span></span><span class=line><span class=cl>注意，在第二步操作中无法再次删除 &#34;abc&#34; ，因为 &#34;abc&#34; 的下一次出现并不是位于接下来的 3 个字母。
+</span></span><span class=line><span class=cl>示例 2：
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>输入：s = &#34;aaabaab&#34;
+</span></span><span class=line><span class=cl>输出：4
+</span></span><span class=line><span class=cl>解释：
+</span></span><span class=line><span class=cl>- 删除第一个字母（&#34;a&#34;），因为它和接下来的字母相等。现在，s = &#34;aabaab&#34;。
+</span></span><span class=line><span class=cl>- 删除前 3 个字母（&#34;aab&#34;），因为它们和接下来 3 个字母相等。现在，s = &#34;aab&#34;。 
+</span></span><span class=line><span class=cl>- 删除第一个字母（&#34;a&#34;），因为它和接下来的字母相等。现在，s = &#34;ab&#34;。
+</span></span><span class=line><span class=cl>- 删除全部字母。
+</span></span><span class=line><span class=cl>一共用了 4 步操作，所以返回 4 。可以证明 4 是所需的最大操作数。
+</span></span><span class=line><span class=cl>示例 3：
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>输入：s = &#34;aaaaa&#34;
+</span></span><span class=line><span class=cl>输出：5
+</span></span><span class=line><span class=cl>解释：在每一步操作中，都可以仅删除 s 的第一个字母。
+</span></span><span class=line><span class=cl> 
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>提示：
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>1 &lt;= s.length &lt;= 4000
+</span></span><span class=line><span class=cl>s 仅由小写英文字母组成
+</span></span></code></pre></td></tr></table></div></div><h3 id=朴素记忆化搜索mle>朴素记忆化搜索(MLE)</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-py data-lang=py><span class=line><span class=cl><span class=k>class</span> <span class=nc>Solution</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=k>def</span> <span class=nf>deleteString</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>s</span><span class=p>:</span> <span class=nb>str</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>int</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=nb>len</span><span class=p>(</span><span class=nb>set</span><span class=p>(</span><span class=n>s</span><span class=p>))</span> <span class=o>==</span> <span class=mi>1</span><span class=p>:</span> 
+</span></span><span class=line><span class=cl>            <span class=k>return</span> <span class=nb>len</span><span class=p>(</span><span class=n>s</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=nd>@cache</span>
+</span></span><span class=line><span class=cl>        <span class=k>def</span> <span class=nf>dfs</span><span class=p>(</span><span class=n>i</span><span class=p>,</span><span class=n>start</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>            <span class=n>ans</span><span class=o>=</span><span class=mi>0</span>
+</span></span><span class=line><span class=cl>            <span class=k>if</span> <span class=n>i</span><span class=o>&gt;=</span><span class=nb>len</span><span class=p>(</span><span class=n>s</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>                <span class=k>if</span> <span class=n>i</span><span class=o>==</span><span class=n>start</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>                    <span class=k>return</span> <span class=mi>0</span>
+</span></span><span class=line><span class=cl>                <span class=k>return</span> <span class=mi>1</span>
+</span></span><span class=line><span class=cl>            <span class=c1># print(s[start:i+1],s[i+1:i+1+(i+1-start)])</span>
+</span></span><span class=line><span class=cl>            <span class=k>if</span> <span class=n>s</span><span class=p>[</span><span class=n>start</span><span class=p>:</span><span class=n>i</span><span class=o>+</span><span class=mi>1</span><span class=p>]</span><span class=o>==</span><span class=n>s</span><span class=p>[</span><span class=n>i</span><span class=o>+</span><span class=mi>1</span><span class=p>:</span><span class=n>i</span><span class=o>+</span><span class=mi>1</span><span class=o>+</span><span class=p>(</span><span class=n>i</span><span class=o>+</span><span class=mi>1</span><span class=o>-</span><span class=n>start</span><span class=p>)]:</span>
+</span></span><span class=line><span class=cl>                <span class=n>ans</span><span class=o>=</span><span class=n>dfs</span><span class=p>(</span><span class=n>i</span><span class=o>+</span><span class=mi>1</span><span class=p>,</span><span class=n>i</span><span class=o>+</span><span class=mi>1</span><span class=p>)</span><span class=o>+</span><span class=mi>1</span>
+</span></span><span class=line><span class=cl>            <span class=n>ans</span><span class=o>=</span><span class=nb>max</span><span class=p>(</span><span class=n>ans</span><span class=p>,</span><span class=n>dfs</span><span class=p>(</span><span class=n>i</span><span class=o>+</span><span class=mi>1</span><span class=p>,</span><span class=n>start</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>            <span class=k>return</span> <span class=n>ans</span>
+</span></span><span class=line><span class=cl>        <span class=n>dfs</span><span class=o>.</span><span class=n>cache_clear</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>dfs</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span><span class=mi>0</span><span class=p>)</span>  
+</span></span></code></pre></td></tr></table></div></div><h3 id=朴素动态规划tle>朴素动态规划(TLE)</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-py data-lang=py><span class=line><span class=cl><span class=k>class</span> <span class=nc>Solution</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=k>def</span> <span class=nf>deleteString</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>s</span><span class=p>:</span> <span class=nb>str</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>int</span><span class=p>:</span>     
+</span></span><span class=line><span class=cl>        <span class=n>size</span><span class=o>=</span><span class=nb>len</span><span class=p>(</span><span class=n>s</span><span class=p>)</span><span class=o>+</span><span class=mi>1</span>
+</span></span><span class=line><span class=cl>        <span class=n>dfs</span><span class=o>=</span><span class=p>[[</span><span class=mi>0</span><span class=p>]</span><span class=o>*</span><span class=p>(</span><span class=n>size</span><span class=o>+</span><span class=mi>2</span><span class=p>)</span> <span class=k>for</span> <span class=n>_</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=n>size</span><span class=o>+</span><span class=mi>2</span><span class=p>)]</span>
+</span></span><span class=line><span class=cl>        <span class=k>for</span> <span class=n>j</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=n>size</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>            <span class=k>if</span> <span class=n>j</span><span class=o>==</span><span class=n>size</span><span class=o>-</span><span class=mi>1</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>                <span class=n>dfs</span><span class=p>[</span><span class=n>size</span><span class=o>-</span><span class=mi>1</span><span class=p>][</span><span class=n>j</span><span class=p>]</span><span class=o>=</span><span class=mi>0</span>
+</span></span><span class=line><span class=cl>            <span class=k>else</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>                <span class=n>dfs</span><span class=p>[</span><span class=n>size</span><span class=o>-</span><span class=mi>1</span><span class=p>][</span><span class=n>j</span><span class=p>]</span><span class=o>=</span><span class=mi>1</span>
+</span></span><span class=line><span class=cl>        <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=n>size</span><span class=o>-</span><span class=mi>1</span><span class=p>,</span><span class=o>-</span><span class=mi>1</span><span class=p>,</span><span class=o>-</span><span class=mi>1</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>            <span class=k>for</span> <span class=n>j</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=n>size</span><span class=o>-</span><span class=mi>1</span><span class=p>,</span><span class=o>-</span><span class=mi>1</span><span class=p>,</span><span class=o>-</span><span class=mi>1</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>                <span class=k>if</span> <span class=n>s</span><span class=p>[</span><span class=n>j</span><span class=p>:</span><span class=n>i</span><span class=o>+</span><span class=mi>1</span><span class=p>]</span><span class=o>==</span><span class=n>s</span><span class=p>[</span><span class=n>i</span><span class=o>+</span><span class=mi>1</span><span class=p>:</span><span class=n>i</span><span class=o>+</span><span class=mi>1</span><span class=o>+</span><span class=p>(</span><span class=n>i</span><span class=o>+</span><span class=mi>1</span><span class=o>-</span><span class=n>j</span><span class=p>)]:</span>
+</span></span><span class=line><span class=cl>                    <span class=n>dfs</span><span class=p>[</span><span class=n>i</span><span class=p>][</span><span class=n>j</span><span class=p>]</span><span class=o>=</span><span class=n>dfs</span><span class=p>[</span><span class=n>i</span><span class=o>+</span><span class=mi>1</span><span class=p>][</span><span class=n>i</span><span class=o>+</span><span class=mi>1</span><span class=p>]</span><span class=o>+</span><span class=mi>1</span>
+</span></span><span class=line><span class=cl>                <span class=n>dfs</span><span class=p>[</span><span class=n>i</span><span class=p>][</span><span class=n>j</span><span class=p>]</span><span class=o>=</span><span class=nb>max</span><span class=p>(</span><span class=n>dfs</span><span class=p>[</span><span class=n>i</span><span class=p>][</span><span class=n>j</span><span class=p>],</span><span class=n>dfs</span><span class=p>[</span><span class=n>i</span><span class=o>+</span><span class=mi>1</span><span class=p>][</span><span class=n>j</span><span class=p>])</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>dfs</span><span class=p>[</span><span class=mi>0</span><span class=p>][</span><span class=mi>0</span><span class=p>]</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=lcp优化朴素动态规划tle>LCP优化朴素动态规划(TLE)</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-py data-lang=py><span class=line><span class=cl><span class=k>class</span> <span class=nc>Solution</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=k>def</span> <span class=nf>deleteString</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>s</span><span class=p>:</span> <span class=nb>str</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>int</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=n>size</span><span class=o>=</span><span class=nb>len</span><span class=p>(</span><span class=n>s</span><span class=p>)</span><span class=o>+</span><span class=mi>1</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=nb>len</span><span class=p>(</span><span class=nb>set</span><span class=p>(</span><span class=n>s</span><span class=p>))</span> <span class=o>==</span> <span class=mi>1</span><span class=p>:</span> <span class=k>return</span> <span class=n>size</span><span class=o>-</span><span class=mi>1</span>
+</span></span><span class=line><span class=cl>        <span class=n>dfs</span><span class=o>=</span><span class=p>[[</span><span class=mi>0</span><span class=p>]</span><span class=o>*</span><span class=p>(</span><span class=n>size</span><span class=o>+</span><span class=mi>2</span><span class=p>)</span> <span class=k>for</span> <span class=n>_</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=n>size</span><span class=o>+</span><span class=mi>2</span><span class=p>)]</span>
+</span></span><span class=line><span class=cl>        <span class=n>lcp</span><span class=o>=</span><span class=p>[[</span><span class=mi>0</span><span class=p>]</span><span class=o>*</span><span class=p>(</span><span class=n>size</span><span class=o>+</span><span class=mi>2</span><span class=p>)</span> <span class=k>for</span> <span class=n>_</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=n>size</span><span class=o>+</span><span class=mi>2</span><span class=p>)]</span>
+</span></span><span class=line><span class=cl>        <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=n>size</span><span class=o>-</span><span class=mi>2</span><span class=p>,</span> <span class=o>-</span><span class=mi>1</span><span class=p>,</span> <span class=o>-</span><span class=mi>1</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>            <span class=k>for</span> <span class=n>j</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=n>size</span><span class=o>-</span><span class=mi>2</span><span class=p>,</span> <span class=n>i</span><span class=p>,</span> <span class=o>-</span><span class=mi>1</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>                <span class=k>if</span> <span class=n>s</span><span class=p>[</span><span class=n>i</span><span class=p>]</span> <span class=o>==</span> <span class=n>s</span><span class=p>[</span><span class=n>j</span><span class=p>]:</span>
+</span></span><span class=line><span class=cl>                    <span class=n>lcp</span><span class=p>[</span><span class=n>i</span><span class=p>][</span><span class=n>j</span><span class=p>]</span> <span class=o>=</span> <span class=n>lcp</span><span class=p>[</span><span class=n>i</span> <span class=o>+</span> <span class=mi>1</span><span class=p>][</span><span class=n>j</span> <span class=o>+</span> <span class=mi>1</span><span class=p>]</span> <span class=o>+</span> <span class=mi>1</span>
+</span></span><span class=line><span class=cl>        <span class=k>for</span> <span class=n>j</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=n>size</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>            <span class=k>if</span> <span class=n>j</span><span class=o>==</span><span class=n>size</span><span class=o>-</span><span class=mi>1</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>                <span class=n>dfs</span><span class=p>[</span><span class=n>size</span><span class=o>-</span><span class=mi>1</span><span class=p>][</span><span class=n>j</span><span class=p>]</span><span class=o>=</span><span class=mi>0</span>
+</span></span><span class=line><span class=cl>            <span class=k>else</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>                <span class=n>dfs</span><span class=p>[</span><span class=n>size</span><span class=o>-</span><span class=mi>1</span><span class=p>][</span><span class=n>j</span><span class=p>]</span><span class=o>=</span><span class=mi>1</span>
+</span></span><span class=line><span class=cl>        <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=n>size</span><span class=o>-</span><span class=mi>1</span><span class=p>,</span><span class=o>-</span><span class=mi>1</span><span class=p>,</span><span class=o>-</span><span class=mi>1</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>            <span class=k>for</span> <span class=n>j</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=n>size</span><span class=o>-</span><span class=mi>1</span><span class=p>,</span><span class=o>-</span><span class=mi>1</span><span class=p>,</span><span class=o>-</span><span class=mi>1</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>                <span class=k>if</span> <span class=n>lcp</span><span class=p>[</span><span class=n>j</span><span class=p>][</span><span class=n>i</span><span class=o>+</span><span class=mi>1</span><span class=p>]</span><span class=o>&gt;=</span><span class=n>i</span><span class=o>+</span><span class=mi>1</span><span class=o>-</span><span class=n>j</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>                    <span class=n>dfs</span><span class=p>[</span><span class=n>i</span><span class=p>][</span><span class=n>j</span><span class=p>]</span><span class=o>=</span><span class=n>dfs</span><span class=p>[</span><span class=n>i</span><span class=o>+</span><span class=mi>1</span><span class=p>][</span><span class=n>i</span><span class=o>+</span><span class=mi>1</span><span class=p>]</span><span class=o>+</span><span class=mi>1</span>
+</span></span><span class=line><span class=cl>                <span class=n>dfs</span><span class=p>[</span><span class=n>i</span><span class=p>][</span><span class=n>j</span><span class=p>]</span><span class=o>=</span><span class=nb>max</span><span class=p>(</span><span class=n>dfs</span><span class=p>[</span><span class=n>i</span><span class=p>][</span><span class=n>j</span><span class=p>],</span><span class=n>dfs</span><span class=p>[</span><span class=n>i</span><span class=o>+</span><span class=mi>1</span><span class=p>][</span><span class=n>j</span><span class=p>])</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>dfs</span><span class=p>[</span><span class=mi>0</span><span class=p>][</span><span class=mi>0</span><span class=p>]</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=剪枝记忆化搜索ac>剪枝记忆化搜索(AC)</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-py data-lang=py><span class=line><span class=cl><span class=k>class</span> <span class=nc>Solution</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=k>def</span> <span class=nf>deleteString</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>s</span><span class=p>:</span> <span class=nb>str</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>int</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=nd>@cache</span>
+</span></span><span class=line><span class=cl>        <span class=k>def</span> <span class=nf>dfs</span><span class=p>(</span><span class=n>i</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>            <span class=n>s_</span> <span class=o>=</span> <span class=n>s</span><span class=p>[</span><span class=n>i</span><span class=p>:]</span>
+</span></span><span class=line><span class=cl>            <span class=n>ans</span> <span class=o>=</span> <span class=mi>1</span>
+</span></span><span class=line><span class=cl>            <span class=k>for</span> <span class=n>j</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span> <span class=nb>len</span><span class=p>(</span><span class=n>s</span><span class=p>)</span> <span class=o>//</span> <span class=mi>2</span> <span class=o>+</span> <span class=mi>1</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>                <span class=k>if</span> <span class=n>s_</span><span class=p>[:</span><span class=n>j</span><span class=p>]</span> <span class=o>==</span> <span class=n>s_</span><span class=p>[</span><span class=n>j</span><span class=p>:</span><span class=n>j</span><span class=o>*</span><span class=mi>2</span><span class=p>]:</span>
+</span></span><span class=line><span class=cl>                    <span class=n>ans</span> <span class=o>=</span> <span class=nb>max</span><span class=p>(</span><span class=n>ans</span><span class=p>,</span> <span class=mi>1</span> <span class=o>+</span> <span class=n>dfs</span><span class=p>(</span><span class=n>i</span> <span class=o>+</span> <span class=n>j</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>            <span class=k>return</span> <span class=n>ans</span>
+</span></span><span class=line><span class=cl>        
+</span></span><span class=line><span class=cl>        <span class=n>dfs</span><span class=o>.</span><span class=n>cache_clear</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>dfs</span><span class=p>(</span><span class=mi>0</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=剪枝lcp优化动态规划ac>剪枝+LCP优化动态规划(AC)</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-py data-lang=py><span class=line><span class=cl><span class=k>class</span> <span class=nc>Solution</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=k>def</span> <span class=nf>deleteString</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>s</span><span class=p>:</span> <span class=nb>str</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>int</span><span class=p>:</span>        
+</span></span><span class=line><span class=cl>        <span class=n>n</span> <span class=o>=</span> <span class=nb>len</span><span class=p>(</span><span class=n>s</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=nb>len</span><span class=p>(</span><span class=nb>set</span><span class=p>(</span><span class=n>s</span><span class=p>))</span> <span class=o>==</span> <span class=mi>1</span><span class=p>:</span> <span class=k>return</span> <span class=n>n</span>  <span class=c1># 特判全部相同的情况</span>
+</span></span><span class=line><span class=cl>        <span class=n>lcp</span> <span class=o>=</span> <span class=p>[[</span><span class=mi>0</span><span class=p>]</span> <span class=o>*</span> <span class=p>(</span><span class=n>n</span> <span class=o>+</span> <span class=mi>1</span><span class=p>)</span> <span class=k>for</span> <span class=n>_</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=n>n</span> <span class=o>+</span> <span class=mi>1</span><span class=p>)]</span>  <span class=c1># lcp[i][j] 表示 s[i:] 和 s[j:] 的最长公共前缀</span>
+</span></span><span class=line><span class=cl>        <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=n>n</span> <span class=o>-</span> <span class=mi>1</span><span class=p>,</span> <span class=o>-</span><span class=mi>1</span><span class=p>,</span> <span class=o>-</span><span class=mi>1</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>            <span class=k>for</span> <span class=n>j</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=n>n</span> <span class=o>-</span> <span class=mi>1</span><span class=p>,</span> <span class=n>i</span><span class=p>,</span> <span class=o>-</span><span class=mi>1</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>                <span class=k>if</span> <span class=n>s</span><span class=p>[</span><span class=n>i</span><span class=p>]</span> <span class=o>==</span> <span class=n>s</span><span class=p>[</span><span class=n>j</span><span class=p>]:</span>
+</span></span><span class=line><span class=cl>                    <span class=n>lcp</span><span class=p>[</span><span class=n>i</span><span class=p>][</span><span class=n>j</span><span class=p>]</span> <span class=o>=</span> <span class=n>lcp</span><span class=p>[</span><span class=n>i</span> <span class=o>+</span> <span class=mi>1</span><span class=p>][</span><span class=n>j</span> <span class=o>+</span> <span class=mi>1</span><span class=p>]</span> <span class=o>+</span> <span class=mi>1</span>
+</span></span><span class=line><span class=cl>        <span class=n>f</span> <span class=o>=</span> <span class=p>[</span><span class=mi>0</span><span class=p>]</span> <span class=o>*</span> <span class=n>n</span>
+</span></span><span class=line><span class=cl>        <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=n>n</span> <span class=o>-</span> <span class=mi>1</span><span class=p>,</span> <span class=o>-</span><span class=mi>1</span><span class=p>,</span> <span class=o>-</span><span class=mi>1</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>            <span class=k>for</span> <span class=n>j</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span> <span class=p>(</span><span class=n>n</span> <span class=o>-</span> <span class=n>i</span><span class=p>)</span> <span class=o>//</span> <span class=mi>2</span> <span class=o>+</span> <span class=mi>1</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>                <span class=k>if</span> <span class=n>lcp</span><span class=p>[</span><span class=n>i</span><span class=p>][</span><span class=n>i</span> <span class=o>+</span> <span class=n>j</span><span class=p>]</span> <span class=o>&gt;=</span> <span class=n>j</span><span class=p>:</span>  <span class=c1># 说明 s[i:i+j] == s[i+j:i+2*j]</span>
+</span></span><span class=line><span class=cl>                    <span class=n>f</span><span class=p>[</span><span class=n>i</span><span class=p>]</span> <span class=o>=</span> <span class=nb>max</span><span class=p>(</span><span class=n>f</span><span class=p>[</span><span class=n>i</span><span class=p>],</span> <span class=n>f</span><span class=p>[</span><span class=n>i</span> <span class=o>+</span> <span class=n>j</span><span class=p>])</span>
+</span></span><span class=line><span class=cl>            <span class=n>f</span><span class=p>[</span><span class=n>i</span><span class=p>]</span> <span class=o>+=</span> <span class=mi>1</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>f</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span>
+</span></span><span class=line><span class=cl><span class=c1># endlesscheng</span>
+</span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-tags><a href=/CpHugo/tags/leetcode/>leetcode</a>
+<a href=/CpHugo/tags/c++/>c++</a></section><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg><span>遵循CC BY-NC-SA 4.0协议</span></section></footer><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css integrity="sha256-J+iAE0sgH8QSz9hpcDxXIftnj65JEZgNhGcgReTTK9s=" crossorigin=anonymous><script src=https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js integrity="sha256-InsNdER1b2xUewP+pKCUJpkhiqwHgqiPXDlIk7GzBu4=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js integrity="sha256-y39Mpg7V3D4lhBX4x6O0bUqTV4pSrfgwEfGKfxkOdgI=" crossorigin=anonymous defer></script><script>window.addEventListener("DOMContentLoaded",()=>{renderMathInElement(document.querySelector(`.article-content`),{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})})</script></article><script src=https://giscus.app/client.js data-repo=open17/CpHugo data-repo-id=R_kgDOJbtiOQ data-category=Announcements data-category-id=DIC_kwDOJbtiOc4CWXPs data-mapping=pathname data-strict=0 data-reactions-enabled=1 data-emit-metadata=0 data-input-position=top data-theme=light data-lang=en crossorigin=anonymous async></script>
+<script>function setGiscusTheme(e){let t=document.querySelector("iframe.giscus-frame");t&&t.contentWindow.postMessage({giscus:{setConfig:{theme:e}}},"https://giscus.app")}(function(){addEventListener("message",t=>{if(event.origin!=="https://giscus.app")return;e()}),window.addEventListener("onColorSchemeChange",e);function e(){setGiscusTheme(document.documentElement.dataset.scheme==="light"?"light":"dark_dimmed")}})()</script><footer class=site-footer><section class=copyright>&copy;
+2023 CpHugo</section><section class=powerby>项目支持：<br>Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a><br>主题 <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.16.0>Stack</a></b> 由 <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a> 设计</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css crossorigin=anonymous></main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=/CpHugo/ts/main.js defer></script>
+<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>
