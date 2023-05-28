@@ -230,7 +230,7 @@ def f(p,m,start,end):
 ```
 还是T,不过这也很正常   
 如何优化?不难看出在求f函数是可以优化的,f可以由上个一个的f转移过来    
-即上一个f减去第一项再乘以p在加上最新一项即可   
+即上一个f减去第一项再除以p在加上最新一项即可   
 ```py
 class Solution:
     def subStrHash(self, s: str, p: int, m: int, k: int, hashValue: int) -> str:
