@@ -348,7 +348,7 @@ T3卡常坐大牢&lt;/p>
 &lt;/div>
 &lt;/div>&lt;p>还是T,不过这也很正常&lt;br>
 如何优化?不难看出在求f函数是可以优化的,f可以由上个一个的f转移过来 &lt;br>
-即上一个f减去第一项再乘以p在加上最新一项即可&lt;/p>
+即上一个f减去第一项再除以p在加上最新一项即可&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1

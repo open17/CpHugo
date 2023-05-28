@@ -183,7 +183,7 @@
 </span></span><span class=line><span class=cl>        <span class=n>hashv</span><span class=o>+=</span><span class=p>(</span><span class=nb>ord</span><span class=p>(</span><span class=n>s</span><span class=p>[</span><span class=n>i</span><span class=p>])</span><span class=o>-</span><span class=nb>ord</span><span class=p>(</span><span class=s1>&#39;a&#39;</span><span class=p>)</span><span class=o>+</span><span class=mi>1</span><span class=p>)</span><span class=o>*</span><span class=p>(</span><span class=n>p</span><span class=o>**</span><span class=p>(</span><span class=n>i</span><span class=o>-</span><span class=n>start</span><span class=p>))</span><span class=o>%</span><span class=n>m</span>
 </span></span><span class=line><span class=cl>        <span class=n>hashv</span><span class=o>%=</span><span class=n>m</span>
 </span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=n>hashv</span><span class=o>%</span><span class=n>m</span>
-</span></span></code></pre></td></tr></table></div></div><p>还是T,不过这也很正常<br>如何优化?不难看出在求f函数是可以优化的,f可以由上个一个的f转移过来<br>即上一个f减去第一项再乘以p在加上最新一项即可</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span></span></code></pre></td></tr></table></div></div><p>还是T,不过这也很正常<br>如何优化?不难看出在求f函数是可以优化的,f可以由上个一个的f转移过来<br>即上一个f减去第一项再除以p在加上最新一项即可</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
 </span><span class=lnt> 4
