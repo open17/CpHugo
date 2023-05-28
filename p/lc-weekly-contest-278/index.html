@@ -1,0 +1,326 @@
+<!doctype html><html lang=en-us dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="本场竞赛由「网易游戏互娱 & 力扣」联合主办"><title>lc weekly contest 278</title><link rel=canonical href=https://open17.github.io/CpHugo/p/lc-weekly-contest-278/><link rel=stylesheet href=/CpHugo/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css><meta property="og:title" content="lc weekly contest 278"><meta property="og:description" content="本场竞赛由「网易游戏互娱 & 力扣」联合主办"><meta property="og:url" content="https://open17.github.io/CpHugo/p/lc-weekly-contest-278/"><meta property="og:site_name" content="CpHugo"><meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="leetcode"><meta property="article:tag" content="c++"><meta property="article:published_time" content="2023-05-28T00:00:00+00:00"><meta property="article:modified_time" content="2023-05-28T00:00:00+00:00"><meta property="og:image" content="https://pic.lingkou.xyz/1642577172-whzTsr-1760-360%20%E5%85%AD%E6%96%B9%E4%BA%91.png"><meta name=twitter:title content="lc weekly contest 278"><meta name=twitter:description content="本场竞赛由「网易游戏互娱 & 力扣」联合主办"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://pic.lingkou.xyz/1642577172-whzTsr-1760-360%20%E5%85%AD%E6%96%B9%E4%BA%91.png"></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label=切换菜单>
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=/CpHugo/><img src=/CpHugo/img/avatar_hud7e36f7e20e71be184458283bdae4646_55974_300x0_resize_box_3.png width=300 height=200 class=site-logo loading=lazy alt=Avatar></a></figure><div class=site-meta><h1 class=site-name><a href=/CpHugo>CpHugo</a></h1><h2 class=site-description>CpHugo</h2></div></header><ol class=menu id=main-menu><li><a href=/CpHugo/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg><span>主页</span></a></li><li><a href=/CpHugo/archives/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg><span>专题</span></a></li><li><a href=/CpHugo/search/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg><span>搜索</span></a></li><li><a href=/CpHugo/%E7%BD%91%E7%AB%99%E6%8C%87%E5%8D%97/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M10 14a3.5 3.5.0 005 0l4-4a3.5 3.5.0 00-5-5l-.5.5"/><path d="M14 10a3.5 3.5.0 00-5 0l-4 4a3.5 3.5.0 005 5l.5-.5"/></svg><span>网站指南</span></a></li><div class=menu-bottom-section><li id=dark-mode-toggle><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><span>暗色模式</span></li></div></ol></aside><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目录</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#前言>前言</a></li><li><a href=#t1-将找到的值乘以-2>T1 将找到的值乘以 2</a><ol><li><a href=#思路>思路</a></li></ol></li><li><a href=#t2-分组得分最高的所有下标>T2 分组得分最高的所有下标</a><ol><li><a href=#思路-1>思路</a></li></ol></li><li><a href=#t3-查找给定哈希值的子串>T3 查找给定哈希值的子串</a><ol><li><a href=#思路-2>思路</a></li><li><a href=#ac-code>AC code</a></li></ol></li><li><a href=#t4-字符串分组>T4 字符串分组</a><ol><li><a href=#思路-3>思路</a></li></ol></li></ol></nav></div></section></aside><main class="main full-width"><article class="has-image main-article"><header class=article-header><div class=article-image><a href=/CpHugo/p/lc-weekly-contest-278/><img src=https://pic.lingkou.xyz/1642577172-whzTsr-1760-360%20%E5%85%AD%E6%96%B9%E4%BA%91.png loading=lazy alt="Featured image of post lc weekly contest 278"></a></div><div class=article-details><div class=article-title-wrapper><h2 class=article-title><a href=/CpHugo/p/lc-weekly-contest-278/>lc weekly contest 278</a></h2><h3 class=article-subtitle>本场竞赛由「网易游戏互娱 & 力扣」联合主办</h3></div><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg><time class=article-time--published>May 28, 2023</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><time class=article-time--reading>阅读时长: 7 分钟</time></div></footer></div></header><section class=article-content><h2 id=前言>前言</h2><p>题目分布:简单,中等,困难,困难<br>T3卡常坐大牢</p><h2 id=t1-将找到的值乘以-2>T1 将找到的值乘以 2</h2><p>给你一个整数数组 nums ，另给你一个整数 original ，这是需要在 nums 中搜索的第一个数字。</p><p>接下来，你需要按下述步骤操作：</p><p>如果在 nums 中找到 original ，将 original 乘以 2 ，得到新 original（即，令 original = 2 * original）。<br>否则，停止这一过程。<br>只要能在数组中找到新 original ，就对新 original 继续 重复 这一过程。<br>返回 original 的 最终 值。</p><p>示例 1：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>输入：nums = [5,3,6,1,12], original = 3
+</span></span><span class=line><span class=cl>输出：24
+</span></span></code></pre></td></tr></table></div></div><p>解释：</p><ul><li>3 能在 nums 中找到。3 * 2 = 6 。</li><li>6 能在 nums 中找到。6 * 2 = 12 。</li><li>12 能在 nums 中找到。12 * 2 = 24 。</li><li>24 不能在 nums 中找到。因此，返回 24 。</li></ul><p>示例 2：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>输入：nums = [2,7,9], original = 4
+</span></span><span class=line><span class=cl>输出：4
+</span></span></code></pre></td></tr></table></div></div><p>解释：</p><ul><li>4 不能在 nums 中找到。因此，返回 4 。</li></ul><p>提示：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>1 &lt;= nums.length &lt;= 1000
+</span></span><span class=line><span class=cl>1 &lt;= nums[i], original &lt;= 1000
+</span></span></code></pre></td></tr></table></div></div><h3 id=思路>思路</h3><p>由于数据范围很小,所以怎么写都行<br>这里的二分还可以继续优化<br>这道题还可以用哈希表达到近似O(n)<br>甚至可以用位运算达到严格O(n)<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-cpp data-lang=cpp><span class=line><span class=cl><span class=cp>#define debug(a,b,c) cout&lt;&lt;&#39;\n&#39;&lt;&lt;&#34;debug start&#34;&lt;&lt;&#39;\n&#39;;for(int i=a;i&lt;=b;i++){cout&lt;&lt;c[i]&lt;&lt;&#39; &#39;;}cout&lt;&lt;&#39;\n&#39;&lt;&lt;&#34;debug over&#34;&lt;&lt;&#39;\n&#39;&lt;&lt;&#39;\n&#39;;
+</span></span></span><span class=line><span class=cl><span class=cp></span><span class=k>class</span> <span class=nc>Solution</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl><span class=k>public</span><span class=o>:</span>
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>findFinalValue</span><span class=p>(</span><span class=n>vector</span><span class=o>&lt;</span><span class=kt>int</span><span class=o>&gt;&amp;</span> <span class=n>nums</span><span class=p>,</span> <span class=kt>int</span> <span class=n>original</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>sort</span><span class=p>(</span><span class=n>nums</span><span class=p>.</span><span class=n>begin</span><span class=p>(),</span><span class=n>nums</span><span class=p>.</span><span class=n>end</span><span class=p>());</span>
+</span></span><span class=line><span class=cl>        <span class=k>auto</span> <span class=n>s</span><span class=o>=</span><span class=n>nums</span><span class=p>.</span><span class=n>begin</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>        <span class=c1>// debug(0,nums.size()-1,nums)
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=k>while</span><span class=p>(</span><span class=mi>1</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>            <span class=kt>int</span> <span class=n>x</span><span class=o>=</span><span class=n>lower_bound</span><span class=p>(</span><span class=n>nums</span><span class=p>.</span><span class=n>begin</span><span class=p>(),</span><span class=n>nums</span><span class=p>.</span><span class=n>end</span><span class=p>(),</span><span class=n>original</span><span class=p>)</span><span class=o>-</span><span class=n>nums</span><span class=p>.</span><span class=n>begin</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>            <span class=k>if</span> <span class=p>(</span><span class=n>x</span><span class=o>&gt;=</span><span class=n>nums</span><span class=p>.</span><span class=n>size</span><span class=p>()</span><span class=o>||</span><span class=n>nums</span><span class=p>[</span><span class=n>x</span><span class=p>]</span><span class=o>!=</span><span class=n>original</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>                <span class=k>break</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=p>}</span>
+</span></span><span class=line><span class=cl>            <span class=n>original</span><span class=o>*=</span><span class=mi>2</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>original</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
+</span></span></code></pre></td></tr></table></div></div><h2 id=t2-分组得分最高的所有下标>T2 分组得分最高的所有下标</h2><p>给你一个下标从 0 开始的二进制数组 nums ，数组长度为 n 。nums 可以按下标 i（ 0 &lt;= i &lt;= n ）拆分成两个数组（可能为空）：numsleft 和 numsright 。</p><p>numsleft 包含 nums 中从下标 0 到 i - 1 的所有元素（包括 0 和 i - 1 ），而 numsright 包含 nums 中从下标 i 到 n - 1 的所有元素（包括 i 和 n - 1 ）。<br>如果 i == 0 ，numsleft 为 空 ，而 numsright 将包含 nums 中的所有元素。<br>如果 i == n ，numsleft 将包含 nums 中的所有元素，而 numsright 为 空 。<br>下标 i 的 分组得分 为 numsleft 中 0 的个数和 numsright 中 1 的个数之 和 。</p><p>返回 分组得分 最高 的 所有不同下标 。你可以按 任意顺序 返回答案。</p><p>示例 1：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>输入：nums = [0,0,1,0]
+</span></span><span class=line><span class=cl>输出：[2,4]
+</span></span></code></pre></td></tr></table></div></div><p>解释：按下标分组</p><ul><li>0 ：numsleft 为 [] 。numsright 为 [0,0,1,0] 。得分为 0 + 1 = 1 。</li><li>1 ：numsleft 为 [0] 。numsright 为 [0,1,0] 。得分为 1 + 1 = 2 。</li><li>2 ：numsleft 为 [0,0] 。numsright 为 [1,0] 。得分为 2 + 1 = 3 。</li><li>3 ：numsleft 为 [0,0,1] 。numsright 为 [0] 。得分为 2 + 0 = 2 。</li><li>4 ：numsleft 为 [0,0,1,0] 。numsright 为 [] 。得分为 3 + 0 = 3 。
+下标 2 和 4 都可以得到最高的分组得分 3 。<br>注意，答案 [4,2] 也被视为正确答案。</li></ul><p>示例 2：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>输入：nums = [0,0,0]
+</span></span><span class=line><span class=cl>输出：[3]
+</span></span></code></pre></td></tr></table></div></div><p>解释：按下标分组</p><ul><li>0 ：numsleft 为 [] 。numsright 为 [0,0,0] 。得分为 0 + 0 = 0 。</li><li>1 ：numsleft 为 [0] 。numsright 为 [0,0] 。得分为 1 + 0 = 1 。</li><li>2 ：numsleft 为 [0,0] 。numsright 为 [0] 。得分为 2 + 0 = 2 。</li><li>3 ：numsleft 为 [0,0,0] 。numsright 为 [] 。得分为 3 + 0 = 3 。
+只有下标 3 可以得到最高的分组得分 3 。</li></ul><p>示例 3：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>输入：nums = [1,1]
+</span></span><span class=line><span class=cl>输出：[0]
+</span></span></code></pre></td></tr></table></div></div><p>解释：按下标分组</p><ul><li>0 ：numsleft 为 [] 。numsright 为 [1,1] 。得分为 0 + 2 = 2 。</li><li>1 ：numsleft 为 [1] 。numsright 为 [1] 。得分为 0 + 1 = 1 。</li><li>2 ：numsleft 为 [1,1] 。numsright 为 [] 。得分为 0 + 0 = 0 。
+只有下标 0 可以得到最高的分组得分 2 。</li></ul><p>提示：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>n == nums.length
+</span></span><span class=line><span class=cl>1 &lt;= n &lt;= 105
+</span></span><span class=line><span class=cl>nums[i] 为 0 或 1
+</span></span></code></pre></td></tr></table></div></div><h3 id=思路-1>思路</h3><p>写的时候没仔细看题目,长度为n应该有n+1中选择情况,后来改动的时候没有保持不变量,调参调了半天<br>思路: 维护前缀和即可,由sum减去得出后缀<br>当然可以维护前后缀,好写一点
+这里还可以压缩成一次遍历<sup id=fnref:2><a href=#fn:2 class=footnote-ref role=doc-noteref>2</a></sup></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-cpp data-lang=cpp><span class=line><span class=cl><span class=cp>#define FOR(w, a, n) for(int w=(a);w&lt;(n);++w)
+</span></span></span><span class=line><span class=cl><span class=cp>#define debug(a,b,c) cout&lt;&lt;&#39;\n&#39;&lt;&lt;&#34;debug start&#34;&lt;&lt;&#39;\n&#39;;for(int i=a;i&lt;=b;i++){cout&lt;&lt;c[i]&lt;&lt;&#39; &#39;;}cout&lt;&lt;&#39;\n&#39;&lt;&lt;&#34;debug over&#34;&lt;&lt;&#39;\n&#39;&lt;&lt;&#39;\n&#39;;
+</span></span></span><span class=line><span class=cl><span class=cp></span><span class=k>const</span> <span class=kt>int</span> <span class=n>N</span><span class=o>=</span><span class=mf>1e5</span><span class=o>+</span><span class=mi>2</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=kt>int</span> <span class=n>b</span><span class=p>[</span><span class=n>N</span><span class=p>];</span>
+</span></span><span class=line><span class=cl><span class=k>class</span> <span class=nc>Solution</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl><span class=k>public</span><span class=o>:</span>
+</span></span><span class=line><span class=cl>    <span class=n>vector</span><span class=o>&lt;</span><span class=kt>int</span><span class=o>&gt;</span> <span class=n>maxScoreIndices</span><span class=p>(</span><span class=n>vector</span><span class=o>&lt;</span><span class=kt>int</span><span class=o>&gt;&amp;</span> <span class=n>nums</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=kt>int</span> <span class=n>ans</span><span class=o>=</span><span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>FOR</span><span class=p>(</span><span class=n>i</span><span class=p>,</span><span class=mi>0</span><span class=p>,</span><span class=n>nums</span><span class=p>.</span><span class=n>size</span><span class=p>()){</span>
+</span></span><span class=line><span class=cl>            <span class=c1>//左边1的个数
+</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=n>b</span><span class=p>[</span><span class=n>i</span><span class=o>+</span><span class=mi>1</span><span class=p>]</span><span class=o>=</span><span class=n>b</span><span class=p>[</span><span class=n>i</span><span class=p>]</span><span class=o>+</span><span class=n>nums</span><span class=p>[</span><span class=n>i</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>            <span class=n>ans</span><span class=o>+=</span><span class=n>nums</span><span class=p>[</span><span class=n>i</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=c1>// debug(0,nums.size(),b)
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=kt>int</span> <span class=n>max_</span><span class=o>=</span><span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>FOR</span><span class=p>(</span><span class=n>i</span><span class=p>,</span><span class=mi>0</span><span class=p>,</span><span class=n>nums</span><span class=p>.</span><span class=n>size</span><span class=p>()</span><span class=o>+</span><span class=mi>1</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>            <span class=n>max_</span><span class=o>=</span><span class=n>max</span><span class=p>(</span><span class=n>max_</span><span class=p>,</span> <span class=n>i</span><span class=o>-</span><span class=n>b</span><span class=p>[</span><span class=n>i</span><span class=p>]</span><span class=o>+</span><span class=n>ans</span><span class=o>-</span><span class=n>b</span><span class=p>[</span><span class=n>i</span><span class=p>]</span> <span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=n>vector</span><span class=o>&lt;</span><span class=kt>int</span><span class=o>&gt;</span> <span class=n>res</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>FOR</span><span class=p>(</span><span class=n>i</span><span class=p>,</span><span class=mi>0</span><span class=p>,</span><span class=n>nums</span><span class=p>.</span><span class=n>size</span><span class=p>()</span><span class=o>+</span><span class=mi>1</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>            <span class=k>if</span><span class=p>(</span><span class=n>i</span><span class=o>-</span><span class=n>b</span><span class=p>[</span><span class=n>i</span><span class=p>]</span><span class=o>+</span><span class=n>ans</span><span class=o>-</span><span class=n>b</span><span class=p>[</span><span class=n>i</span><span class=p>]</span><span class=o>==</span><span class=n>max_</span><span class=p>)</span><span class=n>res</span><span class=p>.</span><span class=n>push_back</span><span class=p>(</span><span class=n>i</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>res</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
+</span></span></code></pre></td></tr></table></div></div><h2 id=t3-查找给定哈希值的子串>T3 查找给定哈希值的子串</h2><p>给定整数 p 和 m ，一个长度为 k 且下标从 0 开始的字符串 s 的哈希值按照如下函数计算：</p><p>hash(s, p, m) = (val(s[0]) * p0 + val(s[1]) * p1 + &mldr; + val(s[k-1]) * pk-1) mod m.<br>其中 val(s[i]) 表示 s[i] 在字母表中的下标，从 val(&lsquo;a&rsquo;) = 1 到 val(&lsquo;z&rsquo;) = 26 。</p><p>给你一个字符串 s 和整数 power，modulo，k 和 hashValue 。请你返回 s 中 第一个 长度为 k 的 子串 sub ，满足 hash(sub, power, modulo) == hashValue 。</p><p>测试数据保证一定 存在 至少一个这样的子串。</p><p>子串 定义为一个字符串中连续非空字符组成的序列。</p><p>示例 1：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>输入：s = &#34;leetcode&#34;, power = 7, modulo = 20, k = 2, hashValue = 0
+</span></span><span class=line><span class=cl>输出：&#34;ee&#34;
+</span></span><span class=line><span class=cl>解释：&#34;ee&#34; 的哈希值为 hash(&#34;ee&#34;, 7, 20) = (5 * 1 + 5 * 7) mod 20 = 40 mod 20 = 0 。
+</span></span><span class=line><span class=cl>&#34;ee&#34; 是长度为 2 的第一个哈希值为 0 的子串，所以我们返回 &#34;ee&#34; 。
+</span></span></code></pre></td></tr></table></div></div><p>示例 2：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>输入：s = &#34;fbxzaad&#34;, power = 31, modulo = 100, k = 3, hashValue = 32
+</span></span><span class=line><span class=cl>输出：&#34;fbx&#34;
+</span></span><span class=line><span class=cl>解释：&#34;fbx&#34; 的哈希值为 hash(&#34;fbx&#34;, 31, 100) = (6 * 1 + 2 * 31 + 24 * 312) mod 100 = 23132 mod 100 = 32 。
+</span></span><span class=line><span class=cl>&#34;bxz&#34; 的哈希值为 hash(&#34;bxz&#34;, 31, 100) = (2 * 1 + 24 * 31 + 26 * 312) mod 100 = 25732 mod 100 = 32 。
+</span></span><span class=line><span class=cl>&#34;fbx&#34; 是长度为 3 的第一个哈希值为 32 的子串，所以我们返回 &#34;fbx&#34; 。
+</span></span><span class=line><span class=cl>注意，&#34;bxz&#34; 的哈希值也为 32 ，但是它在字符串中比 &#34;fbx&#34; 更晚出现。
+</span></span></code></pre></td></tr></table></div></div><p>提示：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>1 &lt;= k &lt;= s.length &lt;= 2 * 104
+</span></span><span class=line><span class=cl>1 &lt;= power, modulo &lt;= 109
+</span></span><span class=line><span class=cl>0 &lt;= hashValue &lt; modulo
+</span></span><span class=line><span class=cl>s 只包含小写英文字母。
+</span></span><span class=line><span class=cl>测试数据保证一定 存在 满足条件的子串。
+</span></span></code></pre></td></tr></table></div></div><h3 id=思路-2>思路</h3><p>先写一个暴力滑窗解法</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-py data-lang=py><span class=line><span class=cl><span class=k>class</span> <span class=nc>Solution</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=k>def</span> <span class=nf>subStrHash</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>s</span><span class=p>:</span> <span class=nb>str</span><span class=p>,</span> <span class=n>power</span><span class=p>:</span> <span class=nb>int</span><span class=p>,</span> <span class=n>modulo</span><span class=p>:</span> <span class=nb>int</span><span class=p>,</span> <span class=n>k</span><span class=p>:</span> <span class=nb>int</span><span class=p>,</span> <span class=n>hashValue</span><span class=p>:</span> <span class=nb>int</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=k>def</span> <span class=nf>f</span><span class=p>(</span><span class=n>p</span><span class=p>,</span><span class=n>m</span><span class=p>,</span><span class=n>start</span><span class=p>,</span><span class=n>end</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>            <span class=n>hashv</span><span class=o>=</span><span class=mi>0</span>
+</span></span><span class=line><span class=cl>            <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=n>start</span><span class=p>,</span><span class=n>end</span><span class=o>+</span><span class=mi>1</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>                <span class=n>hashv</span><span class=o>+=</span><span class=p>(</span><span class=nb>ord</span><span class=p>(</span><span class=n>s</span><span class=p>[</span><span class=n>i</span><span class=p>])</span><span class=o>-</span><span class=nb>ord</span><span class=p>(</span><span class=s1>&#39;a&#39;</span><span class=p>)</span><span class=o>+</span><span class=mi>1</span><span class=p>)</span><span class=o>*</span><span class=p>(</span><span class=n>p</span><span class=o>**</span><span class=p>(</span><span class=n>i</span><span class=o>-</span><span class=n>start</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>            <span class=k>return</span> <span class=n>hashv</span><span class=o>%</span><span class=n>m</span>
+</span></span><span class=line><span class=cl>        <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=n>k</span><span class=o>-</span><span class=mi>1</span><span class=p>,</span><span class=nb>len</span><span class=p>(</span><span class=n>s</span><span class=p>)):</span>
+</span></span><span class=line><span class=cl>            <span class=k>if</span> <span class=n>f</span><span class=p>(</span><span class=n>power</span><span class=p>,</span><span class=n>modulo</span><span class=p>,</span><span class=n>i</span><span class=o>-</span><span class=n>k</span><span class=o>+</span><span class=mi>1</span><span class=p>,</span><span class=n>i</span><span class=p>)</span><span class=o>==</span><span class=n>hashValue</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>                <span class=k>return</span> <span class=n>s</span><span class=p>[</span><span class=n>i</span><span class=o>-</span><span class=n>k</span><span class=o>+</span><span class=mi>1</span><span class=p>:</span><span class=n>i</span><span class=o>+</span><span class=mi>1</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>s</span>
+</span></span></code></pre></td></tr></table></div></div><p>毫无悬念的T了<br>将f尝试改成</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-py data-lang=py><span class=line><span class=cl><span class=k>def</span> <span class=nf>f</span><span class=p>(</span><span class=n>p</span><span class=p>,</span><span class=n>m</span><span class=p>,</span><span class=n>start</span><span class=p>,</span><span class=n>end</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=n>hashv</span><span class=o>=</span><span class=mi>0</span>
+</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=n>start</span><span class=p>,</span><span class=n>end</span><span class=o>+</span><span class=mi>1</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>        <span class=n>hashv</span><span class=o>+=</span><span class=p>(</span><span class=nb>ord</span><span class=p>(</span><span class=n>s</span><span class=p>[</span><span class=n>i</span><span class=p>])</span><span class=o>-</span><span class=nb>ord</span><span class=p>(</span><span class=s1>&#39;a&#39;</span><span class=p>)</span><span class=o>+</span><span class=mi>1</span><span class=p>)</span><span class=o>*</span><span class=p>(</span><span class=n>p</span><span class=o>**</span><span class=p>(</span><span class=n>i</span><span class=o>-</span><span class=n>start</span><span class=p>))</span><span class=o>%</span><span class=n>m</span>
+</span></span><span class=line><span class=cl>        <span class=n>hashv</span><span class=o>%=</span><span class=n>m</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=n>hashv</span><span class=o>%</span><span class=n>m</span>
+</span></span></code></pre></td></tr></table></div></div><p>还是T,不过这也很正常<br>如何优化?不难看出在求f函数是可以优化的,f可以由上个一个的f转移过来<br>即上一个f减去第一项再乘以p在加上最新一项即可</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-py data-lang=py><span class=line><span class=cl><span class=k>class</span> <span class=nc>Solution</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=k>def</span> <span class=nf>subStrHash</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>s</span><span class=p>:</span> <span class=nb>str</span><span class=p>,</span> <span class=n>p</span><span class=p>:</span> <span class=nb>int</span><span class=p>,</span> <span class=n>m</span><span class=p>:</span> <span class=nb>int</span><span class=p>,</span> <span class=n>k</span><span class=p>:</span> <span class=nb>int</span><span class=p>,</span> <span class=n>hashValue</span><span class=p>:</span> <span class=nb>int</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=n>hashv</span><span class=o>=</span><span class=mi>0</span>
+</span></span><span class=line><span class=cl>        <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=n>k</span><span class=o>-</span><span class=mi>1</span><span class=p>,</span><span class=nb>len</span><span class=p>(</span><span class=n>s</span><span class=p>)):</span>
+</span></span><span class=line><span class=cl>            <span class=k>if</span> <span class=n>i</span><span class=o>==</span><span class=n>k</span><span class=o>-</span><span class=mi>1</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>                <span class=k>for</span> <span class=n>j</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=n>i</span><span class=o>-</span><span class=n>k</span><span class=o>+</span><span class=mi>1</span><span class=p>,</span><span class=n>i</span><span class=o>+</span><span class=mi>1</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>                    <span class=n>hashv</span><span class=o>+=</span><span class=p>(</span><span class=nb>ord</span><span class=p>(</span><span class=n>s</span><span class=p>[</span><span class=n>j</span><span class=p>])</span><span class=o>-</span><span class=nb>ord</span><span class=p>(</span><span class=s1>&#39;a&#39;</span><span class=p>)</span><span class=o>+</span><span class=mi>1</span><span class=p>)</span><span class=o>*</span><span class=p>(</span><span class=n>p</span><span class=o>**</span><span class=p>(</span><span class=n>j</span><span class=o>-</span><span class=n>i</span><span class=o>+</span><span class=n>k</span><span class=o>-</span><span class=mi>1</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>            <span class=k>else</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>                <span class=n>hashv</span><span class=o>-=</span><span class=p>(</span><span class=nb>ord</span><span class=p>(</span><span class=n>s</span><span class=p>[</span><span class=n>i</span><span class=o>-</span><span class=n>k</span><span class=p>])</span><span class=o>-</span><span class=nb>ord</span><span class=p>(</span><span class=s1>&#39;a&#39;</span><span class=p>)</span><span class=o>+</span><span class=mi>1</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>                <span class=n>hashv</span><span class=o>//=</span><span class=n>p</span>
+</span></span><span class=line><span class=cl>                <span class=n>hashv</span><span class=o>+=</span><span class=p>(</span><span class=nb>ord</span><span class=p>(</span><span class=n>s</span><span class=p>[</span><span class=n>i</span><span class=p>])</span><span class=o>-</span><span class=nb>ord</span><span class=p>(</span><span class=s1>&#39;a&#39;</span><span class=p>)</span><span class=o>+</span><span class=mi>1</span><span class=p>)</span><span class=o>*</span><span class=p>(</span><span class=n>p</span><span class=o>**</span><span class=p>(</span><span class=n>k</span><span class=o>-</span><span class=mi>1</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>            <span class=k>if</span> <span class=n>hashv</span><span class=o>%</span><span class=n>m</span><span class=o>==</span><span class=n>hashValue</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>                <span class=k>return</span> <span class=n>s</span><span class=p>[</span><span class=n>i</span><span class=o>-</span><span class=n>k</span><span class=o>+</span><span class=mi>1</span><span class=p>:</span><span class=n>i</span><span class=o>+</span><span class=mi>1</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>            <span class=c1>#print(hashv,i)</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>s</span>
+</span></span></code></pre></td></tr></table></div></div><p>还是T?<br>因为除法取余不恒等,不能分步优化<br>那怎么改呢<br>倒叙即可,顺便加入点优化</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-py data-lang=py><span class=line><span class=cl><span class=k>class</span> <span class=nc>Solution</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=k>def</span> <span class=nf>subStrHash</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>s</span><span class=p>:</span> <span class=nb>str</span><span class=p>,</span> <span class=n>p</span><span class=p>:</span> <span class=nb>int</span><span class=p>,</span> <span class=n>m</span><span class=p>:</span> <span class=nb>int</span><span class=p>,</span> <span class=n>k</span><span class=p>:</span> <span class=nb>int</span><span class=p>,</span> <span class=n>hashValue</span><span class=p>:</span> <span class=nb>int</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=n>hashv</span><span class=o>=</span><span class=mi>0</span>
+</span></span><span class=line><span class=cl>        <span class=n>bas</span><span class=o>=</span><span class=n>p</span><span class=o>**</span><span class=p>(</span><span class=n>k</span><span class=o>-</span><span class=mi>1</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=n>a</span><span class=o>=</span><span class=n>b</span><span class=o>=</span><span class=mi>0</span>
+</span></span><span class=line><span class=cl>        <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=nb>len</span><span class=p>(</span><span class=n>s</span><span class=p>)</span><span class=o>-</span><span class=mi>1</span><span class=p>,</span><span class=n>k</span><span class=o>-</span><span class=mi>2</span><span class=p>,</span><span class=o>-</span><span class=mi>1</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>            <span class=k>if</span> <span class=n>i</span><span class=o>==</span><span class=nb>len</span><span class=p>(</span><span class=n>s</span><span class=p>)</span><span class=o>-</span><span class=mi>1</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>                <span class=k>for</span> <span class=n>j</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=n>i</span><span class=o>-</span><span class=n>k</span><span class=o>+</span><span class=mi>1</span><span class=p>,</span><span class=n>i</span><span class=o>+</span><span class=mi>1</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>                    <span class=n>hashv</span><span class=o>+=</span><span class=p>(</span><span class=nb>ord</span><span class=p>(</span><span class=n>s</span><span class=p>[</span><span class=n>j</span><span class=p>])</span><span class=o>-</span><span class=nb>ord</span><span class=p>(</span><span class=s1>&#39;a&#39;</span><span class=p>)</span><span class=o>+</span><span class=mi>1</span><span class=p>)</span><span class=o>*</span><span class=p>(</span><span class=n>p</span><span class=o>**</span><span class=p>(</span><span class=n>j</span><span class=o>-</span><span class=n>i</span><span class=o>+</span><span class=n>k</span><span class=o>-</span><span class=mi>1</span><span class=p>))</span><span class=o>%</span><span class=n>m</span>
+</span></span><span class=line><span class=cl>                    <span class=n>hashv</span><span class=o>%=</span><span class=n>m</span>
+</span></span><span class=line><span class=cl>            <span class=k>else</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>                <span class=n>hashv</span><span class=o>-=</span><span class=p>((</span><span class=nb>ord</span><span class=p>(</span><span class=n>s</span><span class=p>[</span><span class=n>i</span><span class=o>+</span><span class=mi>1</span><span class=p>])</span><span class=o>-</span><span class=nb>ord</span><span class=p>(</span><span class=s1>&#39;a&#39;</span><span class=p>)</span><span class=o>+</span><span class=mi>1</span><span class=p>)</span><span class=o>*</span><span class=n>bas</span><span class=p>)</span><span class=o>%</span><span class=n>m</span>
+</span></span><span class=line><span class=cl>                <span class=n>hashv</span><span class=o>%=</span><span class=n>m</span>
+</span></span><span class=line><span class=cl>                <span class=n>hashv</span><span class=o>*=</span><span class=n>p</span>
+</span></span><span class=line><span class=cl>                <span class=n>hashv</span><span class=o>%=</span><span class=n>m</span>
+</span></span><span class=line><span class=cl>                <span class=n>hashv</span><span class=o>+=</span><span class=p>(</span><span class=nb>ord</span><span class=p>(</span><span class=n>s</span><span class=p>[</span><span class=n>i</span><span class=o>-</span><span class=n>k</span><span class=o>+</span><span class=mi>1</span><span class=p>])</span><span class=o>-</span><span class=nb>ord</span><span class=p>(</span><span class=s1>&#39;a&#39;</span><span class=p>)</span><span class=o>+</span><span class=mi>1</span><span class=p>)</span><span class=o>%</span><span class=n>m</span>
+</span></span><span class=line><span class=cl>                <span class=n>hashv</span><span class=o>%=</span><span class=n>m</span>
+</span></span><span class=line><span class=cl>            <span class=k>if</span> <span class=n>hashv</span><span class=o>==</span><span class=n>hashValue</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>                <span class=n>a</span><span class=o>=</span><span class=n>i</span><span class=o>-</span><span class=n>k</span><span class=o>+</span><span class=mi>1</span>
+</span></span><span class=line><span class=cl>                <span class=n>b</span><span class=o>=</span><span class=n>i</span><span class=o>+</span><span class=mi>1</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>s</span><span class=p>[</span><span class=n>a</span><span class=p>:</span><span class=n>b</span><span class=p>]</span>   
+</span></span></code></pre></td></tr></table></div></div><p>但是,最坐牢的时刻来了,这样还是T<br>快速幂的时候也引入取余,最终AC了</p><h3 id=ac-code>AC code</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-py data-lang=py><span class=line><span class=cl><span class=k>class</span> <span class=nc>Solution</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=k>def</span> <span class=nf>subStrHash</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>s</span><span class=p>:</span> <span class=nb>str</span><span class=p>,</span> <span class=n>p</span><span class=p>:</span> <span class=nb>int</span><span class=p>,</span> <span class=n>m</span><span class=p>:</span> <span class=nb>int</span><span class=p>,</span> <span class=n>k</span><span class=p>:</span> <span class=nb>int</span><span class=p>,</span> <span class=n>hashValue</span><span class=p>:</span> <span class=nb>int</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=n>hashv</span><span class=o>=</span><span class=mi>0</span>
+</span></span><span class=line><span class=cl>        <span class=n>bas</span><span class=o>=</span><span class=nb>pow</span><span class=p>(</span><span class=n>p</span><span class=p>,</span><span class=n>k</span> <span class=o>-</span> <span class=mi>1</span><span class=p>,</span><span class=n>m</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=n>a</span><span class=o>=</span><span class=n>b</span><span class=o>=</span><span class=mi>0</span>
+</span></span><span class=line><span class=cl>        <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=nb>len</span><span class=p>(</span><span class=n>s</span><span class=p>)</span><span class=o>-</span><span class=mi>1</span><span class=p>,</span><span class=n>k</span><span class=o>-</span><span class=mi>2</span><span class=p>,</span><span class=o>-</span><span class=mi>1</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>            <span class=k>if</span> <span class=n>i</span><span class=o>==</span><span class=nb>len</span><span class=p>(</span><span class=n>s</span><span class=p>)</span><span class=o>-</span><span class=mi>1</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>                <span class=k>for</span> <span class=n>j</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=n>i</span><span class=o>-</span><span class=n>k</span><span class=o>+</span><span class=mi>1</span><span class=p>,</span><span class=n>i</span><span class=o>+</span><span class=mi>1</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>                    <span class=n>hashv</span><span class=o>+=</span><span class=p>(</span><span class=nb>ord</span><span class=p>(</span><span class=n>s</span><span class=p>[</span><span class=n>j</span><span class=p>])</span><span class=o>-</span><span class=nb>ord</span><span class=p>(</span><span class=s1>&#39;a&#39;</span><span class=p>)</span><span class=o>+</span><span class=mi>1</span><span class=p>)</span><span class=o>*</span><span class=nb>pow</span><span class=p>(</span><span class=n>p</span><span class=p>,</span><span class=n>j</span><span class=o>-</span><span class=n>i</span><span class=o>+</span><span class=n>k</span><span class=o>-</span><span class=mi>1</span><span class=p>,</span><span class=n>m</span><span class=p>)</span><span class=o>%</span><span class=n>m</span>
+</span></span><span class=line><span class=cl>                    <span class=n>hashv</span><span class=o>%=</span><span class=n>m</span>
+</span></span><span class=line><span class=cl>            <span class=k>else</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>                <span class=n>hashv</span><span class=o>-=</span><span class=p>((</span><span class=nb>ord</span><span class=p>(</span><span class=n>s</span><span class=p>[</span><span class=n>i</span><span class=o>+</span><span class=mi>1</span><span class=p>])</span><span class=o>-</span><span class=nb>ord</span><span class=p>(</span><span class=s1>&#39;a&#39;</span><span class=p>)</span><span class=o>+</span><span class=mi>1</span><span class=p>)</span><span class=o>*</span><span class=n>bas</span><span class=p>)</span><span class=o>%</span><span class=n>m</span>
+</span></span><span class=line><span class=cl>                <span class=n>hashv</span><span class=o>%=</span><span class=n>m</span>
+</span></span><span class=line><span class=cl>                <span class=n>hashv</span><span class=o>*=</span><span class=n>p</span>
+</span></span><span class=line><span class=cl>                <span class=n>hashv</span><span class=o>%=</span><span class=n>m</span>
+</span></span><span class=line><span class=cl>                <span class=n>hashv</span><span class=o>+=</span><span class=p>(</span><span class=nb>ord</span><span class=p>(</span><span class=n>s</span><span class=p>[</span><span class=n>i</span><span class=o>-</span><span class=n>k</span><span class=o>+</span><span class=mi>1</span><span class=p>])</span><span class=o>-</span><span class=nb>ord</span><span class=p>(</span><span class=s1>&#39;a&#39;</span><span class=p>)</span><span class=o>+</span><span class=mi>1</span><span class=p>)</span><span class=o>%</span><span class=n>m</span>
+</span></span><span class=line><span class=cl>                <span class=n>hashv</span><span class=o>%=</span><span class=n>m</span>
+</span></span><span class=line><span class=cl>            <span class=k>if</span> <span class=n>hashv</span><span class=o>==</span><span class=n>hashValue</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>                <span class=n>a</span><span class=o>=</span><span class=n>i</span><span class=o>-</span><span class=n>k</span><span class=o>+</span><span class=mi>1</span>
+</span></span><span class=line><span class=cl>                <span class=n>b</span><span class=o>=</span><span class=n>i</span><span class=o>+</span><span class=mi>1</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>s</span><span class=p>[</span><span class=n>a</span><span class=p>:</span><span class=n>b</span><span class=p>]</span>
+</span></span></code></pre></td></tr></table></div></div><p>其实这道题主要卡时间复杂度的在幂函数这里,所以只优化幂函数,不优化后面的转移也能卡过去(即无需倒叙)<sup id=fnref:3><a href=#fn:3 class=footnote-ref role=doc-noteref>3</a></sup></p><h2 id=t4-字符串分组>T4 字符串分组</h2><p>给你一个下标从 0 开始的字符串数组 words 。每个字符串都只包含 小写英文字母 。words 中任意一个子串中，每个字母都至多只出现一次。</p><p>如果通过以下操作之一，我们可以从 s1 的字母集合得到 s2 的字母集合，那么我们称这两个字符串为 关联的 ：</p><p>往 s1 的字母集合中添加一个字母。<br>从 s1 的字母集合中删去一个字母。<br>将 s1 中的一个字母替换成另外任意一个字母,也可以替换为这个字母本身。<br>数组 words 可以分为一个或者多个无交集的 组 。如果一个字符串与另一个字符串关联，那么它们应当属于同一个组。</p><p>注意，你需要确保分好组后，一个组内的任一字符串与其他组的字符串都不关联。可以证明在这个条件下，分组方案是唯一的。</p><p>请你返回一个长度为 2 的数组 ans ：</p><p>ans[0] 是 words 分组后的 总组数 。<br>ans[1] 是字符串数目最多的组所包含的字符串数目。</p><p>示例 1：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>输入：words = [&#34;a&#34;,&#34;b&#34;,&#34;ab&#34;,&#34;cde&#34;]
+</span></span><span class=line><span class=cl>输出：[2,3]
+</span></span></code></pre></td></tr></table></div></div><p>解释：</p><ul><li>words[0] 可以得到 words[1] （将 &lsquo;a&rsquo; 替换为 &lsquo;b&rsquo;）和 words[2] （添加 &lsquo;b&rsquo;）。所以 words[0] 与 words[1] 和 words[2] 关联。</li><li>words[1] 可以得到 words[0] （将 &lsquo;b&rsquo; 替换为 &lsquo;a&rsquo;）和 words[2] （添加 &lsquo;a&rsquo;）。所以 words[1] 与 words[0] 和 words[2] 关联。</li><li>words[2] 可以得到 words[0] （删去 &lsquo;b&rsquo;）和 words[1] （删去 &lsquo;a&rsquo;）。所以 words[2] 与 words[0] 和 words[1] 关联。</li><li>words[3] 与 words 中其他字符串都不关联。
+所以，words 可以分成 2 个组 [&ldquo;a&rdquo;,&ldquo;b&rdquo;,&ldquo;ab&rdquo;] 和 [&ldquo;cde&rdquo;] 。最大的组大小为 3 。</li></ul><p>示例 2：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>输入：words = [&#34;a&#34;,&#34;ab&#34;,&#34;abc&#34;]
+</span></span><span class=line><span class=cl>输出：[1,3]
+</span></span></code></pre></td></tr></table></div></div><p>解释：</p><ul><li>words[0] 与 words[1] 关联。</li><li>words[1] 与 words[0] 和 words[2] 关联。</li><li>words[2] 与 words[1] 关联。
+由于所有字符串与其他字符串都关联，所以它们全部在同一个组内。<br>所以最大的组大小为 3 。</li></ul><p>提示：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>1 &lt;= words.length &lt;= 2 * 104
+</span></span><span class=line><span class=cl>1 &lt;= words[i].length &lt;= 26
+</span></span><span class=line><span class=cl>words[i] 只包含小写英文字母。
+</span></span><span class=line><span class=cl>words[i] 中每个字母最多只出现一次。
+</span></span></code></pre></td></tr></table></div></div><h3 id=思路-3>思路</h3><p>没时间看了<br>后面再补上吧<br><a class=link href=https://leetcode.cn/problems/groups-of-strings/solution/ target=_blank rel=noopener>见这里</a></p><div class=footnotes role=doc-endnotes><hr><ol><li id=fn:1><p>可以参考<a class=link href=https://leetcode.cn/problems/keep-multiplying-found-values-by-two/solution/ha-xi-biao-mo-ni-by-endlesscheng-ipk3/ target=_blank rel=noopener>这个</a>帖子&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li><li id=fn:2><p>leetcode<a class=link href=https://leetcode.cn/problems/all-divisions-with-the-highest-score-of-a-binary-array/solution/fen-zu-de-fen-zui-gao-de-suo-you-xia-bia-7pqp/ target=_blank rel=noopener>官方解答</a>一次遍历即可&#160;<a href=#fnref:2 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li><li id=fn:3><p>例如<a class=link href=https://leetcode.cn/problems/find-substring-with-given-hash-value/solution/zheng-xiang-kao-lu-wu-da-shu-chu-li-pyth-9z4l/ target=_blank rel=noopener>这个</a>预处理幂加上其它剪枝也能AC&#160;<a href=#fnref:3 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li></ol></div></section><footer class=article-footer><section class=article-tags><a href=/CpHugo/tags/leetcode/>leetcode</a>
+<a href=/CpHugo/tags/c++/>c++</a></section><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg><span>遵循CC BY-NC-SA 4.0协议</span></section></footer><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css integrity="sha256-J+iAE0sgH8QSz9hpcDxXIftnj65JEZgNhGcgReTTK9s=" crossorigin=anonymous><script src=https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js integrity="sha256-InsNdER1b2xUewP+pKCUJpkhiqwHgqiPXDlIk7GzBu4=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js integrity="sha256-y39Mpg7V3D4lhBX4x6O0bUqTV4pSrfgwEfGKfxkOdgI=" crossorigin=anonymous defer></script><script>window.addEventListener("DOMContentLoaded",()=>{renderMathInElement(document.querySelector(`.article-content`),{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})})</script></article><aside class=related-content--wrapper><h2 class=section-title>相关文章</h2><div class=related-content><div class="flex article-list--tile"><article class=has-image><a href=/CpHugo/p/lc-biweekly-contest-105/><div class=article-image><img src=https://pic.lingkou.xyz/1683871861-YilDpq-1760-360%20%E5%AE%BD%E5%BE%B7%E6%8A%95%E8%B5%84.png loading=lazy data-key=lc-biweekly-contest-105 data-hash=https://pic.lingkou.xyz/1683871861-YilDpq-1760-360%20%E5%AE%BD%E5%BE%B7%E6%8A%95%E8%B5%84.png></div><div class=article-details><h2 class=article-title>lc-biweekly-contest-105</h2></div></a></article><article class=has-image><a href=/CpHugo/p/lc-weekly-contest-313/><div class=article-image><img src=https://pic.lingkou.xyz/1664008640-fTlCRH-1760-360%20%E7%A9%BA%E4%B8%AD%E4%BA%91%E6%B1%87.png loading=lazy data-key=lc-weekly-contest-313 data-hash=https://pic.lingkou.xyz/1664008640-fTlCRH-1760-360%20%E7%A9%BA%E4%B8%AD%E4%BA%91%E6%B1%87.png></div><div class=article-details><h2 class=article-title>lc weekly contest 313</h2></div></a></article></div></div></aside><script src=https://giscus.app/client.js data-repo=open17/CpHugo data-repo-id=R_kgDOJbtiOQ data-category=Announcements data-category-id=DIC_kwDOJbtiOc4CWXPs data-mapping=pathname data-strict=0 data-reactions-enabled=1 data-emit-metadata=0 data-input-position=top data-theme=light data-lang=en crossorigin=anonymous async></script>
+<script>function setGiscusTheme(e){let t=document.querySelector("iframe.giscus-frame");t&&t.contentWindow.postMessage({giscus:{setConfig:{theme:e}}},"https://giscus.app")}(function(){addEventListener("message",t=>{if(event.origin!=="https://giscus.app")return;e()}),window.addEventListener("onColorSchemeChange",e);function e(){setGiscusTheme(document.documentElement.dataset.scheme==="light"?"light":"dark_dimmed")}})()</script><footer class=site-footer><section class=copyright>&copy;
+2023 CpHugo</section><section class=powerby>项目支持：<br>Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a><br>主题 <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.16.0>Stack</a></b> 由 <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a> 设计</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css crossorigin=anonymous></main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=/CpHugo/ts/main.js defer></script>
+<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>
