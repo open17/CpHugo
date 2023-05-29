@@ -12,32 +12,19 @@ links:
     website: https://open17.github.io/contest/new.html
 menu:
     main: 
-        weight: 5
+        weight: 1
         params:
             icon: link
 
 comments: false
 ---
-## 协议
+## 欢迎来到CpHugo
+这是一个*个人仿博客类*的竞赛算法(competive programming)网站,记录本人所学的一些算法知识,以及见到的算法题目,由于个人精力有限,可能存在部分疏漏,欢迎指正~     
+在本文的最下面放置了一些方面的跳转链接~   
+## 变更日志
+### v1.0
+- 正式加入评论区
+- 修改入站指南
+## 技术
+本项目基于Hugo和Hugo stack主题
 
-MIT License
-
-Copyright (c) 2023 open17
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
