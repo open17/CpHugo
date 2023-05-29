@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CpHugo</title><link>https://open17.github.io/CpHugo/</link><description>Recent content on CpHugo</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 29 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://open17.github.io/CpHugo/index.xml" rel="self" type="application/rss+xml"/><item><title>lc weekly contest 292</title><link>https://open17.github.io/CpHugo/p/lc-weekly-contest-292/</link><pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/lc-weekly-contest-292/</guid><description>&lt;img src="https://pic.lingkou.xyz/1651221841-OkHrex-1760-360%20Cider.png" alt="Featured image of post lc weekly contest 292" />&lt;h2 id="前言">前言&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>>>>>CpHugo&lt;&lt;&lt;&lt;</title><link>https://open17.github.io/CpHugo/</link><description>Recent content on >>>>CpHugo&lt;&lt;&lt;&lt;</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 29 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://open17.github.io/CpHugo/index.xml" rel="self" type="application/rss+xml"/><item><title>lc weekly contest 292</title><link>https://open17.github.io/CpHugo/p/lc-weekly-contest-292/</link><pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/lc-weekly-contest-292/</guid><description>&lt;img src="https://pic.lingkou.xyz/1651221841-OkHrex-1760-360%20Cider.png" alt="Featured image of post lc weekly contest 292" />&lt;h2 id="前言">前言&lt;/h2>
 &lt;p>题目分布：简单，中等，中等，困难 &lt;br>
 T3思路想错坐牢，写出T4后才写出T3&lt;/p>
 &lt;h2 id="t1-字符串中最大的-3-位相同数字">T1 字符串中最大的 3 位相同数字&lt;/h2>
@@ -9213,21 +9213,14 @@ $0\le a_i&amp;lt;2^{31}$&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>搜索</title><link>https://open17.github.io/CpHugo/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/search/</guid><description/></item><item><title>网站指南</title><link>https://open17.github.io/CpHugo/%E7%BD%91%E7%AB%99%E6%8C%87%E5%8D%97/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/%E7%BD%91%E7%AB%99%E6%8C%87%E5%8D%97/</guid><description>&lt;h2 id="协议">协议&lt;/h2>
-&lt;p>MIT License&lt;/p>
-&lt;p>Copyright (c) 2023 open17&lt;/p>
-&lt;p>Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the &amp;ldquo;Software&amp;rdquo;), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:&lt;/p>
-&lt;p>The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.&lt;/p>
-&lt;p>THE SOFTWARE IS PROVIDED &amp;ldquo;AS IS&amp;rdquo;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.&lt;/p></description></item><item><title>专题</title><link>https://open17.github.io/CpHugo/archives/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/archives/</guid><description/></item></channel></rss>
+&lt;/div></description></item><item><title>搜索</title><link>https://open17.github.io/CpHugo/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/search/</guid><description/></item><item><title>网站指南</title><link>https://open17.github.io/CpHugo/%E7%BD%91%E7%AB%99%E6%8C%87%E5%8D%97/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/%E7%BD%91%E7%AB%99%E6%8C%87%E5%8D%97/</guid><description>&lt;h2 id="欢迎来到cphugo">欢迎来到CpHugo&lt;/h2>
+&lt;p>这是一个&lt;em>个人仿博客类&lt;/em>的竞赛算法(competive programming)网站,记录本人所学的一些算法知识,以及见到的算法题目,由于个人精力有限,可能存在部分疏漏,欢迎指正~ &lt;br>
+在本文的最下面放置了一些方面的跳转链接~&lt;/p>
+&lt;h2 id="变更日志">变更日志&lt;/h2>
+&lt;h3 id="v10">v1.0&lt;/h3>
+&lt;ul>
+&lt;li>正式加入评论区&lt;/li>
+&lt;li>修改入站指南&lt;/li>
+&lt;/ul>
+&lt;h2 id="技术">技术&lt;/h2>
+&lt;p>本项目基于Hugo和Hugo stack主题&lt;/p></description></item><item><title>专题</title><link>https://open17.github.io/CpHugo/archives/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/archives/</guid><description/></item></channel></rss>
