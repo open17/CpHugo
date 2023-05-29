@@ -1,4 +1,666 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>leetcode on CpHugo</title><link>https://open17.github.io/CpHugo/tags/leetcode/</link><description>Recent content in leetcode on CpHugo</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 28 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://open17.github.io/CpHugo/tags/leetcode/index.xml" rel="self" type="application/rss+xml"/><item><title>lc weekly contest 278</title><link>https://open17.github.io/CpHugo/p/lc-weekly-contest-278/</link><pubDate>Sun, 28 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/lc-weekly-contest-278/</guid><description>&lt;img src="https://pic.lingkou.xyz/1642577172-whzTsr-1760-360%20%E5%85%AD%E6%96%B9%E4%BA%91.png" alt="Featured image of post lc weekly contest 278" />&lt;h2 id="前言">前言&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>leetcode on CpHugo</title><link>https://open17.github.io/CpHugo/tags/leetcode/</link><description>Recent content in leetcode on CpHugo</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 29 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://open17.github.io/CpHugo/tags/leetcode/index.xml" rel="self" type="application/rss+xml"/><item><title>lc weekly contest 292</title><link>https://open17.github.io/CpHugo/p/lc-weekly-contest-292/</link><pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/lc-weekly-contest-292/</guid><description>&lt;img src="https://pic.lingkou.xyz/1651221841-OkHrex-1760-360%20Cider.png" alt="Featured image of post lc weekly contest 292" />&lt;h2 id="前言">前言&lt;/h2>
+&lt;p>题目分布：简单，中等，中等，困难 &lt;br>
+T3思路想错坐牢，写出T4后才写出T3&lt;/p>
+&lt;h2 id="t1-字符串中最大的-3-位相同数字">T1 字符串中最大的 3 位相同数字&lt;/h2>
+&lt;p>给你一个字符串 num ，表示一个大整数。如果一个整数满足下述所有条件，则认为该整数是一个 优质整数 ：&lt;/p>
+&lt;p>该整数是 num 的一个长度为 3 的 子字符串 。 &lt;br>
+该整数由唯一一个数字重复 3 次组成。 &lt;br>
+以字符串形式返回 最大的优质整数 。如果不存在满足要求的整数，则返回一个空字符串 &amp;quot;&amp;quot; 。&lt;/p>
+&lt;p>注意：&lt;/p>
+&lt;p>子字符串 是字符串中的一个连续字符序列。 &lt;br>
+num 或优质整数中可能存在 前导零 。&lt;/p>
+&lt;p>示例 1：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">输入：num = &amp;#34;6777133339&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">输出：&amp;#34;777&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">解释：num 中存在两个优质整数：&amp;#34;777&amp;#34; 和 &amp;#34;333&amp;#34; 。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34;777&amp;#34; 是最大的那个，所以返回 &amp;#34;777&amp;#34; 。
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>示例 2：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">输入：num = &amp;#34;2300019&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">输出：&amp;#34;000&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">解释：&amp;#34;000&amp;#34; 是唯一一个优质整数。
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>示例 3：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">输入：num = &amp;#34;42352338&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">输出：&amp;#34;&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">解释：不存在长度为 3 且仅由一个唯一数字组成的整数。因此，不存在优质整数。
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>提示：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">3 &amp;lt;= num.length &amp;lt;= 1000
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">num 仅由数字（0 - 9）组成
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="思路">思路&lt;/h3>
+&lt;p>模拟&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="k">class&lt;/span> &lt;span class="nc">Solution&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">public&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">string&lt;/span> &lt;span class="n">largestGoodInteger&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">string&lt;/span> &lt;span class="n">num&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">l&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">p&lt;/span>&lt;span class="o">=-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">ans&lt;/span>&lt;span class="o">=-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">l&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">num&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">size&lt;/span>&lt;span class="p">()){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">num&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">l&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="n">num&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">l&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">&amp;amp;&amp;amp;&lt;/span>&lt;span class="n">num&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">l&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="n">num&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">l&lt;/span>&lt;span class="p">]){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">p&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">num&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">l&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="sc">&amp;#39;0&amp;#39;&lt;/span>&lt;span class="p">)){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">p&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">num&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">l&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="sc">&amp;#39;0&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">ans&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">l&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">l&lt;/span>&lt;span class="o">+=&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">l&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">ans&lt;/span>&lt;span class="o">==-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="k">return&lt;/span> &lt;span class="s">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">num&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">substr&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">ans&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="t22265-统计值等于子树平均值的节点数">T22265. 统计值等于子树平均值的节点数&lt;/h2>
+&lt;p>给你一棵二叉树的根节点 root ，找出并返回满足要求的节点数，要求节点的值等于其 子树 中值的 平均值 。&lt;/p>
+&lt;p>注意：&lt;/p>
+&lt;p>n 个元素的平均值可以由 n 个元素 求和 然后再除以 n ，并 向下舍入 到最近的整数。 &lt;br>
+root 的 子树 由 root 和它的所有后代组成。&lt;/p>
+&lt;p>示例 1：
+&lt;img src="https://assets.leetcode.com/uploads/2022/03/15/image-20220315203925-1.png"
+loading="lazy"
+alt="img"
+>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">输入：root = [4,8,5,0,1,null,6]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">输出：5
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">解释：
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">对值为 4 的节点：子树的平均值 (4 + 8 + 5 + 0 + 1 + 6) / 6 = 24 / 6 = 4 。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">对值为 5 的节点：子树的平均值 (5 + 6) / 2 = 11 / 2 = 5 。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">对值为 0 的节点：子树的平均值 0 / 1 = 0 。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">对值为 1 的节点：子树的平均值 1 / 1 = 1 。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">对值为 6 的节点：子树的平均值 6 / 1 = 6 。
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>示例 2：
+&lt;img src="https://assets.leetcode.com/uploads/2022/03/26/image-20220326133920-1.png"
+loading="lazy"
+alt="img2"
+>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">输入：root = [1]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">输出：1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">解释：对值为 1 的节点：子树的平均值 1 / 1 = 1。
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>提示：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">树中节点数目在范围 [1, 1000] 内
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">0 &amp;lt;= Node.val &amp;lt;= 1000
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="思路-1">思路&lt;/h3>
+&lt;p>按要求dfs即可&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="cm">/**
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * Definition for a binary tree node.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * struct TreeNode {
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * int val;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * TreeNode *left;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * TreeNode *right;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * TreeNode() : val(0), left(nullptr), right(nullptr) {}
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * };
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">typedef&lt;/span> &lt;span class="n">pair&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="kt">int&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="kt">int&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">pii&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">class&lt;/span> &lt;span class="nc">Solution&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">public&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">cnt&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="nf">averageOfSubtree&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">TreeNode&lt;/span>&lt;span class="o">*&lt;/span> &lt;span class="n">root&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">dfs&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">root&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">cnt&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">pii&lt;/span> &lt;span class="nf">dfs&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">TreeNode&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="n">node&lt;/span>&lt;span class="p">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">ans&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">node&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="n">val&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">num&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">node&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="n">left&lt;/span>&lt;span class="p">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">pii&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">dfs&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">node&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="n">left&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">ans&lt;/span>&lt;span class="o">+=&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">first&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">num&lt;/span>&lt;span class="o">+=&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">second&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">node&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="n">right&lt;/span>&lt;span class="p">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">pii&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">dfs&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">node&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="n">right&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">ans&lt;/span>&lt;span class="o">+=&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">first&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">num&lt;/span>&lt;span class="o">+=&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">second&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">ans&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">num&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="n">node&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="n">val&lt;/span>&lt;span class="p">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cnt&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">make_pair&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">ans&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">num&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="t3-统计打字方案数">T3 统计打字方案数&lt;/h2>
+&lt;p>Alice 在给 Bob 用手机打字。数字到字母的 对应 如下图所示。 &lt;br>
+为了 打出 一个字母，Alice 需要 按 对应字母 i 次，i 是该字母在这个按键上所处的位置。 &lt;br>
+&lt;img src="https://assets.leetcode.com/uploads/2022/03/15/1200px-telephone-keypad2svg.png"
+loading="lazy"
+alt="pic"
+>
+比方说，为了按出字母 &amp;rsquo;s&amp;rsquo; ，Alice 需要按 &amp;lsquo;7&amp;rsquo; 四次。类似的， Alice 需要按 &amp;lsquo;5&amp;rsquo; 两次得到字母 &amp;lsquo;k&amp;rsquo; 。 &lt;br>
+注意，数字 &amp;lsquo;0&amp;rsquo; 和 &amp;lsquo;1&amp;rsquo; 不映射到任何字母，所以 Alice 不 使用它们。 &lt;br>
+但是，由于传输的错误，Bob 没有收到 Alice 打字的字母信息，反而收到了 按键的字符串信息 。&lt;/p>
+&lt;p>比方说，Alice 发出的信息为 &amp;ldquo;bob&amp;rdquo; ，Bob 将收到字符串 &amp;ldquo;2266622&amp;rdquo; 。 &lt;br>
+给你一个字符串 pressedKeys ，表示 Bob 收到的字符串，请你返回 Alice 总共可能发出多少种文字信息 。&lt;/p>
+&lt;p>由于答案可能很大，将它对 109 + 7 取余 后返回。&lt;/p>
+&lt;p>示例 1：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">输入：pressedKeys = &amp;#34;22233&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">输出：8
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">解释：
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Alice 可能发出的文字信息包括：
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34;aaadd&amp;#34;, &amp;#34;abdd&amp;#34;, &amp;#34;badd&amp;#34;, &amp;#34;cdd&amp;#34;, &amp;#34;aaae&amp;#34;, &amp;#34;abe&amp;#34;, &amp;#34;bae&amp;#34; 和 &amp;#34;ce&amp;#34; 。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">由于总共有 8 种可能的信息，所以我们返回 8 。
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>示例 2：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">输入：pressedKeys = &amp;#34;222222222222222222222222222222222222&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">输出：82876089
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">解释：
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">总共有 2082876103 种 Alice 可能发出的文字信息。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">由于我们需要将答案对 109 + 7 取余，所以我们返回 2082876103 % (109 + 7) = 82876089 。
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>提示：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">1 &amp;lt;= pressedKeys.length &amp;lt;= 105
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pressedKeys 只包含数字 &amp;#39;2&amp;#39; 到 &amp;#39;9&amp;#39; 。
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="思路-2">思路&lt;/h3>
+&lt;p>这题写完T4回来看才写出来 &lt;br>
+不难看出我们要进行分组计算(连续相同的字母化为一组)，并根据乘法原则计算最终结果 &lt;br>
+最开始一直想找出数学规律算出每一组(另外比赛还有一个错误就是没发现7，9不同有四种可能)
+后来尝试记忆化搜索&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-py" data-lang="py">&lt;span class="line">&lt;span class="cl">&lt;span class="k">class&lt;/span> &lt;span class="nc">Solution&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">def&lt;/span> &lt;span class="nf">countTexts&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">pressedKeys&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">str&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="nb">int&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">mod&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nb">int&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mf">1e9&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">7&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nd">@cache&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">def&lt;/span> &lt;span class="nf">dfs&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">size&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">t&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="n">size&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">elif&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="n">size&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">s&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="n">k&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="nb">range&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">4&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="n">t&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">s&lt;/span>&lt;span class="o">+=&lt;/span>&lt;span class="n">dfs&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">k&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">size&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">t&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">s&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">s&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">pressedKeys&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">pressedKeys&lt;/span>&lt;span class="o">+=&lt;/span>&lt;span class="s1">&amp;#39;1&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cnt&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">ans&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">pressedKeys&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">!=&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">t&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="s1">&amp;#39;7&amp;#39;&lt;/span> &lt;span class="ow">or&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="s1">&amp;#39;9&amp;#39;&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">t&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">ans&lt;/span>&lt;span class="o">*=&lt;/span>&lt;span class="n">dfs&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">cnt&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">t&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">#xxx&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cnt&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">s&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">i&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cnt&lt;/span>&lt;span class="o">+=&lt;/span>&lt;span class="mi">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">ans&lt;/span>&lt;span class="o">%&lt;/span>&lt;span class="n">mod&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>竟然MLE了，无妨改成递推形式+预处理全部&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-py" data-lang="py">&lt;span class="line">&lt;span class="cl">&lt;span class="n">size&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">100009&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">a&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="n">size&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">b&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="n">size&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="nb">range&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">100000&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="mi">100000&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="nb">range&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">100000&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="mi">100000&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">b&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">b&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">4&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">class&lt;/span> &lt;span class="nc">Solution&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">def&lt;/span> &lt;span class="nf">countTexts&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">pressedKeys&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">str&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="nb">int&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">mod&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nb">int&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mf">1e9&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">7&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">s&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">pressedKeys&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">pressedKeys&lt;/span>&lt;span class="o">+=&lt;/span>&lt;span class="s1">&amp;#39;1&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cnt&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">ans&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">pressedKeys&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">!=&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">t&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="s1">&amp;#39;7&amp;#39;&lt;/span> &lt;span class="ow">or&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="s1">&amp;#39;9&amp;#39;&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">ans&lt;/span>&lt;span class="o">*=&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">100000&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">cnt&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">ans&lt;/span>&lt;span class="o">*=&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">100000&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">cnt&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cnt&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">s&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">i&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cnt&lt;/span>&lt;span class="o">+=&lt;/span>&lt;span class="mi">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">ans&lt;/span>&lt;span class="o">%&lt;/span>&lt;span class="n">mod&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>但是还是MLE，这是为什么呢
+答案是：b中的数会很大很大，占据内存大 &lt;br>
+本来用py就是为了避免高精度，所以一直懒得分步取模，所以MLE了，这个是真的难找出来
+加入分步取模AC了&lt;/p>
+&lt;h3 id="ac-code">AC code&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-py" data-lang="py">&lt;span class="line">&lt;span class="cl">&lt;span class="n">size&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">10&lt;/span>&lt;span class="o">**&lt;/span>&lt;span class="mi">5&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">mod&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nb">int&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mf">1e9&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">7&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">a&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">size&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">4&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">b&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">size&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">5&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="nb">range&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">size&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="n">size&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">])&lt;/span>&lt;span class="o">%&lt;/span>&lt;span class="n">mod&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">%=&lt;/span>&lt;span class="n">mod&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="nb">range&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">size&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="n">size&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">b&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">b&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">4&lt;/span>&lt;span class="p">])&lt;/span>&lt;span class="o">%&lt;/span>&lt;span class="n">mod&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">b&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">%=&lt;/span>&lt;span class="n">mod&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">class&lt;/span> &lt;span class="nc">Solution&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">def&lt;/span> &lt;span class="nf">countTexts&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">pressedKeys&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">str&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="nb">int&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">s&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">pressedKeys&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">pressedKeys&lt;/span>&lt;span class="o">+=&lt;/span>&lt;span class="s1">&amp;#39;1&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cnt&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">ans&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">pressedKeys&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">!=&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">t&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="s1">&amp;#39;7&amp;#39;&lt;/span> &lt;span class="ow">or&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="s1">&amp;#39;9&amp;#39;&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">ans&lt;/span>&lt;span class="o">*=&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">size&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">cnt&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">ans&lt;/span>&lt;span class="o">*=&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">size&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">cnt&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cnt&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">s&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">i&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cnt&lt;/span>&lt;span class="o">+=&lt;/span>&lt;span class="mi">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">ans&lt;/span>&lt;span class="o">%&lt;/span>&lt;span class="n">mod&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="t4-检查是否有合法括号字符串路径">T4 检查是否有合法括号字符串路径&lt;/h2>
+&lt;p>一个括号字符串是一个 非空 且只包含 &amp;lsquo;(&amp;rsquo; 和 &amp;lsquo;)&amp;rsquo; 的字符串。如果下面 任意 条件为 真 ，那么这个括号字符串就是 合法的 。&lt;/p>
+&lt;p>字符串是 () 。 &lt;br>
+字符串可以表示为 AB（A 连接 B），A 和 B 都是合法括号序列。 &lt;br>
+字符串可以表示为 (A) ，其中 A 是合法括号序列。 &lt;br>
+给你一个 m x n 的括号网格图矩阵 grid 。网格图中一个 合法括号路径 是满足以下所有条件的一条路径：&lt;/p>
+&lt;p>路径开始于左上角格子 (0, 0) 。
+路径结束于右下角格子 (m - 1, n - 1) 。
+路径每次只会向 下 或者向 右 移动。
+路径经过的格子组成的括号字符串是 合法 的。
+如果网格图中存在一条 合法括号路径 ，请返回 true ，否则返回 false 。&lt;/p>
+&lt;p>示例 1：
+&lt;img src="https://assets.leetcode.com/uploads/2022/03/15/example1drawio.png"
+loading="lazy"
+alt="1"
+>
+&lt;img src="https://assets.leetcode.com/uploads/2022/03/15/example1drawio.png"
+loading="lazy"
+alt="1"
+>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">输入：grid = [[&amp;#34;(&amp;#34;,&amp;#34;(&amp;#34;,&amp;#34;(&amp;#34;],[&amp;#34;)&amp;#34;,&amp;#34;(&amp;#34;,&amp;#34;)&amp;#34;],[&amp;#34;(&amp;#34;,&amp;#34;(&amp;#34;,&amp;#34;)&amp;#34;],[&amp;#34;(&amp;#34;,&amp;#34;(&amp;#34;,&amp;#34;)&amp;#34;]]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">输出：true
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">解释：上图展示了两条路径，它们都是合法括号字符串路径。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">第一条路径得到的合法字符串是 &amp;#34;()(())&amp;#34; 。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">第二条路径得到的合法字符串是 &amp;#34;((()))&amp;#34; 。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">注意可能有其他的合法括号字符串路径。
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>示例 2：&lt;/p>
+&lt;p>&lt;img src="https://assets.leetcode.com/uploads/2022/03/15/example2drawio.png"
+loading="lazy"
+alt="1"
+>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">输入：grid = [[&amp;#34;)&amp;#34;,&amp;#34;)&amp;#34;],[&amp;#34;(&amp;#34;,&amp;#34;(&amp;#34;]]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">输出：false
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">解释：两条可行路径分别得到 &amp;#34;))(&amp;#34; 和 &amp;#34;)((&amp;#34; 。由于它们都不是合法括号字符串，我们返回 false 。
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>提示：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">m == grid.length
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">n == grid[i].length
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">1 &amp;lt;= m, n &amp;lt;= 100
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">grid[i][j] 要么是 &amp;#39;(&amp;#39; ，要么是 &amp;#39;)&amp;#39; 。
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="思路-3">思路&lt;/h3>
+&lt;p>一眼dp，用数值模拟括号而非栈，快速AC&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="k">class&lt;/span> &lt;span class="nc">Solution&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">def&lt;/span> &lt;span class="n">hasValidPath&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">self&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nl">grid&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">str&lt;/span>&lt;span class="p">]])&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="kt">bool&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">@&lt;/span>&lt;span class="n">cache&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">def&lt;/span> &lt;span class="n">dfs&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">j&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="cp"># print(i,j,s)
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">&amp;gt;=&lt;/span>&lt;span class="n">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">grid&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span> &lt;span class="n">and&lt;/span> &lt;span class="n">j&lt;/span>&lt;span class="o">&amp;gt;=&lt;/span>&lt;span class="n">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">grid&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">])&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="cp"># print(s)
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="mi">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">a&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">False&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">j&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">grid&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">])&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">grid&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="n">j&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="sc">&amp;#39;)&amp;#39;&lt;/span> &lt;span class="n">and&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">a&lt;/span>&lt;span class="o">|=&lt;/span> &lt;span class="n">dfs&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">j&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">elif&lt;/span> &lt;span class="n">grid&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="n">j&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="sc">&amp;#39;(&amp;#39;&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">a&lt;/span>&lt;span class="o">|=&lt;/span> &lt;span class="n">dfs&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">j&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">grid&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">grid&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="n">j&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="sc">&amp;#39;)&amp;#39;&lt;/span> &lt;span class="n">and&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">a&lt;/span>&lt;span class="o">|=&lt;/span> &lt;span class="n">dfs&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">j&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">elif&lt;/span> &lt;span class="n">grid&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="n">j&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="sc">&amp;#39;(&amp;#39;&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">a&lt;/span>&lt;span class="o">|=&lt;/span> &lt;span class="n">dfs&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">j&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">a&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">grid&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">!=&lt;/span>&lt;span class="sc">&amp;#39;(&amp;#39;&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">False&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">dfs&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>lc weekly contest 278</title><link>https://open17.github.io/CpHugo/p/lc-weekly-contest-278/</link><pubDate>Sun, 28 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/lc-weekly-contest-278/</guid><description>&lt;img src="https://pic.lingkou.xyz/1642577172-whzTsr-1760-360%20%E5%85%AD%E6%96%B9%E4%BA%91.png" alt="Featured image of post lc weekly contest 278" />&lt;h2 id="前言">前言&lt;/h2>
 &lt;p>题目分布:简单,中等,困难,困难&lt;br>
 T3卡常坐大牢&lt;/p>
 &lt;h2 id="t1-将找到的值乘以-2">T1 将找到的值乘以 2&lt;/h2>

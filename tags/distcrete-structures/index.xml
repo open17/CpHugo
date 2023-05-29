@@ -558,4 +558,303 @@ then G has a Hamilton circuit.&lt;/p>
 &lt;li>v ≥ 3, then e ≤ 3v – 6&lt;/li>
 &lt;li>G has a vertex of degree not exceeding 5&lt;/li>
 &lt;li>if v&amp;gt;=3 and no circuits of length 3,then e&amp;lt;=2v-4&lt;/li>
-&lt;/ul></description></item></channel></rss>
+&lt;/ul></description></item><item><title>离散数学知识速查</title><link>https://open17.github.io/CpHugo/p/dm-quick-review/</link><pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/dm-quick-review/</guid><description>&lt;h2 id="topics1">Topics&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/h2>
+&lt;ul>
+&lt;li>Logic and proofs&lt;/li>
+&lt;li>Set, functions, sequences, and summations&lt;/li>
+&lt;li>Counting&lt;/li>
+&lt;li>Relations&lt;/li>
+&lt;li>Graph theory&lt;/li>
+&lt;li>Tree&lt;/li>
+&lt;li>Boolean algebra&lt;/li>
+&lt;/ul>
+&lt;h2 id="logic-and-proofs">Logic and Proofs&lt;/h2>
+&lt;h3 id="propositional-logic">Propositional logic&lt;/h3>
+&lt;h4 id="truth-table">Truth table&lt;/h4>
+&lt;p>(Given a proposition, draw the truth table)&lt;/p>
+&lt;h4 id="logical-operators">Logical operators&lt;/h4>
+&lt;p>Conjunction ∧&lt;br>
+Disjunction ∨&lt;br>
+Exclusive OR ⊕
+Implication $→$&lt;/p>
+&lt;h3 id="propositional-equivalence">Propositional equivalence&lt;/h3>
+&lt;h4 id="laws">Laws&lt;/h4>
+&lt;ol>
+&lt;li>De Morgan’s laws (否定拆括号取反)&lt;/li>
+&lt;li>Distributive(分配) laws&lt;/li>
+&lt;li>$p\rightarrow q=\neg p \vee q$&lt;/li>
+&lt;/ol>
+&lt;h4 id="tautology-and-contradiction">Tautology and contradiction&lt;/h4>
+&lt;p>Given two propositions, prove they are equivalent&lt;/p>
+&lt;h3 id="predicates">Predicates&lt;/h3>
+&lt;p>Universal quantification&lt;br>
+Existential quantification&lt;br>
+Translate a sentence to a logical expression&lt;/p>
+&lt;h3 id="proofs">Proofs&lt;/h3>
+&lt;h4 id="inference-rules-推理规则">Inference rules 推理规则&lt;/h4>
+&lt;p>(prove or disprove an argument)&lt;/p>
+&lt;ul>
+&lt;li>肯定前件推理 $p\wedge( p \rightarrow q)\Rightarrow q$&lt;/li>
+&lt;li>否定后件推理 $\neg q \wedge(p\rightarrow q) \Rightarrow \neg p$&lt;/li>
+&lt;li>析取三段论&lt;/li>
+&lt;li>假说演绎推理&lt;/li>
+&lt;li>归结推理&lt;/li>
+&lt;/ul>
+&lt;h4 id="argument">Argument&lt;/h4>
+&lt;ul>
+&lt;li>Valid argument&lt;/li>
+&lt;li>Invalid argument&lt;/li>
+&lt;/ul>
+&lt;h3 id="proof-methods">Proof methods&lt;/h3>
+&lt;h4 id="direct-proofs">direct proofs&lt;/h4>
+&lt;h4 id="indirect-proofs">Indirect proofs&lt;/h4>
+&lt;p>Proof by contraposition(非非反)
+Proof by contradiction&lt;/p>
+&lt;h4 id="existence-proof-constructive-and-non-constructive">Existence proof (constructive and non-constructive)&lt;/h4>
+&lt;h4 id="uniqueness-proof-two-steps">Uniqueness proof (two steps)&lt;/h4>
+&lt;p>存在且仅存在一个 &lt;br>
+假设存在两个满足,然后证明两个相等&lt;/p>
+&lt;h2 id="sets-functions-sequences-and-summations">Sets, Functions, Sequences and Summations&lt;/h2>
+&lt;h3 id="sets">Sets&lt;/h3>
+&lt;h4 id="subset">Subset&lt;/h4>
+&lt;p>子集,空集,非空真子集,真子集&lt;/p>
+&lt;h4 id="powerset">Powerset&lt;/h4>
+&lt;p>(P(S)=A∣A⊆S)&lt;/p>
+&lt;h4 id="cardinality">Cardinality&lt;/h4>
+&lt;p>集合元素个数，特别有|P(S)|=$2^n$&lt;/p>
+&lt;h4 id="cartesian-product笛卡尔积">Cartesian product(笛卡尔积)&lt;/h4>
+&lt;p>全部组合&lt;/p>
+&lt;h4 id="set-operations">Set operations&lt;/h4>
+&lt;h4 id="set-identity">Set identity&lt;/h4>
+&lt;p>(prove two sets are the same)&lt;/p>
+&lt;ul>
+&lt;li>De Morgan’s Law&lt;/li>
+&lt;/ul>
+&lt;h4 id="laws-and-membership-table">Laws and membership table&lt;/h4>
+&lt;p>0,1表&lt;/p>
+&lt;h3 id="functions">Functions&lt;/h3>
+&lt;h4 id="one-to-one-functions-injection">One-to-one functions (injection)&lt;/h4>
+&lt;p>单射,一一对应&lt;/p>
+&lt;h4 id="onto-functions-surjection">Onto functions (surjection)&lt;/h4>
+&lt;p>满射,全部y都有x&lt;/p>
+&lt;h4 id="one-to-one-and-onto-functions-bijection">One-to-one and onto functions (bijection)&lt;/h4>
+&lt;p>单加满&lt;/p>
+&lt;h4 id="special-functions">Special functions&lt;/h4>
+&lt;ul>
+&lt;li>Ceiling function上&lt;/li>
+&lt;li>Floor function下&lt;/li>
+&lt;/ul>
+&lt;h3 id="sequences-and-summations">Sequences and summations&lt;/h3>
+&lt;h2 id="countings">Countings&lt;/h2>
+&lt;h3 id="rules">Rules&lt;/h3>
+&lt;h4 id="product-rule">Product rule&lt;/h4>
+&lt;p>乘法原理&lt;/p>
+&lt;h4 id="sum-rule">Sum rule&lt;/h4>
+&lt;p>加法原理&lt;/p>
+&lt;h4 id="隔板法">隔板法&lt;/h4>
+&lt;h3 id="principles">Principles&lt;/h3>
+&lt;h4 id="inclusion-exclusion-principle">Inclusion-exclusion principle&lt;/h4>
+&lt;p>容斥&lt;/p>
+&lt;h4 id="pigeonhole-principle">Pigeonhole principle&lt;/h4>
+&lt;p>抽屉原理(ceil(n/k))&lt;/p>
+&lt;h3 id="permutation-and-combination">Permutation and combination&lt;/h3>
+&lt;p>$$P(n,r)=n!/(n-r)!$$&lt;/p>
+&lt;h3 id="recurrence-relation">Recurrence relation&lt;/h3>
+&lt;p>$$C(n,r)=n!/[(n-r)!*r!]$$&lt;/p>
+&lt;h4 id="construct-a-recurrence-relation">Construct a recurrence relation&lt;/h4>
+&lt;h4 id="solve-a-recurrence-relation">Solve a recurrence relation&lt;/h4>
+&lt;p>$$
+a_n=c_1a_{n-1}+c_2a_{n-2} \
+r^2-c_1r-c_2=0 \
+a_n=k_1r_1^n+k_2r_2^n
+$$&lt;/p>
+&lt;h2 id="relations">Relations&lt;/h2>
+&lt;h3 id="representing-relations">Representing relations&lt;/h3>
+&lt;p>There are several other ways to represent relations&lt;/p>
+&lt;ul>
+&lt;li>Tables&lt;/li>
+&lt;li>Matrices&lt;/li>
+&lt;li>Graphs&lt;/li>
+&lt;/ul>
+&lt;h3 id="relations-on-a-set">Relations on a set&lt;/h3>
+&lt;p>A relation on the set is a relation from 𝐴 to 𝐴&lt;/p>
+&lt;h4 id="reflexive">Reflexive&lt;/h4>
+&lt;p>(a,a) belongs to R for all element in A&lt;/p>
+&lt;h4 id="symmetric">Symmetric&lt;/h4>
+&lt;p>对称&lt;/p>
+&lt;h4 id="anti-symmetric">Anti-symmetric&lt;/h4>
+&lt;p>反对称&lt;/p>
+&lt;h4 id="transitive">Transitive&lt;/h4>
+&lt;p>传递性&lt;/p>
+&lt;h3 id="equivalence-relation">Equivalence relation&lt;/h3>
+&lt;h4 id="equivalence-relation-and-partition">Equivalence relation and Partition&lt;/h4>
+&lt;p>Equivalence relation ⇔ Partition&lt;/p>
+&lt;h4 id="prove-a-relation-is-an-equivalence-relation">Prove a relation is an equivalence relation.&lt;/h4>
+&lt;p>Reflexive Symmetric Transitive&lt;/p>
+&lt;h4 id="given-an-equivalence-relation-list-equivalent-classes-give-the-partition">Given an equivalence relation, list equivalent classes (give the partition)&lt;/h4>
+&lt;h2 id="graph-theory">Graph Theory&lt;/h2>
+&lt;h3 id="graph">Graph&lt;/h3>
+&lt;h4 id="definition">Definition&lt;/h4>
+&lt;p>G=(V,E)&lt;/p>
+&lt;h4 id="representing-graphs-adjacency-matrix-adjacency-list--and-sketch">Representing graphs (adjacency matrix, adjacency list, and sketch)&lt;/h4>
+&lt;h4 id="isomorphism">Isomorphism&lt;/h4>
+&lt;ol>
+&lt;li>邻接矩阵&lt;/li>
+&lt;li>$bijection f:V_1 \rightarrow V_2: \forall a,b \in V_1((a,b)\in E_1 \leftrightarrow (f(a),f(b))\in E_2) $&lt;/li>
+&lt;/ol>
+&lt;h3 id="eular-path-and-eular-circuit">Eular path and Eular circuit&lt;/h3>
+&lt;p>containing every edge (simple path)&lt;br>
+欧拉回路:each vertex has even degree&lt;br>
+欧拉路径在连通multi: exactly 2 vertices of odd degree&lt;/p>
+&lt;h3 id="hamilton-path-and-hamilton-circuit">Hamilton path and Hamilton circuit&lt;/h3>
+&lt;p>each vertex once&lt;/p>
+&lt;h4 id="ores-theorem">Ore’s theorem&lt;/h4>
+&lt;p>If for every pair of nonadjacent vertices u and v in the simple graph G with n vertices, deg(u) + deg(v) ≥ n ,then has a Hamilton circuit.&lt;/p>
+&lt;h4 id="diracs-theorem">Dirac’s theorem&lt;/h4>
+&lt;p>If the degree of each vertex is great than or equals n/2 in the connected simple graph G with n vertices where n ≥ 3, then G has a Hamilton circuit.&lt;/p>
+&lt;h3 id="planar-graphs">Planar graphs&lt;/h3>
+&lt;p>r=e–v+2&lt;/p>
+&lt;h4 id="eulers-formula">Euler’s Formula&lt;/h4>
+&lt;blockquote>
+&lt;p>G is a connected planar simple graph&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>v ≥ 3, then e ≤ 3v – 6&lt;/li>
+&lt;li>G has a vertex of degree not exceeding 5&lt;/li>
+&lt;li>if v&amp;gt;=3 and no circuits of length 3,then e&amp;lt;=2v-4&lt;/li>
+&lt;/ul>
+&lt;h2 id="trees">Trees&lt;/h2>
+&lt;h3 id="tree-traversal">Tree traversal&lt;/h3>
+&lt;h4 id="preorder-traversal">Preorder traversal&lt;/h4>
+&lt;p>中左1右&lt;/p>
+&lt;h4 id="in-order-traversal">In-order traversal&lt;/h4>
+&lt;p>左1中右&lt;/p>
+&lt;h4 id="post-order-traversal">Post-order traversal&lt;/h4>
+&lt;p>左1右中&lt;/p>
+&lt;h3 id="expression-forms-conversion-among-the-different-forms">Expression forms (conversion among the different forms)&lt;/h3>
+&lt;p>关键
+Internal vertices(非叶子节点) represent operations&lt;br>
+Leaves(叶子节点) represent the variables or numbers&lt;/p>
+&lt;h4 id="infix">Infix&lt;/h4>
+&lt;h4 id="prefix">prefix&lt;/h4>
+&lt;h4 id="postfix">postfix&lt;/h4>
+&lt;h3 id="spanning-tree">Spanning tree&lt;/h3>
+&lt;h4 id="dfs">DFS&lt;/h4>
+&lt;p>回溯(字母序)&lt;/p>
+&lt;h4 id="bfs">BFS&lt;/h4>
+&lt;p>都走(字母序,不重复)&lt;/p>
+&lt;h2 id="boolean-algebra">Boolean Algebra&lt;/h2>
+&lt;h3 id="boolean-expressions">Boolean expressions&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;/th>
+&lt;th>&lt;/th>
+&lt;th>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>.&lt;/td>
+&lt;td>与&lt;/td>
+&lt;td>product&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>+&lt;/td>
+&lt;td>或&lt;/td>
+&lt;td>sum&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>-&lt;/td>
+&lt;td>非&lt;/td>
+&lt;td>complement&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="boolean-identities">Boolean identities&lt;/h4>
+&lt;p>换成逻辑表达式再换回来记忆&lt;/p>
+&lt;h4 id="min-term最小项">min-term(最小项)&lt;/h4>
+&lt;p>A min-term of Boolean variables x1, x2, ⋯ ,xn is a Boolean product of literals&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup> y1y2 , ⋯ , yn where yi (1 ≤ i ≤ n ) is either xi or complement of xi
+Each min-term has exactly one literal for every variable.&lt;/p>
+&lt;h4 id="dnf">DNF&lt;/h4>
+&lt;p>任何命题公式，最终都能够化成 ( A 1 ∧ A 2 ) ∨ ( A 3 ∧ A 4 )的形式，这种先 ∧ 合 取 再 ∨ 析 取 的范式，被称为 “析取范式”。&lt;/p>
+&lt;p>DNF is the unique sum of min-terms of the variables in the expression,Also called sum of products expansion&lt;/p>
+&lt;p>SOP是DNF的化简，DNF是SOP的扩展&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>&lt;/p>
+&lt;h4 id="maxterms最大项">Maxterms(最大项)&lt;/h4>
+&lt;p>A max-term of Boolean variables x1, x2, ⋯ , is the sum of literals y1 + y2+, ⋯ ,yn + where (1 ≤ i ≤ n) is either xi or complement of xi&lt;/p>
+&lt;h4 id="cnf">CNF&lt;/h4>
+&lt;p>任何命题公式，最终都能够化成 ( A 1 ∨ A 2 ) ∧ ( A 3 ∨ A 4 ) 的形式，这种先 ∨ 析 取 再 ∧ 合 取 的范式，被称为 “ 合取范式”。&lt;/p>
+&lt;p>POS同上&lt;/p>
+&lt;blockquote>
+&lt;p>If we have DNF for $\overline F $, then get CNF from $\overline{\overline F} $&lt;/p>
+&lt;/blockquote>
+&lt;h4 id="equivalence-of-expressions">Equivalence of expressions&lt;/h4>
+&lt;h4 id="funtion-completeness">Funtion completeness&lt;/h4>
+&lt;p>can represent {+ . ——} using Operate O&lt;/p>
+&lt;h3 id="logic-circuits">Logic circuits&lt;/h3>
+&lt;h4 id="logic-gates">Logic gates&lt;/h4>
+&lt;p>&lt;img src="https://open17.github.io/CpHugo/CpHugo/p/dm-quick-review/LogicGate.PNG"
+width="948"
+height="748"
+srcset="https://open17.github.io/CpHugo/CpHugo/p/dm-quick-review/LogicGate_hu3ae756db54a9cfe3360b55a6800b815e_59353_480x0_resize_box_3.PNG 480w, https://open17.github.io/CpHugo/CpHugo/p/dm-quick-review/LogicGate_hu3ae756db54a9cfe3360b55a6800b815e_59353_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+alt="pic"
+class="gallery-image"
+data-flex-grow="126"
+data-flex-basis="304px"
+>
+&lt;img src="https://open17.github.io/CpHugo/CpHugo/p/dm-quick-review/Buffer.PNG"
+width="753"
+height="511"
+srcset="https://open17.github.io/CpHugo/CpHugo/p/dm-quick-review/Buffer_hu96baafbacbeda63a0d52d5ccad167053_46626_480x0_resize_box_3.PNG 480w, https://open17.github.io/CpHugo/CpHugo/p/dm-quick-review/Buffer_hu96baafbacbeda63a0d52d5ccad167053_46626_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+alt="buf"
+class="gallery-image"
+data-flex-grow="147"
+data-flex-basis="353px"
+>&lt;/p>
+&lt;h3 id="logic-circuits-1">Logic circuits&lt;/h3>
+&lt;h4 id="karnaugh-maps4">Karnaugh maps&lt;sup id="fnref:4">&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref">4&lt;/a>&lt;/sup>&lt;/h4>
+&lt;p>&lt;img src="https://open17.github.io/CpHugo/CpHugo/p/dm-quick-review/KarnaughMap.PNG"
+width="957"
+height="581"
+srcset="https://open17.github.io/CpHugo/CpHugo/p/dm-quick-review/KarnaughMap_hu0df7f2d6c3afb9a34f51855538f83e32_54009_480x0_resize_box_3.PNG 480w, https://open17.github.io/CpHugo/CpHugo/p/dm-quick-review/KarnaughMap_hu0df7f2d6c3afb9a34f51855538f83e32_54009_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+alt="map"
+class="gallery-image"
+data-flex-grow="164"
+data-flex-basis="395px"
+>
+1、取大不取小，圈越大，消去的变量越多，与项越简单，能画入大圈就不画入小圈；&lt;br>
+2、圈数越少，化简后的与项就越少；&lt;br>
+3、一个最小项可以重复使用，即只要需要，一个方格可以同时被多圈所圈&lt;/p>
+&lt;h4 id="steps-in-designing-a-logic-circuit">Steps in designing a logic circuit&lt;/h4>
+&lt;p>&lt;img src="https://open17.github.io/CpHugo/CpHugo/p/dm-quick-review/Step2design.PNG"
+width="981"
+height="689"
+srcset="https://open17.github.io/CpHugo/CpHugo/p/dm-quick-review/Step2design_huca4c02c930d949363577d42a5cfc6f8b_121195_480x0_resize_box_3.PNG 480w, https://open17.github.io/CpHugo/CpHugo/p/dm-quick-review/Step2design_huca4c02c930d949363577d42a5cfc6f8b_121195_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+alt="step"
+class="gallery-image"
+data-flex-grow="142"
+data-flex-basis="341px"
+>&lt;/p>
+&lt;div class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1">
+&lt;p>&lt;a class="link" href="https://blog.csdn.net/sinat_21644713/article/details/45896211" target="_blank" rel="noopener"
+>推荐阅读&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2">
+&lt;p>A literal is a Boolean variable or its complement.&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:3">
+&lt;p>有些书上定义DNF为SOP，将SOP的扩展叫做CDNF，本文不采用这种定义&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:4">
+&lt;p>&lt;a class="link" href="http://t.csdn.cn/pUBN1" target="_blank" rel="noopener"
+>可以参考&lt;/a>&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/div></description></item></channel></rss>
