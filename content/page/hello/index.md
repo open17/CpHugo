@@ -12,7 +12,7 @@ links:
     website: https://open17.github.io/contest/new.html
 menu:
     main: 
-        weight: 1
+        weight: 5
         params:
             icon: link
 
