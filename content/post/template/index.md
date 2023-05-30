@@ -6,19 +6,34 @@ date: 2023-05-08 00:03:00+0000
 image: cover.jpg
 categories:
     - Alg
+    - Learn
 tags:
-    - begin
     - templates
     - c++
     - c
-    - java
     - python
-    - go
     - qread
 ---
 ## c++
-###  快读模板
+### 精简模板
 ```cpp
+#include<bits/stdc++.h>
+using namespace std;
+#define ios ios::sync_with_stdio(false);cin.tie(0);cout.tie(0);
+#define For(w, a, n) for(int w=(a);w<(n);++w)
+#define _For(a,b,c) for(int a=(b);a>(c);a--)
+#define all(x) (x).begin(),x.end()
+#define inf 0x3f3f3f3f
+//对拍
+#define fo1 freopen("data.in","r",stdin);freopen("res.out","w",stdout);
+#define fo2 freopen("data.in","r",stdin);freopen("ans.out","w",stdout);
+//输出数组
+#define printA(a,b,c) cout<<'\n'<<"debug start"<<'\n';for(int i=a;i<=b;i++){cout<<c[i]<<' ';}cout<<'\n'<<"debug over"<<'\n'<<'\n';
+typedef long long ll;
+typedef unsigned long long ull;
+typedef pair<int, int> pii;
+const int N=3e6;
+const int MOD=1e9+7;
 inline int read() {
     int x = 0, f = 1;
     char ch = getchar();
@@ -33,24 +48,29 @@ inline int read() {
     }
     return x * f;
 }
-```
-### 精简模板
-```cpp
-#include<bits/stdc++.h>
-using namespace std;
-#define ios ios::sync_with_stdio(false);cin.tie(0);cout.tie(0);
-#define FOR(w, a, n) for(int w=(a);w<(n);++w)
-#define inf 0x3f
-typedef long long ll;
-typedef pair<int, int> pii;
-const int N=3e6;
+inline void write(int x)
+{
+    if (x < 0) { putchar('-'); x = -x; }
+    if (x > 9) write(x / 10);
+    putchar(x % 10 + '0');
+}
+
+
+inline void hhhh(){
+    //todo
+}
+
 int main() {
-    ios
-    cout << "Hello, ACM." << endl;
+    //hhhh();
+    int T;
+    T.read();
+    while(T--){
+        hhhh();
+    }
     return 0;
 }
 ```
-### 完全模板
+### 其它模板(来源网络)
 ```cpp
 #define _USE_MATH_DEFINES
 // C
