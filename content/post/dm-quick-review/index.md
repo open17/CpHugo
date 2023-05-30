@@ -2,7 +2,7 @@
 title: 离散数学知识速查
 description: quick-review
 slug: dm-quick-review
-date: 2023-05-01 00:00:00+0000
+date: 2023-05-29 00:00:00+0000
 categories:
     - Math
 tags:

@@ -2,10 +2,10 @@
 title:  C语言快速入门
 description: 基础c语言知识，篇幅较长
 slug: cstart
-date: 2023-04-26 00:00:00+0000
+date: 2023-05-30 00:00:00+0000
 image: https://picx.zhimg.com/80/v2-905bb346af5546905d0eae5178eeb7ad_720w.webp?source=1940ef5c
 categories:
-    - Alg
+    - Learn
 tags:
     - summary
     - c
