@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on >>>>CpHugo&lt;&lt;&lt;&lt;</title><link>https://open17.github.io/CpHugo/page/</link><description>Recent content in Pages on >>>>CpHugo&lt;&lt;&lt;&lt;</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://open17.github.io/CpHugo/page/index.xml" rel="self" type="application/rss+xml"/><item><title>你好</title><link>https://open17.github.io/CpHugo/hello/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/hello/</guid><description>&lt;h1 id="欢迎来到cphugo">🎉欢迎来到CpHugo&lt;/h1>
-&lt;h2 id="这是什么">❓这是什么&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on >>>>CpHugo&lt;&lt;&lt;&lt;</title><link>https://open17.github.io/CpHugo/page/</link><description>Recent content in Pages on >>>>CpHugo&lt;&lt;&lt;&lt;</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://open17.github.io/CpHugo/page/index.xml" rel="self" type="application/rss+xml"/><item><title>欢迎🎉</title><link>https://open17.github.io/CpHugo/hello/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/hello/</guid><description>&lt;h2 id="这是什么">❓这是什么&lt;/h2>
 &lt;p>这是一个基础竞赛算法(competive programming)个人总结仓库,记录本人所学的一些基础算法知识,以及见到的算法题目,由于个人精力有限,可能存在部分疏漏,欢迎指正~&lt;/p>
 &lt;h2 id="rss已修复">⌚RSS(已修复)&lt;/h2>
 &lt;p>&lt;a class="link" href="https://open17.github.io/CpHugo/index.xml" target="_blank" rel="noopener"
@@ -10,7 +9,13 @@
 &lt;li>hugo stack(主题)&lt;/li>
 &lt;li>giscus(评论功能)&lt;/li>
 &lt;/ol>
-&lt;h2 id="包含内容">🌠包含内容&lt;/h2>
+&lt;h2 id="网站功能">🌠网站功能&lt;/h2>
+&lt;ul>
+&lt;li>支持tag查找&lt;/li>
+&lt;li>支持关键词搜索&lt;/li>
+&lt;li>支持按分类搜索&lt;/li>
+&lt;/ul>
+&lt;h2 id="内容大纲">🌃内容大纲&lt;/h2>
 &lt;ul>
 &lt;li>🥰基础知识(完成度80%)
 &lt;ul>
@@ -24,10 +29,10 @@
 &lt;/li>
 &lt;li>💖常见算法(完成度90%)
 &lt;ul>
-&lt;li>二分&lt;/li>
-&lt;li>倍增&lt;/li>
-&lt;li>位运算&lt;/li>
-&lt;li>前缀和与差分&lt;/li>
+&lt;li>二分(Binary search)&lt;/li>
+&lt;li>倍增(Binary Lifting)&lt;/li>
+&lt;li>位运算(Bit)&lt;/li>
+&lt;li>前缀和与差分(PreSum)&lt;/li>
 &lt;li>贪心&lt;/li>
 &lt;li>哈希&lt;/li>
 &lt;li>双指针与滑动窗口&lt;/li>
@@ -37,7 +42,7 @@
 &lt;/li>
 &lt;li>🤯数学(完成度10%)
 &lt;ul>
-&lt;li>离散数学
+&lt;li>离散数学(Distcrete Structures)
 &lt;ul>
 &lt;li>命题逻辑&lt;/li>
 &lt;li>集合与函数&lt;/li>
@@ -51,8 +56,9 @@
 &lt;ul>
 &lt;li>gcd,lcm&lt;/li>
 &lt;li>扩展gcd&lt;/li>
-&lt;li>欧拉筛&lt;/li>
-&lt;li>逆元&lt;/li>
+&lt;li>快速幂取余(Spow)&lt;/li>
+&lt;li>欧拉筛(Euler Sieve)&lt;/li>
+&lt;li>逆元(Inv)&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>组合数学&lt;/li>
@@ -63,22 +69,22 @@
 &lt;li>💡数据结构(完成度45%)
 &lt;ul>
 &lt;li>二叉堆&lt;/li>
-&lt;li>单调栈&lt;/li>
-&lt;li>单调队列&lt;/li>
-&lt;li>ST表&lt;/li>
+&lt;li>单调栈(Monotonic Stack)&lt;/li>
+&lt;li>单调队列(Monotonic Queue)&lt;/li>
+&lt;li>ST表(ST)&lt;/li>
 &lt;li>BST&lt;/li>
 &lt;li>AVL&lt;/li>
 &lt;li>替罪羊树&lt;/li>
 &lt;li>B树&lt;/li>
 &lt;li>B+树&lt;/li>
 &lt;li>分块&lt;/li>
-&lt;li>树状数组&lt;/li>
-&lt;li>线段树&lt;/li>
+&lt;li>树状数组(Fenwick Tree)&lt;/li>
+&lt;li>线段树(Segment Tree)&lt;/li>
 &lt;li>主席树&lt;/li>
 &lt;li>字典树&lt;/li>
 &lt;li>01字典树&lt;/li>
 &lt;li>珂朵莉树&lt;/li>
-&lt;li>并查集&lt;/li>
+&lt;li>并查集(Buf)&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>💎动态规划(完成度5%)
@@ -98,7 +104,7 @@
 &lt;li>🔖字符串(完成度40%)
 &lt;ul>
 &lt;li>字典树&lt;/li>
-&lt;li>KMP&lt;/li>
+&lt;li>KMP(KMP)&lt;/li>
 &lt;li>扩展 KMP&lt;/li>
 &lt;li>马拉车&lt;/li>
 &lt;li>SA&lt;/li>
@@ -143,7 +149,7 @@
 &lt;li>树上问题
 &lt;ul>
 &lt;li>树的直径&lt;/li>
-&lt;li>LCA&lt;/li>
+&lt;li>LCA(LCA)&lt;/li>
 &lt;li>重链剖分&lt;/li>
 &lt;li>树上启发式合并(DSU)&lt;/li>
 &lt;/ul>
@@ -168,7 +174,7 @@
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;h2 id="相关">相关&lt;/h2>
+&lt;h2 id="相关算法资源推荐">🌈相关算法资源推荐&lt;/h2>
 &lt;ol>
 &lt;li>&lt;a class="link" href="https://visualgo.net/zh/" target="_blank" rel="noopener"
 >算法可视化网站&lt;/a>&lt;/li>
@@ -199,4 +205,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.&lt;/p>
-&lt;h2 id="快捷跳转链接">快捷跳转链接&lt;/h2></description></item><item><title>搜索</title><link>https://open17.github.io/CpHugo/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/search/</guid><description/></item><item><title>专题</title><link>https://open17.github.io/CpHugo/archives/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/archives/</guid><description/></item></channel></rss>
+&lt;h2 id="快捷跳转链接">🌟快捷跳转链接&lt;/h2></description></item><item><title>搜索</title><link>https://open17.github.io/CpHugo/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/search/</guid><description/></item><item><title>专题</title><link>https://open17.github.io/CpHugo/archives/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/archives/</guid><description/></item></channel></rss>
