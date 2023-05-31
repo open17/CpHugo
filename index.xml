@@ -7648,7 +7648,7 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>树状数组模板</title><link>https://open17.github.io/CpHugo/p/fenwicktree/</link><pubDate>Fri, 05 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/fenwicktree/</guid><description>&lt;img src="https://img2.baidu.com/it/u=1929941019,3324507395&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500" alt="Featured image of post 树状数组模板" />&lt;h2 id="封装模板">封装模板&lt;/h2>
+&lt;/div></description></item><item><title>树状数组模板</title><link>https://open17.github.io/CpHugo/p/fenwicktree/</link><pubDate>Fri, 05 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/fenwicktree/</guid><description>&lt;h2 id="封装模板">封装模板&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -7742,7 +7742,7 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>线段树模板</title><link>https://open17.github.io/CpHugo/p/segmenttree/</link><pubDate>Fri, 05 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/segmenttree/</guid><description>&lt;img src="https://img2.baidu.com/it/u=1110941159,2287283460&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500" alt="Featured image of post 线段树模板" />&lt;h2 id="lazy线段树模板">lazy线段树模板&lt;/h2>
+&lt;/div></description></item><item><title>线段树模板</title><link>https://open17.github.io/CpHugo/p/segmenttree/</link><pubDate>Fri, 05 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/segmenttree/</guid><description>&lt;h2 id="lazy线段树模板">lazy线段树模板&lt;/h2>
 &lt;ul>
 &lt;li>区间修改logn&lt;/li>
 &lt;li>区间查询logn
@@ -9256,14 +9256,205 @@ $0\le a_i&amp;lt;2^{31}$&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>🎗️下面已经空空如也啦~</title><link>https://open17.github.io/CpHugo/p/message/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/message/</guid><description/></item><item><title>你好</title><link>https://open17.github.io/CpHugo/hello/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/hello/</guid><description>&lt;h2 id="欢迎来到cphugo">🎉欢迎来到CpHugo&lt;/h2>
-&lt;p>这是一个&lt;em>个人仿博客类&lt;/em>的竞赛算法(competive programming)网站,记录本人所学的一些算法知识,以及见到的算法题目,由于个人精力有限,可能存在部分疏漏,欢迎指正~ &lt;br>
-在本文的最下面放置了一些方面的跳转链接~&lt;/p>
-&lt;h2 id="变更日志">变更日志&lt;/h2>
-&lt;h3 id="v10">v1.0&lt;/h3>
+&lt;/div></description></item><item><title>🎗️下面已经空空如也啦~</title><link>https://open17.github.io/CpHugo/p/message/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/message/</guid><description/></item><item><title>你好</title><link>https://open17.github.io/CpHugo/hello/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/hello/</guid><description>&lt;h1 id="欢迎来到cphugo">🎉欢迎来到CpHugo&lt;/h1>
+&lt;h2 id="这是什么">❓这是什么&lt;/h2>
+&lt;p>这是一个基础竞赛算法(competive programming)个人总结仓库,记录本人所学的一些基础算法知识,以及见到的算法题目,由于个人精力有限,可能存在部分疏漏,欢迎指正~&lt;/p>
+&lt;h2 id="rss已修复">⌚RSS(已修复)&lt;/h2>
+&lt;p>&lt;a class="link" href="https://open17.github.io/CpHugo/index.xml" target="_blank" rel="noopener"
+>https://open17.github.io/CpHugo/index.xml&lt;/a>&lt;/p>
+&lt;h2 id="技术支持">🔱技术支持&lt;/h2>
+&lt;ol>
+&lt;li>Hugo&lt;/li>
+&lt;li>hugo stack(主题)&lt;/li>
+&lt;li>giscus(评论功能)&lt;/li>
+&lt;/ol>
+&lt;h2 id="包含内容">🌠包含内容&lt;/h2>
 &lt;ul>
-&lt;li>正式加入评论区&lt;/li>
-&lt;li>修改入站指南&lt;/li>
+&lt;li>🥰基础知识(完成度80%)
+&lt;ul>
+&lt;li>C语言入门知识&lt;/li>
+&lt;li>输入输出模板(常用宏,快读,快写)&lt;/li>
+&lt;li>面向对象&lt;/li>
+&lt;li>STL用法&lt;/li>
+&lt;li>对拍模板&lt;/li>
+&lt;li>Python常用语法糖&lt;/li>
 &lt;/ul>
-&lt;h2 id="技术">技术&lt;/h2>
-&lt;p>本项目基于Hugo和Hugo stack主题&lt;/p></description></item><item><title>搜索</title><link>https://open17.github.io/CpHugo/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/search/</guid><description/></item><item><title>专题</title><link>https://open17.github.io/CpHugo/archives/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/archives/</guid><description/></item></channel></rss>
+&lt;/li>
+&lt;li>💖常见算法(完成度90%)
+&lt;ul>
+&lt;li>二分&lt;/li>
+&lt;li>倍增&lt;/li>
+&lt;li>位运算&lt;/li>
+&lt;li>前缀和与差分&lt;/li>
+&lt;li>贪心&lt;/li>
+&lt;li>哈希&lt;/li>
+&lt;li>双指针与滑动窗口&lt;/li>
+&lt;li>离散化&lt;/li>
+&lt;li>搜索算法&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>🤯数学(完成度10%)
+&lt;ul>
+&lt;li>离散数学
+&lt;ul>
+&lt;li>命题逻辑&lt;/li>
+&lt;li>集合与函数&lt;/li>
+&lt;li>计数原理&lt;/li>
+&lt;li>关系&lt;/li>
+&lt;li>图与树&lt;/li>
+&lt;li>布尔代数&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>数论
+&lt;ul>
+&lt;li>gcd,lcm&lt;/li>
+&lt;li>扩展gcd&lt;/li>
+&lt;li>欧拉筛&lt;/li>
+&lt;li>逆元&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>组合数学&lt;/li>
+&lt;li>计算几何&lt;/li>
+&lt;li>博弈论&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>💡数据结构(完成度45%)
+&lt;ul>
+&lt;li>二叉堆&lt;/li>
+&lt;li>单调栈&lt;/li>
+&lt;li>单调队列&lt;/li>
+&lt;li>ST表&lt;/li>
+&lt;li>BST&lt;/li>
+&lt;li>AVL&lt;/li>
+&lt;li>替罪羊树&lt;/li>
+&lt;li>B树&lt;/li>
+&lt;li>B+树&lt;/li>
+&lt;li>分块&lt;/li>
+&lt;li>树状数组&lt;/li>
+&lt;li>线段树&lt;/li>
+&lt;li>主席树&lt;/li>
+&lt;li>字典树&lt;/li>
+&lt;li>01字典树&lt;/li>
+&lt;li>珂朵莉树&lt;/li>
+&lt;li>并查集&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>💎动态规划(完成度5%)
+&lt;ul>
+&lt;li>记忆化搜索&lt;/li>
+&lt;li>背包模型&lt;/li>
+&lt;li>线性DP&lt;/li>
+&lt;li>区间DP&lt;/li>
+&lt;li>数位DP&lt;/li>
+&lt;li>状压DP&lt;/li>
+&lt;li>插头DP&lt;/li>
+&lt;li>树形DP&lt;/li>
+&lt;li>斜率优化DP&lt;/li>
+&lt;li>倍增优化DP&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>🔖字符串(完成度40%)
+&lt;ul>
+&lt;li>字典树&lt;/li>
+&lt;li>KMP&lt;/li>
+&lt;li>扩展 KMP&lt;/li>
+&lt;li>马拉车&lt;/li>
+&lt;li>SA&lt;/li>
+&lt;li>AC自动机&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>🔭图论(完成度10%)
+&lt;ul>
+&lt;li>图的存储&lt;/li>
+&lt;li>图的遍历&lt;/li>
+&lt;li>二分图
+&lt;ul>
+&lt;li>判定(染色法)&lt;/li>
+&lt;li>匹配(匈牙利算法)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>并查集&lt;/li>
+&lt;li>最小生成树
+&lt;ul>
+&lt;li>Prim&lt;/li>
+&lt;li>Kruskal&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>拓扑排序&lt;/li>
+&lt;li>欧拉回路和欧拉路径&lt;/li>
+&lt;li>最短路
+&lt;ul>
+&lt;li>Floyd&lt;/li>
+&lt;li>Dijkstra&lt;/li>
+&lt;li>Bellman-Ford&lt;/li>
+&lt;li>SPFA&lt;/li>
+&lt;li>同余最短路&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>最小环&lt;/li>
+&lt;li>强连通分量
+&lt;ul>
+&lt;li>Tarjan&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>网络流&lt;/li>
+&lt;li>树上问题
+&lt;ul>
+&lt;li>树的直径&lt;/li>
+&lt;li>LCA&lt;/li>
+&lt;li>重链剖分&lt;/li>
+&lt;li>树上启发式合并(DSU)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>🔑杂项(待整理)
+&lt;ul>
+&lt;li>莫里斯遍历&lt;/li>
+&lt;li>调度场算法&lt;/li>
+&lt;li>对顶堆&lt;/li>
+&lt;li>pick定理&lt;/li>
+&lt;li>CDQ分治&lt;/li>
+&lt;li>启发式搜索&lt;/li>
+&lt;li>&amp;hellip;&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>🍬其它
+&lt;ul>
+&lt;li>OJ比赛题解&lt;/li>
+&lt;li>&amp;hellip;&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="相关">相关&lt;/h2>
+&lt;ol>
+&lt;li>&lt;a class="link" href="https://visualgo.net/zh/" target="_blank" rel="noopener"
+>算法可视化网站&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://oi-wiki.org/" target="_blank" rel="noopener"
+>OIWiki&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://zhuanlan.zhihu.com/p/105467597" target="_blank" rel="noopener"
+>算法学习笔记&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/EndlessCheng/codeforces-go" target="_blank" rel="noopener"
+>算法竞赛模板库&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://studyingfather.com/archives/841" target="_blank" rel="noopener"
+>能力全面提升综合题单&lt;/a>&lt;/li>
+&lt;/ol>
+&lt;h2 id="协议-mit">🔅协议 MIT&lt;/h2>
+&lt;p>MIT License&lt;/p>
+&lt;p>Copyright (c) 2023 open17&lt;/p>
+&lt;p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the &amp;ldquo;Software&amp;rdquo;), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:&lt;/p>
+&lt;p>The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.&lt;/p>
+&lt;p>THE SOFTWARE IS PROVIDED &amp;ldquo;AS IS&amp;rdquo;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.&lt;/p>
+&lt;h2 id="快捷跳转链接">快捷跳转链接&lt;/h2></description></item><item><title>搜索</title><link>https://open17.github.io/CpHugo/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/search/</guid><description/></item><item><title>专题</title><link>https://open17.github.io/CpHugo/archives/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/archives/</guid><description/></item></channel></rss>
