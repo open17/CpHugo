@@ -2,7 +2,7 @@
 mainSections = ["post"]
 # Output page's full content in RSS.
 rssFullContent = true
-favicon = "img/favicon.ico"
+favicon = "img/avatar_huba7df165b03f065124e52c61be437fcf_127360_300x0_resize_box_3.png"
 [footer]
 since = 2023
 customText = "感谢:"
