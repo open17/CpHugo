@@ -2842,6 +2842,107 @@ ans[1] 是字符串数目最多的组所包含的字符串数目。&lt;/p>
 >这个&lt;/a>预处理幂加上其它剪枝也能AC&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
+&lt;/div></description></item><item><title>摩尔投票</title><link>https://open17.github.io/CpHugo/p/boyermoore-majority-vote-algorithm/</link><pubDate>Sun, 28 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/boyermoore-majority-vote-algorithm/</guid><description>&lt;h2 id="什么是摩尔投票">什么是摩尔投票&lt;/h2>
+&lt;p>摩尔投票是一种用来解决绝对众数&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>问题的算法
+它能使用O(1)级别的空间复杂度找出绝对众数&lt;/p>
+&lt;h2 id="经典例题2">经典例题&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/h2>
+&lt;p>给定一个大小为 n 的数组 nums ，返回其中的多数元素。多数元素是指在数组中出现次数 大于 ⌊ n/2 ⌋ 的元素。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="k">class&lt;/span> &lt;span class="nc">Solution&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">public&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">majorityElement&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">vector&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="kt">int&lt;/span>&lt;span class="o">&amp;gt;&amp;amp;&lt;/span> &lt;span class="n">nums&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">t&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">cnt&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">auto&lt;/span> &lt;span class="nl">i&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="n">nums&lt;/span>&lt;span class="p">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="n">t&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="n">cnt&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span> &lt;span class="nf">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">cnt&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">t&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cnt&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">t&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="区间绝对众数3">区间绝对众数&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>&lt;/h2>
+&lt;p>设计一个数据结构，有效地找到给定子数组的 多数元素 。&lt;/p>
+&lt;p>子数组的 多数元素 是在子数组中出现 threshold 次数或次数以上的元素。&lt;/p>
+&lt;p>实现 MajorityChecker 类:&lt;/p>
+&lt;pre>&lt;code>MajorityChecker(int[] arr) 会用给定的数组 arr 对 MajorityChecker 初始化。
+int query(int left, int right, int threshold) 返回子数组中的元素 arr[left...right] 至少出现 threshold 次数，如果不存在这样的元素则返回 -1。
+&lt;/code>&lt;/pre>
+&lt;p>示例 1：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">输入:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[&amp;#34;MajorityChecker&amp;#34;, &amp;#34;query&amp;#34;, &amp;#34;query&amp;#34;, &amp;#34;query&amp;#34;]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[[[1, 1, 2, 2, 1, 1]], [0, 5, 4], [0, 3, 3], [2, 3, 2]]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">输出：
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[null, 1, -1, 2]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">解释：
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">MajorityChecker majorityChecker = new MajorityChecker([1,1,2,2,1,1]);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">majorityChecker.query(0,5,4); // 返回 1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">majorityChecker.query(0,3,3); // 返回 -1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">majorityChecker.query(2,3,2); // 返回 2
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>提示：&lt;/p>
+&lt;pre>&lt;code>1 &amp;lt;= arr.length &amp;lt;= 2 * 104
+1 &amp;lt;= arr[i] &amp;lt;= 2 * 104
+0 &amp;lt;= left &amp;lt;= right &amp;lt; arr.length
+threshold &amp;lt;= right - left + 1
+2 * threshold &amp;gt; right - left + 1
+调用 query 的次数最多为 104
+&lt;/code>&lt;/pre>
+&lt;h2 id="参考">参考&lt;/h2>
+&lt;ol>
+&lt;li>&lt;a class="link" href="https://leetcode.cn/problems/majority-element/solutions/2215722/tong-su-yi-dong-mo-er-tou-piao-fa-by-ni-h4m1b/" target="_blank" rel="noopener"
+>通俗易懂摩尔投票法&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://zhuanlan.zhihu.com/p/387744743" target="_blank" rel="noopener"
+>算法学习笔记(78): 摩尔投票&lt;/a>&lt;/li>
+&lt;/ol>
+&lt;div class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1">
+&lt;p>在一个集合中，如果一个元素的出现次数比其他所有元素的出现次数之和还多，那么就称它为这个集合的绝对众数。等价地说，绝对众数的出现次数大于总元素数的一半。&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2">
+&lt;p>题目来源:https://leetcode.cn/problems/majority-element/description/&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:3">
+&lt;p>题目来源LC1157. 子数组中占绝大多数的元素&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
 &lt;/div></description></item><item><title>小蓝书0X06倍增---天才ACM</title><link>https://open17.github.io/CpHugo/p/blue06/</link><pubDate>Sat, 27 May 2023 01:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/blue06/</guid><description>&lt;h2 id="天才acm">天才ACM&lt;/h2>
 &lt;h3 id="题目描述">题目描述&lt;/h3>
 &lt;p>给定一个整数 M，对于任意一个整数集合 S，定义“校验值”如下:&lt;/p>
@@ -9256,7 +9357,7 @@ $0\le a_i&amp;lt;2^{31}$&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>🎗️下面已经空空如也啦~</title><link>https://open17.github.io/CpHugo/p/message/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/message/</guid><description/></item><item><title>欢迎</title><link>https://open17.github.io/CpHugo/hello/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/hello/</guid><description>&lt;h2 id="这是什么">❓这是什么&lt;/h2>
+&lt;/div></description></item><item><title>🎗️下面已经空空如也啦~</title><link>https://open17.github.io/CpHugo/p/message/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/message/</guid><description/></item><item><title>标签</title><link>https://open17.github.io/CpHugo/tags/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/tags/</guid><description/></item><item><title>欢迎</title><link>https://open17.github.io/CpHugo/hello/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/hello/</guid><description>&lt;h2 id="这是什么">❓这是什么&lt;/h2>
 &lt;p>这是一个基础竞赛算法(competive programming)个人总结仓库,记录本人所学的一些基础算法知识,以及见到的算法题目,由于个人精力有限,可能存在部分疏漏,欢迎指正~&lt;/p>
 &lt;h2 id="rss已修复">⌚RSS(已修复)&lt;/h2>
 &lt;p>&lt;a class="link" href="https://open17.github.io/CpHugo/index.xml" target="_blank" rel="noopener"
@@ -9416,6 +9517,7 @@ $0\le a_i&amp;lt;2^{31}$&lt;/p>
 &lt;/li>
 &lt;li>🔑杂项(待整理)
 &lt;ul>
+&lt;li>摩尔投票(Boyer–Moore Majority Vote)&lt;/li>
 &lt;li>莫里斯遍历&lt;/li>
 &lt;li>调度场算法&lt;/li>
 &lt;li>对顶堆&lt;/li>
@@ -9462,5 +9564,4 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.&lt;/p>
-&lt;h2 id="快捷跳转链接">🌟快捷跳转链接&lt;/h2></description></item><item><title>搜索</title><link>https://open17.github.io/CpHugo/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/search/</guid><description/></item><item><title>专题</title><link>https://open17.github.io/CpHugo/archives/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/archives/</guid><description/></item></channel></rss>
+SOFTWARE.&lt;/p></description></item><item><title>搜索</title><link>https://open17.github.io/CpHugo/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/search/</guid><description/></item><item><title>专题</title><link>https://open17.github.io/CpHugo/archives/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/archives/</guid><description/></item></channel></rss>
