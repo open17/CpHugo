@@ -3,7 +3,6 @@ title: 树状数组模板
 description: 一种简单的用于维护区间信息的数据结构
 slug: FenwickTree
 date: 2023-05-05 00:00:00+0000
-image: https://img2.baidu.com/it/u=1929941019,3324507395&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500
 categories:
     - DS
 tags:

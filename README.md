@@ -1,29 +1,12 @@
----
-title: "你好"
-slug: hello
-links:
-  - title: 全部标签
-    description: 分类标签大全
-    website: ../tags
-  - title: 全部专题
-    description: 专题大全
-    website: ../categories
-  - title: 速查模板
-    description: 算法模板速查
-    website: https://open17.github.io/contest/new.html
-menu:
-    main: 
-        weight: 1
-        params:
-            icon: link
-
-comments: false
----
 # 🎉欢迎来到CpHugo
 ## ❓这是什么
 这是一个基础竞赛算法(competive programming)个人总结仓库,记录本人所学的一些基础算法知识,以及见到的算法题目,由于个人精力有限,可能存在部分疏漏,欢迎指正~    
+## 🌏网址
+> https://open17.github.io/CpHugo
+>    
+[点我传送~](https://open17.github.io/CpHugo)
 ## ⌚RSS(已修复)
-https://open17.github.io/CpHugo/index.xml     
+https://open17.github.io/CpHugo/index.xml
 ## 🔱技术支持
 1. Hugo
 2. hugo stack(主题)
@@ -172,6 +155,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-## 快捷跳转链接
-
 
