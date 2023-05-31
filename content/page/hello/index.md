@@ -130,6 +130,7 @@ https://open17.github.io/CpHugo/index.xml
         - 重链剖分
         - 树上启发式合并(DSU)
 - 🔑杂项(待整理)
+    - 摩尔投票(Boyer–Moore Majority Vote)
     - 莫里斯遍历
     - 调度场算法
     - 对顶堆
@@ -171,6 +172,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-## 🌟快捷跳转链接
+
 
 
