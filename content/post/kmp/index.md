@@ -4,13 +4,11 @@ description: 一种字符串匹配算法
 slug: kmp
 date: 2023-05-08 00:00:00+0000
 categories:
-    - Alg
+    - Str 
 tags:
-    - templates
-    - c++
-    - kmp
-    - luogu
-    - strings
+    - Templates
+    - KMP
+    - Luogu
 ---
 ## 模板
 ```cpp

@@ -6,9 +6,8 @@ date: 2023-05-02 00:00:00+0000
 categories:
     - Alg
 tags:
-    - presum
-    - c++
-    - luogu
+    - PreSum
+    - Luogu
 ---
 # 最大加权矩形
 

@@ -4,8 +4,7 @@ description: 本场竞赛由「 Airwallex 空中云汇 & 力扣」联合主办
 slug: lc-weekly-contest-313 
 date: 2023-05-26 00:00:00+0000
 tags:
-    - leetcode
-    - c++
+    - Leetcode
 image: https://pic.lingkou.xyz/1664008640-fTlCRH-1760-360%20%E7%A9%BA%E4%B8%AD%E4%BA%91%E6%B1%87.png   
 ---
 > 痛苦T4

@@ -4,12 +4,11 @@ description: 运用倍增思想优化的LCA模板
 slug: LCA
 date: 2023-05-08 00:00:00+0000
 categories:
-    - Alg
+    - Graph 
 tags:
-    - templates
-    - c++
+    - Templates
     - LCA
-    - luogu
+    - Luogu
 ---
 ## 模板
 ```cpp

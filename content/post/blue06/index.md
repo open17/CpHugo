@@ -6,8 +6,7 @@ date: 2023-05-27 01:00:00+0000
 categories:
     - Blue
 tags:
-    - summary
-    - c++
+    - Binary Lifting
 ---
 
 ## 天才ACM

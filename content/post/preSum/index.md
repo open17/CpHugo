@@ -6,9 +6,8 @@ date: 2023-05-02 00:00:00+0000
 categories:
     - Alg
 tags:
-    - templates
-    - presum
-    - c++
+    - Templates
+    - PreSum
 ---
 ## 一维前缀和
 ```cpp

@@ -6,11 +6,9 @@ date: 2023-05-08 00:00:00+0000
 categories:
     - DS
 tags:
-    - templates
-    - c++
-    - NGE
-    - luogu
-    - MonotonicStack
+    - Templates
+    - Luogu
+    - Monotonic Stack
 ---
 ## 模板1
 - 这种思路通常用于寻找右边的数（求左边时倒叙即可）

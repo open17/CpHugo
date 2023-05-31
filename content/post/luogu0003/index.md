@@ -6,9 +6,8 @@ date: 2023-05-05 00:00:00+0000
 categories:
     - DS
 tags:
-    - buf
-    - c++
-    - luogu
+    - Buf
+    - Luogu
 ---
 # 【模板】并查集
 

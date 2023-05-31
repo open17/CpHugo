@@ -6,8 +6,7 @@ date: 2023-05-05 00:00:00+0000
 categories:
     - DS
 tags:
-    - templates
-    - c++
+    - Templates
     - FenwickTree
 ---
 ## 封装模板

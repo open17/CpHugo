@@ -6,10 +6,9 @@ date: 2023-05-08 00:00:00+0000
 categories:
     - Math
 tags:
-    - templates
-    - c++
-    - inv
-    - luogu
+    - Templates
+    - Inv
+    - Luogu
 ---
 ## 模板
 - 只适用于模数为质数的情况(费马小定理)

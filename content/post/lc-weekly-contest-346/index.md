@@ -4,8 +4,7 @@ description: 本场竞赛由「顺丰科技 & 力扣」联合主办
 slug: lc-weekly-contest-346 
 date: 2023-05-21 00:00:00+0000
 tags:
-    - leetcode
-    - c++
+    - Leetcode
 image: https://pic.lingkou.xyz/1684119642-NLFpUC-1760-360%20%E9%A1%BA%E4%B8%B0%E7%A7%91%E6%8A%80.png
 ---
 ## 写在前面

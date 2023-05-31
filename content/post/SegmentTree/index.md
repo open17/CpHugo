@@ -6,9 +6,8 @@ date: 2023-05-05 00:00:00+0000
 categories:
     - DS
 tags:
-    - templates
-    - c++
-    - SegmentTree
+    - Templates
+    - Segment Tree
 ---
 ## lazy线段树模板
 - 区间修改logn

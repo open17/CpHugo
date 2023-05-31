@@ -6,9 +6,8 @@ date: 2023-05-05 00:00:00+0000
 categories:
     - DS
 tags:
-    - templates
-    - c++
-    - buf
+    - Templates
+    - Buf
 ---
 ##  按序合并路径压缩优化并查集
 ### 封装模板

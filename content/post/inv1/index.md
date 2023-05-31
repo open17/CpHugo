@@ -6,9 +6,8 @@ date: 2023-05-08 00:00:00+0000
 categories:
     - Math
 tags:
-    - templates
-    - c++
-    - inv
+    - Templates
+    - Inv
 ---
 ## 模板
 ```cpp

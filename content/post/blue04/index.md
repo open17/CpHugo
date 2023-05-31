@@ -6,8 +6,7 @@ date: 2023-05-26 00:00:00+0000
 categories:
     - Blue
 tags:
-    - summary
-    - c++
+    - Binary search
 ---
 ## 102. 最佳牛围栏
 

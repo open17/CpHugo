@@ -4,8 +4,7 @@ description: 本场竞赛由「网易游戏互娱 & 力扣」联合主办
 slug: lc-weekly-contest-278 
 date: 2023-05-28 00:00:00+0000
 tags:
-    - leetcode
-    - c++
+    - Leetcode
 image: https://pic.lingkou.xyz/1642577172-whzTsr-1760-360%20%E5%85%AD%E6%96%B9%E4%BA%91.png
 ---
 ## 前言

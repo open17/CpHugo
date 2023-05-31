@@ -6,9 +6,7 @@ date: 2023-04-26 00:00:00+0000
 categories:
     - Blue
 tags:
-    - summary
-    - c++
-    - preSum
+    - PreSum
 ---
 ## 激光炸弹
 ### 题目

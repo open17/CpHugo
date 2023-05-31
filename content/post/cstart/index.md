@@ -6,9 +6,6 @@ date: 2023-05-30 00:00:00+0000
 image: https://picx.zhimg.com/80/v2-905bb346af5546905d0eae5178eeb7ad_720w.webp?source=1940ef5c
 categories:
     - Learn
-tags:
-    - summary
-    - c
 ---
 ```C
 #include <stdio.h>

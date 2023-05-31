@@ -3,9 +3,8 @@ title: 对拍模板
 description: 一种常见的技巧
 slug: duipai
 date: 2023-05-23 00:00:00+0000
-tags:
-    - skill
-    - c++
+categories:
+    - Learn
 ---
 ## windows
 ### 对拍主程序

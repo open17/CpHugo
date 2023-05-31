@@ -6,9 +6,8 @@ date: 2023-05-05 00:00:00+0000
 categories:
     - Alg
 tags:
-    - luogu
-    - c++
-    - SegmentTree
+    - Luogu
+    - Segment Tree
 ---
 # 【模板】线段树 1
 

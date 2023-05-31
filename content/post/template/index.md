@@ -5,14 +5,9 @@ slug: template
 date: 2023-05-08 00:03:00+0000
 image: cover.jpg
 categories:
-    - Alg
     - Learn
 tags:
-    - templates
-    - c++
-    - c
-    - python
-    - qread
+    - Templates
 ---
 ## c++
 ### 精简模板

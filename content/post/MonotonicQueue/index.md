@@ -6,10 +6,9 @@ date: 2023-05-08 00:00:00+0000
 categories:
     - DS
 tags:
-    - templates
-    - c++
-    - MonotonicQueue
-    - luogu
+    - Templates
+    - Monotonic Queue
+    - Luogu
 ---
 ## 模板
 ```cpp

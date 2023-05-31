@@ -4,8 +4,7 @@ description: 本场竞赛由「Cider & 力扣」联合主办
 slug: lc-weekly-contest-292 
 date: 2023-05-29 00:00:00+0000
 tags:
-    - leetcode
-    - c++
+    - Leetcode
 image: https://pic.lingkou.xyz/1651221841-OkHrex-1760-360%20Cider.png
 ---
 ## 前言

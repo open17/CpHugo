@@ -6,8 +6,7 @@ date: 2023-04-26 00:00:00+0000
 categories:
     - Blue
 tags:
-    - summary
-    - c++
+    - Bit
 ---
 ## a的b次方对p取模
 ### 前置知识

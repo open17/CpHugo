@@ -7,7 +7,7 @@ categories:
     - Math
 tags:
     - Distcrete Structures
-    - tree
+
 ---
 > A tree is a connected undirected simple graph that contains no simple circuits.
 ## Rooted Trees

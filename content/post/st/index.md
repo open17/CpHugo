@@ -6,11 +6,9 @@ date: 2023-05-08 00:00:00+0000
 categories:
     - Alg
 tags:
-    - templates
-    - c++
-    - st
-    - luogu
-    - RMQ
+    - Templates
+    - ST 
+    - Luogu
 ---
 ## 模板
 ```cpp

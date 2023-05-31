@@ -6,10 +6,9 @@ date: 2023-05-05 00:00:00+0000
 categories:
     - Math
 tags:
-    - templates
-    - c++
-    - qpow
-    - luogu
+    - Templates
+    - Spow
+    - Luogu
 ---
 ## 模板
 ```cpp

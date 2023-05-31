@@ -1,18 +1,18 @@
 # 🎉欢迎来到CpHugo
 ## ❓这是什么
 这是一个基础竞赛算法(competive programming)个人总结仓库,记录本人所学的一些基础算法知识,以及见到的算法题目,由于个人精力有限,可能存在部分疏漏,欢迎指正~    
-## 🌏网址
-> https://open17.github.io/CpHugo
->    
-[点我传送~](https://open17.github.io/CpHugo)
 ## ⌚RSS(已修复)
-https://open17.github.io/CpHugo/index.xml
+https://open17.github.io/CpHugo/index.xml     
 ## 🔱技术支持
 1. Hugo
 2. hugo stack(主题)
 3. giscus(评论功能)
 
-## 🌠包含内容
+## 🌠网站功能
+- 支持tag查找
+- 支持关键词搜索
+- 支持按分类搜索
+## 🌃内容大纲
 - 🥰基础知识(完成度80%)
     - C语言入门知识
     - 输入输出模板(常用宏,快读,快写)
@@ -21,17 +21,17 @@ https://open17.github.io/CpHugo/index.xml
     - 对拍模板
     - Python常用语法糖
 - 💖常见算法(完成度90%)
-    - 二分
-    - 倍增
-    - 位运算
-    - 前缀和与差分
+    - 二分(Binary search)
+    - 倍增(Binary Lifting)
+    - 位运算(Bit)
+    - 前缀和与差分(PreSum)
     - 贪心
     - 哈希
     - 双指针与滑动窗口
     - 离散化
     - 搜索算法
 - 🤯数学(完成度10%)
-    - 离散数学
+    - 离散数学(Distcrete Structures)
         - 命题逻辑
         - 集合与函数
         - 计数原理
@@ -41,29 +41,30 @@ https://open17.github.io/CpHugo/index.xml
     - 数论
         - gcd,lcm
         - 扩展gcd
-        - 欧拉筛
-        - 逆元
+        - 快速幂取余(Spow)
+        - 欧拉筛(Euler Sieve)
+        - 逆元(Inv)
     - 组合数学
     - 计算几何
     - 博弈论
 - 💡数据结构(完成度45%)
     - 二叉堆
-    - 单调栈
-    - 单调队列
-    - ST表
+    - 单调栈(Monotonic Stack)
+    - 单调队列(Monotonic Queue)
+    - ST表(ST)
     - BST
     - AVL
     - 替罪羊树
     - B树
     - B+树
     - 分块
-    - 树状数组
-    - 线段树
+    - 树状数组(Fenwick Tree)
+    - 线段树(Segment Tree)
     - 主席树
     - 字典树
     - 01字典树
     - 珂朵莉树
-    - 并查集
+    - 并查集(Buf)
 - 💎动态规划(完成度5%)
     - 记忆化搜索
     - 背包模型
@@ -77,7 +78,7 @@ https://open17.github.io/CpHugo/index.xml
     - 倍增优化DP
 - 🔖字符串(完成度40%)
     - 字典树
-    - KMP
+    - KMP(KMP)
     - 扩展 KMP
     - 马拉车
     - SA
@@ -106,7 +107,7 @@ https://open17.github.io/CpHugo/index.xml
     - 网络流
     - 树上问题
         - 树的直径
-        - LCA
+        - LCA(LCA)
         - 重链剖分
         - 树上启发式合并(DSU)
 - 🔑杂项(待整理)
@@ -123,9 +124,7 @@ https://open17.github.io/CpHugo/index.xml
 
 
 
-
-
-## 相关
+## 🌈相关算法资源推荐
 1. [算法可视化网站](https://visualgo.net/zh/)
 2. [OIWiki](https://oi-wiki.org/)
 3. [算法学习笔记](https://zhuanlan.zhihu.com/p/105467597)
@@ -155,4 +154,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-

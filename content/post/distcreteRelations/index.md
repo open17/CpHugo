@@ -6,7 +6,6 @@ date: 2023-05-05 00:00:00+0000
 categories:
     - Math
 tags:
-    - summary
     - Distcrete Structures
 ---
 >  A relation is a structure that is used to represent the relationships between elements

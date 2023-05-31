@@ -6,9 +6,8 @@ date: 2023-05-05 00:00:00+0000
 categories:
     - Alg
 tags:
-    - SegmentTree
-    - c++
-    - luogu
+    - Segment Tree
+    - Luogu
 ---
 # [TJOI2009] 开关
 
