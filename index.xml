@@ -4378,7 +4378,7 @@ x XOR num1 的值 最小
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="linux">linux&lt;/h2>
-&lt;p>把exe改成out,fc改成diff,Sleep改成sleep,windows.h改为unistd.h&lt;/p></description></item><item><title>lc weekly contest 346</title><link>https://open17.github.io/CpHugo/p/lc-weekly-contest-346/</link><pubDate>Sun, 21 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/lc-weekly-contest-346/</guid><description>&lt;img src="https://pic.lingkou.xyz/1684119642-NLFpUC-1760-360%20%E9%A1%BA%E4%B8%B0%E7%A7%91%E6%8A%80.png" alt="Featured image of post lc weekly contest 346" />&lt;h2 id="写在前面">写在前面&lt;/h2>
+&lt;p>把exe改成out,fc改成diff,Sleep改成sleep,windows.h改为unistd.h&lt;/p></description></item><item><title>Java Gui</title><link>https://open17.github.io/CpHugo/p/java-gui/</link><pubDate>Mon, 22 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/java-gui/</guid><description/></item><item><title>lc weekly contest 346</title><link>https://open17.github.io/CpHugo/p/lc-weekly-contest-346/</link><pubDate>Sun, 21 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/lc-weekly-contest-346/</guid><description>&lt;img src="https://pic.lingkou.xyz/1684119642-NLFpUC-1760-360%20%E9%A1%BA%E4%B8%B0%E7%A7%91%E6%8A%80.png" alt="Featured image of post lc weekly contest 346" />&lt;h2 id="写在前面">写在前面&lt;/h2>
 &lt;blockquote>
 &lt;p>&lt;a class="link" href="https://leetcode.cn/contest/weekly-contest-346/" target="_blank" rel="noopener"
 >LC346传送门&lt;/a>
@@ -8220,6 +8220,278 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
+&lt;/div></description></item><item><title>面向对象与Java</title><link>https://open17.github.io/CpHugo/p/oop-java/</link><pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/oop-java/</guid><description>&lt;h2 id="变量类型">变量类型&lt;/h2>
+&lt;h3 id="local-variables">Local Variables&lt;/h3>
+&lt;p>方法体内&lt;/p>
+&lt;h3 id="instance-variables">Instance Variables&lt;/h3>
+&lt;p>成员变量,类中方法体外&lt;/p>
+&lt;h3 id="class-variables">Class Variables&lt;/h3>
+&lt;p>类变量,静态成员变量,同一种类只有一份拷贝&lt;/p>
+&lt;h3 id="parameters">Parameters&lt;/h3>
+&lt;p>传参&lt;/p>
+&lt;h3 id="常量">常量&lt;/h3>
+&lt;p>final修饰,不能更改&lt;/p>
+&lt;h2 id="修饰符1">修饰符&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/h2>
+&lt;h3 id="访问修饰符">访问修饰符&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>default(什么也不写): 在同一包内可见，不使用任何修饰符。使用对象：类、接口、变量、方法。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>private : 在同一类内可见。使用对象：变量、方法。 注意：不能修饰类（外部类）&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>public : 对所有类可见。使用对象：类、接口、变量、方法&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>protected : 对同一包内的类和所有子类可见。使用对象：变量、方法。 注意：不能修饰类（外部类）&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="非访问修饰符">非访问修饰符&lt;/h3>
+&lt;h4 id="static-修饰符">static 修饰符&lt;/h4>
+&lt;p>用来修饰类方法和类变量。&lt;/p>
+&lt;h5 id="静态变量">静态变量&lt;/h5>
+&lt;p>static 关键字用来声明独立于对象的静态变量，无论一个类实例化多少对象，它的静态变量只有一份拷贝。 静态变量也被称为类变量。局部变量不能被声明为 static 变量。&lt;/p>
+&lt;h5 id="静态方法">静态方法&lt;/h5>
+&lt;p>static 关键字用来声明独立于对象的静态方法。静态方法不能使用类的非静态变量。静态方法从参数列表得到数据，然后计算这些数据。&lt;/p>
+&lt;h4 id="final-修饰符">final 修饰符&lt;/h4>
+&lt;p>用来修饰类、方法和变量，final 修饰的类不能够被继承，修饰的方法不能被继承类重新定义，修饰的变量为常量，是不可修改的。&lt;/p>
+&lt;h5 id="final变量">final变量&lt;/h5>
+&lt;p>final 修饰符通常和 static 修饰符一起使用来创建类常量。&lt;/p>
+&lt;h5 id="final方法">final方法&lt;/h5>
+&lt;p>父类中的 final 方法可以被子类继承，但是不能被子类重写
+abstract 修饰符，用来创建抽象类和抽象方法。&lt;/p>
+&lt;h4 id="abstract修饰符">abstract修饰符&lt;/h4>
+&lt;p>详见&lt;a class="link" href="#%e6%8a%bd%e8%b1%a1" >抽象&lt;/a>&lt;/p>
+&lt;h2 id="继承">继承&lt;/h2>
+&lt;h3 id="关键词-extends">关键词 extends&lt;/h3>
+&lt;h3 id="调用父类方法-super">调用父类方法 super&lt;/h3>
+&lt;p>我们可以通过super关键字来实现对父类成员的访问，用来引用当前对象的父类。&lt;/p>
+&lt;blockquote>
+&lt;p>在构造中子类是不继承父类的构造器（构造方法或者构造函数）的，它只是调用（隐式或显式）。如果父类的构造器带有参数，则必须在子类的构造器中显式地通过 super 关键字调用父类的构造器并配以适当的参数列表。如果父类构造器没有参数，则在子类的构造器中不需要使用 super 关键字调用父类构造器，系统会自动调用父类的无参构造器。&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/p>
+&lt;/blockquote>
+&lt;p>记得super放在构造器的第一行&lt;/p>
+&lt;h3 id="关键词this">关键词this&lt;/h3>
+&lt;p>this关键字：指向自己的引用。
+另外参数变量名和成员变量名重复的时候常使用this关键词区分&lt;/p>
+&lt;h3 id="override-与-overload">Override 与 Overload&lt;/h3>
+&lt;h4 id="重写方法">重写方法&lt;/h4>
+&lt;ol>
+&lt;li>返回值和形参不能改&lt;/li>
+&lt;li>抛出的异常不能变得比父类广泛&lt;/li>
+&lt;/ol>
+&lt;h4 id="重载方法">重载方法&lt;/h4>
+&lt;ol>
+&lt;li>访问权限不能更小&lt;/li>
+&lt;li>入参不能改&lt;/li>
+&lt;li>返回值可以不同(但是必须是父类返回值的派生类)&lt;/li>
+&lt;li>抛出的异常可以改变&lt;/li>
+&lt;/ol>
+&lt;h3 id="upcase-和-downcase">upcase 和 downcase&lt;/h3>
+&lt;ul>
+&lt;li>upcase:子类可以转为父类类型&lt;/li>
+&lt;li>downcase: 只有由子类转成父类的父类才可以转为子类&lt;/li>
+&lt;/ul>
+&lt;h3 id="关键词instanceof">关键词instanceof&lt;/h3>
+&lt;p>&lt;code>A istanseof Class&lt;/code>,其中 A 为一个对象，Class 表示一个类或者一个接口，当 obj 为 Class 的对象，或者是其直接或间接子类，或者是其接口的实现类，结果都返回 true，否则返回false。&lt;/p>
+&lt;h3 id="注意">注意&lt;/h3>
+&lt;p>java中不能多继承&lt;/p>
+&lt;h2 id="抽象">抽象&lt;/h2>
+&lt;h3 id="关键词abstract">关键词abstract&lt;/h3>
+&lt;h3 id="特点">特点&lt;/h3>
+&lt;p>不能实例化对象&lt;/p>
+&lt;h3 id="抽象方法特点">抽象方法特点&lt;/h3>
+&lt;ol>
+&lt;li>如果一个类包含抽象方法，那么该类必须是抽象类。&lt;/li>
+&lt;li>任何子类必须重写父类的抽象方法，或者声明自身为抽象类&lt;/li>
+&lt;li>构造方法，类方法（用 static 修饰的方法）不能声明为抽象方法&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">public&lt;/span> &lt;span class="kd">abstract&lt;/span> &lt;span class="kd">class&lt;/span> &lt;span class="nc">A&lt;/span>&lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">public&lt;/span> &lt;span class="kd">abstract&lt;/span> &lt;span class="kt">void&lt;/span> &lt;span class="nf">ToDo&lt;/span>&lt;span class="o">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="接口">接口&lt;/h2>
+&lt;h3 id="特点-1">特点&lt;/h3>
+&lt;ul>
+&lt;li>都为抽象方法&lt;/li>
+&lt;li>不支持非final/static修饰的变量(不写默认为static final)&lt;/li>
+&lt;li>不需要写出abstract&lt;/li>
+&lt;/ul>
+&lt;h3 id="继承-1">继承&lt;/h3>
+&lt;p>接口继承接口:extends&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>
+接口允许多继承&lt;/p>
+&lt;h3 id="接口的实现">接口的实现&lt;/h3>
+&lt;p>关键词:implements
+类可以实现多个接口&lt;/p>
+&lt;h2 id="异常处理">异常处理&lt;/h2>
+&lt;h3 id="异常捕获">异常捕获&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="k">try&lt;/span>&lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 程序代码
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="o">}&lt;/span>&lt;span class="k">catch&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="err">异常类型&lt;/span>&lt;span class="mi">1&lt;/span> &lt;span class="err">异常的变量名&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="o">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 程序代码
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="o">}&lt;/span>&lt;span class="k">catch&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="err">异常类型&lt;/span>&lt;span class="mi">2&lt;/span> &lt;span class="err">异常的变量名&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="o">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 程序代码
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="o">}&lt;/span>&lt;span class="k">catch&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="err">异常类型&lt;/span>&lt;span class="mi">3&lt;/span> &lt;span class="err">异常的变量名&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="o">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 程序代码
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="o">}&lt;/span>&lt;span class="k">finally&lt;/span>&lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">//to-do
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>finally无论是否try/catch都会触发&lt;br>
+try 代码后不能既没catch也没finally&lt;/p>
+&lt;h3 id="throw">throw&lt;/h3>
+&lt;p>&lt;code>throw new Exception(&amp;quot;aaa&amp;quot;);&lt;/code>&lt;/p>
+&lt;h3 id="throws">throws&lt;/h3>
+&lt;p>表明可能抛出异常&lt;/p>
+&lt;h3 id="常用">常用&lt;/h3>
+&lt;p>&lt;code>e.getMessage()&lt;/code> 获取e中的字符串&lt;/p>
+&lt;h3 id="自定义异常">自定义异常&lt;/h3>
+&lt;blockquote>
+&lt;p>这里只处理检测性异常&lt;/p>
+&lt;/blockquote>
+&lt;h4 id="模板">模板&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">public&lt;/span> &lt;span class="kd">class&lt;/span> &lt;span class="nc">A&lt;/span> &lt;span class="kd">extends&lt;/span> &lt;span class="n">Exception&lt;/span>&lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">public&lt;/span> &lt;span class="nf">A&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">String&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="o">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">super&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="泛型">泛型&lt;/h2>
+&lt;h3 id="泛型标记符">泛型标记符&lt;/h3>
+&lt;p>E - Element (在集合中使用，因为集合中存放的是元素)
+T - Type（Java 类）
+K - Key（键）
+V - Value（值）
+N - Number（数值类型）
+？ - 表示不确定的 java 类型&lt;/p>
+&lt;h3 id="泛型上限下限">泛型上限/下限&lt;/h3>
+&lt;p>&lt;code>&amp;lt;T extends/implements B&amp;gt;&lt;/code> 表示泛型应为B或B的子类&lt;br>
+&lt;code>&amp;lt;T super B&amp;gt;&lt;/code> 表示泛型应为B或B的父类&lt;/p>
+&lt;h3 id="泛型类与泛型方法">泛型类与泛型方法&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">public&lt;/span> &lt;span class="kd">class&lt;/span> &lt;span class="nc">A&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="o">&amp;gt;{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">//todo
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">public&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="kt">void&lt;/span> &lt;span class="nf">ff&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">T&lt;/span> &lt;span class="n">t1&lt;/span>&lt;span class="o">,&lt;/span>&lt;span class="n">T&lt;/span> &lt;span class="n">t2&lt;/span>&lt;span class="o">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">//todo
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="字符串">字符串&lt;/h2>
+&lt;h3 id="字符串相等">字符串相等&lt;/h3>
+&lt;p>equals()&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//源自菜鸟教程
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="n">String&lt;/span> &lt;span class="n">s1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s">&amp;#34;Hello&amp;#34;&lt;/span>&lt;span class="o">;&lt;/span> &lt;span class="c1">// String 直接创建
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="n">String&lt;/span> &lt;span class="n">s2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s">&amp;#34;Hello&amp;#34;&lt;/span>&lt;span class="o">;&lt;/span> &lt;span class="c1">// String 直接创建
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="n">String&lt;/span> &lt;span class="n">s3&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">s1&lt;/span>&lt;span class="o">;&lt;/span> &lt;span class="c1">// 相同引用
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="n">String&lt;/span> &lt;span class="n">s4&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="n">String&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;Hello&amp;#34;&lt;/span>&lt;span class="o">);&lt;/span> &lt;span class="c1">// String 对象创建
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="n">String&lt;/span> &lt;span class="n">s5&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="n">String&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s">&amp;#34;Hello&amp;#34;&lt;/span>&lt;span class="o">);&lt;/span> &lt;span class="c1">// String 对象创建
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">s1&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">s1&lt;/span>&lt;span class="o">;&lt;/span> &lt;span class="c1">// true, 相同引用
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="n">s1&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">s2&lt;/span>&lt;span class="o">;&lt;/span> &lt;span class="c1">// true, s1 和 s2 都在公共池中，引用相同
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="n">s1&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">s3&lt;/span>&lt;span class="o">;&lt;/span> &lt;span class="c1">// true, s3 与 s1 引用相同
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="n">s1&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">s4&lt;/span>&lt;span class="o">;&lt;/span> &lt;span class="c1">// false, 不同引用地址
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="n">s4&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">s5&lt;/span>&lt;span class="o">;&lt;/span> &lt;span class="c1">// false, 堆中不同引用地址
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">s1&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">equals&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">s3&lt;/span>&lt;span class="o">);&lt;/span> &lt;span class="c1">// true, 相同内容
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="n">s1&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">equals&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">s4&lt;/span>&lt;span class="o">);&lt;/span> &lt;span class="c1">// true, 相同内容
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="n">s4&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">equals&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">s5&lt;/span>&lt;span class="o">);&lt;/span> &lt;span class="c1">// true, 相同内容
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="可变数组">可变数组&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">java.util.ArrayList&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>ArrayList&amp;lt;String&amp;gt; sites = new ArrayList&amp;lt;String&amp;gt;();&lt;/code>
+get()访问元素
+set(i,&amp;ldquo;xxx&amp;rdquo;)修改元素
+add()添加元素
+remove(i)删除下标为i的元素
+removeAll()删除所有元素
+size()大小&lt;/p>
+&lt;div class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1">
+&lt;p>摘自菜鸟教程&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2">
+&lt;p>摘自菜鸟教程&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:3">
+&lt;p>请与接口的实现区分&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
 &lt;/div></description></item><item><title>前缀和与差分模板</title><link>https://open17.github.io/CpHugo/p/presum/</link><pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/presum/</guid><description>&lt;h2 id="一维前缀和">一维前缀和&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -9358,21 +9630,13 @@ $0\le a_i&amp;lt;2^{31}$&lt;/p>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>🎗️下面已经空空如也啦~</title><link>https://open17.github.io/CpHugo/p/message/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/message/</guid><description/></item><item><title>标签</title><link>https://open17.github.io/CpHugo/tags/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/tags/</guid><description/></item><item><title>欢迎</title><link>https://open17.github.io/CpHugo/hello/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/hello/</guid><description>&lt;h2 id="这是什么">❓这是什么&lt;/h2>
-&lt;p>这是一个基础竞赛算法(competive programming)个人总结仓库,记录本人所学的一些基础算法知识,以及见到的算法题目,由于个人精力有限,可能存在部分疏漏,欢迎指正~&lt;/p>
-&lt;h2 id="rss已修复">⌚RSS(已修复)&lt;/h2>
-&lt;p>&lt;a class="link" href="https://open17.github.io/CpHugo/index.xml" target="_blank" rel="noopener"
->https://open17.github.io/CpHugo/index.xml&lt;/a>&lt;/p>
-&lt;h2 id="技术支持">🔱技术支持&lt;/h2>
-&lt;ol>
-&lt;li>Hugo&lt;/li>
-&lt;li>hugo stack(主题)&lt;/li>
-&lt;li>giscus(评论功能)&lt;/li>
-&lt;/ol>
+&lt;p>这是一个基础竞赛算法(competive programming)个人总结仓库,记录本人所学的一些基础算法知识,以及见到的算法题目&lt;/p>
+&lt;p>由于个人精力有限,可能存在部分疏漏,欢迎指正~&lt;/p>
 &lt;h2 id="网站功能">🌠网站功能&lt;/h2>
 &lt;ul>
 &lt;li>支持tag查找&lt;/li>
 &lt;li>支持关键词搜索&lt;/li>
-&lt;li>支持按分类搜索&lt;/li>
+&lt;li>支持专题查找&lt;/li>
 &lt;/ul>
 &lt;h2 id="内容大纲">🌃内容大纲&lt;/h2>
 &lt;ul>
@@ -9425,7 +9689,7 @@ $0\le a_i&amp;lt;2^{31}$&lt;/p>
 &lt;li>博弈论&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>💡数据结构(完成度45%)
+&lt;li>🥥数据结构(完成度45%)
 &lt;ul>
 &lt;li>二叉堆&lt;/li>
 &lt;li>单调栈(Monotonic Stack)&lt;/li>
@@ -9446,7 +9710,7 @@ $0\le a_i&amp;lt;2^{31}$&lt;/p>
 &lt;li>并查集(Buf)&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>💎动态规划(完成度5%)
+&lt;li>🍒动态规划(完成度5%)
 &lt;ul>
 &lt;li>记忆化搜索&lt;/li>
 &lt;li>背包模型&lt;/li>
@@ -9460,7 +9724,7 @@ $0\le a_i&amp;lt;2^{31}$&lt;/p>
 &lt;li>倍增优化DP&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>🔖字符串(完成度40%)
+&lt;li>🍋字符串(完成度40%)
 &lt;ul>
 &lt;li>字典树&lt;/li>
 &lt;li>KMP(KMP)&lt;/li>
@@ -9470,7 +9734,7 @@ $0\le a_i&amp;lt;2^{31}$&lt;/p>
 &lt;li>AC自动机&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>🔭图论(完成度10%)
+&lt;li>🥝图论(完成度10%)
 &lt;ul>
 &lt;li>图的存储&lt;/li>
 &lt;li>图的遍历&lt;/li>
@@ -9515,7 +9779,7 @@ $0\le a_i&amp;lt;2^{31}$&lt;/p>
 &lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>🔑杂项(待整理)
+&lt;li>🍎杂项(待整理)
 &lt;ul>
 &lt;li>摩尔投票(Boyer–Moore Majority Vote)&lt;/li>
 &lt;li>莫里斯遍历&lt;/li>
@@ -9534,6 +9798,22 @@ $0\le a_i&amp;lt;2^{31}$&lt;/p>
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
+&lt;h2 id="地址">🍉地址&lt;/h2>
+&lt;h3 id="网站地址">网站地址&lt;/h3>
+&lt;p>&lt;a class="link" href="https://open17.github.io/CpHugo/hello" target="_blank" rel="noopener"
+>https://open17.github.io/CpHugo/hello&lt;/a>&lt;/p>
+&lt;h3 id="github地址">github地址&lt;/h3>
+&lt;p>&lt;a class="link" href="https://github.com/open17/CpHugo" target="_blank" rel="noopener"
+>https://github.com/open17/CpHugo&lt;/a>&lt;/p>
+&lt;h2 id="rss已修复">🍏RSS(已修复)&lt;/h2>
+&lt;p>&lt;a class="link" href="https://open17.github.io/CpHugo/index.xml" target="_blank" rel="noopener"
+>https://open17.github.io/CpHugo/index.xml&lt;/a>&lt;/p>
+&lt;h2 id="技术支持">🔱技术支持&lt;/h2>
+&lt;ol>
+&lt;li>Hugo&lt;/li>
+&lt;li>hugo stack(主题)&lt;/li>
+&lt;li>giscus(评论功能)&lt;/li>
+&lt;/ol>
 &lt;h2 id="相关算法资源推荐">🌈相关算法资源推荐&lt;/h2>
 &lt;ol>
 &lt;li>&lt;a class="link" href="https://visualgo.net/zh/" target="_blank" rel="noopener"
@@ -9564,4 +9844,115 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.&lt;/p></description></item><item><title>搜索</title><link>https://open17.github.io/CpHugo/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/search/</guid><description/></item><item><title>专题</title><link>https://open17.github.io/CpHugo/archives/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/archives/</guid><description/></item></channel></rss>
+SOFTWARE.&lt;/p></description></item><item><title>快捷</title><link>https://open17.github.io/CpHugo/qst/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/qst/</guid><description>&lt;h2 id="输入输出">输入输出&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span>&lt;span class="cpf">&amp;lt;bits/stdc++.h&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="k">using&lt;/span> &lt;span class="k">namespace&lt;/span> &lt;span class="n">std&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#define ios ios::sync_with_stdio(false);cin.tie(0);cout.tie(0);
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#define For(w, a, n) for(int w=(a);w&amp;lt;(n);++w)
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#define _For(a,b,c) for(int a=(b);a&amp;gt;(c);a--)
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#define all(x) (x).begin(),x.end()
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#define inf 0x3f3f3f3f
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="c1">//对拍
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="cp">#define fo1 freopen(&amp;#34;data.in&amp;#34;,&amp;#34;r&amp;#34;,stdin);freopen(&amp;#34;res.out&amp;#34;,&amp;#34;w&amp;#34;,stdout);
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#define fo2 freopen(&amp;#34;data.in&amp;#34;,&amp;#34;r&amp;#34;,stdin);freopen(&amp;#34;ans.out&amp;#34;,&amp;#34;w&amp;#34;,stdout);
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="c1">//输出数组
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="cp">#define printA(a,b,c) cout&amp;lt;&amp;lt;&amp;#39;\n&amp;#39;&amp;lt;&amp;lt;&amp;#34;debug start&amp;#34;&amp;lt;&amp;lt;&amp;#39;\n&amp;#39;;for(int i=a;i&amp;lt;=b;i++){cout&amp;lt;&amp;lt;c[i]&amp;lt;&amp;lt;&amp;#39; &amp;#39;;}cout&amp;lt;&amp;lt;&amp;#39;\n&amp;#39;&amp;lt;&amp;lt;&amp;#34;debug over&amp;#34;&amp;lt;&amp;lt;&amp;#39;\n&amp;#39;&amp;lt;&amp;lt;&amp;#39;\n&amp;#39;;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="k">typedef&lt;/span> &lt;span class="kt">long&lt;/span> &lt;span class="kt">long&lt;/span> &lt;span class="n">ll&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">typedef&lt;/span> &lt;span class="kt">unsigned&lt;/span> &lt;span class="kt">long&lt;/span> &lt;span class="kt">long&lt;/span> &lt;span class="n">ull&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">typedef&lt;/span> &lt;span class="n">pair&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="kt">int&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">int&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">pii&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">const&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">N&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mf">3e6&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">const&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">MOD&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mf">1e9&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">7&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">inline&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="nf">read&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">f&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">char&lt;/span> &lt;span class="n">ch&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">getchar&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">ch&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="sc">&amp;#39;0&amp;#39;&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="n">ch&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="sc">&amp;#39;9&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">ch&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="sc">&amp;#39;-&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">f&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">ch&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">getchar&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">ch&lt;/span> &lt;span class="o">&amp;gt;=&lt;/span> &lt;span class="sc">&amp;#39;0&amp;#39;&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="n">ch&lt;/span> &lt;span class="o">&amp;lt;=&lt;/span> &lt;span class="sc">&amp;#39;9&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">x&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="mi">10&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">ch&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="sc">&amp;#39;0&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">ch&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">getchar&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">x&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">f&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">inline&lt;/span> &lt;span class="kt">void&lt;/span> &lt;span class="nf">write&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="n">putchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sc">&amp;#39;-&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="n">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="mi">9&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="n">write&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span> &lt;span class="o">/&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">putchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span> &lt;span class="o">%&lt;/span> &lt;span class="mi">10&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="sc">&amp;#39;0&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">inline&lt;/span> &lt;span class="kt">void&lt;/span> &lt;span class="nf">hhhh&lt;/span>&lt;span class="p">(){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">//todo
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">//hhhh();
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">T&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">T&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">read&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="p">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">hhhh&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>搜索</title><link>https://open17.github.io/CpHugo/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/search/</guid><description/></item><item><title>专题</title><link>https://open17.github.io/CpHugo/archives/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/archives/</guid><description/></item></channel></rss>
