@@ -6,5 +6,5 @@ menu:
     main:
         weight: 5
         params: 
-            icon: clock
+            icon: touou
 ---

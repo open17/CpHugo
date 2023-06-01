@@ -1,6 +1,6 @@
 ---
 title: "欢迎"
-slug: hello
+slug: "hello"
 links:
   - title: 全部标签
     description: 分类标签大全
@@ -19,18 +19,13 @@ menu:
 
 ---
 ## ❓这是什么
-这是一个基础竞赛算法(competive programming)个人总结仓库,记录本人所学的一些基础算法知识,以及见到的算法题目,由于个人精力有限,可能存在部分疏漏,欢迎指正~    
-## ⌚RSS(已修复)
-https://open17.github.io/CpHugo/index.xml     
-## 🔱技术支持
-1. Hugo
-2. hugo stack(主题)
-3. giscus(评论功能)
+这是一个基础竞赛算法(competive programming)个人总结仓库,记录本人所学的一些基础算法知识,以及见到的算法题目
 
+由于个人精力有限,可能存在部分疏漏,欢迎指正~ 
 ## 🌠网站功能
 - 支持tag查找
 - 支持关键词搜索
-- 支持按分类搜索
+- 支持专题查找
 ## 🌃内容大纲
 - 🥰基础知识(完成度80%)
     - C语言入门知识
@@ -66,7 +61,7 @@ https://open17.github.io/CpHugo/index.xml
     - 组合数学
     - 计算几何
     - 博弈论
-- 💡数据结构(完成度45%)
+- 🥥数据结构(完成度45%)
     - 二叉堆
     - 单调栈(Monotonic Stack)
     - 单调队列(Monotonic Queue)
@@ -84,7 +79,7 @@ https://open17.github.io/CpHugo/index.xml
     - 01字典树
     - 珂朵莉树
     - 并查集(Buf)
-- 💎动态规划(完成度5%)
+- 🍒动态规划(完成度5%)
     - 记忆化搜索
     - 背包模型
     - 线性DP
@@ -95,14 +90,14 @@ https://open17.github.io/CpHugo/index.xml
     - 树形DP
     - 斜率优化DP
     - 倍增优化DP
-- 🔖字符串(完成度40%)
+- 🍋字符串(完成度40%)
     - 字典树
     - KMP(KMP)
     - 扩展 KMP
     - 马拉车
     - SA
     - AC自动机
-- 🔭图论(完成度10%)
+- 🥝图论(完成度10%)
     - 图的存储
     - 图的遍历
     - 二分图
@@ -129,7 +124,7 @@ https://open17.github.io/CpHugo/index.xml
         - LCA(LCA)
         - 重链剖分
         - 树上启发式合并(DSU)
-- 🔑杂项(待整理)
+- 🍎杂项(待整理)
     - 摩尔投票(Boyer–Moore Majority Vote)
     - 莫里斯遍历
     - 调度场算法
@@ -140,8 +135,18 @@ https://open17.github.io/CpHugo/index.xml
     - ...
 - 🍬其它
     - OJ比赛题解
-    - ...
-
+    - ...   
+## 🍉地址
+### 网站地址
+https://open17.github.io/CpHugo/hello
+### github地址
+https://github.com/open17/CpHugo
+## 🍏RSS(已修复)
+https://open17.github.io/CpHugo/index.xml     
+## 🔱技术支持
+1. Hugo
+2. hugo stack(主题)
+3. giscus(评论功能)
 ## 🌈相关算法资源推荐
 1. [算法可视化网站](https://visualgo.net/zh/)
 2. [OIWiki](https://oi-wiki.org/)
