@@ -5,17 +5,80 @@ date: 2023-05-02 00:00:00+0000
 categories:
     - Learn
 ---
-## 变量类型
-### Local Variables
+## Topic
+- OOP Introduction & UML
+- Java Programming Essentials
+- Creating Java Classes
+- Inheritance
+- Abstract and Interface
+- Exception Handling
+- Array and Generics
+
+
+
+## 概念
+1. object is an  instanceof a class
+2. a class is a blueprint from which objects are made
+3. Objects have data(instance fileds) and behavior(medthods)
+
+## UML && Class Relationship
+- association
+- aggregation(关系更加紧密,但可分开)
+- composition(不可分开)
+- inheritance
+
+## Java Programming Essentials
+### 变量名 
+字母数字$_   
+数字不能开头
+### 变量类型
+#### Local Variables
 方法体内
-### Instance Variables
+#### Instance Variables
 成员变量,类中方法体外
-### Class Variables
+#### Class Variables
 类变量,静态成员变量,同一种类只有一份拷贝
-### Parameters
+#### Parameters
 传参
-### 常量
+#### 常量
 final修饰,不能更改
+### Standard input and output (I/O)
+- System.out
+- Scanner
+### float
+float类型如果含有小数的话一定要加上后缀f/F(不加默认是double)
+### char
+在java里同样区分单引号双引号
+### 隐式转换
+在java中只能向上转换
+特别的,char转int但int不能隐式转化char
+### switch
+```java
+switch(expression){
+    case value :
+       //语句
+       break; //可选
+    case value :
+       //语句
+       break; //可选
+    //你可以有任意数量的case语句
+    default : //可选
+       //语句
+}
+```
+
+## Creating Java Classes
+### Constructor
+- the same name as the class
+- no type return
+- often overloaed
+- default constructor
+### Memory analysis
+### 访问修饰符
+见[修饰符](#修饰符)
+
+
+
 ## 修饰符[^1]
 ### 访问修饰符
 - default(什么也不写): 在同一包内可见，不使用任何修饰符。使用对象：类、接口、变量、方法。      
@@ -48,6 +111,7 @@ abstract 修饰符，用来创建抽象类和抽象方法。
 
 
 ## 继承
+Subclass automatically has all the non-private instance variables and methods of the superclass
 ### 关键词 extends
 ### 调用父类方法 super 
 我们可以通过super关键字来实现对父类成员的访问，用来引用当前对象的父类。
@@ -69,7 +133,9 @@ this关键字：指向自己的引用。
 2. 入参不能改
 3. 返回值可以不同(但是必须是父类返回值的派生类)
 4. 抛出的异常可以改变
-
+### Object
+#### toString()
+#### equals(...)
 ### upcase 和 downcase
 - upcase:子类可以转为父类类型
 - downcase: 只有由子类转成父类的父类才可以转为子类
@@ -105,6 +171,9 @@ public abstract class A{
 类可以实现多个接口
 
 ## 异常处理
+### unchecked exceptions and checked exceptions
+RuntimeException: don't know
+Else: checked
 ### 异常捕获
 ```java
 try{
@@ -180,28 +249,22 @@ s1.equals(s4);    // true, 相同内容
 s4.equals(s5);    // true, 相同内容
 ```
 
-## 可变数组
+## 数组
+### array
+`a.length`      
+`A[] a;`                 
+`a=new A(1)[10];`                        
+### arraylist
 ```java
 import java.util.ArrayList; 
 ```
-`ArrayList<String> sites = new ArrayList<String>();`
-get()访问元素
-set(i,"xxx")修改元素
-add()添加元素
-remove(i)删除下标为i的元素
-removeAll()删除所有元素
-size()大小
-
-
-
-
-
-
-
-
-
-
-
+`ArrayList<String> sites = new ArrayList<String>();`                 
+get()访问元素            
+set(i,"xxx")修改元素         
+add()添加元素            
+remove(i)删除下标为i的元素              
+removeAll()删除所有元素             
+size()大小                  
 
 
 
