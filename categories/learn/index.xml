@@ -1769,19 +1769,98 @@ $lcm(a,b)&lt;em>gcd(a,b)=a&lt;/em>b$&lt;br>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="java">java&lt;/h2>
-&lt;h2 id="go">go&lt;/h2></description></item><item><title>面向对象与Java</title><link>https://open17.github.io/CpHugo/p/oop-java/</link><pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/oop-java/</guid><description>&lt;h2 id="变量类型">变量类型&lt;/h2>
-&lt;h3 id="local-variables">Local Variables&lt;/h3>
+&lt;h2 id="go">go&lt;/h2></description></item><item><title>面向对象与Java</title><link>https://open17.github.io/CpHugo/p/oop-java/</link><pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/oop-java/</guid><description>&lt;h2 id="topic">Topic&lt;/h2>
+&lt;ul>
+&lt;li>OOP Introduction &amp;amp; UML&lt;/li>
+&lt;li>Java Programming Essentials&lt;/li>
+&lt;li>Creating Java Classes&lt;/li>
+&lt;li>Inheritance&lt;/li>
+&lt;li>Abstract and Interface&lt;/li>
+&lt;li>Exception Handling&lt;/li>
+&lt;li>Array and Generics&lt;/li>
+&lt;/ul>
+&lt;h2 id="概念">概念&lt;/h2>
+&lt;ol>
+&lt;li>object is an instanceof a class&lt;/li>
+&lt;li>a class is a blueprint from which objects are made&lt;/li>
+&lt;li>Objects have data(instance fileds) and behavior(medthods)&lt;/li>
+&lt;/ol>
+&lt;h2 id="uml--class-relationship">UML &amp;amp;&amp;amp; Class Relationship&lt;/h2>
+&lt;ul>
+&lt;li>association&lt;/li>
+&lt;li>aggregation(关系更加紧密,但可分开)&lt;/li>
+&lt;li>composition(不可分开)&lt;/li>
+&lt;li>inheritance&lt;/li>
+&lt;/ul>
+&lt;h2 id="java-programming-essentials">Java Programming Essentials&lt;/h2>
+&lt;h3 id="变量名">变量名&lt;/h3>
+&lt;p>字母数字$_&lt;br>
+数字不能开头&lt;/p>
+&lt;h3 id="变量类型">变量类型&lt;/h3>
+&lt;h4 id="local-variables">Local Variables&lt;/h4>
 &lt;p>方法体内&lt;/p>
-&lt;h3 id="instance-variables">Instance Variables&lt;/h3>
+&lt;h4 id="instance-variables">Instance Variables&lt;/h4>
 &lt;p>成员变量,类中方法体外&lt;/p>
-&lt;h3 id="class-variables">Class Variables&lt;/h3>
+&lt;h4 id="class-variables">Class Variables&lt;/h4>
 &lt;p>类变量,静态成员变量,同一种类只有一份拷贝&lt;/p>
-&lt;h3 id="parameters">Parameters&lt;/h3>
+&lt;h4 id="parameters">Parameters&lt;/h4>
 &lt;p>传参&lt;/p>
-&lt;h3 id="常量">常量&lt;/h3>
+&lt;h4 id="常量">常量&lt;/h4>
 &lt;p>final修饰,不能更改&lt;/p>
-&lt;h2 id="修饰符1">修饰符&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/h2>
+&lt;h3 id="standard-input-and-output-io">Standard input and output (I/O)&lt;/h3>
+&lt;ul>
+&lt;li>System.out&lt;/li>
+&lt;li>Scanner&lt;/li>
+&lt;/ul>
+&lt;h3 id="float">float&lt;/h3>
+&lt;p>float类型如果含有小数的话一定要加上后缀f/F(不加默认是double)&lt;/p>
+&lt;h3 id="char">char&lt;/h3>
+&lt;p>在java里同样区分单引号双引号&lt;/p>
+&lt;h3 id="隐式转换">隐式转换&lt;/h3>
+&lt;p>在java中只能向上转换
+特别的,char转int但int不能隐式转化char&lt;/p>
+&lt;h3 id="switch">switch&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="k">switch&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">expression&lt;/span>&lt;span class="o">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">case&lt;/span> &lt;span class="n">value&lt;/span> &lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">//语句
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="k">break&lt;/span>&lt;span class="o">;&lt;/span> &lt;span class="c1">//可选
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="k">case&lt;/span> &lt;span class="n">value&lt;/span> &lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">//语句
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="k">break&lt;/span>&lt;span class="o">;&lt;/span> &lt;span class="c1">//可选
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">//你可以有任意数量的case语句
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="k">default&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="c1">//可选
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">//语句
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="creating-java-classes">Creating Java Classes&lt;/h2>
+&lt;h3 id="constructor">Constructor&lt;/h3>
+&lt;ul>
+&lt;li>the same name as the class&lt;/li>
+&lt;li>no type return&lt;/li>
+&lt;li>often overloaed&lt;/li>
+&lt;li>default constructor&lt;/li>
+&lt;/ul>
+&lt;h3 id="memory-analysis">Memory analysis&lt;/h3>
 &lt;h3 id="访问修饰符">访问修饰符&lt;/h3>
+&lt;p>见&lt;a class="link" href="#%e4%bf%ae%e9%a5%b0%e7%ac%a6" >修饰符&lt;/a>&lt;/p>
+&lt;h2 id="修饰符1">修饰符&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/h2>
+&lt;h3 id="访问修饰符-1">访问修饰符&lt;/h3>
 &lt;ul>
 &lt;li>
 &lt;p>default(什么也不写): 在同一包内可见，不使用任何修饰符。使用对象：类、接口、变量、方法。&lt;/p>
@@ -1813,6 +1892,7 @@ abstract 修饰符，用来创建抽象类和抽象方法。&lt;/p>
 &lt;h4 id="abstract修饰符">abstract修饰符&lt;/h4>
 &lt;p>详见&lt;a class="link" href="#%e6%8a%bd%e8%b1%a1" >抽象&lt;/a>&lt;/p>
 &lt;h2 id="继承">继承&lt;/h2>
+&lt;p>Subclass automatically has all the non-private instance variables and methods of the superclass&lt;/p>
 &lt;h3 id="关键词-extends">关键词 extends&lt;/h3>
 &lt;h3 id="调用父类方法-super">调用父类方法 super&lt;/h3>
 &lt;p>我们可以通过super关键字来实现对父类成员的访问，用来引用当前对象的父类。&lt;/p>
@@ -1836,6 +1916,9 @@ abstract 修饰符，用来创建抽象类和抽象方法。&lt;/p>
 &lt;li>返回值可以不同(但是必须是父类返回值的派生类)&lt;/li>
 &lt;li>抛出的异常可以改变&lt;/li>
 &lt;/ol>
+&lt;h3 id="object">Object&lt;/h3>
+&lt;h4 id="tostring">toString()&lt;/h4>
+&lt;h4 id="equals">equals(&amp;hellip;)&lt;/h4>
 &lt;h3 id="upcase-和-downcase">upcase 和 downcase&lt;/h3>
 &lt;ul>
 &lt;li>upcase:子类可以转为父类类型&lt;/li>
@@ -1881,6 +1964,9 @@ abstract 修饰符，用来创建抽象类和抽象方法。&lt;/p>
 &lt;p>关键词:implements
 类可以实现多个接口&lt;/p>
 &lt;h2 id="异常处理">异常处理&lt;/h2>
+&lt;h3 id="unchecked-exceptions-and-checked-exceptions">unchecked exceptions and checked exceptions&lt;/h3>
+&lt;p>RuntimeException: don&amp;rsquo;t know
+Else: checked&lt;/p>
 &lt;h3 id="异常捕获">异常捕获&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -2012,7 +2098,12 @@ N - Number（数值类型）
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="n">s4&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">equals&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="n">s5&lt;/span>&lt;span class="o">);&lt;/span> &lt;span class="c1">// true, 相同内容
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="可变数组">可变数组&lt;/h2>
+&lt;/div>&lt;h2 id="数组">数组&lt;/h2>
+&lt;h3 id="array">array&lt;/h3>
+&lt;p>&lt;code>a.length&lt;/code> &lt;br>
+&lt;code>A[] a;&lt;/code> &lt;br>
+&lt;code>a=new A(1)[10];&lt;/code>&lt;/p>
+&lt;h3 id="arraylist">arraylist&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -2021,12 +2112,12 @@ N - Number（数值类型）
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">java.util.ArrayList&lt;/span>&lt;span class="o">;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>&lt;code>ArrayList&amp;lt;String&amp;gt; sites = new ArrayList&amp;lt;String&amp;gt;();&lt;/code>
-get()访问元素
-set(i,&amp;ldquo;xxx&amp;rdquo;)修改元素
-add()添加元素
-remove(i)删除下标为i的元素
-removeAll()删除所有元素
+&lt;/div>&lt;p>&lt;code>ArrayList&amp;lt;String&amp;gt; sites = new ArrayList&amp;lt;String&amp;gt;();&lt;/code> &lt;br>
+get()访问元素 &lt;br>
+set(i,&amp;ldquo;xxx&amp;rdquo;)修改元素 &lt;br>
+add()添加元素 &lt;br>
+remove(i)删除下标为i的元素 &lt;br>
+removeAll()删除所有元素 &lt;br>
 size()大小&lt;/p>
 &lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
