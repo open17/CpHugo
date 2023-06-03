@@ -1,0 +1,155 @@
+<!doctype html><html lang=en-us dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="vector 1 2 3 4 5 6 7 8 size() empy() clear() front() back() //取值 push_back() pop_back() begin() end() //迭代器 [index] 重载比较符号,字典序 string 1 2 3 4 size() empty() clear() substr(i,len) //开始下标,长度 queue 1 2 3 4 5 6 size() empty() push() front() back() pop() deque"><title>C++ STL</title><link rel=canonical href=https://open17.github.io/CpHugo/p/stl/><link rel=stylesheet href=/CpHugo/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css><meta property="og:title" content="C++ STL"><meta property="og:description" content="vector 1 2 3 4 5 6 7 8 size() empy() clear() front() back() //取值 push_back() pop_back() begin() end() //迭代器 [index] 重载比较符号,字典序 string 1 2 3 4 size() empty() clear() substr(i,len) //开始下标,长度 queue 1 2 3 4 5 6 size() empty() push() front() back() pop() deque"><meta property="og:url" content="https://open17.github.io/CpHugo/p/stl/"><meta property="og:site_name" content=">>>>CpHugo<<<<"><meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2023-05-21T00:00:00+00:00"><meta property="article:modified_time" content="2023-05-21T00:00:00+00:00"><meta name=twitter:title content="C++ STL"><meta name=twitter:description content="vector 1 2 3 4 5 6 7 8 size() empy() clear() front() back() //取值 push_back() pop_back() begin() end() //迭代器 [index] 重载比较符号,字典序 string 1 2 3 4 size() empty() clear() substr(i,len) //开始下标,长度 queue 1 2 3 4 5 6 size() empty() push() front() back() pop() deque"><link rel="shortcut icon" href=img/avatar_huba7df165b03f065124e52c61be437fcf_127360_300x0_resize_box_3.png></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label=切换菜单>
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=/CpHugo/><img src=/CpHugo/img/avatar_huba7df165b03f065124e52c61be437fcf_127360_300x0_resize_box_3.png width=300 height=300 class=site-logo loading=lazy alt=Avatar></a></figure><div class=site-meta><h1 class=site-name><a href=/CpHugo>>>>>CpHugo&lt;&lt;&lt;&lt;</a></h1><h2 class=site-description>你好呀~欢迎前来</h2></div></header><ol class=menu id=main-menu><li><a href=/CpHugo/hello/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-messages" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M21 14l-3-3h-7a1 1 0 01-1-1V4a1 1 0 011-1h9a1 1 0 011 1v10"/><path d="M14 15v2a1 1 0 01-1 1H6l-3 3V11a1 1 0 011-1h2"/></svg><span>欢迎</span></a></li><li><a href=/CpHugo/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg><span>主页</span></a></li><li><a href=/CpHugo/qst/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><span>快捷</span></a></li><li><a href=/CpHugo/archives/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg><span>专题</span></a></li><li><a href=/CpHugo/search/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg><span>搜索</span></a></li><li><a href=/CpHugo/tags/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11 3l9 9a1.5 1.5.0 010 2l-6 6a1.5 1.5.0 01-2 0L3 11V7a4 4 0 014-4h4"/><circle cx="9" cy="9" r="2"/></svg><span>标签</span></a></li><div class=menu-bottom-section><li id=dark-mode-toggle><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><span>暗色模式</span></li></div></ol></aside><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目录</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#vector>vector</a></li><li><a href=#string>string</a></li><li><a href=#queue>queue</a></li><li><a href=#deque>deque</a></li><li><a href=#priority_queue>priority_queue</a></li><li><a href=#stack>stack</a></li><li><a href=#pair>pair</a></li><li><a href=#set-map-multiset-multimap>set, map, multiset, multimap</a><ol><li><a href=#setmultiset>set/multiset</a></li><li><a href=#mapmultimap>map/multimap</a></li></ol></li><li><a href=#unorderedxxxx>unorderedXXXX</a></li><li><a href=#bitset-圧位>bitset, 圧位</a></li></ol></nav></div></section></aside><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><header class=article-category><a href=/CpHugo/categories/learn/ style=background-color:orange;color:#fff>基础知识</a></header><div class=article-title-wrapper><h2 class=article-title><a href=/CpHugo/p/stl/>C++ STL</a></h2></div><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg><time class=article-time--published>May 21, 2023</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><time class=article-time--reading>阅读时长: 2 分钟</time></div></footer></div></header><section class=article-content><h2 id=vector>vector</h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>size()
+</span></span><span class=line><span class=cl>empy()
+</span></span><span class=line><span class=cl>clear()
+</span></span><span class=line><span class=cl>front()  back() //取值
+</span></span><span class=line><span class=cl>push_back()   pop_back()
+</span></span><span class=line><span class=cl>begin() end()   //迭代器
+</span></span><span class=line><span class=cl>[index]
+</span></span><span class=line><span class=cl>重载比较符号,字典序
+</span></span></code></pre></td></tr></table></div></div><h2 id=string>string</h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>size()
+</span></span><span class=line><span class=cl>empty()
+</span></span><span class=line><span class=cl>clear()
+</span></span><span class=line><span class=cl>substr(i,len) //开始下标,长度
+</span></span></code></pre></td></tr></table></div></div><h2 id=queue>queue</h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>size()
+</span></span><span class=line><span class=cl>empty()
+</span></span><span class=line><span class=cl>push()
+</span></span><span class=line><span class=cl>front()
+</span></span><span class=line><span class=cl>back()
+</span></span><span class=line><span class=cl>pop()
+</span></span></code></pre></td></tr></table></div></div><h2 id=deque>deque</h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>size()
+</span></span><span class=line><span class=cl>empty()
+</span></span><span class=line><span class=cl>clear()
+</span></span><span class=line><span class=cl>front()/back()
+</span></span><span class=line><span class=cl>push_back()/pop_back()
+</span></span><span class=line><span class=cl>push_front()/pop_front()
+</span></span><span class=line><span class=cl>begin()/end()
+</span></span><span class=line><span class=cl>[index]
+</span></span></code></pre></td></tr></table></div></div><h2 id=priority_queue>priority_queue</h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>priority_queue&lt;type&gt; ,默认是大根堆(在queue库)
+</span></span><span class=line><span class=cl>size()
+</span></span><span class=line><span class=cl>empty()
+</span></span><span class=line><span class=cl>push() 插入一个元素
+</span></span><span class=line><span class=cl>top() 返回堆顶元素
+</span></span><span class=line><span class=cl>pop() 弹出堆顶元素
+</span></span><span class=line><span class=cl>小根堆：priority_queue&lt;int, vector&lt;int&gt;, greater&lt;int&gt;&gt;;
+</span></span></code></pre></td></tr></table></div></div><h2 id=stack>stack</h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>size()
+</span></span><span class=line><span class=cl>empty()
+</span></span><span class=line><span class=cl>push() 向栈顶插入一个元素
+</span></span><span class=line><span class=cl>top() 返回栈顶元素
+</span></span><span class=line><span class=cl>pop() 弹出栈顶元素
+</span></span></code></pre></td></tr></table></div></div><h2 id=pair>pair</h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>first
+</span></span><span class=line><span class=cl>second
+</span></span><span class=line><span class=cl>比较,first为第一关键,second为第二关键词,字典序
+</span></span></code></pre></td></tr></table></div></div><h2 id=set-map-multiset-multimap>set, map, multiset, multimap</h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>size()
+</span></span><span class=line><span class=cl>empty()
+</span></span><span class=line><span class=cl>clear()
+</span></span><span class=line><span class=cl>begin()/end()
+</span></span></code></pre></td></tr></table></div></div><h3 id=setmultiset>set/multiset</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>insert() 插入一个数
+</span></span><span class=line><span class=cl>find() 查找一个数
+</span></span><span class=line><span class=cl>count() 返回某一个数的个数
+</span></span><span class=line><span class=cl>erase()
+</span></span><span class=line><span class=cl>(1) 输入是一个数x，删除所有x O(k + logn)
+</span></span><span class=line><span class=cl>(2) 输入一个迭代器，删除这个迭代器
+</span></span><span class=line><span class=cl>lower_bound()/upper_bound()
+</span></span><span class=line><span class=cl>lower_bound(x) 返回大于等于x的最小的数的迭代器
+</span></span><span class=line><span class=cl>upper_bound(x) 返回大于x的最小的数的迭代器
+</span></span></code></pre></td></tr></table></div></div><h3 id=mapmultimap>map/multimap</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>insert() 插入的数是一个pair
+</span></span><span class=line><span class=cl>erase() 输入的参数是pair或者迭代器
+</span></span><span class=line><span class=cl>find()
+</span></span><span class=line><span class=cl>[] 注意multimap不支持此操作。 时间复杂度是 O(logn)
+</span></span><span class=line><span class=cl>lower_bound()/upper_bound()
+</span></span></code></pre></td></tr></table></div></div><h2 id=unorderedxxxx>unorderedXXXX</h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>不支持 lower_bound()/upper_bound()， 迭代器的++，--
+</span></span></code></pre></td></tr></table></div></div><h2 id=bitset-圧位>bitset, 圧位</h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>bitset&lt;10000&gt; s;
+</span></span><span class=line><span class=cl>~, &amp;, |, ^
+</span></span><span class=line><span class=cl>&gt;&gt;, &lt;&lt;
+</span></span><span class=line><span class=cl>==, !=
+</span></span><span class=line><span class=cl>[]
+</span></span><span class=line><span class=cl>count() 返回有多少个1
+</span></span><span class=line><span class=cl>any() 判断是否至少有一个1
+</span></span><span class=line><span class=cl>none() 判断是否全为0
+</span></span><span class=line><span class=cl>set() 把所有位置成1
+</span></span><span class=line><span class=cl>set(k, v) 将第k位变成v
+</span></span><span class=line><span class=cl>reset() 把所有位变成0
+</span></span><span class=line><span class=cl>flip() 等价于~
+</span></span><span class=line><span class=cl>flip(k) 把第k位取反
+</span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg><span>谢谢观看~</span></section></footer><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css integrity="sha256-J+iAE0sgH8QSz9hpcDxXIftnj65JEZgNhGcgReTTK9s=" crossorigin=anonymous><script src=https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js integrity="sha256-InsNdER1b2xUewP+pKCUJpkhiqwHgqiPXDlIk7GzBu4=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js integrity="sha256-y39Mpg7V3D4lhBX4x6O0bUqTV4pSrfgwEfGKfxkOdgI=" crossorigin=anonymous defer></script><script>window.addEventListener("DOMContentLoaded",()=>{renderMathInElement(document.querySelector(`.article-content`),{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})})</script></article><aside class=related-content--wrapper><h2 class=section-title>相关文章</h2><div class=related-content><div class="flex article-list--tile"><article class=has-image><a href=/CpHugo/p/cstart/><div class=article-image><img src="https://picx.zhimg.com/80/v2-905bb346af5546905d0eae5178eeb7ad_720w.webp?source=1940ef5c" loading=lazy data-key=cstart data-hash="https://picx.zhimg.com/80/v2-905bb346af5546905d0eae5178eeb7ad_720w.webp?source=1940ef5c"></div><div class=article-details><h2 class=article-title>C语言快速入门</h2></div></a></article><article><a href=/CpHugo/p/duipai/><div class=article-details><h2 class=article-title>对拍模板</h2></div></a></article><article class=has-image><a href=/CpHugo/p/template/><div class=article-image><img src=/CpHugo/p/template/cover.c514d916917173a48a42e0114b469961_hud7e36f7e20e71be184458283bdae4646_55974_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post 算法输入输出模板" data-key=template data-hash="md5-xRTZFpFxc6SKQuARS0aZYQ=="></div><div class=article-details><h2 class=article-title>算法输入输出模板</h2></div></a></article><article><a href=/CpHugo/p/oop-java/><div class=article-details><h2 class=article-title>面向对象与Java</h2></div></a></article></div></div></aside><script src=https://giscus.app/client.js data-repo=open17/CpHugo data-repo-id=R_kgDOJbtiOQ data-category=Announcements data-category-id=DIC_kwDOJbtiOc4CWXPs data-mapping=pathname data-strict=0 data-reactions-enabled=1 data-emit-metadata=0 data-input-position=top data-theme=light data-lang=en crossorigin=anonymous async></script>
+<script>function setGiscusTheme(e){let t=document.querySelector("iframe.giscus-frame");t&&t.contentWindow.postMessage({giscus:{setConfig:{theme:e}}},"https://giscus.app")}(function(){addEventListener("message",t=>{if(event.origin!=="https://giscus.app")return;e()}),window.addEventListener("onColorSchemeChange",e);function e(){setGiscusTheme(document.documentElement.dataset.scheme==="light"?"light":"dark_dimmed")}})()</script><footer class=site-footer><section class=copyright>&copy;
+2023 >>>>CpHugo&lt;&lt;&lt;&lt;</section><section class=powerby>感谢:<br>Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a><br>主题 <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.16.0>Stack</a></b> 由 <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a> 设计</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css crossorigin=anonymous></main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=/CpHugo/ts/main.js defer></script>
+<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>

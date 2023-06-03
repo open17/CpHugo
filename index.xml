@@ -4378,7 +4378,237 @@ x XOR num1 的值 最小
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="linux">linux&lt;/h2>
-&lt;p>把exe改成out,fc改成diff,Sleep改成sleep,windows.h改为unistd.h&lt;/p></description></item><item><title>Java Gui</title><link>https://open17.github.io/CpHugo/p/java-gui/</link><pubDate>Mon, 22 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/java-gui/</guid><description/></item><item><title>lc weekly contest 346</title><link>https://open17.github.io/CpHugo/p/lc-weekly-contest-346/</link><pubDate>Sun, 21 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/lc-weekly-contest-346/</guid><description>&lt;img src="https://pic.lingkou.xyz/1684119642-NLFpUC-1760-360%20%E9%A1%BA%E4%B8%B0%E7%A7%91%E6%8A%80.png" alt="Featured image of post lc weekly contest 346" />&lt;h2 id="写在前面">写在前面&lt;/h2>
+&lt;p>把exe改成out,fc改成diff,Sleep改成sleep,windows.h改为unistd.h&lt;/p></description></item><item><title>Java Gui</title><link>https://open17.github.io/CpHugo/p/java-gui/</link><pubDate>Mon, 22 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/java-gui/</guid><description/></item><item><title>C++ STL</title><link>https://open17.github.io/CpHugo/p/stl/</link><pubDate>Sun, 21 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/stl/</guid><description>&lt;h2 id="vector">vector&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">size()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">empy()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">clear()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">front() back() //取值
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">push_back() pop_back()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">begin() end() //迭代器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[index]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">重载比较符号,字典序
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="string">string&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">size()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">empty()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">clear()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">substr(i,len) //开始下标,长度
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="queue">queue&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">size()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">empty()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">push()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">front()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">back()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pop()
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="deque">deque&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">size()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">empty()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">clear()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">front()/back()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">push_back()/pop_back()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">push_front()/pop_front()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">begin()/end()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[index]
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="priority_queue">priority_queue&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">priority_queue&amp;lt;type&amp;gt; ,默认是大根堆(在queue库)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">size()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">empty()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">push() 插入一个元素
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">top() 返回堆顶元素
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pop() 弹出堆顶元素
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">小根堆：priority_queue&amp;lt;int, vector&amp;lt;int&amp;gt;, greater&amp;lt;int&amp;gt;&amp;gt;;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="stack">stack&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">size()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">empty()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">push() 向栈顶插入一个元素
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">top() 返回栈顶元素
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pop() 弹出栈顶元素
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="pair">pair&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">first
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">second
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">比较,first为第一关键,second为第二关键词,字典序
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="set-map-multiset-multimap">set, map, multiset, multimap&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">size()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">empty()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">clear()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">begin()/end()
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="setmultiset">set/multiset&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">insert() 插入一个数
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">find() 查找一个数
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">count() 返回某一个数的个数
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">erase()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">(1) 输入是一个数x，删除所有x O(k + logn)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">(2) 输入一个迭代器，删除这个迭代器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lower_bound()/upper_bound()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lower_bound(x) 返回大于等于x的最小的数的迭代器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">upper_bound(x) 返回大于x的最小的数的迭代器
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="mapmultimap">map/multimap&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">insert() 插入的数是一个pair
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">erase() 输入的参数是pair或者迭代器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">find()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[] 注意multimap不支持此操作。 时间复杂度是 O(logn)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lower_bound()/upper_bound()
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="unorderedxxxx">unorderedXXXX&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">不支持 lower_bound()/upper_bound()， 迭代器的++，--
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="bitset-圧位">bitset, 圧位&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">bitset&amp;lt;10000&amp;gt; s;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">~, &amp;amp;, |, ^
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;gt;&amp;gt;, &amp;lt;&amp;lt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">==, !=
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">count() 返回有多少个1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">any() 判断是否至少有一个1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">none() 判断是否全为0
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">set() 把所有位置成1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">set(k, v) 将第k位变成v
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">reset() 把所有位变成0
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">flip() 等价于~
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">flip(k) 把第k位取反
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>lc weekly contest 346</title><link>https://open17.github.io/CpHugo/p/lc-weekly-contest-346/</link><pubDate>Sun, 21 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/lc-weekly-contest-346/</guid><description>&lt;img src="https://pic.lingkou.xyz/1684119642-NLFpUC-1760-360%20%E9%A1%BA%E4%B8%B0%E7%A7%91%E6%8A%80.png" alt="Featured image of post lc weekly contest 346" />&lt;h2 id="写在前面">写在前面&lt;/h2>
 &lt;blockquote>
 &lt;p>&lt;a class="link" href="https://leetcode.cn/contest/weekly-contest-346/" target="_blank" rel="noopener"
 >LC346传送门&lt;/a>
