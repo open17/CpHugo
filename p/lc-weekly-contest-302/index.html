@@ -1,0 +1,297 @@
+<!doctype html><html lang=en-us dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="本场竞赛由「千挂科技 & 力扣」联合主办"><title>lc weekly contest 302</title><link rel=canonical href=https://open17.github.io/CpHugo/p/lc-weekly-contest-302/><link rel=stylesheet href=/CpHugo/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css><meta property="og:title" content="lc weekly contest 302"><meta property="og:description" content="本场竞赛由「千挂科技 & 力扣」联合主办"><meta property="og:url" content="https://open17.github.io/CpHugo/p/lc-weekly-contest-302/"><meta property="og:site_name" content=">>>>CpHugo<<<<"><meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="Leetcode"><meta property="article:published_time" content="2023-06-01T00:00:00+00:00"><meta property="article:modified_time" content="2023-06-01T00:00:00+00:00"><meta property="og:image" content="https://pic.lingkou.xyz/1657181817-GjoGBU-1760-360%20%E5%8D%83%E6%8C%82%E7%A7%91%E6%8A%80.png"><meta name=twitter:title content="lc weekly contest 302"><meta name=twitter:description content="本场竞赛由「千挂科技 & 力扣」联合主办"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://pic.lingkou.xyz/1657181817-GjoGBU-1760-360%20%E5%8D%83%E6%8C%82%E7%A7%91%E6%8A%80.png"><link rel="shortcut icon" href=img/avatar_huba7df165b03f065124e52c61be437fcf_127360_300x0_resize_box_3.png></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label=切换菜单>
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=/CpHugo/><img src=/CpHugo/img/avatar_huba7df165b03f065124e52c61be437fcf_127360_300x0_resize_box_3.png width=300 height=300 class=site-logo loading=lazy alt=Avatar></a></figure><div class=site-meta><h1 class=site-name><a href=/CpHugo>>>>>CpHugo&lt;&lt;&lt;&lt;</a></h1><h2 class=site-description>你好呀~欢迎前来</h2></div></header><ol class=menu id=main-menu><li><a href=/CpHugo/hello/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-messages" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M21 14l-3-3h-7a1 1 0 01-1-1V4a1 1 0 011-1h9a1 1 0 011 1v10"/><path d="M14 15v2a1 1 0 01-1 1H6l-3 3V11a1 1 0 011-1h2"/></svg><span>欢迎</span></a></li><li><a href=/CpHugo/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg><span>主页</span></a></li><li><a href=/CpHugo/qst/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><span>快捷</span></a></li><li><a href=/CpHugo/archives/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg><span>专题</span></a></li><li><a href=/CpHugo/search/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg><span>搜索</span></a></li><li><a href=/CpHugo/tags/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11 3l9 9a1.5 1.5.0 010 2l-6 6a1.5 1.5.0 01-2 0L3 11V7a4 4 0 014-4h4"/><circle cx="9" cy="9" r="2"/></svg><span>标签</span></a></li><div class=menu-bottom-section><li id=dark-mode-toggle><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><span>暗色模式</span></li></div></ol></aside><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目录</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#写在前面>写在前面</a></li><li><a href=#t1-数组能形成多少数对>T1 数组能形成多少数对</a><ol><li><a href=#思路>思路</a></li></ol></li><li><a href=#t2-数位和相等数对的最大和>T2 数位和相等数对的最大和</a><ol><li><a href=#思路-1>思路</a></li></ol></li><li><a href=#t4使数组可以被整除的最少删除次数>T4使数组可以被整除的最少删除次数</a><ol><li><a href=#思路-2>思路</a></li></ol></li></ol></nav></div></section></aside><main class="main full-width"><article class="has-image main-article"><header class=article-header><div class=article-image><a href=/CpHugo/p/lc-weekly-contest-302/><img src=https://pic.lingkou.xyz/1657181817-GjoGBU-1760-360%20%E5%8D%83%E6%8C%82%E7%A7%91%E6%8A%80.png loading=lazy alt="Featured image of post lc weekly contest 302"></a></div><div class=article-details><div class=article-title-wrapper><h2 class=article-title><a href=/CpHugo/p/lc-weekly-contest-302/>lc weekly contest 302</a></h2><h3 class=article-subtitle>本场竞赛由「千挂科技 & 力扣」联合主办</h3></div><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg><time class=article-time--published>Jun 01, 2023</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><time class=article-time--reading>阅读时长: 3 分钟</time></div></footer></div></header><section class=article-content><h2 id=写在前面>写在前面</h2><hr><h2 id=t1-数组能形成多少数对>T1 数组能形成多少数对</h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>给你一个下标从 0 开始的整数数组 nums 。在一步操作中，你可以执行以下步骤：
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>从 nums 选出 两个 相等的 整数
+</span></span><span class=line><span class=cl>从 nums 中移除这两个整数，形成一个 数对
+</span></span><span class=line><span class=cl>请你在 nums 上多次执行此操作直到无法继续执行。
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>返回一个下标从 0 开始、长度为 2 的整数数组 answer 作为答案，其中 answer[0] 是形成的数对数目，answer[1] 是对 nums 尽可能执行上述操作后剩下的整数数目。
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl> 
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>示例 1：
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>输入：nums = [1,3,2,1,3,2,2]
+</span></span><span class=line><span class=cl>输出：[3,1]
+</span></span><span class=line><span class=cl>解释：
+</span></span><span class=line><span class=cl>nums[0] 和 nums[3] 形成一个数对，并从 nums 中移除，nums = [3,2,3,2,2] 。
+</span></span><span class=line><span class=cl>nums[0] 和 nums[2] 形成一个数对，并从 nums 中移除，nums = [2,2,2] 。
+</span></span><span class=line><span class=cl>nums[0] 和 nums[1] 形成一个数对，并从 nums 中移除，nums = [2] 。
+</span></span><span class=line><span class=cl>无法形成更多数对。总共形成 3 个数对，nums 中剩下 1 个数字。
+</span></span><span class=line><span class=cl>示例 2：
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>输入：nums = [1,1]
+</span></span><span class=line><span class=cl>输出：[1,0]
+</span></span><span class=line><span class=cl>解释：nums[0] 和 nums[1] 形成一个数对，并从 nums 中移除，nums = [] 。
+</span></span><span class=line><span class=cl>无法形成更多数对。总共形成 1 个数对，nums 中剩下 0 个数字。
+</span></span><span class=line><span class=cl>示例 3：
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>输入：nums = [0]
+</span></span><span class=line><span class=cl>输出：[0,1]
+</span></span><span class=line><span class=cl>解释：无法形成数对，nums 中剩下 1 个数字。
+</span></span><span class=line><span class=cl> 
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>提示：
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>1 &lt;= nums.length &lt;= 100
+</span></span><span class=line><span class=cl>0 &lt;= nums[i] &lt;= 100
+</span></span></code></pre></td></tr></table></div></div><h3 id=思路>思路</h3><p>哈希记录数量再按照题目模拟(这里为了快用了py的Counter)</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-py data-lang=py><span class=line><span class=cl><span class=k>class</span> <span class=nc>Solution</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=k>def</span> <span class=nf>numberOfPairs</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>nums</span><span class=p>:</span> <span class=n>List</span><span class=p>[</span><span class=nb>int</span><span class=p>])</span> <span class=o>-&gt;</span> <span class=n>List</span><span class=p>[</span><span class=nb>int</span><span class=p>]:</span>
+</span></span><span class=line><span class=cl>        <span class=n>x</span><span class=o>=</span><span class=n>Counter</span><span class=p>(</span><span class=n>nums</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=nb>print</span><span class=p>(</span><span class=n>x</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=n>cnt</span><span class=o>=</span><span class=mi>0</span>
+</span></span><span class=line><span class=cl>        <span class=n>p</span><span class=o>=</span><span class=mi>0</span>
+</span></span><span class=line><span class=cl>        <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=n>x</span><span class=o>.</span><span class=n>keys</span><span class=p>():</span>
+</span></span><span class=line><span class=cl>            <span class=k>if</span> <span class=n>x</span><span class=p>[</span><span class=n>i</span><span class=p>]</span><span class=o>&amp;</span><span class=mi>1</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>                <span class=n>cnt</span><span class=o>+=</span><span class=n>x</span><span class=p>[</span><span class=n>i</span><span class=p>]</span><span class=o>%</span><span class=mi>2</span>
+</span></span><span class=line><span class=cl>            <span class=n>p</span><span class=o>+=</span><span class=n>x</span><span class=p>[</span><span class=n>i</span><span class=p>]</span><span class=o>//</span><span class=mi>2</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=p>[</span><span class=n>p</span><span class=p>,</span><span class=n>cnt</span><span class=p>]</span>
+</span></span></code></pre></td></tr></table></div></div><h2 id=t2-数位和相等数对的最大和>T2 数位和相等数对的最大和</h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>给你一个下标从 0 开始的数组 nums ，数组中的元素都是 正 整数。请你选出两个下标 i 和 j（i != j），且 nums[i] 的数位和 与  nums[j] 的数位和相等。
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>请你找出所有满足条件的下标 i 和 j ，找出并返回 nums[i] + nums[j] 可以得到的 最大值 。
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl> 
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>示例 1：
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>输入：nums = [18,43,36,13,7]
+</span></span><span class=line><span class=cl>输出：54
+</span></span><span class=line><span class=cl>解释：满足条件的数对 (i, j) 为：
+</span></span><span class=line><span class=cl>- (0, 2) ，两个数字的数位和都是 9 ，相加得到 18 + 36 = 54 。
+</span></span><span class=line><span class=cl>- (1, 4) ，两个数字的数位和都是 7 ，相加得到 43 + 7 = 50 。
+</span></span><span class=line><span class=cl>所以可以获得的最大和是 54 。
+</span></span><span class=line><span class=cl>示例 2：
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>输入：nums = [10,12,19,14]
+</span></span><span class=line><span class=cl>输出：-1
+</span></span><span class=line><span class=cl>解释：不存在满足条件的数对，返回 -1 。
+</span></span><span class=line><span class=cl> 
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>提示：
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>1 &lt;= nums.length &lt;= 105
+</span></span><span class=line><span class=cl>1 &lt;= nums[i] &lt;= 109
+</span></span></code></pre></td></tr></table></div></div><h3 id=思路-1>思路</h3><p>类同leetcode第一题两数之和<br>哈希条件改一下即可</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-cpp data-lang=cpp><span class=line><span class=cl><span class=k>class</span> <span class=nc>Solution</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl><span class=k>public</span><span class=o>:</span>
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>getS</span><span class=p>(</span><span class=kt>int</span> <span class=n>n</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>        <span class=kt>int</span> <span class=n>ans</span><span class=o>=</span><span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=k>while</span><span class=p>(</span><span class=n>n</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>           <span class=n>ans</span><span class=o>+=</span><span class=n>n</span><span class=o>%</span><span class=mi>10</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>           <span class=n>n</span><span class=o>/=</span><span class=mi>10</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>ans</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=nf>maximumSum</span><span class=p>(</span><span class=n>vector</span><span class=o>&lt;</span><span class=kt>int</span><span class=o>&gt;&amp;</span> <span class=n>nums</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>map</span><span class=o>&lt;</span><span class=kt>int</span><span class=p>,</span><span class=kt>int</span><span class=o>&gt;</span> <span class=n>mm</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=kt>int</span> <span class=n>res</span><span class=o>=-</span><span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=k>for</span><span class=p>(</span><span class=k>auto</span> <span class=nl>i</span><span class=p>:</span><span class=n>nums</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>            <span class=kt>int</span> <span class=n>p</span><span class=o>=</span><span class=n>getS</span><span class=p>(</span><span class=n>i</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>            <span class=k>if</span><span class=p>(</span><span class=n>mm</span><span class=p>.</span><span class=n>count</span><span class=p>(</span><span class=n>p</span><span class=p>)){</span>
+</span></span><span class=line><span class=cl>                <span class=n>res</span><span class=o>=</span><span class=n>max</span><span class=p>(</span><span class=n>res</span><span class=p>,</span><span class=n>mm</span><span class=p>[</span><span class=n>p</span><span class=p>]</span><span class=o>+</span><span class=n>i</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>                <span class=n>mm</span><span class=p>[</span><span class=n>p</span><span class=p>]</span><span class=o>=</span><span class=n>max</span><span class=p>(</span><span class=n>mm</span><span class=p>[</span><span class=n>p</span><span class=p>],</span><span class=n>i</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>            <span class=p>}</span>
+</span></span><span class=line><span class=cl>            <span class=k>else</span><span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=n>mm</span><span class=p>.</span><span class=n>insert</span><span class=p>(</span><span class=n>make_pair</span><span class=p>(</span><span class=n>p</span><span class=p>,</span><span class=n>i</span><span class=p>));</span>
+</span></span><span class=line><span class=cl>            <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>res</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
+</span></span></code></pre></td></tr></table></div></div><h2 id=t4使数组可以被整除的最少删除次数>T4使数组可以被整除的最少删除次数</h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>给你两个正整数数组 nums 和 numsDivide 。你可以从 nums 中删除任意数目的元素。
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>请你返回使 nums 中 最小 元素可以整除 numsDivide 中所有元素的 最少 删除次数。如果无法得到这样的元素，返回 -1 。
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>如果 y % x == 0 ，那么我们说整数 x 整除 y 。
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl> 
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>示例 1：
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>输入：nums = [2,3,2,4,3], numsDivide = [9,6,9,3,15]
+</span></span><span class=line><span class=cl>输出：2
+</span></span><span class=line><span class=cl>解释：
+</span></span><span class=line><span class=cl>[2,3,2,4,3] 中最小元素是 2 ，它无法整除 numsDivide 中所有元素。
+</span></span><span class=line><span class=cl>我们从 nums 中删除 2 个大小为 2 的元素，得到 nums = [3,4,3] 。
+</span></span><span class=line><span class=cl>[3,4,3] 中最小元素为 3 ，它可以整除 numsDivide 中所有元素。
+</span></span><span class=line><span class=cl>可以证明 2 是最少删除次数。
+</span></span><span class=line><span class=cl>示例 2：
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>输入：nums = [4,3,6], numsDivide = [8,2,6,10]
+</span></span><span class=line><span class=cl>输出：-1
+</span></span><span class=line><span class=cl>解释：
+</span></span><span class=line><span class=cl>我们想 nums 中的最小元素可以整除 numsDivide 中的所有元素。
+</span></span><span class=line><span class=cl>没有任何办法可以达到这一目的。
+</span></span><span class=line><span class=cl> 
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>提示：
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>1 &lt;= nums.length, numsDivide.length &lt;= 105
+</span></span><span class=line><span class=cl>1 &lt;= nums[i], numsDivide[i] &lt;= 109
+</span></span></code></pre></td></tr></table></div></div><h3 id=思路-2>思路</h3><p>数学,先求出gcd,然后遍历一遍数组看看有没有gcd的因数即可</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-py data-lang=py><span class=line><span class=cl><span class=k>class</span> <span class=nc>Solution</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=k>def</span> <span class=nf>minOperations</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>nums</span><span class=p>:</span> <span class=n>List</span><span class=p>[</span><span class=nb>int</span><span class=p>],</span> <span class=n>numsDivide</span><span class=p>:</span> <span class=n>List</span><span class=p>[</span><span class=nb>int</span><span class=p>])</span> <span class=o>-&gt;</span> <span class=nb>int</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=n>nums</span><span class=o>.</span><span class=n>sort</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>        <span class=n>x</span><span class=o>=</span><span class=n>numsDivide</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>        <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=n>numsDivide</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>            <span class=n>x</span><span class=o>=</span><span class=n>gcd</span><span class=p>(</span><span class=n>x</span><span class=p>,</span><span class=n>i</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=c1># print(x)</span>
+</span></span><span class=line><span class=cl>        <span class=n>p</span><span class=o>=</span><span class=mi>0</span>
+</span></span><span class=line><span class=cl>        <span class=k>while</span> <span class=n>p</span><span class=o>&lt;=</span><span class=nb>len</span><span class=p>(</span><span class=n>nums</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>            <span class=k>if</span> <span class=n>p</span><span class=o>==</span><span class=nb>len</span><span class=p>(</span><span class=n>nums</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>                <span class=n>p</span><span class=o>=-</span><span class=mi>1</span>
+</span></span><span class=line><span class=cl>                <span class=k>break</span>
+</span></span><span class=line><span class=cl>            <span class=k>if</span> <span class=n>x</span><span class=o>%</span><span class=n>nums</span><span class=p>[</span><span class=n>p</span><span class=p>]</span><span class=o>==</span><span class=mi>0</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>                <span class=k>break</span>
+</span></span><span class=line><span class=cl>            <span class=n>p</span><span class=o>+=</span><span class=mi>1</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>p</span>
+</span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-tags><a href=/CpHugo/tags/leetcode/>Leetcode</a></section><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg><span>谢谢观看~</span></section></footer><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css integrity="sha256-J+iAE0sgH8QSz9hpcDxXIftnj65JEZgNhGcgReTTK9s=" crossorigin=anonymous><script src=https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js integrity="sha256-InsNdER1b2xUewP+pKCUJpkhiqwHgqiPXDlIk7GzBu4=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js integrity="sha256-y39Mpg7V3D4lhBX4x6O0bUqTV4pSrfgwEfGKfxkOdgI=" crossorigin=anonymous defer></script><script>window.addEventListener("DOMContentLoaded",()=>{renderMathInElement(document.querySelector(`.article-content`),{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})})</script></article><script src=https://giscus.app/client.js data-repo=open17/CpHugo data-repo-id=R_kgDOJbtiOQ data-category=Announcements data-category-id=DIC_kwDOJbtiOc4CWXPs data-mapping=pathname data-strict=0 data-reactions-enabled=1 data-emit-metadata=0 data-input-position=top data-theme=light data-lang=en crossorigin=anonymous async></script>
+<script>function setGiscusTheme(e){let t=document.querySelector("iframe.giscus-frame");t&&t.contentWindow.postMessage({giscus:{setConfig:{theme:e}}},"https://giscus.app")}(function(){addEventListener("message",t=>{if(event.origin!=="https://giscus.app")return;e()}),window.addEventListener("onColorSchemeChange",e);function e(){setGiscusTheme(document.documentElement.dataset.scheme==="light"?"light":"dark_dimmed")}})()</script><footer class=site-footer><section class=copyright>&copy;
+2023 >>>>CpHugo&lt;&lt;&lt;&lt;</section><section class=powerby>感谢:<br>Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a><br>主题 <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.16.0>Stack</a></b> 由 <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a> 设计</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css crossorigin=anonymous></main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=/CpHugo/ts/main.js defer></script>
+<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>
