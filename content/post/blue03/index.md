@@ -5,6 +5,7 @@ slug: blue03
 date: 2023-04-26 00:00:00+0000
 categories:
     - Blue
+    - Alg
 tags:
     - PreSum
 ---

@@ -28,6 +28,7 @@ menu:
 - 支持专题查找
 ## 🌃内容大纲
 - 🥰基础知识(完成度80%)
+    -  [传送门](https://open17.github.io/CpHugo/categories/learn/)
     - C语言入门知识
     - 输入输出模板(常用宏,快读,快写)
     - 面向对象
@@ -35,6 +36,7 @@ menu:
     - 对拍模板
     - Python常用语法糖
 - 💖常见算法(完成度90%)
+    - [传送门](https://open17.github.io/CpHugo/categories/alg/)
     - 二分(Binary search)
     - 倍增(Binary Lifting)
     - 位运算(Bit)
@@ -45,6 +47,7 @@ menu:
     - 离散化
     - 搜索算法
 - 🤯数学(完成度10%)
+    - [传送门](https://open17.github.io/CpHugo/categories/math/)
     - 离散数学(Distcrete Structures)
         - 命题逻辑
         - 集合与函数
@@ -62,6 +65,7 @@ menu:
     - 计算几何
     - 博弈论
 - 🥥数据结构(完成度45%)
+    - [传送门](https://open17.github.io/CpHugo/categories/ds/)
     - 二叉堆
     - 单调栈(Monotonic Stack)
     - 单调队列(Monotonic Queue)
@@ -80,6 +84,7 @@ menu:
     - 珂朵莉树
     - 并查集(Buf)
 - 🍒动态规划(完成度5%)
+    - [传送门](https://open17.github.io/CpHugo/categories/dp/)
     - 记忆化搜索
     - 背包模型
     - 线性DP
@@ -91,6 +96,7 @@ menu:
     - 斜率优化DP
     - 倍增优化DP
 - 🍋字符串(完成度40%)
+    - [传送门](https://open17.github.io/CpHugo/categories/str/)
     - 字典树
     - KMP(KMP)
     - 扩展 KMP
@@ -98,6 +104,7 @@ menu:
     - SA
     - AC自动机
 - 🥝图论(完成度10%)
+    - [传送门](https://open17.github.io/CpHugo/categories/graph/)
     - 图的存储
     - 图的遍历
     - 二分图

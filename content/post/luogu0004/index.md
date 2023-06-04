@@ -4,7 +4,7 @@ description: 略微修改的板子题，不过前提是要彻底理解相关板�
 slug: luogu0004
 date: 2023-05-05 00:00:00+0000
 categories:
-    - Alg
+    - DS
 tags:
     - Segment Tree
     - Luogu

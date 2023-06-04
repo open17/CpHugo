@@ -4,7 +4,7 @@ description: 利用倍增思想的算法，常用于解决RMQ问题
 slug: st
 date: 2023-05-08 00:00:00+0000
 categories:
-    - Alg
+    - DS
 tags:
     - Templates
     - ST 

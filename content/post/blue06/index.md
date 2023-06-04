@@ -5,6 +5,7 @@ slug: blue06
 date: 2023-05-27 01:00:00+0000
 categories:
     - Blue
+    - Alg
 tags:
     - Binary Lifting
 ---

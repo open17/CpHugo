@@ -5,6 +5,7 @@ slug: blue04
 date: 2023-05-26 00:00:00+0000
 categories:
     - Blue
+    - Alg
 tags:
     - Binary search
 ---

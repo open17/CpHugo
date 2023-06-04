@@ -4,7 +4,7 @@ description: 板子题
 slug: luogu0005
 date: 2023-05-05 00:00:00+0000
 categories:
-    - Alg
+- DS
 tags:
     - Luogu
     - Segment Tree
