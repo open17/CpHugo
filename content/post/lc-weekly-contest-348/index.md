@@ -2,7 +2,7 @@
 title: lc weekly contest 348 
 description: 思维场
 slug: lc-weekly-contest-348 
-date: 2023-06-01 00:00:00+0000
+date: 2023-06-03 00:00:00+0000
 tags:
     - Leetcode
 ---
@@ -222,7 +222,7 @@ class Solution:
     1 <= min_sum <= max_sum <= 400
 ```
 注: 1022=$10^{22}$
-## 思路
+### 思路
 数位DP,这里是直接改的板子,is_num其实不需要
 ```py
 class Solution:
