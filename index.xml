@@ -13504,6 +13504,8 @@ $0\le a_i&amp;lt;2^{31}$&lt;/p>
 &lt;ul>
 &lt;li>🥰基础知识(完成度80%)
 &lt;ul>
+&lt;li>&lt;a class="link" href="https://open17.github.io/CpHugo/categories/learn/" target="_blank" rel="noopener"
+>传送门&lt;/a>&lt;/li>
 &lt;li>C语言入门知识&lt;/li>
 &lt;li>输入输出模板(常用宏,快读,快写)&lt;/li>
 &lt;li>面向对象&lt;/li>
@@ -13514,6 +13516,8 @@ $0\le a_i&amp;lt;2^{31}$&lt;/p>
 &lt;/li>
 &lt;li>💖常见算法(完成度90%)
 &lt;ul>
+&lt;li>&lt;a class="link" href="https://open17.github.io/CpHugo/categories/alg/" target="_blank" rel="noopener"
+>传送门&lt;/a>&lt;/li>
 &lt;li>二分(Binary search)&lt;/li>
 &lt;li>倍增(Binary Lifting)&lt;/li>
 &lt;li>位运算(Bit)&lt;/li>
@@ -13527,6 +13531,8 @@ $0\le a_i&amp;lt;2^{31}$&lt;/p>
 &lt;/li>
 &lt;li>🤯数学(完成度10%)
 &lt;ul>
+&lt;li>&lt;a class="link" href="https://open17.github.io/CpHugo/categories/math/" target="_blank" rel="noopener"
+>传送门&lt;/a>&lt;/li>
 &lt;li>离散数学(Distcrete Structures)
 &lt;ul>
 &lt;li>命题逻辑&lt;/li>
@@ -13553,6 +13559,8 @@ $0\le a_i&amp;lt;2^{31}$&lt;/p>
 &lt;/li>
 &lt;li>🥥数据结构(完成度45%)
 &lt;ul>
+&lt;li>&lt;a class="link" href="https://open17.github.io/CpHugo/categories/ds/" target="_blank" rel="noopener"
+>传送门&lt;/a>&lt;/li>
 &lt;li>二叉堆&lt;/li>
 &lt;li>单调栈(Monotonic Stack)&lt;/li>
 &lt;li>单调队列(Monotonic Queue)&lt;/li>
@@ -13574,6 +13582,8 @@ $0\le a_i&amp;lt;2^{31}$&lt;/p>
 &lt;/li>
 &lt;li>🍒动态规划(完成度5%)
 &lt;ul>
+&lt;li>&lt;a class="link" href="https://open17.github.io/CpHugo/categories/dp/" target="_blank" rel="noopener"
+>传送门&lt;/a>&lt;/li>
 &lt;li>记忆化搜索&lt;/li>
 &lt;li>背包模型&lt;/li>
 &lt;li>线性DP&lt;/li>
@@ -13588,6 +13598,8 @@ $0\le a_i&amp;lt;2^{31}$&lt;/p>
 &lt;/li>
 &lt;li>🍋字符串(完成度40%)
 &lt;ul>
+&lt;li>&lt;a class="link" href="https://open17.github.io/CpHugo/categories/str/" target="_blank" rel="noopener"
+>传送门&lt;/a>&lt;/li>
 &lt;li>字典树&lt;/li>
 &lt;li>KMP(KMP)&lt;/li>
 &lt;li>扩展 KMP&lt;/li>
@@ -13598,6 +13610,8 @@ $0\le a_i&amp;lt;2^{31}$&lt;/p>
 &lt;/li>
 &lt;li>🥝图论(完成度10%)
 &lt;ul>
+&lt;li>&lt;a class="link" href="https://open17.github.io/CpHugo/categories/graph/" target="_blank" rel="noopener"
+>传送门&lt;/a>&lt;/li>
 &lt;li>图的存储&lt;/li>
 &lt;li>图的遍历&lt;/li>
 &lt;li>二分图
