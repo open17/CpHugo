@@ -250,7 +250,7 @@ class Solution:
 还是T?    
 因为除法取余不恒等,不能分步优化     
 那怎么改呢    
-倒叙即可,顺便加入点优化   
+倒叙即可,顺便加入点优化[^3]   
 ```py
 class Solution:
     def subStrHash(self, s: str, p: int, m: int, k: int, hashValue: int) -> str:
@@ -300,7 +300,7 @@ class Solution:
                 b=i+1
         return s[a:b]
 ```
-其实这道题主要卡时间复杂度的在幂函数这里,所以只优化幂函数,不优化后面的转移也能卡过去(即无需倒叙)[^3]
+其实这道题主要卡时间复杂度的在幂函数这里,所以只优化幂函数,不优化后面的转移也能卡过去(即无需倒叙)[^4]
 
 ## T4 字符串分组
 给你一个下标从 0 开始的字符串数组 words 。每个字符串都只包含 小写英文字母 。words 中任意一个子串中，每个字母都至多只出现一次。
@@ -360,4 +360,5 @@ words[i] 中每个字母最多只出现一次。
 
 [^1]: 可以参考[这个](https://leetcode.cn/problems/keep-multiplying-found-values-by-two/solution/ha-xi-biao-mo-ni-by-endlesscheng-ipk3/)帖子
 [^2]: leetcode[官方解答](https://leetcode.cn/problems/all-divisions-with-the-highest-score-of-a-binary-array/solution/fen-zu-de-fen-zui-gao-de-suo-you-xia-bia-7pqp/)一次遍历即可
-[^3]: 例如[这个](https://leetcode.cn/problems/find-substring-with-given-hash-value/solution/zheng-xiang-kao-lu-wu-da-shu-chu-li-pyth-9z4l/)预处理幂加上其它剪枝也能AC
+[^3]: 当然也可以用逆元正向遍历
+[^4]: 例如[这个](https://leetcode.cn/problems/find-substring-with-given-hash-value/solution/zheng-xiang-kao-lu-wu-da-shu-chu-li-pyth-9z4l/)预处理幂加上其它剪枝也能AC
