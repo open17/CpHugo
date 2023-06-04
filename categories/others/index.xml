@@ -1,4 +1,2160 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>少数派 on >>>>CpHugo&lt;&lt;&lt;&lt;</title><link>https://open17.github.io/CpHugo/categories/others/</link><description>Recent content in 少数派 on >>>>CpHugo&lt;&lt;&lt;&lt;</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 28 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://open17.github.io/CpHugo/categories/others/index.xml" rel="self" type="application/rss+xml"/><item><title>摩尔投票</title><link>https://open17.github.io/CpHugo/p/boyermoore-majority-vote-algorithm/</link><pubDate>Sun, 28 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/boyermoore-majority-vote-algorithm/</guid><description>&lt;h2 id="什么是摩尔投票">什么是摩尔投票&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>少数派 on >>>>CpHugo&lt;&lt;&lt;&lt;</title><link>https://open17.github.io/CpHugo/categories/others/</link><description>Recent content in 少数派 on >>>>CpHugo&lt;&lt;&lt;&lt;</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 01 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://open17.github.io/CpHugo/categories/others/index.xml" rel="self" type="application/rss+xml"/><item><title>练手项目:硅谷甄选运营平台</title><link>https://open17.github.io/CpHugo/p/gulizhenxuan/</link><pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/gulizhenxuan/</guid><description>&lt;p>此次教学课程为硅谷甄选运营平台项目,包含运营平台项目模板从0到1开发，以及数据大屏幕、权限等业务。&lt;/p>
+&lt;p>此次教学课程涉及到技术栈包含***:vue3+TypeScript+vue-router+pinia+element-plus+axios+echarts***等技术栈。&lt;/p>
+&lt;h2 id="一vue3组件通信方式">一、vue3组件通信方式&lt;/h2>
+&lt;p>&lt;strong>通信仓库地址:https://gitee.com/jch1011/vue3_communication.git&lt;/strong>&lt;/p>
+&lt;p>不管是vue2还是vue3,组件通信方式很重要,不管是项目还是面试都是经常用到的知识点。&lt;/p>
+&lt;p>&lt;strong>比如:vue2组件通信方式&lt;/strong>&lt;/p>
+&lt;p>**props:**可以实现父子组件、子父组件、甚至兄弟组件通信&lt;/p>
+&lt;p>&lt;strong>自定义事件&lt;/strong>:可以实现子父组件通信&lt;/p>
+&lt;p>&lt;strong>全局事件总线$bus&lt;/strong>:可以实现任意组件通信&lt;/p>
+&lt;p>**pubsub:**发布订阅模式实现任意组件通信&lt;/p>
+&lt;p>&lt;strong>vuex&lt;/strong>:集中式状态管理容器，实现任意组件通信&lt;/p>
+&lt;p>&lt;strong>ref&lt;/strong>:父组件获取子组件实例VC,获取子组件的响应式数据以及方法&lt;/p>
+&lt;p>**slot:**插槽(默认插槽、具名插槽、作用域插槽)实现父子组件通信&amp;hellip;&amp;hellip;..&lt;/p>
+&lt;h3 id="11props">1.1props&lt;/h3>
+&lt;p>props可以实现父子组件通信,在vue3中我们可以通过defineProps获取父组件传递的数据。且在组件内部不需要引入defineProps方法可以直接使用！&lt;/p>
+&lt;p>&lt;strong>父组件给子组件传递数据&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;lt;Child info=&amp;#34;我爱祖国&amp;#34; :money=&amp;#34;money&amp;#34;&amp;gt;&amp;lt;/Child&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>子组件获取父组件传递数据:方式1&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">let props = defineProps({
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> info:{
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> type:String,//接受的数据类型
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> default:&amp;#39;默认参数&amp;#39;,//接受默认数据
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> money:{
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> type:Number,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> default:0
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}})
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>子组件获取父组件传递数据:方式2&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">let props = defineProps([&amp;#34;info&amp;#34;,&amp;#39;money&amp;#39;]);
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>子组件获取到props数据就可以在模板中使用了,但是切记props是只读的(只能读取，不能修改)&lt;/p>
+&lt;h3 id="12自定义事件">1.2自定义事件&lt;/h3>
+&lt;p>在vue框架中事件分为两种:一种是原生的DOM事件，另外一种自定义事件。&lt;/p>
+&lt;p>原生DOM事件可以让用户与网页进行交互，比如click、dbclick、change、mouseenter、mouseleave&amp;hellip;.&lt;/p>
+&lt;p>自定义事件可以实现子组件给父组件传递数据&lt;/p>
+&lt;h4 id="121原生dom事件">1.2.1原生DOM事件&lt;/h4>
+&lt;p>代码如下:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"> &amp;lt;pre @click=&amp;#34;handler&amp;#34;&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> 我是祖国的老花骨朵
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;/pre&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>当前代码级给pre标签绑定原生DOM事件点击事件,默认会给事件回调注入event事件对象。当然点击事件想注入多个参数可以按照下图操作。但是切记注入的事件对象务必叫做$event.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"> &amp;lt;div @click=&amp;#34;handler1(1,2,3,$event)&amp;#34;&amp;gt;我要传递多个参数&amp;lt;/div&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>在vue3框架click、dbclick、change(这类原生DOM事件),不管是在标签、自定义标签上(组件标签)都是原生DOM事件。&lt;/p>
+&lt;p>&lt;strong>&lt;!-- raw HTML omitted -->&lt;/strong>&lt;/p>
+&lt;h4 id="122自定义事件">1.2.2自定义事件&lt;/h4>
+&lt;p>自定义事件可以实现子组件给父组件传递数据.在项目中是比较常用的。&lt;/p>
+&lt;p>比如在父组件内部给子组件(Event2)绑定一个自定义事件&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;lt;Event2 @xxx=&amp;#34;handler3&amp;#34;&amp;gt;&amp;lt;/Event2&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>在Event2子组件内部触发这个自定义事件&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;lt;template&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;div&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;h1&amp;gt;我是子组件2&amp;lt;/h1&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;button @click=&amp;#34;handler&amp;#34;&amp;gt;点击我触发xxx自定义事件&amp;lt;/button&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;/div&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;/template&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;script setup lang=&amp;#34;ts&amp;#34;&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">let $emit = defineEmits([&amp;#34;xxx&amp;#34;]);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">const handler = () =&amp;gt; {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> $emit(&amp;#34;xxx&amp;#34;, &amp;#34;法拉利&amp;#34;, &amp;#34;茅台&amp;#34;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">};
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;/script&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;style scoped&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;/style&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>我们会发现在script标签内部,使用了defineEmits方法，此方法是vue3提供的方法,不需要引入直接使用。defineEmits方法执行，传递一个数组，数组元素即为将来组件需要触发的自定义事件类型，此方执行会返回一个$emit方法用于触发自定义事件。&lt;/p>
+&lt;p>当点击按钮的时候，事件回调内部调用$emit方法去触发自定义事件,第一个参数为触发事件类型，第二个、三个、N个参数即为传递给父组件的数据。&lt;/p>
+&lt;p>需要注意的是:代码如下&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;lt;Event2 @xxx=&amp;#34;handler3&amp;#34; @click=&amp;#34;handler&amp;#34;&amp;gt;&amp;lt;/Event2&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>正常说组件标签书写@click应该为原生DOM事件,但是如果子组件内部通过defineEmits定义就变为自定义事件了&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">let $emit = defineEmits([&amp;#34;xxx&amp;#34;,&amp;#39;click&amp;#39;]);
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="13全局事件总线">1.3全局事件总线&lt;/h3>
+&lt;p>全局事件总线可以实现任意组件通信，在vue2中可以根据VM与VC关系推出全局事件总线。&lt;/p>
+&lt;p>但是在vue3中没有Vue构造函数，也就没有Vue.prototype.以及组合式API写法没有this，&lt;/p>
+&lt;p>那么在Vue3想实现全局事件的总线功能就有点不现实啦，如果想在Vue3中使用全局事件总线功能&lt;/p>
+&lt;p>可以使用插件mitt实现。&lt;/p>
+&lt;p>&lt;strong>mitt:官网地址:https://www.npmjs.com/package/mitt&lt;/strong>&lt;/p>
+&lt;h3 id="14v-model">1.4v-model&lt;/h3>
+&lt;p>v-model指令可是收集表单数据(数据双向绑定)，除此之外它也可以实现父子组件数据同步。&lt;/p>
+&lt;p>而v-model实指利用props[modelValue]与自定义事件[update:modelValue]实现的。&lt;/p>
+&lt;p>下方代码:相当于给组件Child传递一个props(modelValue)与绑定一个自定义事件update:modelValue&lt;/p>
+&lt;p>实现父子组件数据同步&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;lt;Child v-model=&amp;#34;msg&amp;#34;&amp;gt;&amp;lt;/Child&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>在vue3中一个组件可以通过使用多个v-model,让父子组件多个数据同步,下方代码相当于给组件Child传递两个props分别是pageNo与pageSize，以及绑定两个自定义事件update:pageNo与update:pageSize实现父子数据同步&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;lt;Child v-model:pageNo=&amp;#34;msg&amp;#34; v-model:pageSize=&amp;#34;msg1&amp;#34;&amp;gt;&amp;lt;/Child&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="15useattrs">1.5useAttrs&lt;/h3>
+&lt;p>在Vue3中可以利用useAttrs方法获取组件的属性与事件(包含:原生DOM事件或者自定义事件),次函数功能类似于Vue2框架中$attrs属性与$listeners方法。&lt;/p>
+&lt;p>比如:在父组件内部使用一个子组件my-button&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;lt;my-button type=&amp;#34;success&amp;#34; size=&amp;#34;small&amp;#34; title=&amp;#39;标题&amp;#39; @click=&amp;#34;handler&amp;#34;&amp;gt;&amp;lt;/my-button&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>子组件内部可以通过useAttrs方法获取组件属性与事件.因此你也发现了，它类似于props,可以接受父组件传递过来的属性与属性值。需要注意如果defineProps接受了某一个属性，useAttrs方法返回的对象身上就没有相应属性与属性值。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;lt;script setup lang=&amp;#34;ts&amp;#34;&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import {useAttrs} from &amp;#39;vue&amp;#39;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">let $attrs = useAttrs();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;/script&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="16ref与parent">1.6ref与$parent&lt;/h3>
+&lt;p>ref,提及到ref可能会想到它可以获取元素的DOM或者获取子组件实例的VC。既然可以在父组件内部通过ref获取子组件实例VC，那么子组件内部的方法与响应式数据父组件可以使用的。&lt;/p>
+&lt;p>比如:在父组件挂载完毕获取组件实例&lt;/p>
+&lt;p>父组件内部代码:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;lt;template&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;div&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;h1&amp;gt;ref与$parent&amp;lt;/h1&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;Son ref=&amp;#34;son&amp;#34;&amp;gt;&amp;lt;/Son&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;/div&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;/template&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;script setup lang=&amp;#34;ts&amp;#34;&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import Son from &amp;#34;./Son.vue&amp;#34;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import { onMounted, ref } from &amp;#34;vue&amp;#34;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">const son = ref();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">onMounted(() =&amp;gt; {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> console.log(son.value);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">});
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;/script&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>但是需要注意，如果想让父组件获取子组件的数据或者方法需要通过defineExpose对外暴露,因为vue3中组件内部的数据对外“关闭的”，外部不能访问&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;lt;script setup lang=&amp;#34;ts&amp;#34;&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import { ref } from &amp;#34;vue&amp;#34;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">//数据
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">let money = ref(1000);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">//方法
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">const handler = ()=&amp;gt;{
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">defineExpose({
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> money,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> handler
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">})
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;/script&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>$parent可以获取某一个组件的父组件实例VC,因此可以使用父组件内部的数据与方法。必须子组件内部拥有一个按钮点击时候获取父组件实例，当然父组件的数据与方法需要通过defineExpose方法对外暴露&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;lt;button @click=&amp;#34;handler($parent)&amp;#34;&amp;gt;点击我获取父组件实例&amp;lt;/button&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="17provide与inject">1.7provide与inject&lt;/h3>
+&lt;p>&lt;strong>provide[提供]&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>inject[注入]&lt;/strong>&lt;/p>
+&lt;p>vue3提供两个方法provide与inject,可以实现隔辈组件传递参数&lt;/p>
+&lt;p>组件组件提供数据:&lt;/p>
+&lt;p>provide方法用于提供数据，此方法执需要传递两个参数,分别提供数据的key与提供数据value&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;lt;script setup lang=&amp;#34;ts&amp;#34;&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import {provide} from &amp;#39;vue&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">provide(&amp;#39;token&amp;#39;,&amp;#39;admin_token&amp;#39;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;/script&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>后代组件可以通过inject方法获取数据,通过key获取存储的数值&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;lt;script setup lang=&amp;#34;ts&amp;#34;&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import {inject} from &amp;#39;vue&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">let token = inject(&amp;#39;token&amp;#39;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;/script&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="18pinia">1.8pinia&lt;/h3>
+&lt;p>&lt;strong>pinia官网:https://pinia.web3doc.top/&lt;/strong>&lt;/p>
+&lt;p>pinia也是集中式管理状态容器,类似于vuex。但是核心概念没有mutation、modules,使用方式参照官网&lt;/p>
+&lt;h3 id="19slot">1.9slot&lt;/h3>
+&lt;p>插槽：默认插槽、具名插槽、作用域插槽可以实现父子组件通信.&lt;/p>
+&lt;p>&lt;strong>默认插槽:&lt;/strong>&lt;/p>
+&lt;p>在子组件内部的模板中书写slot全局组件标签&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;lt;template&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;div&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;slot&amp;gt;&amp;lt;/slot&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;/div&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;/template&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;script setup lang=&amp;#34;ts&amp;#34;&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;/script&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;style scoped&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;/style&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>在父组件内部提供结构：Todo即为子组件,在父组件内部使用的时候，在双标签内部书写结构传递给子组件&lt;/p>
+&lt;p>注意开发项目的时候默认插槽一般只有一个&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;lt;Todo&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;h1&amp;gt;我是默认插槽填充的结构&amp;lt;/h1&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;/Todo&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>具名插槽：&lt;/strong>&lt;/p>
+&lt;p>顾名思义，此插槽带有名字在组件内部留多个指定名字的插槽。&lt;/p>
+&lt;p>下面是一个子组件内部,模板中留两个插槽&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;lt;template&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;div&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;h1&amp;gt;todo&amp;lt;/h1&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;slot name=&amp;#34;a&amp;#34;&amp;gt;&amp;lt;/slot&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;slot name=&amp;#34;b&amp;#34;&amp;gt;&amp;lt;/slot&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;/div&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;/template&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;script setup lang=&amp;#34;ts&amp;#34;&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;/script&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;style scoped&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;/style&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>父组件内部向指定的具名插槽传递结构。需要注意v-slot：可以替换为#&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;lt;template&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;div&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;h1&amp;gt;slot&amp;lt;/h1&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;Todo&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;template v-slot:a&amp;gt; //可以用#a替换
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;div&amp;gt;填入组件A部分的结构&amp;lt;/div&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;/template&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;template v-slot:b&amp;gt;//可以用#b替换
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;div&amp;gt;填入组件B部分的结构&amp;lt;/div&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;/template&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;/Todo&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;/div&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;/template&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;script setup lang=&amp;#34;ts&amp;#34;&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import Todo from &amp;#34;./Todo.vue&amp;#34;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;/script&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;style scoped&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;/style&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>作用域插槽&lt;/strong>&lt;/p>
+&lt;p>作用域插槽：可以理解为，子组件数据由父组件提供，但是子组件内部决定不了自身结构与外观(样式)&lt;/p>
+&lt;p>子组件Todo代码如下:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;lt;template&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;div&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;h1&amp;gt;todo&amp;lt;/h1&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;ul&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;!--组件内部遍历数组--&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;li v-for=&amp;#34;(item,index) in todos&amp;#34; :key=&amp;#34;item.id&amp;#34;&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;!--作用域插槽将数据回传给父组件--&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;slot :$row=&amp;#34;item&amp;#34; :$index=&amp;#34;index&amp;#34;&amp;gt;&amp;lt;/slot&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;/li&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;/ul&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;/div&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;/template&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;script setup lang=&amp;#34;ts&amp;#34;&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">defineProps([&amp;#39;todos&amp;#39;]);//接受父组件传递过来的数据
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;/script&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;style scoped&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;/style&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>父组件内部代码如下:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;lt;template&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;div&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;h1&amp;gt;slot&amp;lt;/h1&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;Todo :todos=&amp;#34;todos&amp;#34;&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;template v-slot=&amp;#34;{$row,$index}&amp;#34;&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;!--父组件决定子组件的结构与外观--&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;span :style=&amp;#34;{color:$row.done?&amp;#39;green&amp;#39;:&amp;#39;red&amp;#39;}&amp;#34;&amp;gt;{{$row.title}}&amp;lt;/span&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;/template&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;/Todo&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;/div&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;/template&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;script setup lang=&amp;#34;ts&amp;#34;&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import Todo from &amp;#34;./Todo.vue&amp;#34;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import { ref } from &amp;#34;vue&amp;#34;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">//父组件内部数据
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">let todos = ref([
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> { id: 1, title: &amp;#34;吃饭&amp;#34;, done: true },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> { id: 2, title: &amp;#34;睡觉&amp;#34;, done: false },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> { id: 3, title: &amp;#34;打豆豆&amp;#34;, done: true },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">]);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;/script&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;style scoped&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;/style&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="二搭建后台管理系统模板">二、搭建后台管理系统模板&lt;/h2>
+&lt;h3 id="21项目初始化">2.1项目初始化&lt;/h3>
+&lt;p>今天来带大家从0开始搭建一个vue3版本的后台管理系统。一个项目要有统一的规范，需要使用eslint+stylelint+prettier来对我们的代码质量做检测和修复，需要使用husky来做commit拦截，需要使用commitlint来统一提交规范，需要使用preinstall来统一包管理工具。&lt;/p>
+&lt;p>下面我们就用这一套规范来初始化我们的项目，集成一个规范的模版。&lt;/p>
+&lt;h4 id="211环境准备">2.1.1环境准备&lt;/h4>
+&lt;ul>
+&lt;li>node v16.14.2&lt;/li>
+&lt;li>pnpm 8.0.0&lt;/li>
+&lt;/ul>
+&lt;h4 id="212初始化项目">2.1.2初始化项目&lt;/h4>
+&lt;p>本项目使用vite进行构建，vite官方中文文档参考：&lt;a class="link" href="https://cn.vitejs.dev/guide/" target="_blank" rel="noopener"
+>cn.vitejs.dev/guide/&lt;/a>&lt;/p>
+&lt;p>&lt;strong>pnpm:performant npm ，意味“高性能的 npm”。&lt;a class="link" href="https://so.csdn.net/so/search?q=pnpm&amp;amp;spm=1001.2101.3001.7020" target="_blank" rel="noopener"
+>pnpm&lt;/a>由npm/yarn衍生而来，解决了npm/yarn内部潜在的bug，极大的优化了性能，扩展了使用场景。被誉为“最先进的包管理工具”&lt;/strong>&lt;/p>
+&lt;p>pnpm安装指令&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">npm i -g pnpm
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>项目初始化命令:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">pnpm create vite
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>进入到项目根目录pnpm install安装全部依赖.安装完依赖运行程序:pnpm run dev&lt;/p>
+&lt;p>运行完毕项目跑在http://127.0.0.1:5173/,可以访问你得项目啦&lt;/p>
+&lt;h3 id="22项目配置">2.2项目配置&lt;/h3>
+&lt;h4 id="一eslint配置">一、eslint配置&lt;/h4>
+&lt;p>&lt;strong>eslint中文官网:http://eslint.cn/&lt;/strong>&lt;/p>
+&lt;p>ESLint最初是由&lt;a class="link" href="http://nczonline.net/" target="_blank" rel="noopener"
+>Nicholas C. Zakas&lt;/a> 于2013年6月创建的开源项目。它的目标是提供一个插件化的&lt;strong>javascript代码检测工具&lt;/strong>&lt;/p>
+&lt;p>首先安装eslint&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">pnpm i eslint -D
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>生成配置文件:.eslint.cjs&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">npx eslint --init
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>.eslint.cjs配置文件&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">module.exports = {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //运行环境
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;env&amp;#34;: {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;browser&amp;#34;: true,//浏览器端
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;es2021&amp;#34;: true,//es2021
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //规则继承
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;extends&amp;#34;: [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //全部规则默认是关闭的,这个配置项开启推荐规则,推荐规则参照文档
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //比如:函数不能重名、对象不能出现重复key
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;eslint:recommended&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //vue3语法规则
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;plugin:vue/vue3-essential&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //ts语法规则
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;plugin:@typescript-eslint/recommended&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //要为特定类型的文件指定处理器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;overrides&amp;#34;: [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //指定解析器:解析器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //Esprima 默认解析器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //Babel-ESLint babel解析器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //@typescript-eslint/parser ts解析器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;parser&amp;#34;: &amp;#34;@typescript-eslint/parser&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //指定解析器选项
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;parserOptions&amp;#34;: {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;ecmaVersion&amp;#34;: &amp;#34;latest&amp;#34;,//校验ECMA最新版本
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;sourceType&amp;#34;: &amp;#34;module&amp;#34;//设置为&amp;#34;script&amp;#34;（默认），或者&amp;#34;module&amp;#34;代码在ECMAScript模块中
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //ESLint支持使用第三方插件。在使用插件之前，您必须使用npm安装它
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //该eslint-plugin-前缀可以从插件名称被省略
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;plugins&amp;#34;: [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;vue&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;@typescript-eslint&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //eslint规则
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;rules&amp;#34;: {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h5 id="11vue3环境代码校验插件">1.1vue3环境代码校验插件&lt;/h5>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"># 让所有与prettier规则存在冲突的Eslint rules失效，并使用prettier进行代码检查
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34;eslint-config-prettier&amp;#34;: &amp;#34;^8.6.0&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34;eslint-plugin-import&amp;#34;: &amp;#34;^2.27.5&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34;eslint-plugin-node&amp;#34;: &amp;#34;^11.1.0&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 运行更漂亮的Eslint，使prettier规则优先级更高，Eslint优先级低
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34;eslint-plugin-prettier&amp;#34;: &amp;#34;^4.2.1&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># vue.js的Eslint插件（查找vue语法错误，发现错误指令，查找违规风格指南
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34;eslint-plugin-vue&amp;#34;: &amp;#34;^9.9.0&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 该解析器允许使用Eslint校验所有babel code
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34;@babel/eslint-parser&amp;#34;: &amp;#34;^7.19.1&amp;#34;,
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>安装指令&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">pnpm install -D eslint-plugin-import eslint-plugin-vue eslint-plugin-node eslint-plugin-prettier eslint-config-prettier eslint-plugin-node @babel/eslint-parser
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h5 id="12修改eslintrccjs配置文件">1.2修改.eslintrc.cjs配置文件&lt;/h5>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;span class="lnt">53
+&lt;/span>&lt;span class="lnt">54
+&lt;/span>&lt;span class="lnt">55
+&lt;/span>&lt;span class="lnt">56
+&lt;/span>&lt;span class="lnt">57
+&lt;/span>&lt;span class="lnt">58
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">// @see https://eslint.bootcss.com/docs/rules/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">module.exports = {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> env: {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> browser: true,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> es2021: true,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> node: true,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> jest: true,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> /* 指定如何解析语法 */
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> parser: &amp;#39;vue-eslint-parser&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> /** 优先级低于 parse 的语法解析配置 */
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> parserOptions: {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ecmaVersion: &amp;#39;latest&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sourceType: &amp;#39;module&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> parser: &amp;#39;@typescript-eslint/parser&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> jsxPragma: &amp;#39;React&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ecmaFeatures: {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> jsx: true,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> /* 继承已有的规则 */
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> extends: [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;eslint:recommended&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;plugin:vue/vue3-essential&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;plugin:@typescript-eslint/recommended&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;plugin:prettier/recommended&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> plugins: [&amp;#39;vue&amp;#39;, &amp;#39;@typescript-eslint&amp;#39;],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> /*
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> * &amp;#34;off&amp;#34; 或 0 ==&amp;gt; 关闭规则
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> * &amp;#34;warn&amp;#34; 或 1 ==&amp;gt; 打开的规则作为警告（不影响代码执行）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> * &amp;#34;error&amp;#34; 或 2 ==&amp;gt; 规则作为一个错误（代码不能执行，界面报错）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> */
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> rules: {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // eslint（https://eslint.bootcss.com/docs/rules/）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;no-var&amp;#39;: &amp;#39;error&amp;#39;, // 要求使用 let 或 const 而不是 var
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;no-multiple-empty-lines&amp;#39;: [&amp;#39;warn&amp;#39;, { max: 1 }], // 不允许多个空行
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;no-console&amp;#39;: process.env.NODE_ENV === &amp;#39;production&amp;#39; ? &amp;#39;error&amp;#39; : &amp;#39;off&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;no-debugger&amp;#39;: process.env.NODE_ENV === &amp;#39;production&amp;#39; ? &amp;#39;error&amp;#39; : &amp;#39;off&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;no-unexpected-multiline&amp;#39;: &amp;#39;error&amp;#39;, // 禁止空余的多行
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;no-useless-escape&amp;#39;: &amp;#39;off&amp;#39;, // 禁止不必要的转义字符
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // typeScript (https://typescript-eslint.io/rules)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;@typescript-eslint/no-unused-vars&amp;#39;: &amp;#39;error&amp;#39;, // 禁止定义未使用的变量
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;@typescript-eslint/prefer-ts-expect-error&amp;#39;: &amp;#39;error&amp;#39;, // 禁止使用 @ts-ignore
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;@typescript-eslint/no-explicit-any&amp;#39;: &amp;#39;off&amp;#39;, // 禁止使用 any 类型
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;@typescript-eslint/no-non-null-assertion&amp;#39;: &amp;#39;off&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;@typescript-eslint/no-namespace&amp;#39;: &amp;#39;off&amp;#39;, // 禁止使用自定义 TypeScript 模块和命名空间。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;@typescript-eslint/semi&amp;#39;: &amp;#39;off&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // eslint-plugin-vue (https://eslint.vuejs.org/rules/)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;vue/multi-word-component-names&amp;#39;: &amp;#39;off&amp;#39;, // 要求组件名称始终为 “-” 链接的单词
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;vue/script-setup-uses-vars&amp;#39;: &amp;#39;error&amp;#39;, // 防止&amp;lt;script setup&amp;gt;使用的变量&amp;lt;template&amp;gt;被标记为未使用
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;vue/no-mutating-props&amp;#39;: &amp;#39;off&amp;#39;, // 不允许组件 prop的改变
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;vue/attribute-hyphenation&amp;#39;: &amp;#39;off&amp;#39;, // 对模板中的自定义组件强制执行属性命名样式
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h5 id="13eslintignore忽略文件">1.3.eslintignore忽略文件&lt;/h5>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">dist
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">node_modules
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h5 id="14运行脚本">1.4运行脚本&lt;/h5>
+&lt;p>package.json新增两个运行脚本&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;#34;scripts&amp;#34;: {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;lint&amp;#34;: &amp;#34;eslint src&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;fix&amp;#34;: &amp;#34;eslint src --fix&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="二配置prettier">二、配置&lt;strong>prettier&lt;/strong>&lt;/h4>
+&lt;p>有了eslint，为什么还要有prettier？eslint针对的是javascript，他是一个检测工具，包含js语法以及少部分格式问题，在eslint看来，语法对了就能保证代码正常运行，格式问题属于其次；&lt;/p>
+&lt;p>而prettier属于格式化工具，它看不惯格式不统一，所以它就把eslint没干好的事接着干，另外，prettier支持&lt;/p>
+&lt;p>包含js在内的多种语言。&lt;/p>
+&lt;p>总结起来，&lt;strong>eslint和prettier这俩兄弟一个保证js代码质量，一个保证代码美观。&lt;/strong>&lt;/p>
+&lt;h5 id="21安装依赖包">2.1安装依赖包&lt;/h5>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">pnpm install -D eslint-plugin-prettier prettier eslint-config-prettier
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h5 id="22prettierrcjson添加规则">2.2.prettierrc.json添加规则&lt;/h5>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">{
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;singleQuote&amp;#34;: true,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;semi&amp;#34;: false,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;bracketSpacing&amp;#34;: true,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;htmlWhitespaceSensitivity&amp;#34;: &amp;#34;ignore&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;endOfLine&amp;#34;: &amp;#34;auto&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;trailingComma&amp;#34;: &amp;#34;all&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;tabWidth&amp;#34;: 2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h5 id="23prettierignore忽略文件">2.3.prettierignore忽略文件&lt;/h5>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">/dist/*
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/html/*
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.local
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/node_modules/**
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">**/*.svg
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">**/*.sh
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/public/*
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>通过pnpm run lint去检测语法，如果出现不规范格式,通过pnpm run fix 修改&lt;/strong>&lt;/p>
+&lt;h4 id="三配置stylelint">三、配置stylelint&lt;/h4>
+&lt;p>&lt;a class="link" href="https://stylelint.io/" target="_blank" rel="noopener"
+>stylelint&lt;/a>为css的lint工具。可格式化css代码，检查css语法错误与不合理的写法，指定css书写顺序等。&lt;/p>
+&lt;p>我们的项目中使用scss作为预处理器，安装以下依赖：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">pnpm add sass sass-loader stylelint postcss postcss-scss postcss-html stylelint-config-prettier stylelint-config-recess-order stylelint-config-recommended-scss stylelint-config-standard stylelint-config-standard-vue stylelint-scss stylelint-order stylelint-config-standard-scss -D
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h5 id="31stylelintrccjs配置文件">3.1&lt;code>.stylelintrc.cjs&lt;/code>&lt;strong>配置文件&lt;/strong>&lt;/h5>
+&lt;p>&lt;strong>官网:https://stylelint.bootcss.com/&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;span class="lnt">53
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">// @see https://stylelint.bootcss.com/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">module.exports = {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> extends: [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;stylelint-config-standard&amp;#39;, // 配置stylelint拓展插件
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;stylelint-config-html/vue&amp;#39;, // 配置 vue 中 template 样式格式化
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;stylelint-config-standard-scss&amp;#39;, // 配置stylelint scss插件
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;stylelint-config-recommended-vue/scss&amp;#39;, // 配置 vue 中 scss 样式格式化
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;stylelint-config-recess-order&amp;#39;, // 配置stylelint css属性书写顺序插件,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;stylelint-config-prettier&amp;#39;, // 配置stylelint和prettier兼容
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> overrides: [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> files: [&amp;#39;**/*.(scss|css|vue|html)&amp;#39;],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> customSyntax: &amp;#39;postcss-scss&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> files: [&amp;#39;**/*.(html|vue)&amp;#39;],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> customSyntax: &amp;#39;postcss-html&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ignoreFiles: [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;**/*.js&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;**/*.jsx&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;**/*.tsx&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;**/*.ts&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;**/*.json&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;**/*.md&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;**/*.yaml&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> /**
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> * null =&amp;gt; 关闭该规则
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> * always =&amp;gt; 必须
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> */
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> rules: {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;value-keyword-case&amp;#39;: null, // 在 css 中使用 v-bind，不报错
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;no-descending-specificity&amp;#39;: null, // 禁止在具有较高优先级的选择器后出现被其覆盖的较低优先级的选择器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;function-url-quotes&amp;#39;: &amp;#39;always&amp;#39;, // 要求或禁止 URL 的引号 &amp;#34;always(必须加上引号)&amp;#34;|&amp;#34;never(没有引号)&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;no-empty-source&amp;#39;: null, // 关闭禁止空源码
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;selector-class-pattern&amp;#39;: null, // 关闭强制选择器类名的格式
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;property-no-unknown&amp;#39;: null, // 禁止未知的属性(true 为不允许)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;block-opening-brace-space-before&amp;#39;: &amp;#39;always&amp;#39;, //大括号之前必须有一个空格或不能有空白符
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;value-no-vendor-prefix&amp;#39;: null, // 关闭 属性值前缀 --webkit-box
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;property-no-vendor-prefix&amp;#39;: null, // 关闭 属性前缀 -webkit-mask
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;selector-pseudo-class-no-unknown&amp;#39;: [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 不允许未知的选择器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> true,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ignorePseudoClasses: [&amp;#39;global&amp;#39;, &amp;#39;v-deep&amp;#39;, &amp;#39;deep&amp;#39;], // 忽略属性，修改element默认样式的时候能使用到
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h5 id="32stylelintignore忽略文件">3.2.stylelintignore忽略文件&lt;/h5>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">/node_modules/*
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/dist/*
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/html/*
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/public/*
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h5 id="33运行脚本">3.3运行脚本&lt;/h5>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;#34;scripts&amp;#34;: {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;lint:style&amp;#34;: &amp;#34;stylelint src/**/*.{css,scss,vue} --cache --fix&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>最后配置统一的prettier来格式化我们的js和css，html代码&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"> &amp;#34;scripts&amp;#34;: {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;dev&amp;#34;: &amp;#34;vite --open&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;build&amp;#34;: &amp;#34;vue-tsc &amp;amp;&amp;amp; vite build&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;preview&amp;#34;: &amp;#34;vite preview&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;lint&amp;#34;: &amp;#34;eslint src&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;fix&amp;#34;: &amp;#34;eslint src --fix&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;format&amp;#34;: &amp;#34;prettier --write \&amp;#34;./**/*.{html,vue,ts,js,json,md}\&amp;#34;&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;lint:eslint&amp;#34;: &amp;#34;eslint src/**/*.{ts,vue} --cache --fix&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;lint:style&amp;#34;: &amp;#34;stylelint src/**/*.{css,scss,vue} --cache --fix&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>当我们运行&lt;code>pnpm run format&lt;/code>的时候，会把代码直接格式化&lt;/strong>&lt;/p>
+&lt;h4 id="四配置husky">四、配置husky&lt;/h4>
+&lt;p>在上面我们已经集成好了我们代码校验工具，但是需要每次手动的去执行命令才会格式化我们的代码。如果有人没有格式化就提交了远程仓库中，那这个规范就没什么用。所以我们需要强制让开发人员按照代码规范来提交。&lt;/p>
+&lt;p>要做到这件事情，就需要利用husky在代码提交之前触发git hook(git在客户端的钩子)，然后执行&lt;code>pnpm run format&lt;/code>来自动的格式化我们的代码。&lt;/p>
+&lt;p>安装&lt;code>husky&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">pnpm install -D husky
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>执行&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">npx husky-init
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>会在根目录下生成个一个.husky目录，在这个目录下面会有一个pre-commit文件，这个文件里面的命令在我们执行commit的时候就会执行&lt;/p>
+&lt;p>在&lt;code>.husky/pre-commit&lt;/code>文件添加如下命令：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#!/usr/bin/env sh
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>. &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="k">$(&lt;/span>dirname -- &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$0&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="k">)&lt;/span>&lt;span class="s2">/_/husky.sh&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pnpm run format
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>当我们对代码进行commit操作的时候，就会执行命令，对代码进行格式化，然后再提交。&lt;/p>
+&lt;h4 id="五配置commitlint">五、配置commitlint&lt;/h4>
+&lt;p>对于我们的commit信息，也是有统一规范的，不能随便写,要让每个人都按照统一的标准来执行，我们可以利用&lt;strong>commitlint&lt;/strong>来实现。&lt;/p>
+&lt;p>安装包&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">pnpm add @commitlint/config-conventional @commitlint/cli -D
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>添加配置文件，新建&lt;code>commitlint.config.cjs&lt;/code>(注意是cjs)，然后添加下面的代码：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">module.exports = {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> extends: [&amp;#39;@commitlint/config-conventional&amp;#39;],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 校验规则
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> rules: {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;type-enum&amp;#39;: [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> 2,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;always&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;feat&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;fix&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;docs&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;style&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;refactor&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;perf&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;test&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;chore&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;revert&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;build&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;type-case&amp;#39;: [0],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;type-empty&amp;#39;: [0],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;scope-empty&amp;#39;: [0],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;scope-case&amp;#39;: [0],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;subject-full-stop&amp;#39;: [0, &amp;#39;never&amp;#39;],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;subject-case&amp;#39;: [0, &amp;#39;never&amp;#39;],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;header-max-length&amp;#39;: [0, &amp;#39;always&amp;#39;, 72],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>在&lt;code>package.json&lt;/code>中配置scripts命令&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"># 在scrips中添加下面的代码
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34;scripts&amp;#34;: {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;commitlint&amp;#34;: &amp;#34;commitlint --config commitlint.config.cjs -e -V&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>配置结束，现在当我们填写&lt;code>commit&lt;/code>信息的时候，前面就需要带着下面的&lt;code>subject&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;#39;feat&amp;#39;,//新特性、新功能
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#39;fix&amp;#39;,//修改bug
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#39;docs&amp;#39;,//文档修改
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#39;style&amp;#39;,//代码格式修改, 注意不是 css 修改
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#39;refactor&amp;#39;,//代码重构
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#39;perf&amp;#39;,//优化相关，比如提升性能、体验
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#39;test&amp;#39;,//测试用例修改
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#39;chore&amp;#39;,//其他修改, 比如改变构建流程、或者增加依赖库、工具等
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#39;revert&amp;#39;,//回滚到上一个版本
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#39;build&amp;#39;,//编译相关的修改，例如发布版本、对项目构建或者依赖的改动
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>配置husky&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">npx husky add .husky/commit-msg
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>在生成的commit-msg文件中添加下面的命令&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#!/usr/bin/env sh
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>. &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="k">$(&lt;/span>dirname -- &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$0&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="k">)&lt;/span>&lt;span class="s2">/_/husky.sh&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pnpm commitlint
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>当我们 commit 提交信息时，就不能再随意写了，必须是 git commit -m &amp;lsquo;fix: xxx&amp;rsquo; 符合类型的才可以，&lt;strong>需要注意的是类型的后面需要用英文的 :，并且冒号后面是需要空一格的，这个是不能省略的&lt;/strong>&lt;/p>
+&lt;h4 id="六强制使用pnpm包管理器工具">六、强制使用pnpm包管理器工具&lt;/h4>
+&lt;p>团队开发项目的时候，需要统一包管理器工具,因为不同包管理器工具下载同一个依赖,可能版本不一样,&lt;/p>
+&lt;p>导致项目出现bug问题,因此包管理器工具需要统一管理！！！&lt;/p>
+&lt;p>在根目录创建&lt;code>scritps/preinstall.js&lt;/code>文件，添加下面的内容&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="p">(!&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="nx">pnpm&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">test&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">process&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">env&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">npm_execpath&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="err">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">warn&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s">`\u001b[33mThis repository must using pnpm as the package manager `&lt;/span> &lt;span class="o">+&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s">` for scripts to work properly.\u001b[39m\n`&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">process&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">exit&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>配置命令&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;#34;scripts&amp;#34;: {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;preinstall&amp;#34;: &amp;#34;node ./scripts/preinstall.js&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>当我们使用npm或者yarn来安装包的时候，就会报错了。原理就是在install的时候会触发preinstall（npm提供的生命周期钩子）这个文件里面的代码。&lt;/strong>&lt;/p>
+&lt;h2 id="三项目集成">三、项目集成&lt;/h2>
+&lt;h3 id="31集成element-plus">3.1集成element-plus&lt;/h3>
+&lt;p>硅谷甄选运营平台,UI组件库采用的element-plus，因此需要集成element-plus插件！！！&lt;/p>
+&lt;p>官网地址:https://element-plus.gitee.io/zh-CN/&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">pnpm install element-plus @element-plus/icons-vue
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>入口文件main.ts全局安装element-plus,element-plus默认支持语言英语设置为中文&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">import ElementPlus from &amp;#39;element-plus&amp;#39;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import &amp;#39;element-plus/dist/index.css&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">//@ts-ignore忽略当前文件ts类型的检测否则有红色提示(打包会失败)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import zhCn from &amp;#39;element-plus/dist/locale/zh-cn.mjs&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">app.use(ElementPlus, {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> locale: zhCn
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">})
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>Element Plus全局组件类型声明&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">// tsconfig.json
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;compilerOptions&amp;#34;: {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // ...
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;types&amp;#34;: [&amp;#34;element-plus/global&amp;#34;]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>配置完毕可以测试element-plus组件与图标的使用.&lt;/p>
+&lt;h3 id="32src别名的配置">3.2src别名的配置&lt;/h3>
+&lt;p>在开发项目的时候文件与文件关系可能很复杂，因此我们需要给src文件夹配置一个别名！！！&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">// vite.config.ts
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import {defineConfig} from &amp;#39;vite&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import vue from &amp;#39;@vitejs/plugin-vue&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import path from &amp;#39;path&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export default defineConfig({
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> plugins: [vue()],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> resolve: {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> alias: {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;@&amp;#34;: path.resolve(&amp;#34;./src&amp;#34;) // 相对路径别名配置，使用 @ 代替 src
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">})
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>TypeScript 编译配置&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">// tsconfig.json
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;compilerOptions&amp;#34;: {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;baseUrl&amp;#34;: &amp;#34;./&amp;#34;, // 解析非相对模块的基地址，默认是当前目录
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;paths&amp;#34;: { //路径映射，相对于baseUrl
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;@/*&amp;#34;: [&amp;#34;src/*&amp;#34;]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="33环境变量的配置">3.3环境变量的配置&lt;/h3>
+&lt;p>&lt;strong>项目开发过程中，至少会经历开发环境、测试环境和生产环境(即正式环境)三个阶段。不同阶段请求的状态(如接口地址等)不尽相同，若手动切换接口地址是相当繁琐且易出错的。于是环境变量配置的需求就应运而生，我们只需做简单的配置，把环境状态切换的工作交给代码。&lt;/strong>&lt;/p>
+&lt;p>开发环境（development）
+顾名思义，开发使用的环境，每位开发人员在自己的dev分支上干活，开发到一定程度，同事会合并代码，进行联调。&lt;/p>
+&lt;p>测试环境（testing）
+测试同事干活的环境啦，一般会由测试同事自己来部署，然后在此环境进行测试&lt;/p>
+&lt;p>生产环境（production）
+生产环境是指正式提供对外服务的，一般会关掉错误报告，打开错误日志。(正式提供给客户使用的环境。)&lt;/p>
+&lt;p>注意:一般情况下，一个环境对应一台服务器,也有的公司开发与测试环境是一台服务器！！！&lt;/p>
+&lt;p>项目根目录分别添加 开发、生产和测试环境的文件!&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">.env.development
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.env.production
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.env.test
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>文件内容&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"># 变量必须以 VITE_ 为前缀才能暴露给外部读取
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">NODE_ENV = &amp;#39;development&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">VITE_APP_TITLE = &amp;#39;硅谷甄选运营平台&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">VITE_APP_BASE_API = &amp;#39;/dev-api&amp;#39;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">NODE_ENV = &amp;#39;production&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">VITE_APP_TITLE = &amp;#39;硅谷甄选运营平台&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">VITE_APP_BASE_API = &amp;#39;/prod-api&amp;#39;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"># 变量必须以 VITE_ 为前缀才能暴露给外部读取
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">NODE_ENV = &amp;#39;test&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">VITE_APP_TITLE = &amp;#39;硅谷甄选运营平台&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">VITE_APP_BASE_API = &amp;#39;/test-api&amp;#39;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>配置运行命令：package.json&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"> &amp;#34;scripts&amp;#34;: {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;dev&amp;#34;: &amp;#34;vite --open&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;build:test&amp;#34;: &amp;#34;vue-tsc &amp;amp;&amp;amp; vite build --mode test&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;build:pro&amp;#34;: &amp;#34;vue-tsc &amp;amp;&amp;amp; vite build --mode production&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;preview&amp;#34;: &amp;#34;vite preview&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>通过import.meta.env获取环境变量&lt;/p>
+&lt;h3 id="34svg图标配置">3.4SVG图标配置&lt;/h3>
+&lt;p>在开发项目的时候经常会用到svg矢量图,而且我们使用SVG以后，页面上加载的不再是图片资源,&lt;/p>
+&lt;p>这对页面性能来说是个很大的提升，而且我们SVG文件比img要小的很多，放在项目中几乎不占用资源。&lt;/p>
+&lt;p>&lt;strong>安装SVG依赖插件&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">pnpm install vite-plugin-svg-icons -D
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>在&lt;code>vite.config.ts&lt;/code>中配置插件&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">import { createSvgIconsPlugin } from &amp;#39;vite-plugin-svg-icons&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import path from &amp;#39;path&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export default () =&amp;gt; {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> plugins: [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> createSvgIconsPlugin({
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // Specify the icon folder to be cached
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> iconDirs: [path.resolve(process.cwd(), &amp;#39;src/assets/icons&amp;#39;)],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // Specify symbolId format
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> symbolId: &amp;#39;icon-[dir]-[name]&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>入口文件导入&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">import &amp;#39;virtual:svg-icons-register&amp;#39;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="341svg封装为全局组件">3.4.1svg封装为全局组件&lt;/h4>
+&lt;p>因为项目很多模块需要使用图标,因此把它封装为全局组件！！！&lt;/p>
+&lt;p>&lt;strong>在src/components目录下创建一个SvgIcon组件:代表如下&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;lt;template&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;div&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;svg :style=&amp;#34;{ width: width, height: height }&amp;#34;&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;use :xlink:href=&amp;#34;prefix + name&amp;#34; :fill=&amp;#34;color&amp;#34;&amp;gt;&amp;lt;/use&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;/svg&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;/div&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;/template&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;script setup lang=&amp;#34;ts&amp;#34;&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">defineProps({
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //xlink:href属性值的前缀
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> prefix: {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> type: String,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> default: &amp;#39;#icon-&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //svg矢量图的名字
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> name: String,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //svg图标的颜色
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> color: {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> type: String,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> default: &amp;#34;&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //svg宽度
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> width: {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> type: String,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> default: &amp;#39;16px&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //svg高度
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> height: {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> type: String,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> default: &amp;#39;16px&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">})
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;/script&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;style scoped&amp;gt;&amp;lt;/style&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>在src文件夹目录下创建一个index.ts文件：用于注册components文件夹内部全部全局组件！！！&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">import SvgIcon from &amp;#39;./SvgIcon/index.vue&amp;#39;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import type { App, Component } from &amp;#39;vue&amp;#39;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">const components: { [name: string]: Component } = { SvgIcon };
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export default {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> install(app: App) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Object.keys(components).forEach((key: string) =&amp;gt; {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> app.component(key, components[key]);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> })
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>在入口文件引入src/index.ts文件,通过app.use方法安装自定义插件&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">import gloablComponent from &amp;#39;./components/index&amp;#39;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">app.use(gloablComponent);
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="35集成sass">3.5集成sass&lt;/h3>
+&lt;p>我们目前在组件内部已经可以使用scss样式,因为在配置styleLint工具的时候，项目当中已经安装过sass sass-loader,因此我们再组件内可以使用scss语法！！！需要加上lang=&amp;ldquo;scss&amp;rdquo;&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;lt;style scoped lang=&amp;#34;scss&amp;#34;&amp;gt;&amp;lt;/style&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>接下来我们为项目添加一些全局的样式&lt;/p>
+&lt;p>在src/styles目录下创建一个index.scss文件，当然项目中需要用到清除默认样式，因此在index.scss引入reset.scss&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">@import reset.scss
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>在入口文件引入&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">import &amp;#39;@/styles&amp;#39;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>但是你会发现在src/styles/index.scss全局样式文件中没有办法使用$变量.因此需要给项目中引入全局变量$.&lt;/p>
+&lt;p>在style/variable.scss创建一个variable.scss文件！&lt;/p>
+&lt;p>在vite.config.ts文件配置如下:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">export default defineConfig((config) =&amp;gt; {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> css: {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> preprocessorOptions: {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> scss: {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> javascriptEnabled: true,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> additionalData: &amp;#39;@import &amp;#34;./src/styles/variable.scss&amp;#34;;&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>&lt;code>@import &amp;quot;./src/styles/variable.less&amp;quot;;&lt;/code>后面的&lt;code>;&lt;/code>不要忘记，不然会报错&lt;/strong>!&lt;/p>
+&lt;p>配置完毕你会发现scss提供这些全局变量可以在组件样式中使用了！！！&lt;/p>
+&lt;h3 id="36mock数据">3.6mock数据&lt;/h3>
+&lt;p>安装依赖:https://www.npmjs.com/package/vite-plugin-mock&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">pnpm install -D vite-plugin-mock mockjs
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>在 vite.config.js 配置文件启用插件。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">import { UserConfigExport, ConfigEnv } from &amp;#39;vite&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import { viteMockServe } from &amp;#39;vite-plugin-mock&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import vue from &amp;#39;@vitejs/plugin-vue&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export default ({ command })=&amp;gt; {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> plugins: [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> vue(),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> viteMockServe({
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> localEnabled: command === &amp;#39;serve&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>在根目录创建mock文件夹:去创建我们需要mock数据与接口！！！&lt;/p>
+&lt;p>在mock文件夹内部创建一个user.ts文件&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;span class="lnt">53
+&lt;/span>&lt;span class="lnt">54
+&lt;/span>&lt;span class="lnt">55
+&lt;/span>&lt;span class="lnt">56
+&lt;/span>&lt;span class="lnt">57
+&lt;/span>&lt;span class="lnt">58
+&lt;/span>&lt;span class="lnt">59
+&lt;/span>&lt;span class="lnt">60
+&lt;/span>&lt;span class="lnt">61
+&lt;/span>&lt;span class="lnt">62
+&lt;/span>&lt;span class="lnt">63
+&lt;/span>&lt;span class="lnt">64
+&lt;/span>&lt;span class="lnt">65
+&lt;/span>&lt;span class="lnt">66
+&lt;/span>&lt;span class="lnt">67
+&lt;/span>&lt;span class="lnt">68
+&lt;/span>&lt;span class="lnt">69
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">//用户信息数据
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">function createUserList() {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> userId: 1,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> avatar:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> username: &amp;#39;admin&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> password: &amp;#39;111111&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> desc: &amp;#39;平台管理员&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> roles: [&amp;#39;平台管理员&amp;#39;],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> buttons: [&amp;#39;cuser.detail&amp;#39;],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> routes: [&amp;#39;home&amp;#39;],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> token: &amp;#39;Admin Token&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> userId: 2,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> avatar:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> username: &amp;#39;system&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> password: &amp;#39;111111&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> desc: &amp;#39;系统管理员&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> roles: [&amp;#39;系统管理员&amp;#39;],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> buttons: [&amp;#39;cuser.detail&amp;#39;, &amp;#39;cuser.user&amp;#39;],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> routes: [&amp;#39;home&amp;#39;],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> token: &amp;#39;System Token&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export default [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 用户登录接口
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> url: &amp;#39;/api/user/login&amp;#39;,//请求地址
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> method: &amp;#39;post&amp;#39;,//请求方式
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> response: ({ body }) =&amp;gt; {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //获取请求体携带过来的用户名与密码
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> const { username, password } = body;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //调用获取用户信息函数,用于判断是否有此用户
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> const checkUser = createUserList().find(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> (item) =&amp;gt; item.username === username &amp;amp;&amp;amp; item.password === password,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> )
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //没有用户返回失败信息
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if (!checkUser) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return { code: 201, data: { message: &amp;#39;账号或者密码不正确&amp;#39; } }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //如果有返回成功信息
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> const { token } = checkUser
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return { code: 200, data: { token } }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 获取用户信息
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> url: &amp;#39;/api/user/info&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> method: &amp;#39;get&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> response: (request) =&amp;gt; {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //获取请求头携带token
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> const token = request.headers.token;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //查看用户信息是否包含有次token用户
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> const checkUser = createUserList().find((item) =&amp;gt; item.token === token)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //没有返回失败的信息
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if (!checkUser) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return { code: 201, data: { message: &amp;#39;获取用户信息失败&amp;#39; } }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //如果有返回成功信息
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return { code: 200, data: {checkUser} }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">]
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>安装axios&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">pnpm install axios
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>最后通过axios测试接口！！！&lt;/p>
+&lt;h3 id="37axios二次封装">3.7axios二次封装&lt;/h3>
+&lt;p>在开发项目的时候避免不了与后端进行交互,因此我们需要使用axios插件实现发送网络请求。在开发项目的时候&lt;/p>
+&lt;p>我们经常会把axios进行二次封装。&lt;/p>
+&lt;p>目的:&lt;/p>
+&lt;p>1:使用请求拦截器，可以在请求拦截器中处理一些业务(开始进度条、请求头携带公共参数)&lt;/p>
+&lt;p>2:使用响应拦截器，可以在响应拦截器中处理一些业务(进度条结束、简化服务器返回的数据、处理http网络错误)&lt;/p>
+&lt;p>在根目录下创建utils/request.ts&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">import axios from &amp;#34;axios&amp;#34;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import { ElMessage } from &amp;#34;element-plus&amp;#34;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">//创建axios实例
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">let request = axios.create({
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> baseURL: import.meta.env.VITE_APP_BASE_API,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> timeout: 5000
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">})
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">//请求拦截器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">request.interceptors.request.use(config =&amp;gt; {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return config;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">});
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">//响应拦截器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">request.interceptors.response.use((response) =&amp;gt; {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return response.data;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}, (error) =&amp;gt; {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //处理网络错误
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> let msg = &amp;#39;&amp;#39;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> let status = error.response.status;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> switch (status) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> case 401:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> msg = &amp;#34;token过期&amp;#34;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> break;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> case 403:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> msg = &amp;#39;无权访问&amp;#39;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> break;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> case 404:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> msg = &amp;#34;请求地址错误&amp;#34;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> break;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> case 500:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> msg = &amp;#34;服务器出现问题&amp;#34;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> break;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> default:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> msg = &amp;#34;无网络&amp;#34;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ElMessage({
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> type: &amp;#39;error&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> message: msg
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> })
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return Promise.reject(error);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">});
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export default request;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="38api接口统一管理">3.8API接口统一管理&lt;/h3>
+&lt;p>在开发项目的时候,接口可能很多需要统一管理。在src目录下去创建api文件夹去统一管理项目的接口；&lt;/p>
+&lt;p>比如:下面方式&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">//统一管理咱们项目用户相关的接口
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import request from &amp;#39;@/utils/request&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import type {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> loginFormData,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> loginResponseData,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> userInfoReponseData,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">} from &amp;#39;./type&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">//项目用户相关的请求地址
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">enum API {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> LOGIN_URL = &amp;#39;/admin/acl/index/login&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> USERINFO_URL = &amp;#39;/admin/acl/index/info&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> LOGOUT_URL = &amp;#39;/admin/acl/index/logout&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">//登录接口
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export const reqLogin = (data: loginFormData) =&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> request.post&amp;lt;any, loginResponseData&amp;gt;(API.LOGIN_URL, data)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">//获取用户信息
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export const reqUserInfo = () =&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> request.get&amp;lt;any, userInfoReponseData&amp;gt;(API.USERINFO_URL)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">//退出登录
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export const reqLogout = () =&amp;gt; request.post&amp;lt;any, any&amp;gt;(API.LOGOUT_URL)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="四项目的资源地址">四、项目的资源地址&lt;/h2>
+&lt;p>贾成豪老师代码仓库地址:https://gitee.com/jch1011/vue3_admin_template-bj1.git&lt;/p>
+&lt;p>项目在线文档:&lt;/p>
+&lt;p>服务器域名:http://sph-api.atguigu.cn&lt;/p>
+&lt;p>swagger文档:&lt;/p>
+&lt;p>http://139.198.104.58:8209/swagger-ui.html&lt;/p>
+&lt;p>http://139.198.104.58:8212/swagger-ui.html#/&lt;/p>
+&lt;p>echarts:国内镜像网站&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.isqqw.com/echarts-doc/zh/option.html#title" target="_blank" rel="noopener"
+>https://www.isqqw.com/echarts-doc/zh/option.html#title&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="http://datav.aliyun.com/portal/school/atlas/area_selector" target="_blank" rel="noopener"
+>http://datav.aliyun.com/portal/school/atlas/area_selector&lt;/a>&lt;/p></description></item><item><title>摩尔投票</title><link>https://open17.github.io/CpHugo/p/boyermoore-majority-vote-algorithm/</link><pubDate>Sun, 28 May 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/boyermoore-majority-vote-algorithm/</guid><description>&lt;h2 id="什么是摩尔投票">什么是摩尔投票&lt;/h2>
 &lt;p>摩尔投票是一种用来解决绝对众数&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>问题的算法
 它能使用O(1)级别的空间复杂度找出绝对众数&lt;/p>
 &lt;h2 id="经典例题2">经典例题&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/h2>
