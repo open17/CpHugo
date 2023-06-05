@@ -48,11 +48,56 @@ void NGE(int n){
     }
 }
 ```
+### 补充
+技巧：事先压入一个边界元素到栈底，这样保证循环时栈一定不会为空，从而简化逻辑(源自0x3f)             
+还要我发现我总结的上面的两个模板,灵神有个更本质的解释:https://leetcode.cn/problems/next-greater-node-in-linked-list/solution/tu-jie-dan-diao-zhan-liang-chong-fang-fa-v9ab/        
 ### 练习
+#### 传统单调栈系列
 ```cpp
-
-
-
-
+//https://leetcode.cn/problems/next-greater-element-i/
+class Solution {
+public:
+    vector<int> nextGreaterElement(vector<int>& nums1, vector<int>& nums2) {
+        stack<int> a;
+        map<int,int> m;
+        vector<int> ans;
+        for(int i=0;i<nums1.size();i++){
+            m[nums1[i]]=i;
+            ans.push_back(-1);
+        }
+        //max=1e4
+        a.push(1e4+1);
+        for(auto i:nums2){
+            while(a.top()<i){
+                int x=a.top();
+                a.pop();
+                if(m.count(x)){
+                    ans[m[x]]=i;
+                }
+            }
+            a.push(i);
+        }
+        return ans;
+    }
+};
+//https://leetcode.cn/problems/next-greater-element-ii/
+class Solution {
+public:
+    vector<int> nextGreaterElements(vector<int>& nums) {
+        stack<int> a;
+        int s=nums.size();
+        vector<int> ans(s,-1);
+        nums.push_back(1e9+1);
+        a.push(s);
+        for(int i=0;i<2*s-1;i++){
+            while(nums[a.top()]<nums[i%s]){
+                ans[a.top()]=nums[i%s];
+                a.pop();
+            }
+            a.push(i%s);
+        }
+        return ans;
+    }
+};
 
 ```
