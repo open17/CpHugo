@@ -417,7 +417,7 @@ SOFTWARE.&lt;/p></description></item><item><title>快捷</title><link>https://op
 &lt;/tr>
 &lt;tr>
 &lt;td>成环数组&lt;/td>
-&lt;td>暴力拼接/分三类(一般)讨论&lt;/td>
+&lt;td>暴力拼接/分三类(一般)讨论/取余下标模拟&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>n个数无限取,拼凑满足..&lt;/td>
