@@ -51,13 +51,22 @@
 </span><span class=lnt>50
 </span><span class=lnt>51
 </span><span class=lnt>52
+</span><span class=lnt>53
+</span><span class=lnt>54
+</span><span class=lnt>55
+</span><span class=lnt>56
+</span><span class=lnt>57
+</span><span class=lnt>58
+</span><span class=lnt>59
 </span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-cpp data-lang=cpp><span class=line><span class=cl><span class=cp>#include</span><span class=cpf>&lt;bits/stdc++.h&gt;</span><span class=cp>
 </span></span></span><span class=line><span class=cl><span class=cp></span><span class=k>using</span> <span class=k>namespace</span> <span class=n>std</span><span class=p>;</span>
-</span></span><span class=line><span class=cl><span class=cp>#define ios ios::sync_with_stdio(false);cin.tie(0);cout.tie(0);
+</span></span><span class=line><span class=cl><span class=c1>// #define int long long
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=cp>#define ios ios::sync_with_stdio(false);cin.tie(0);cout.tie(0);
 </span></span></span><span class=line><span class=cl><span class=cp>#define For(w, a, n) for(int w=(a);w&lt;(n);++w)
 </span></span></span><span class=line><span class=cl><span class=cp>#define _For(a,b,c) for(int a=(b);a&gt;(c);a--)
 </span></span></span><span class=line><span class=cl><span class=cp>#define all(x) (x).begin(),x.end()
 </span></span></span><span class=line><span class=cl><span class=cp>#define inf 0x3f3f3f3f
+</span></span></span><span class=line><span class=cl><span class=cp>#define endl &#39;\n&#39;
 </span></span></span><span class=line><span class=cl><span class=cp></span><span class=c1>//对拍
 </span></span></span><span class=line><span class=cl><span class=c1></span><span class=cp>#define fo1 freopen(&#34;data.in&#34;,&#34;r&#34;,stdin);freopen(&#34;res.out&#34;,&#34;w&#34;,stdout);
 </span></span></span><span class=line><span class=cl><span class=cp>#define fo2 freopen(&#34;data.in&#34;,&#34;r&#34;,stdin);freopen(&#34;ans.out&#34;,&#34;w&#34;,stdout);
@@ -66,8 +75,28 @@
 </span></span></span><span class=line><span class=cl><span class=cp></span><span class=k>typedef</span> <span class=kt>long</span> <span class=kt>long</span> <span class=n>ll</span><span class=p>;</span>
 </span></span><span class=line><span class=cl><span class=k>typedef</span> <span class=kt>unsigned</span> <span class=kt>long</span> <span class=kt>long</span> <span class=n>ull</span><span class=p>;</span>
 </span></span><span class=line><span class=cl><span class=k>typedef</span> <span class=n>pair</span><span class=o>&lt;</span><span class=kt>int</span><span class=p>,</span> <span class=kt>int</span><span class=o>&gt;</span> <span class=n>pii</span><span class=p>;</span>
-</span></span><span class=line><span class=cl><span class=k>const</span> <span class=kt>int</span> <span class=n>N</span><span class=o>=</span><span class=mf>3e6</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=kt>int</span> <span class=nf>read</span><span class=p>();</span>
+</span></span><span class=line><span class=cl><span class=kt>void</span> <span class=nf>write</span><span class=p>(</span><span class=kt>int</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>const</span> <span class=kt>int</span> <span class=n>N</span><span class=o>=</span><span class=mf>5e5</span><span class=o>+</span><span class=mi>5</span><span class=p>;</span>
 </span></span><span class=line><span class=cl><span class=k>const</span> <span class=kt>int</span> <span class=n>MOD</span><span class=o>=</span><span class=mf>1e9</span><span class=o>+</span><span class=mi>7</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kt>void</span> <span class=nf>hhhh</span><span class=p>(){</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kt>signed</span> <span class=nf>main</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// hhhh();
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=kt>int</span> <span class=n>T</span><span class=o>=</span><span class=n>read</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>    <span class=k>while</span><span class=p>(</span><span class=n>T</span><span class=o>--</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>        <span class=n>hhhh</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=kr>inline</span> <span class=kt>int</span> <span class=nf>read</span><span class=p>()</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>x</span> <span class=o>=</span> <span class=mi>0</span><span class=p>,</span> <span class=n>f</span> <span class=o>=</span> <span class=mi>1</span><span class=p>;</span>
 </span></span><span class=line><span class=cl>    <span class=kt>char</span> <span class=n>ch</span> <span class=o>=</span> <span class=n>getchar</span><span class=p>();</span>
@@ -87,21 +116,6 @@
 </span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=p>(</span><span class=n>x</span> <span class=o>&lt;</span> <span class=mi>0</span><span class=p>)</span> <span class=p>{</span> <span class=n>putchar</span><span class=p>(</span><span class=sc>&#39;-&#39;</span><span class=p>);</span> <span class=n>x</span> <span class=o>=</span> <span class=o>-</span><span class=n>x</span><span class=p>;</span> <span class=p>}</span>
 </span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=p>(</span><span class=n>x</span> <span class=o>&gt;</span> <span class=mi>9</span><span class=p>)</span> <span class=n>write</span><span class=p>(</span><span class=n>x</span> <span class=o>/</span> <span class=mi>10</span><span class=p>);</span>
 </span></span><span class=line><span class=cl>    <span class=n>putchar</span><span class=p>(</span><span class=n>x</span> <span class=o>%</span> <span class=mi>10</span> <span class=o>+</span> <span class=sc>&#39;0&#39;</span><span class=p>);</span>
-</span></span><span class=line><span class=cl><span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=kr>inline</span> <span class=kt>void</span> <span class=nf>hhhh</span><span class=p>(){</span>
-</span></span><span class=line><span class=cl>    <span class=c1>//todo
-</span></span></span><span class=line><span class=cl><span class=c1></span><span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=kt>int</span> <span class=nf>main</span><span class=p>()</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=c1>//hhhh();
-</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=kt>int</span> <span class=n>T</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>    <span class=n>T</span><span class=p>.</span><span class=n>read</span><span class=p>();</span>
-</span></span><span class=line><span class=cl>    <span class=k>while</span><span class=p>(</span><span class=n>T</span><span class=o>--</span><span class=p>){</span>
-</span></span><span class=line><span class=cl>        <span class=n>hhhh</span><span class=p>();</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
 </span></span><span class=line><span class=cl><span class=p>}</span>
 </span></span></code></pre></td></tr></table></div></div><h3 id=其它模板来源网络>其它模板(来源网络)</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
