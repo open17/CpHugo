@@ -14,11 +14,13 @@ tags:
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
+// #define int long long
 #define ios ios::sync_with_stdio(false);cin.tie(0);cout.tie(0);
 #define For(w, a, n) for(int w=(a);w<(n);++w)
 #define _For(a,b,c) for(int a=(b);a>(c);a--)
 #define all(x) (x).begin(),x.end()
 #define inf 0x3f3f3f3f
+#define endl '\n'
 //对拍
 #define fo1 freopen("data.in","r",stdin);freopen("res.out","w",stdout);
 #define fo2 freopen("data.in","r",stdin);freopen("ans.out","w",stdout);
@@ -27,8 +29,28 @@ using namespace std;
 typedef long long ll;
 typedef unsigned long long ull;
 typedef pair<int, int> pii;
-const int N=3e6;
+int read();
+void write(int);
+
+const int N=5e5+5;
 const int MOD=1e9+7;
+
+
+void hhhh(){
+}
+
+signed main() {
+    // hhhh();
+    int T=read();
+    while(T--){
+        hhhh();
+    }
+    return 0;
+}
+
+
+
+
 inline int read() {
     int x = 0, f = 1;
     char ch = getchar();
@@ -50,20 +72,6 @@ inline void write(int x)
     putchar(x % 10 + '0');
 }
 
-
-inline void hhhh(){
-    //todo
-}
-
-int main() {
-    //hhhh();
-    int T;
-    T.read();
-    while(T--){
-        hhhh();
-    }
-    return 0;
-}
 ```
 ### 其它模板(来源网络)
 ```cpp
