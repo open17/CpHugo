@@ -38,15 +38,13 @@ const int MOD=1e9+7;
 
 
 void hhhh(){
-    int x=99;
-    vector<int>a (1,3);
-    print("a","290i",111111111,"ajo",x,1);
-    println("a",1,"bbb");
+
 }
 
 signed main() {
     // hhhh();
-    int T=read();
+    int T;
+    cin>>T;
     while(T--){
         hhhh();
     }
