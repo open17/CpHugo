@@ -21,9 +21,13 @@ using namespace std;
 //对拍
 #define fo1 freopen("data.in","r",stdin);freopen("res.out","w",stdout);
 #define fo2 freopen("data.in","r",stdin);freopen("ans.out","w",stdout);
-//输出数组
+//输出
 #define printA(a,b,c) cout<<'\n'<<"debug start"<<'\n';for(int i=a;i<=b;i++){cout<<c[i]<<' ';}cout<<'\n'<<"debug over"<<'\n'<<'\n';
-typedef long long ll;
+template <typename T>void print(const T & t){cout << t << endl;}
+template <typename T, typename... Args>void print(const T &t ,const Args... args){cout << t << ' ';print(args...);}
+template <typename T>void println(const T & t){cout << t << endl;}
+template <typename T, typename... Args>void println(const T &t ,const Args... args){cout << t << endl;println(args...);}
+
 typedef unsigned long long ull;
 typedef pair<int, int> pii;
 int read();
@@ -34,6 +38,10 @@ const int MOD=1e9+7;
 
 
 void hhhh(){
+    int x=99;
+    vector<int>a (1,3);
+    print("a","290i",111111111,"ajo",x,1);
+    println("a",1,"bbb");
 }
 
 signed main() {
@@ -68,6 +76,7 @@ inline void write(int x)
     if (x > 9) write(x / 10);
     putchar(x % 10 + '0');
 }
+
 ```
 ## 常见套路
 |key|算法|
