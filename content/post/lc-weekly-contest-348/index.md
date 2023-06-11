@@ -5,7 +5,7 @@ slug: lc-weekly-contest-348
 date: 2023-06-03 00:00:00+0000
 tags:
     - Leetcode
-image: https://img2.baidu.com/it/u=4248933948,3175621791&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto?sec=1686330000&t=53c71f720e5610b35567333cb516b465
+image: https://img2.baidu.com/it/u=4248933948,3175621791&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto?sec=1686330000&t=53c71f720e5610b35567333cb516b465;
 ---
 ## 写在前面
 难度: 中等简单中等困难    
