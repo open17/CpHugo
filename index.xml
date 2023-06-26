@@ -15064,9 +15064,17 @@ $0\le a_i&amp;lt;2^{31}$&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>🎗️下面已经空空如也啦~</title><link>https://open17.github.io/CpHugo/p/message/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/message/</guid><description/></item><item><title>标签</title><link>https://open17.github.io/CpHugo/tags/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/tags/</guid><description/></item><item><title>欢迎</title><link>https://open17.github.io/CpHugo/hello/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/hello/</guid><description>&lt;h2 id="这是什么">❓这是什么&lt;/h2>
-&lt;p>这是一个基础竞赛算法(competive programming)个人总结仓库,记录本人所学的一些基础算法知识,以及见到的算法题目&lt;/p>
-&lt;p>由于个人精力有限,可能存在部分疏漏,欢迎指正~&lt;/p>
+&lt;/div></description></item><item><title>🎗️下面已经空空如也啦~</title><link>https://open17.github.io/CpHugo/p/message/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/message/</guid><description/></item><item><title>标签</title><link>https://open17.github.io/CpHugo/tags/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/tags/</guid><description/></item><item><title>欢迎</title><link>https://open17.github.io/CpHugo/hello/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/hello/</guid><description>&lt;h1 id="cphugo">CpHugo&lt;/h1>
+&lt;p>&lt;img src="https://img.shields.io/github/languages/code-size/open17/CpHugo.svg?style=popout-square"
+loading="lazy"
+alt="GitHub code size in bytes"
+>
+&lt;img src="https://img.shields.io/github/license/open17/CpHugo"
+loading="lazy"
+alt="GitHub"
+>&lt;/p>
+&lt;h2 id="介绍">❓介绍&lt;/h2>
+&lt;p>这是一个面向基础竞赛算法(competive programming)的个人总结仓库,由于个人精力有限,可能存在部分疏漏,欢迎指正&lt;/p>
 &lt;h2 id="网站功能">🌠网站功能&lt;/h2>
 &lt;ul>
 &lt;li>支持tag查找&lt;/li>
