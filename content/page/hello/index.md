@@ -18,10 +18,11 @@ menu:
             icon: messages
 
 ---
-## ❓这是什么
-这是一个基础竞赛算法(competive programming)个人总结仓库,记录本人所学的一些基础算法知识,以及见到的算法题目
-
-由于个人精力有限,可能存在部分疏漏,欢迎指正~ 
+# CpHugo
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/open17/CpHugo.svg?style=popout-square)
+![GitHub](https://img.shields.io/github/license/open17/CpHugo)
+## ❓介绍
+这是一个面向基础竞赛算法(competive programming)的个人总结仓库,由于个人精力有限,可能存在部分疏漏,欢迎指正 
 ## 🌠网站功能
 - 支持tag查找
 - 支持关键词搜索
