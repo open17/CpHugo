@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>>>>>CpHugo&lt;&lt;&lt;&lt;</title><link>https://open17.github.io/CpHugo/</link><description>Recent content on >>>>CpHugo&lt;&lt;&lt;&lt;</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 04 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://open17.github.io/CpHugo/index.xml" rel="self" type="application/rss+xml"/><item><title>数据结构学习合集</title><link>https://open17.github.io/CpHugo/p/dsall/</link><pubDate>Sun, 04 Jun 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/dsall/</guid><description>&lt;h2 id="单调栈">单调栈&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>>>>>CpHugo&lt;&lt;&lt;&lt;</title><link>https://open17.github.io/CpHugo/</link><description>Recent content on >>>>CpHugo&lt;&lt;&lt;&lt;</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 26 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://open17.github.io/CpHugo/index.xml" rel="self" type="application/rss+xml"/><item><title>技巧与套路</title><link>https://open17.github.io/CpHugo/p/tricks/</link><pubDate>Mon, 26 Jun 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/tricks/</guid><description>&lt;h2 id="heading">&lt;/h2></description></item><item><title>数据结构学习合集</title><link>https://open17.github.io/CpHugo/p/dsall/</link><pubDate>Sun, 04 Jun 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/dsall/</guid><description>&lt;h2 id="单调栈">单调栈&lt;/h2>
 &lt;h3 id="模板1">模板1&lt;/h3>
 &lt;ul>
 &lt;li>这种思路通常用于寻找右边的数（求左边时倒叙即可）&lt;/li>
@@ -1151,7 +1151,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>lc weekly contest 348</title><link>https://open17.github.io/CpHugo/p/lc-weekly-contest-348/</link><pubDate>Sat, 03 Jun 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/lc-weekly-contest-348/</guid><description>&lt;img src="https://img2.baidu.com/it/u=4248933948,3175621791&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto?sec=1686330000&t=53c71f720e5610b35567333cb516b465;" alt="Featured image of post lc weekly contest 348" />&lt;h2 id="写在前面">写在前面&lt;/h2>
+&lt;/div></description></item><item><title>lc weekly contest 348</title><link>https://open17.github.io/CpHugo/p/lc-weekly-contest-348/</link><pubDate>Sat, 03 Jun 2023 00:00:00 +0000</pubDate><guid>https://open17.github.io/CpHugo/p/lc-weekly-contest-348/</guid><description>&lt;h2 id="写在前面">写在前面&lt;/h2>
 &lt;p>难度: 中等简单中等困难 &lt;br>
 前三题均为思维题 最后一题比较板&lt;/p>
 &lt;h2 id="t1--最小化字符串长度">T1 最小化字符串长度&lt;/h2>
